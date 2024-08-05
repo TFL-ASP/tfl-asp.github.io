@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PVE on TFL-ASP</title>
+    <link>http://localhost:1313/tags/pve/</link>
+    <description>Recent content in PVE on TFL-ASP</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 15 Jul 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/pve/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PVE 8 安装与优化</title>
+      <link>http://localhost:1313/2024/pveinstall/</link>
+      <pubDate>Mon, 15 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/2024/pveinstall/</guid>
+      <description>前言 该文章还在CSDN发表，文章链接：Link PVE镜像下载 1、在浏览器输入以下网址下载pve的iso安装镜像。 Download Proxmox VE 清华大学开源镜像站，下</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,899 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>TFL-ASP</title>
+        <link>http://localhost:1313/</link>
+        <description>Recent content on TFL-ASP</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Mon, 05 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>PVE 8 安装与优化</title>
+        <link>http://localhost:1313/2024/pveinstall/</link>
+        <pubDate>Mon, 15 Jul 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/2024/pveinstall/</guid>
+        <description>&lt;img src="http://localhost:1313/2024/pveinstall/pveinstaller.png" alt="Featured image of post PVE 8 安装与优化" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;该文章还在CSDN发表，文章链接：&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/Dd_w606/article/details/140447411&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;pve镜像下载&#34;&gt;PVE镜像下载&lt;/h2&gt;
+&lt;p&gt;1、在浏览器输入以下网址下载pve的iso安装镜像。
+&lt;a class=&#34;link&#34; href=&#34;https://mirrors.tuna.tsinghua.edu.cn/proxmox/iso/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Download Proxmox VE&lt;/a&gt;
+清华大学开源镜像站，下拉选择对应版本下载iso文件。&lt;/p&gt;
+&lt;p&gt;2、制作系统引导盘&lt;/p&gt;
+&lt;p&gt;这里使用rufus工具将ISO文件刻录进U盘&lt;/p&gt;
+&lt;p&gt;rufus下载地址:https://wwf.lanzoul.com/i72bm24j105c
+密码:5k8t&lt;/p&gt;
+&lt;p&gt;下载完成后直接双击运行，无需安装，设备中选择U盘，引导类型选择PVE镜像，然后点击开始，注意U盘中的原有数据会被格式化，重要数据记得备份。&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 77; 
+			flex-basis: 185px&#34;
+	&gt;
+	&lt;a href=&#34;http://localhost:1313/2024/pveinstall/rufus.jpg&#34; data-size=&#34;407x528&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/2024/pveinstall/rufus.jpg&#34;
+			width=&#34;407&#34;
+			height=&#34;528&#34;
+			srcset=&#34;http://localhost:1313/2024/pveinstall/rufus_hu9022114c45b0b968251779c450e3cec5_49544_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2024/pveinstall/rufus_hu9022114c45b0b968251779c450e3cec5_49544_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			alt=&#34;Rufus&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;Rufus&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;注意:一定要使用DD模式写入！使用iso模式写入可能导致某些版本的镜像无法启动！&lt;/p&gt;
+&lt;p&gt;当写盘完成时，显示准备就绪，即可关闭程序，弹出U盘，拔出U盘。&lt;/p&gt;
+&lt;h2 id=&#34;pve-安装&#34;&gt;PVE 安装&lt;/h2&gt;
+&lt;p&gt;1、打开主机电源，不断按键盘F12按键（不同主机的启动按键不同，请自行百度）选择由刚刚制作好的启动盘启动。&lt;/p&gt;
+&lt;p&gt;2、进入PVE安装页面，选择第一个Install Proxmox VE （Graphical)，按回车。&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 382; 
+			flex-basis: 918px&#34;
+	&gt;
+	&lt;a href=&#34;http://localhost:1313/2024/pveinstall/pveinstaller.png&#34; data-size=&#34;612x160&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/2024/pveinstall/pveinstaller.png&#34;
+			width=&#34;612&#34;
+			height=&#34;160&#34;
+			srcset=&#34;http://localhost:1313/2024/pveinstall/pveinstaller_hufe9653886b00745c7725dbc66e171966_53939_480x0_resize_box_3.png 480w, http://localhost:1313/2024/pveinstall/pveinstaller_hufe9653886b00745c7725dbc66e171966_53939_1024x0_resize_box_3.png 1024w&#34;
+			loading=&#34;lazy&#34;
+			alt=&#34;pveinstaller&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;pveinstaller&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;然后会进入一段代码，此时不要作任何操作。&lt;/p&gt;
+&lt;p&gt;3、进入下面页面安装正式开始，首先使用协议页面点击我同意。&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 163; 
+			flex-basis: 391px&#34;
+	&gt;
+	&lt;a href=&#34;http://localhost:1313/2024/pveinstall/pve1.jpg&#34; data-size=&#34;728x446&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/2024/pveinstall/pve1.jpg&#34;
+			width=&#34;728&#34;
+			height=&#34;446&#34;
+			srcset=&#34;http://localhost:1313/2024/pveinstall/pve1_hub24785e94cd7e6f41db6636150344cac_49630_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2024/pveinstall/pve1_hub24785e94cd7e6f41db6636150344cac_49630_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			alt=&#34;Install&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;Install&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 163; 
+			flex-basis: 393px&#34;
+	&gt;
+	&lt;a href=&#34;http://localhost:1313/2024/pveinstall/pve2.jpg&#34; data-size=&#34;746x455&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/2024/pveinstall/pve2.jpg&#34;
+			width=&#34;746&#34;
+			height=&#34;455&#34;
+			srcset=&#34;http://localhost:1313/2024/pveinstall/pve2_hu1acf53cfa78a1e4f90e9ff45384034d9_60377_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2024/pveinstall/pve2_hu1acf53cfa78a1e4f90e9ff45384034d9_60377_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			alt=&#34;Install&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;Install&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;填写邮件，网卡选默认即可。&lt;/p&gt;
+&lt;p&gt;Gateway是虚拟机网关，一般默认即可，然后点下一步设定密码。&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 169; 
+			flex-basis: 405px&#34;
+	&gt;
+	&lt;a href=&#34;http://localhost:1313/2024/pveinstall/pve3.jpg&#34; data-size=&#34;531x314&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/2024/pveinstall/pve3.jpg&#34;
+			width=&#34;531&#34;
+			height=&#34;314&#34;
+			srcset=&#34;http://localhost:1313/2024/pveinstall/pve3_hu2ceec3d3c2db0ec84a95090d1db699e7_28816_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2024/pveinstall/pve3_hu2ceec3d3c2db0ec84a95090d1db699e7_28816_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			alt=&#34;Install&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;Install&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 150; 
+			flex-basis: 360px&#34;
+	&gt;
+	&lt;a href=&#34;http://localhost:1313/2024/pveinstall/pve4.jpg&#34; data-size=&#34;666x444&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/2024/pveinstall/pve4.jpg&#34;
+			width=&#34;666&#34;
+			height=&#34;444&#34;
+			srcset=&#34;http://localhost:1313/2024/pveinstall/pve4_hue83c051bc6084a79c30f568f5a79db2e_54784_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2024/pveinstall/pve4_hue83c051bc6084a79c30f568f5a79db2e_54784_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			alt=&#34;Install&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;Install&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 161; 
+			flex-basis: 388px&#34;
+	&gt;
+	&lt;a href=&#34;http://localhost:1313/2024/pveinstall/pve5.jpg&#34; data-size=&#34;523x323&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/2024/pveinstall/pve5.jpg&#34;
+			width=&#34;523&#34;
+			height=&#34;323&#34;
+			srcset=&#34;http://localhost:1313/2024/pveinstall/pve5_hu4f2a19208fc4497b6b447bea3fb5a425_21241_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2024/pveinstall/pve5_hu4f2a19208fc4497b6b447bea3fb5a425_21241_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			alt=&#34;Install&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;Install&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;这一步后就等待安装，安装完毕后重启记得拔掉u盘。&lt;/p&gt;
+&lt;p&gt;重启&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 336; 
+			flex-basis: 807px&#34;
+	&gt;
+	&lt;a href=&#34;http://localhost:1313/2024/pveinstall/pve6.jpg&#34; data-size=&#34;387x115&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/2024/pveinstall/pve6.jpg&#34;
+			width=&#34;387&#34;
+			height=&#34;115&#34;
+			srcset=&#34;http://localhost:1313/2024/pveinstall/pve6_hu2ae12b08c970ac2a9f4fe45e11f4d670_8260_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2024/pveinstall/pve6_hu2ae12b08c970ac2a9f4fe45e11f4d670_8260_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			alt=&#34;Default&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;Default&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;进入到这个界面是代表安装成功了。&lt;/p&gt;
+&lt;h2 id=&#34;初始化pve&#34;&gt;初始化PVE&lt;/h2&gt;
+&lt;p&gt;接下来到主力机上进行操作，输入刚刚安装成功显示的网址（如前一个图，网址为192.168.10.20:8006）&lt;/p&gt;
+&lt;p&gt;注意输入时要带端口号，不然进不去。&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 151; 
+			flex-basis: 363px&#34;
+	&gt;
+	&lt;a href=&#34;http://localhost:1313/2024/pveinstall/pve7.jpg&#34; data-size=&#34;759x501&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/2024/pveinstall/pve7.jpg&#34;
+			width=&#34;759&#34;
+			height=&#34;501&#34;
+			srcset=&#34;http://localhost:1313/2024/pveinstall/pve7_hua3ca2b5c349893fc36ea85467d17b35b_42848_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2024/pveinstall/pve7_hua3ca2b5c349893fc36ea85467d17b35b_42848_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;继续访问，进入pve登录界面。&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 160; 
+			flex-basis: 384px&#34;
+	&gt;
+	&lt;a href=&#34;http://localhost:1313/2024/pveinstall/pve8.jpg&#34; data-size=&#34;503x314&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/2024/pveinstall/pve8.jpg&#34;
+			width=&#34;503&#34;
+			height=&#34;314&#34;
+			srcset=&#34;http://localhost:1313/2024/pveinstall/pve8_hu502096d5d5671b63054c6232b614f636_23804_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2024/pveinstall/pve8_hu502096d5d5671b63054c6232b614f636_23804_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;输入刚刚设置的密码，改为中文（非必须）即可进入pve，第一次登陆会显示无有效订阅，关闭即可。&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 285; 
+			flex-basis: 686px&#34;
+	&gt;
+	&lt;a href=&#34;http://localhost:1313/2024/pveinstall/pve9.jpg&#34; data-size=&#34;506x177&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/2024/pveinstall/pve9.jpg&#34;
+			width=&#34;506&#34;
+			height=&#34;177&#34;
+			srcset=&#34;http://localhost:1313/2024/pveinstall/pve9_hu3638dc0d8e472d78a5849a297b0f193e_13023_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2024/pveinstall/pve9_hu3638dc0d8e472d78a5849a297b0f193e_13023_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;虚拟机直通设备&#34;&gt;虚拟机直通设备&lt;/h2&gt;
+&lt;p&gt;首先在主板BIOS里查看是否开启了硬件虚拟化（通常在Advanced栏下），同时CPU也必须要支持虚拟化才行。Intel VT-D。&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 241; 
+			flex-basis: 579px&#34;
+	&gt;
+	&lt;a href=&#34;http://localhost:1313/2024/pveinstall/pve10.jpg&#34; data-size=&#34;768x318&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/2024/pveinstall/pve10.jpg&#34;
+			width=&#34;768&#34;
+			height=&#34;318&#34;
+			srcset=&#34;http://localhost:1313/2024/pveinstall/pve10_hu74c9828a0c0ef861f45d03445e0a54ab_60944_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2024/pveinstall/pve10_hu74c9828a0c0ef861f45d03445e0a54ab_60944_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;如上图进入pve shell。&lt;/p&gt;
+&lt;p&gt;输入&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;nano /etc/default/grub
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;对于Intel CPU，添加 intel_iommu=on，操作如下：&lt;/p&gt;
+&lt;p&gt;2、找到：GRUB_CMDLINE_LINUX_DEFAULT=&amp;ldquo;quiet&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;然后修改为&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;GRUB_CMDLINE_LINUX_DEFAULT=&amp;quot;quiet intel_iommu=on&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;编辑完成后，使用快捷键 Ctrl + O 回车保存文件，Ctrl + X 退出编辑器。&lt;/p&gt;
+&lt;p&gt;3、使用命令 update-grub 保存更改并更新grub&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;root@pve:~# update-grub
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;4、更新完成后，使用命令 reboot 重启PVE系统&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;root@pve:~# reboot
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;从命令行运行&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;dmesg | grep -e DMAR -e IOMMU
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;如果没有输出，则说明有问题。&lt;/p&gt;
+&lt;p&gt;如果有,可基本确认这个过程顺利完成! 接下来就可以为虚拟机正常的添加硬件直通了。&lt;/p&gt;
+&lt;p&gt;AMD CPU&lt;/p&gt;
+&lt;p&gt;对于AMD CPU 添加 amd_iommu=on, 操作如下：&lt;/p&gt;
+&lt;p&gt;1、Shell 里面输入命令：nano /etc/default/grub&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;root@pve:~# nano /etc/default/grub
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;2、在里面找到：GRUB_CMDLINE_LINUX_DEFAULT=&amp;ldquo;quiet&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;然后修改为&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;GRUB_CMDLINE_LINUX_DEFAULT=&amp;quot;quiet amd_iommu=on&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;编辑完成后，使用快捷键 Ctrl + O 回车保存文件，Ctrl + X 退出编辑器。&lt;/p&gt;
+&lt;p&gt;3、使用命令 update-grub 保存更改并更新grub&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;root@pve:~# update-grub
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;4、更新完成后，使用命令 reboot 重启PVE系统&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;root@pve:~# reboot
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这样虚拟机直通设置就完成了。&lt;/p&gt;
+&lt;p&gt;当然，也可以使用pvetools来进行pve环境下的优化设置操作，更加方便（需换源）&lt;/p&gt;
+&lt;h2 id=&#34;虚拟机安装&#34;&gt;虚拟机安装&lt;/h2&gt;
+&lt;p&gt;pve安装虚拟机还是非常简单的，本篇我们将使用pve安装win10来演示一下安装过程，其他系统安装大同小异。&lt;/p&gt;
+&lt;p&gt;1、首先需要上传安装镜像，通过local(pve)→ISO镜像→上传，将win10镜像上传到pve中。&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 237; 
+			flex-basis: 569px&#34;
+	&gt;
+	&lt;a href=&#34;http://localhost:1313/2024/pveinstall/pve11.jpg&#34; data-size=&#34;773x326&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/2024/pveinstall/pve11.jpg&#34;
+			width=&#34;773&#34;
+			height=&#34;326&#34;
+			srcset=&#34;http://localhost:1313/2024/pveinstall/pve11_hu02bfa4a0b3fa7c2ca9d67f7858fc4d5e_29652_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2024/pveinstall/pve11_hu02bfa4a0b3fa7c2ca9d67f7858fc4d5e_29652_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;2、回到pve首页，点击右上角的创建虚拟机，常规中自定义虚拟机的名称&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 270; 
+			flex-basis: 649px&#34;
+	&gt;
+	&lt;a href=&#34;http://localhost:1313/2024/pveinstall/pve12.jpg&#34; data-size=&#34;768x284&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/2024/pveinstall/pve12.jpg&#34;
+			width=&#34;768&#34;
+			height=&#34;284&#34;
+			srcset=&#34;http://localhost:1313/2024/pveinstall/pve12_hu96dfe6a9295b615d9d64b6705bb10d7f_28135_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2024/pveinstall/pve12_hu96dfe6a9295b615d9d64b6705bb10d7f_28135_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;3、操作系统中选择windows10镜像，然后在类型中选择安装操作系统的类型，注意版本也要选择。&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 261; 
+			flex-basis: 628px&#34;
+	&gt;
+	&lt;a href=&#34;http://localhost:1313/2024/pveinstall/pve13.jpg&#34; data-size=&#34;772x295&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/2024/pveinstall/pve13.jpg&#34;
+			width=&#34;772&#34;
+			height=&#34;295&#34;
+			srcset=&#34;http://localhost:1313/2024/pveinstall/pve13_hub0c87ce57345371923d29d2a48e9dd81_46281_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2024/pveinstall/pve13_hub0c87ce57345371923d29d2a48e9dd81_46281_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;4、系统保持默认即可。&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 353; 
+			flex-basis: 848px&#34;
+	&gt;
+	&lt;a href=&#34;http://localhost:1313/2024/pveinstall/pve14.jpg&#34; data-size=&#34;764x216&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/2024/pveinstall/pve14.jpg&#34;
+			width=&#34;764&#34;
+			height=&#34;216&#34;
+			srcset=&#34;http://localhost:1313/2024/pveinstall/pve14_hu2c5259a851325227a15596e602d27853_21677_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2024/pveinstall/pve14_hu2c5259a851325227a15596e602d27853_21677_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;5、硬盘中总线选择sata，其他保持默认。（当然SCSI、IDE等等都行的）&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 143; 
+			flex-basis: 343px&#34;
+	&gt;
+	&lt;a href=&#34;http://localhost:1313/2024/pveinstall/pve15.jpg&#34; data-size=&#34;771x538&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/2024/pveinstall/pve15.jpg&#34;
+			width=&#34;771&#34;
+			height=&#34;538&#34;
+			srcset=&#34;http://localhost:1313/2024/pveinstall/pve15_hu24775b9d217cd648832fa5ba6dfa19ae_35119_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2024/pveinstall/pve15_hu24775b9d217cd648832fa5ba6dfa19ae_35119_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;6、CPU根据机器配置选择，插槽表示cpu个数单CPU机器输入1，核心根据CPU选择，类别使用HOST系统性能最大化。&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 384; 
+			flex-basis: 922px&#34;
+	&gt;
+	&lt;a href=&#34;http://localhost:1313/2024/pveinstall/pve16.jpg&#34; data-size=&#34;773x201&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/2024/pveinstall/pve16.jpg&#34;
+			width=&#34;773&#34;
+			height=&#34;201&#34;
+			srcset=&#34;http://localhost:1313/2024/pveinstall/pve16_hu6aae2a4c467a857f79ba6a5d5d7f8b8e_27227_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2024/pveinstall/pve16_hu6aae2a4c467a857f79ba6a5d5d7f8b8e_27227_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;7、内存根据机器配置以及具体需求设置。&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 428; 
+			flex-basis: 1029px&#34;
+	&gt;
+	&lt;a href=&#34;http://localhost:1313/2024/pveinstall/pve17.jpg&#34; data-size=&#34;759x177&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/2024/pveinstall/pve17.jpg&#34;
+			width=&#34;759&#34;
+			height=&#34;177&#34;
+			srcset=&#34;http://localhost:1313/2024/pveinstall/pve17_hu57531c6c14e1a55e8fb902e2f78ff41b_15034_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2024/pveinstall/pve17_hu57531c6c14e1a55e8fb902e2f78ff41b_15034_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;8、网络设置中选择兼容性最高的e1000即可。&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 309; 
+			flex-basis: 742px&#34;
+	&gt;
+	&lt;a href=&#34;http://localhost:1313/2024/pveinstall/pve18.jpg&#34; data-size=&#34;767x248&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/2024/pveinstall/pve18.jpg&#34;
+			width=&#34;767&#34;
+			height=&#34;248&#34;
+			srcset=&#34;http://localhost:1313/2024/pveinstall/pve18_hu877fb474b0f6f7fba8f5f56fc689d5c9_24247_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2024/pveinstall/pve18_hu877fb474b0f6f7fba8f5f56fc689d5c9_24247_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;9、最后检查配置没有，确认无误后点击完成。&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 141; 
+			flex-basis: 340px&#34;
+	&gt;
+	&lt;a href=&#34;http://localhost:1313/2024/pveinstall/pve19.jpg&#34; data-size=&#34;776x547&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/2024/pveinstall/pve19.jpg&#34;
+			width=&#34;776&#34;
+			height=&#34;547&#34;
+			srcset=&#34;http://localhost:1313/2024/pveinstall/pve19_hub1f3d015def93a1d4c84965df41b641e_61164_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2024/pveinstall/pve19_hub1f3d015def93a1d4c84965df41b641e_61164_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;10、稍等几秒，机器创建成功。&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 205; 
+			flex-basis: 492px&#34;
+	&gt;
+	&lt;a href=&#34;http://localhost:1313/2024/pveinstall/pve20.jpg&#34; data-size=&#34;773x377&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/2024/pveinstall/pve20.jpg&#34;
+			width=&#34;773&#34;
+			height=&#34;377&#34;
+			srcset=&#34;http://localhost:1313/2024/pveinstall/pve20_hu50d96014c3395628cd56018edea6adf8_44636_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2024/pveinstall/pve20_hu50d96014c3395628cd56018edea6adf8_44636_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;11、点击控制台启动，按照正常windows系统安装流程安装即可。&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 147; 
+			flex-basis: 354px&#34;
+	&gt;
+	&lt;a href=&#34;http://localhost:1313/2024/pveinstall/pve21.jpg&#34; data-size=&#34;762x516&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/2024/pveinstall/pve21.jpg&#34;
+			width=&#34;762&#34;
+			height=&#34;516&#34;
+			srcset=&#34;http://localhost:1313/2024/pveinstall/pve21_huac9baecf74c17d38443fe5b784fed325_52090_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2024/pveinstall/pve21_huac9baecf74c17d38443fe5b784fed325_52090_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Hugo | 使用Hugo&#43;Stack主题搭建博客</title>
+        <link>http://localhost:1313/2024/hugo-stack/</link>
+        <pubDate>Thu, 11 Jul 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/2024/hugo-stack/</guid>
+        <description>&lt;img src="http://localhost:1313/2024/hugo-stack/hugo.jpg" alt="Featured image of post Hugo | 使用Hugo&#43;Stack主题搭建博客" /&gt;&lt;p&gt;Github仓库地址：&lt;a class=&#34;link&#34; href=&#34;https://github.com/CaiJimmy/hugo-theme-stack&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;hugo-stack-theme&lt;/a&gt;&lt;/p&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;使用方式&#34;&gt;使用方式&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;从零建立博客&lt;/strong&gt;：Fork仓库到自己账号下，用Github 注册 Vercel，依次点击Overview → New Project → import刚刚Fork的仓库，设置&lt;code&gt;FRAMEWORK PRESET&lt;/code&gt;为Hugo → 点击&lt;code&gt;Environment Variables&lt;/code&gt;，设置&lt;code&gt;NAME&lt;/code&gt;为&lt;code&gt;HUGO_VERSION&lt;/code&gt;，&lt;code&gt;Value&lt;/code&gt;为&lt;code&gt;Hugo版本号（如0.89.0）&lt;/code&gt; → 点击Add → 点击Deploy，稍等十来秒即可部署完成。下载仓库到本地后使用Github Desktop更新文章。（注，本地预览需安装Hugo，Powershell里输入Choco install hugo-extended）&lt;/p&gt;
+&lt;br&gt;
+&lt;h3 id=&#34;友情链接使用方式&#34;&gt;友情链接使用方式&lt;/h3&gt;
+&lt;p&gt;友链头像放在&lt;code&gt;/assets/link-img&lt;/code&gt;，友链数据放在&lt;code&gt;/data/links.json&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[
+    {
+        &amp;quot;title&amp;quot;: &amp;quot;Friends&amp;quot;,
+        &amp;quot;website&amp;quot;: &amp;quot;https://mantyke.icu/&amp;quot;,
+        &amp;quot;image&amp;quot;: &amp;quot;mantyke.png&amp;quot;,
+     &amp;quot;description&amp;quot;: &amp;quot;Description&amp;quot;
+    },
+	{
+        &amp;quot;title&amp;quot;: &amp;quot;友情链接2&amp;quot;,
+        &amp;quot;website&amp;quot;: &amp;quot;&amp;quot;,
+        &amp;quot;image&amp;quot;: &amp;quot;&amp;quot;,
+     &amp;quot;description&amp;quot;: &amp;quot;&amp;quot;
+    }
+]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;br&gt;
+&lt;h3 id=&#34;修改页尾信息&#34;&gt;修改页尾信息&lt;/h3&gt;
+&lt;p&gt;站点名称及建站时间请修改以下代码&lt;/p&gt;
+&lt;p&gt;站点名称及链接：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#位置：layout/partials/footer/footer.html
+
+    &amp;lt;section class=&amp;quot;copyright&amp;quot;&amp;gt;
+        &amp;amp;copy; 
+        {{ if and (.Site.Params.footer.since) (ne .Site.Params.footer.since (int (now.Format &amp;quot;2006&amp;quot;))) }}
+            {{ .Site.Params.footer.since }} - 
+        {{ end }}
+        {{ now.Format &amp;quot;2006&amp;quot; }} &amp;lt;a href=&amp;quot;https://stack-theme-mod.vercel.app/&amp;quot;&amp;gt;Example Site&amp;lt;/a&amp;gt;·&amp;lt;i class=&amp;quot;fas fa-bell&amp;quot;&amp;gt;&amp;lt;/i&amp;gt; &amp;lt;a id=&amp;quot;days&amp;quot;&amp;gt;0&amp;lt;/a&amp;gt;Days&amp;lt;br&amp;gt;
+      {{$var :=  $scratch.Get &amp;quot;total&amp;quot;}}{{$var = div $var 100.0}}{{$var = math.Ceil $var}}{{$var = div $var 10.0}}共书写了{{$var}}k字·共 {{ len (where .Site.RegularPages &amp;quot;Section&amp;quot; &amp;quot;post&amp;quot;) }}篇文章&amp;lt;/br&amp;gt;&amp;lt;span&amp;gt;&amp;lt;p&amp;gt;
+    &amp;lt;/section&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;#位置：layout/partials/footer/footer.html
+
+var s1 = &#39;2022-02-13&#39;;//设置为建站时间
+s1 = new Date(s1.replace(/-/g, &amp;quot;/&amp;quot;));
+s2 = new Date();
+var days = s2.getTime() - s1.getTime();
+var number_of_days = parseInt(days / (1000 * 60 * 60 * 24));
+document.getElementById(&#39;days&#39;).innerHTML = number_of_days;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;其他常见修改&#34;&gt;其他常见修改&lt;/h2&gt;
+&lt;h3 id=&#34;设置博客头像&#34;&gt;设置博客头像&lt;/h3&gt;
+&lt;p&gt;位置：&lt;code&gt;/assets/img&lt;/code&gt;，请将头像命名为&lt;code&gt;avatar.png&lt;/code&gt;，替换原头像文件&lt;/p&gt;
+&lt;h3 id=&#34;删除博客头像&#34;&gt;删除博客头像&lt;/h3&gt;
+&lt;p&gt;位置：&lt;code&gt;/layouts/partials/sidebar/left.html&lt;/code&gt;，注释或删去以下部分：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;        {{ with .Site.Params.sidebar.avatar }}
+            {{ if (default true .enabled) }}
+            &amp;lt;figure class=&amp;quot;site-avatar&amp;quot;&amp;gt;
+                &amp;lt;a href=&amp;quot;{{ .Site.BaseURL | relLangURL }}&amp;quot;&amp;gt;
+                {{ if not .local }}
+                    &amp;lt;img src=&amp;quot;{{ .src }}&amp;quot; width=&amp;quot;300&amp;quot; height=&amp;quot;300&amp;quot; class=&amp;quot;site-logo&amp;quot; loading=&amp;quot;lazy&amp;quot; alt=&amp;quot;Avatar&amp;quot;&amp;gt;
+                {{ else }}
+                    {{ $avatar := resources.Get (.src) }}
+                    
+                    {{ if $avatar }}
+                        {{ $avatarResized := $avatar.Resize &amp;quot;300x&amp;quot; }}
+                        &amp;lt;img src=&amp;quot;{{ $avatarResized.RelPermalink }}&amp;quot; width=&amp;quot;{{ $avatarResized.Width }}&amp;quot;
+                            height=&amp;quot;{{ $avatarResized.Height }}&amp;quot; class=&amp;quot;site-logo&amp;quot; loading=&amp;quot;lazy&amp;quot; alt=&amp;quot;Avatar&amp;quot;&amp;gt;
+                    {{ else }}
+                        {{ errorf &amp;quot;Failed loading avatar from %q&amp;quot; . }}
+                    {{ end }}
+                {{ end }}
+                &amp;lt;/a&amp;gt;
+                {{ with $.Site.Params.sidebar.emoji }}
+                    &amp;lt;span class=&amp;quot;emoji&amp;quot;&amp;gt;{{ . }}&amp;lt;/span&amp;gt;
+                {{ end }}
+            &amp;lt;/figure&amp;gt;
+            {{ end }}
+        {{ end }}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;修改博客背景颜色&#34;&gt;修改博客背景颜色&lt;/h3&gt;
+&lt;p&gt;位置：&lt;code&gt;assets\scss\variables.scss&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;--body-background: #f6f6f6;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;指定首页分类标签颜色&#34;&gt;指定首页分类标签颜色&lt;/h3&gt;
+&lt;p&gt;位置：&lt;code&gt;content\categories&lt;/code&gt;，创建分类同名文件夹后，在文件夹内创建&lt;code&gt;_index.md&lt;/code&gt;文件，写入frontmatter&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;title: &amp;quot;class&amp;quot; //分类名称
+description: &amp;quot;简介&amp;quot; //简介
+image: &amp;quot;image.png&amp;quot; //分类题图
+style:
+    background: &amp;quot;#80aba9&amp;quot; //分类标签底色
+    color: &amp;quot;#fff&amp;quot;
+---
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;配置各类图标&#34;&gt;配置各类图标&lt;/h3&gt;
+&lt;p&gt;图标放在：&lt;code&gt;/assets/icons&lt;/code&gt;，svg格式。&lt;/p&gt;
+&lt;br&gt;
+</description>
+        </item>
+        <item>
+        <title>安装与激活Microsoft Office</title>
+        <link>http://localhost:1313/2021/officeinstall/</link>
+        <pubDate>Sun, 10 Oct 2021 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/2021/officeinstall/</guid>
+        <description>&lt;img src="http://localhost:1313/2021/officeinstall/office1.jpg" alt="Featured image of post 安装与激活Microsoft Office" /&gt;&lt;p&gt;​&lt;/p&gt;
+&lt;p&gt;所需工具：【office安装工具】Office Tool Plus(OTP),[Windows desktop runtime x 86]，一台联网计算机&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;本文章所提及的所有文件：OTP,Windows desktop runtime，我已经上传到主页，可以自行下载体验！，支持正版，请到&lt;/strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.microsoft.com/zh-cn/microsoft-365/buy/microsoft-365&#34;  title=&#34;此处&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;此处&lt;/a&gt;&lt;strong&gt;购买正版Office&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;一：安装Office 365&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;首先安装Windows desktop runtime X86&lt;/p&gt;
+&lt;p&gt;然后双击运行OTP，同意许可条款&lt;/p&gt;
+&lt;p&gt;点击部署，添加产品&lt;/p&gt;
+&lt;p&gt;选择365 应用企业版，在右侧选择你的体系结构，通道建议选择测试通道，这样Office就有了新的启动UI~&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 172; 
+			flex-basis: 413px&#34;
+	&gt;
+	&lt;a href=&#34;http://localhost:1313/2021/officeinstall/office1.jpg&#34; data-size=&#34;901x523&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/2021/officeinstall/office1.jpg&#34;
+			width=&#34;901&#34;
+			height=&#34;523&#34;
+			srcset=&#34;http://localhost:1313/2021/officeinstall/office1_huef74ab535c7b344634e4ad90e98a5055_85467_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2021/officeinstall/office1_huef74ab535c7b344634e4ad90e98a5055_85467_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;点击开始部署，然后保持你的联机状态，office会自动下载并安装，安装完成后会有一个通知（下载安装速度取决于你的网速和RAM大小），安装完成后关闭红色的office部署工具，再次进入OTP，点击左上角的返回回到主页&lt;/p&gt;
+&lt;p&gt;**二：激活 **&lt;/p&gt;
+&lt;p&gt;在主页里找到“激活”，进入后安装许可证：“Office mondo 2016-批量许可证”，点击安装许可证。&lt;/p&gt;
+&lt;p&gt;在上方有一个类似于命令提示符的图标，打开输入以下指令：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;/osppilbyid MondoVolume /osppsethst:kms.loli.beer /osppsetprt:1688 /osppact
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;按回车，右下角会有“OSPP正在运行”，等待完成，Office就激活了，激活是有一定时效的，一般是180天，激活失效后再OTP里-激活-清除许可证，然后再复制命令粘贴到命令行里就能再次激活了。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;三：使用&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;本文章所提及的所有文件：OTP,Windows desktop runtime，我已经上传到主页，可以自行下载，支持正版！&lt;/strong&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Markdown Syntax Guide</title>
+        <link>http://localhost:1313/2020/markdown-syntax-guide/</link>
+        <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/2020/markdown-syntax-guide/</guid>
+        <description>&lt;img src="http://localhost:1313/2020/markdown-syntax-guide/pawel-czerwinski-8uZPynIu-rQ-unsplash.jpg" alt="Featured image of post Markdown Syntax Guide" /&gt;&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;
+&lt;h2 id=&#34;headings&#34;&gt;Headings&lt;/h2&gt;
+&lt;p&gt;The following HTML &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt;—&lt;code&gt;&amp;lt;h6&amp;gt;&lt;/code&gt; elements represent six levels of section headings. &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt; is the highest section level while &lt;code&gt;&amp;lt;h6&amp;gt;&lt;/code&gt; is the lowest.&lt;/p&gt;
+&lt;h1 id=&#34;h1&#34;&gt;H1&lt;/h1&gt;
+&lt;h2 id=&#34;h2&#34;&gt;H2&lt;/h2&gt;
+&lt;h3 id=&#34;h3&#34;&gt;H3&lt;/h3&gt;
+&lt;h4 id=&#34;h4&#34;&gt;H4&lt;/h4&gt;
+&lt;h5 id=&#34;h5&#34;&gt;H5&lt;/h5&gt;
+&lt;h6 id=&#34;h6&#34;&gt;H6&lt;/h6&gt;
+&lt;h2 id=&#34;paragraph&#34;&gt;Paragraph&lt;/h2&gt;
+&lt;p&gt;Xerum, quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum, voluptionse latur sitiae dolessi aut parist aut dollo enim qui voluptate ma dolestendit peritin re plis aut quas inctum laceat est volestemque commosa as cus endigna tectur, offic to cor sequas etum rerum idem sintibus eiur? Quianimin porecus evelectur, cum que nis nust voloribus ratem aut omnimi, sitatur? Quiatem. Nam, omnis sum am facea corem alique molestrunt et eos evelece arcillit ut aut eos eos nus, sin conecerem erum fuga. Ri oditatquam, ad quibus unda veliamenimin cusam et facea ipsamus es exerum sitate dolores editium rerore eost, temped molorro ratiae volorro te reribus dolorer sperchicium faceata tiustia prat.&lt;/p&gt;
+&lt;p&gt;Itatur? Quiatae cullecum rem ent aut odis in re eossequodi nonsequ idebis ne sapicia is sinveli squiatum, core et que aut hariosam ex eat.&lt;/p&gt;
+&lt;h2 id=&#34;blockquotes&#34;&gt;Blockquotes&lt;/h2&gt;
+&lt;p&gt;The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a &lt;code&gt;footer&lt;/code&gt; or &lt;code&gt;cite&lt;/code&gt; element, and optionally with in-line changes such as annotations and abbreviations.&lt;/p&gt;
+&lt;h4 id=&#34;blockquote-without-attribution&#34;&gt;Blockquote without attribution&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Tiam, ad mint andaepu dandae nostion secatur sequo quae.
+&lt;strong&gt;Note&lt;/strong&gt; that you can use &lt;em&gt;Markdown syntax&lt;/em&gt; within a blockquote.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;blockquote-with-attribution&#34;&gt;Blockquote with attribution&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Don&amp;rsquo;t communicate by sharing memory, share memory by communicating.&lt;br&gt;
+— &lt;cite&gt;Rob Pike&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/cite&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;tables&#34;&gt;Tables&lt;/h2&gt;
+&lt;p&gt;Tables aren&amp;rsquo;t part of the core Markdown spec, but Hugo supports supports them out-of-the-box.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th&gt;Age&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Bob&lt;/td&gt;
+&lt;td&gt;27&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Alice&lt;/td&gt;
+&lt;td&gt;23&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&#34;inline-markdown-within-tables&#34;&gt;Inline Markdown within tables&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Italics&lt;/th&gt;
+&lt;th&gt;Bold&lt;/th&gt;
+&lt;th&gt;Code&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;em&gt;italics&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;bold&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;code&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;A&lt;/th&gt;
+&lt;th&gt;B&lt;/th&gt;
+&lt;th&gt;C&lt;/th&gt;
+&lt;th&gt;D&lt;/th&gt;
+&lt;th&gt;E&lt;/th&gt;
+&lt;th&gt;F&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/td&gt;
+&lt;td&gt;Phasellus ultricies, sapien non euismod aliquam, dui ligula tincidunt odio, at accumsan nulla sapien eget ex.&lt;/td&gt;
+&lt;td&gt;Proin eleifend dictum ipsum, non euismod ipsum pulvinar et. Vivamus sollicitudin, quam in pulvinar aliquam, metus elit pretium purus&lt;/td&gt;
+&lt;td&gt;Proin sit amet velit nec enim imperdiet vehicula.&lt;/td&gt;
+&lt;td&gt;Ut bibendum vestibulum quam, eu egestas turpis gravida nec&lt;/td&gt;
+&lt;td&gt;Sed scelerisque nec turpis vel viverra. Vivamus vitae pretium sapien&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;code-blocks&#34;&gt;Code Blocks&lt;/h2&gt;
+&lt;h4 id=&#34;code-block-with-backticks&#34;&gt;Code block with backticks&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!doctype html&amp;gt;
+&amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt;
+&amp;lt;head&amp;gt;
+  &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;
+  &amp;lt;title&amp;gt;Example HTML5 Document&amp;lt;/title&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+  &amp;lt;p&amp;gt;Test&amp;lt;/p&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;code-block-indented-with-four-spaces&#34;&gt;Code block indented with four spaces&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;!doctype html&amp;gt;
+&amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt;
+&amp;lt;head&amp;gt;
+  &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;
+  &amp;lt;title&amp;gt;Example HTML5 Document&amp;lt;/title&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+  &amp;lt;p&amp;gt;Test&amp;lt;/p&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;code-block-with-hugos-internal-highlight-shortcode&#34;&gt;Code block with Hugo&amp;rsquo;s internal highlight shortcode&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;!doctype html&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;html&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;lang&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;en&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;head&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;meta&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;charset&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;utf-8&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;Example HTML5 Document&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;head&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;body&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;Test&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;body&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;html&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h4 id=&#34;diff-code-block&#34;&gt;Diff code block&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&#34;language-diff&#34;&gt;[dependencies.bevy]
+git = &amp;quot;https://github.com/bevyengine/bevy&amp;quot;
+rev = &amp;quot;11f52b8c72fc3a568e8bb4a4cd1f3eb025ac2e13&amp;quot;
+- features = [&amp;quot;dynamic&amp;quot;]
++ features = [&amp;quot;jpeg&amp;quot;, &amp;quot;dynamic&amp;quot;]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;list-types&#34;&gt;List Types&lt;/h2&gt;
+&lt;h4 id=&#34;ordered-list&#34;&gt;Ordered List&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;First item&lt;/li&gt;
+&lt;li&gt;Second item&lt;/li&gt;
+&lt;li&gt;Third item&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;unordered-list&#34;&gt;Unordered List&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;List item&lt;/li&gt;
+&lt;li&gt;Another item&lt;/li&gt;
+&lt;li&gt;And another item&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;nested-list&#34;&gt;Nested list&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Fruit
+&lt;ul&gt;
+&lt;li&gt;Apple&lt;/li&gt;
+&lt;li&gt;Orange&lt;/li&gt;
+&lt;li&gt;Banana&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Dairy
+&lt;ul&gt;
+&lt;li&gt;Milk&lt;/li&gt;
+&lt;li&gt;Cheese&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;other-elements--abbr-sub-sup-kbd-mark&#34;&gt;Other Elements — abbr, sub, sup, kbd, mark&lt;/h2&gt;
+&lt;p&gt;&lt;abbr title=&#34;Graphics Interchange Format&#34;&gt;GIF&lt;/abbr&gt; is a bitmap image format.&lt;/p&gt;
+&lt;p&gt;H&lt;sub&gt;2&lt;/sub&gt;O&lt;/p&gt;
+&lt;p&gt;X&lt;sup&gt;n&lt;/sup&gt; + Y&lt;sup&gt;n&lt;/sup&gt; = Z&lt;sup&gt;n&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;Press &lt;kbd&gt;&lt;kbd&gt;CTRL&lt;/kbd&gt;+&lt;kbd&gt;ALT&lt;/kbd&gt;+&lt;kbd&gt;Delete&lt;/kbd&gt;&lt;/kbd&gt; to end the session.&lt;/p&gt;
+&lt;p&gt;Most &lt;mark&gt;salamanders&lt;/mark&gt; are nocturnal, and hunt for insects, worms, and other small creatures.&lt;/p&gt;
+&lt;h2 id=&#34;hyperlinked-image&#34;&gt;Hyperlinked image&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://google.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://www.google.com/images/branding/googlelogo/1x/googlelogo_light_color_272x92dp.png&#34; &gt;
+		&lt;img src=&#34;https://www.google.com/images/branding/googlelogo/1x/googlelogo_light_color_272x92dp.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			alt=&#34;Google&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;Google&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;The above quote is excerpted from Rob Pike&amp;rsquo;s &lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=PAAkCSZUG1c&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;talk&lt;/a&gt; during Gopherfest, November 18, 2015.&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</description>
+        </item>
+        <item>
+        <title>Math Typesetting</title>
+        <link>http://localhost:1313/2020/math-typesetting/</link>
+        <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/2020/math-typesetting/</guid>
+        <description>&lt;p&gt;Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.&lt;/p&gt;
+&lt;p&gt;In this example we will be using &lt;a class=&#34;link&#34; href=&#34;https://katex.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;KaTeX&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Create a partial under &lt;code&gt;/layouts/partials/math.html&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Within this partial reference the &lt;a class=&#34;link&#34; href=&#34;https://katex.org/docs/autorender.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Auto-render Extension&lt;/a&gt; or host these scripts locally.&lt;/li&gt;
+&lt;li&gt;Include the partial in your templates like so:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;{{ if or .Params.math .Site.Params.math }}
+{{ partial &amp;quot;math.html&amp;quot; . }}
+{{ end }}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;To enable KaTex globally set the parameter &lt;code&gt;math&lt;/code&gt; to &lt;code&gt;true&lt;/code&gt; in a project&amp;rsquo;s configuration&lt;/li&gt;
+&lt;li&gt;To enable KaTex on a per page basis include the parameter &lt;code&gt;math: true&lt;/code&gt; in content files&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; Use the online reference of &lt;a class=&#34;link&#34; href=&#34;https://katex.org/docs/supported.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Supported TeX Functions&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;examples&#34;&gt;Examples&lt;/h3&gt;
+
+&lt;p&gt;Block math:
+$$
+\varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } }
+$$&lt;/p&gt;</description>
+        </item>
+        
+    </channel>
+</rss>
