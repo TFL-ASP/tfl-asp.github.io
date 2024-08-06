@@ -23,6 +23,13 @@
       <description>Github仓库地址：hugo-stack-theme 使用方式 从零建立博客：Fork仓库到自己账号下，用Github 注册 Vercel，依次点</description>
     </item>
     <item>
+      <title>安装与激活Microsoft Office</title>
+      <link>http://localhost:1313/2021/officeinstall/</link>
+      <pubDate>Sun, 10 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/2021/officeinstall/</guid>
+      <description>​ 所需工具：【office安装工具】Office Tool Plus(OTP),[Windows desktop runtime x 86]，一台联网计算机 本文章所提及的所有文件：OTP,Windows desktop runtim</description>
+    </item>
+    <item>
       <title>Markdown Syntax Guide</title>
       <link>http://localhost:1313/2020/markdown-syntax-guide/</link>
       <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
@@ -35,13 +42,6 @@
       <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/2020/math-typesetting/</guid>
       <description>&lt;p&gt;Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>http://localhost:1313/1/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/1/</guid>
-      <description>​所需工具：【office安装工具】Office Tool Plus(OTP),[Windows desktop runtime x 86]，一台联网计算机 本文章所提及的所有文件：OTP,Windows desktop runtim</description>
     </item>
   </channel>
 </rss>
