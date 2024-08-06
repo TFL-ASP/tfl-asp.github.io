@@ -910,6 +910,23 @@
      
      
         
+    <script src='//cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js'></script>
+<div id="waline" class="waline-container"></div>
+<style>
+    .waline-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+    .waline-container .vcount {
+        color: var(--card-text-color-main);
+    }
+</style><script>
+    
+    new Waline({"dark":"html[data-scheme=\"dark\"]","el":"#waline","emoji":["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo"],"locale":{"admin":"Admin"},"requiredMeta":["name","email","url"]});
+</script>
+
     
 
     <footer class="site-footer">
@@ -1135,7 +1152,7 @@ document.getElementById('days').innerHTML = number_of_days;
     <h3 class="widget-title"> </h3>
     <div class="widget-body">
         <div class="category-list">
-            <div class="category-list-item"><a href="http://localhost:1313/categories/hugo/" class="category-list-link">hugo<span class="category-list-count">1</a>
+            <div class="category-list-item"><a href="http://localhost:1313/categories/hugo/" class="category-list-link">hugo<span class="category-list-count">2</a>
             </span></div>
             <div class="category-list-item"><a href="http://localhost:1313/categories/pve/" class="category-list-link">pve<span class="category-list-count">1</a>
             </span></div>
