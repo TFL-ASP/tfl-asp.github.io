@@ -328,7 +328,7 @@
 
 
                 <time class="article-words">
-                    1653字
+                    1615字
                 </time>
             </div>
         
@@ -350,8 +350,9 @@
 清华大学开源镜像站，下拉选择对应版本下载iso文件。</p>
 <p>2、制作系统引导盘</p>
 <p>这里使用rufus工具将ISO文件刻录进U盘</p>
-<p>rufus下载地址:https://wwf.lanzoul.com/i72bm24j105c
-密码:5k8t</p>
+<p>Rufus<a class="link" href="https://wwf.lanzoul.com/i72bm24j105c"  target="_blank" rel="noopener"
+    >下载地址</a>
+（密码:5k8t）</p>
 <p>下载完成后直接双击运行，无需安装，设备中选择U盘，引导类型选择PVE镜像，然后点击开始，注意U盘中的原有数据会被格式化，重要数据记得备份。</p>
 <p><figure 
 	
@@ -390,10 +391,8 @@
 			height="160"
 			srcset="/2024/pveinstall/pveinstaller_hufe9653886b00745c7725dbc66e171966_53939_480x0_resize_box_3.png 480w, /2024/pveinstall/pveinstaller_hufe9653886b00745c7725dbc66e171966_53939_1024x0_resize_box_3.png 1024w"
 			loading="lazy"
-			alt="pveinstaller">
+			>
 	</a>
-	
-	<figcaption>pveinstaller</figcaption>
 	
 </figure></p>
 <p>然后会进入一段代码，此时不要作任何操作。</p>
@@ -411,10 +410,8 @@
 			height="446"
 			srcset="/2024/pveinstall/pve1_hub24785e94cd7e6f41db6636150344cac_49630_480x0_resize_q75_box.jpg 480w, /2024/pveinstall/pve1_hub24785e94cd7e6f41db6636150344cac_49630_1024x0_resize_q75_box.jpg 1024w"
 			loading="lazy"
-			alt="Install">
+			>
 	</a>
-	
-	<figcaption>Install</figcaption>
 	
 </figure></p>
 <p><figure 
@@ -430,10 +427,8 @@
 			height="455"
 			srcset="/2024/pveinstall/pve2_hu1acf53cfa78a1e4f90e9ff45384034d9_60377_480x0_resize_q75_box.jpg 480w, /2024/pveinstall/pve2_hu1acf53cfa78a1e4f90e9ff45384034d9_60377_1024x0_resize_q75_box.jpg 1024w"
 			loading="lazy"
-			alt="Install">
+			>
 	</a>
-	
-	<figcaption>Install</figcaption>
 	
 </figure></p>
 <p>填写邮件，网卡选默认即可。</p>
@@ -451,10 +446,8 @@
 			height="314"
 			srcset="/2024/pveinstall/pve3_hu2ceec3d3c2db0ec84a95090d1db699e7_28816_480x0_resize_q75_box.jpg 480w, /2024/pveinstall/pve3_hu2ceec3d3c2db0ec84a95090d1db699e7_28816_1024x0_resize_q75_box.jpg 1024w"
 			loading="lazy"
-			alt="Install">
+			>
 	</a>
-	
-	<figcaption>Install</figcaption>
 	
 </figure></p>
 <p><figure 
@@ -470,10 +463,8 @@
 			height="444"
 			srcset="/2024/pveinstall/pve4_hue83c051bc6084a79c30f568f5a79db2e_54784_480x0_resize_q75_box.jpg 480w, /2024/pveinstall/pve4_hue83c051bc6084a79c30f568f5a79db2e_54784_1024x0_resize_q75_box.jpg 1024w"
 			loading="lazy"
-			alt="Install">
+			>
 	</a>
-	
-	<figcaption>Install</figcaption>
 	
 </figure></p>
 <p><figure 
@@ -489,10 +480,8 @@
 			height="323"
 			srcset="/2024/pveinstall/pve5_hu4f2a19208fc4497b6b447bea3fb5a425_21241_480x0_resize_q75_box.jpg 480w, /2024/pveinstall/pve5_hu4f2a19208fc4497b6b447bea3fb5a425_21241_1024x0_resize_q75_box.jpg 1024w"
 			loading="lazy"
-			alt="Install">
+			>
 	</a>
-	
-	<figcaption>Install</figcaption>
 	
 </figure></p>
 <p>这一步后就等待安装，安装完毕后重启记得拔掉u盘。</p>
@@ -510,10 +499,8 @@
 			height="115"
 			srcset="/2024/pveinstall/pve6_hu2ae12b08c970ac2a9f4fe45e11f4d670_8260_480x0_resize_q75_box.jpg 480w, /2024/pveinstall/pve6_hu2ae12b08c970ac2a9f4fe45e11f4d670_8260_1024x0_resize_q75_box.jpg 1024w"
 			loading="lazy"
-			alt="Default">
+			>
 	</a>
-	
-	<figcaption>Default</figcaption>
 	
 </figure></p>
 <p>进入到这个界面是代表安装成功了。</p>
@@ -596,7 +583,7 @@
 <p>输入</p>
 <pre><code>nano /etc/default/grub
 </code></pre>
-<p>对于Intel CPU，添加 intel_iommu=on，操作如下：</p>
+<h4 id="对于intel-cpu添加-intel_iommuon操作如下">对于Intel CPU，添加 intel_iommu=on，操作如下：</h4>
 <p>2、找到：GRUB_CMDLINE_LINUX_DEFAULT=&ldquo;quiet&rdquo;</p>
 <p>然后修改为</p>
 <pre><code>GRUB_CMDLINE_LINUX_DEFAULT=&quot;quiet intel_iommu=on&quot;
@@ -613,7 +600,7 @@
 </code></pre>
 <p>如果没有输出，则说明有问题。</p>
 <p>如果有,可基本确认这个过程顺利完成! 接下来就可以为虚拟机正常的添加硬件直通了。</p>
-<p>AMD CPU</p>
+<h4 id="对于amd-cpu">对于AMD CPU</h4>
 <p>对于AMD CPU 添加 amd_iommu=on, 操作如下：</p>
 <p>1、Shell 里面输入命令：nano /etc/default/grub</p>
 <pre><code>root@pve:~# nano /etc/default/grub
@@ -923,53 +910,13 @@
      
      
         
-    <div class="disqus-container">
-    <div id="disqus_thread"></div>
-<script>
-    window.disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "stack" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</div>
-
-<style>
-    .disqus-container {
-        background-color: var(--card-background);
-        border-radius: var(--card-border-radius);
-        box-shadow: var(--shadow-l1);
-        padding: var(--card-padding);
-    }
-</style>
-
-<script>
-    window.addEventListener('onColorSchemeChange', (e) => {
-        if (DISQUS) {
-            DISQUS.reset({
-                reload: true
-            });
-        }
-    })
-</script>
-
     
 
     <footer class="site-footer">
   
 
+
+    
 
     
 
@@ -1006,7 +953,7 @@
             2021 - 
         
         2024 <a href="https://stack-theme-mod.vercel.app/">Example Site</a>·<i class="fas fa-bell"></i> <a id="days">0</a>Days<br>
-      共书写了4.1k字·共 5篇文章</br><span><p>
+      共书写了11.8k字·共 6篇文章</br><span><p>
     </section>
     
     <section class="powerby">
@@ -1155,7 +1102,16 @@ document.getElementById('days').innerHTML = number_of_days;
     <li><a href="#pve镜像下载">PVE镜像下载</a></li>
     <li><a href="#pve-安装">PVE 安装</a></li>
     <li><a href="#初始化pve">初始化PVE</a></li>
-    <li><a href="#虚拟机直通设备">虚拟机直通设备</a></li>
+    <li><a href="#虚拟机直通设备">虚拟机直通设备</a>
+      <ol>
+        <li>
+          <ol>
+            <li><a href="#对于intel-cpu添加-intel_iommuon操作如下">对于Intel CPU，添加 intel_iommu=on，操作如下：</a></li>
+            <li><a href="#对于amd-cpu">对于AMD CPU</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
     <li><a href="#虚拟机安装">虚拟机安装</a></li>
   </ol>
 </nav>
@@ -1184,6 +1140,10 @@ document.getElementById('days').innerHTML = number_of_days;
             <div class="category-list-item"><a href="http://localhost:1313/categories/pve/" class="category-list-link">pve<span class="category-list-count">1</a>
             </span></div>
             <div class="category-list-item"><a href="http://localhost:1313/categories/software/" class="category-list-link">software<span class="category-list-count">1</a>
+            </span></div>
+            <div class="category-list-item"><a href="http://localhost:1313/categories/ssd/" class="category-list-link">ssd<span class="category-list-count">1</a>
+            </span></div>
+            <div class="category-list-item"><a href="http://localhost:1313/categories/%E5%89%8D%E6%B2%BF%E6%8A%80%E6%9C%AF/" class="category-list-link">前沿技术<span class="category-list-count">1</a>
             </span></div>
             <div class="category-list-item"><a href="http://localhost:1313/categories/%E6%95%99%E7%A8%8B/" class="category-list-link">教程<span class="category-list-count">3</a>
             </span></div>
@@ -1215,7 +1175,7 @@ document.getElementById('days').innerHTML = number_of_days;
                     <a href="/archives/#2024">
                         
                             <span class="year">2024</span>
-                            <span class="count">2</span>
+                            <span class="count">3</span>
                         
                     </a> 
                 </div>
@@ -1276,6 +1236,10 @@ document.getElementById('days').innerHTML = number_of_days;
         
             <a href="/tags/software/" class="font_size_1">
                 Software
+            </a>
+        
+            <a href="/tags/ssd/" class="font_size_1">
+                SSD
             </a>
         
             <a href="/tags/themes/" class="font_size_1">

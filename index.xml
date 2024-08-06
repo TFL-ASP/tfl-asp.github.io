@@ -7,6 +7,569 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <lastBuildDate>Mon, 05 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>年度巨献 | 深入浅出SSD（持续更新）</title>
+        <link>http://localhost:1313/2024/intossd/</link>
+        <pubDate>Sun, 04 Aug 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/2024/intossd/</guid>
+        <description>&lt;img src="http://localhost:1313/2024/intossd/ssd.jpg" alt="Featured image of post 年度巨献 | 深入浅出SSD（持续更新）" /&gt;&lt;h2 id=&#34;ssd简介&#34;&gt;SSD简介&lt;/h2&gt;
+&lt;p&gt;SSD (&lt;code&gt;Solid State Drive&lt;/code&gt;)，即固态硬盘，是一种以半导体闪存(&lt;code&gt;NAND Flash&lt;/code&gt;)作为介质的存储设备。和传统机械硬盘(&lt;code&gt;Hard Disk Drive，HDD&lt;/code&gt;)不同，SSD以半导体存储数据，用纯电子电路实现，没有任何机械设备，这就决定了它在性能、功耗、可靠性等方面和HDD有很大不同。&lt;/p&gt;
+&lt;h2 id=&#34;ssd-协议与接口&#34;&gt;SSD 协议与接口&lt;/h2&gt;
+&lt;h3 id=&#34;pcie协议&#34;&gt;PCIe协议&lt;/h3&gt;
+&lt;h4 id=&#34;pcie带宽&#34;&gt;PCIe带宽&lt;/h4&gt;
+&lt;p&gt;PCIe GEN1在链路上的传输速率为2.5Gb/s。PCIe在GEN1和GEN2采用了8b/10b编码方式，也就是说链路上传输10b数据，实际传输的有效数据只有8b。对于GEN1 x1的PCIe链路，传输的有效带宽为：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;2.5Gb/s * 2 * 8b/10b * B/8b = 0.5GB/s
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;2代表TX和RX&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 446; 
+			flex-basis: 1070px&#34;
+	&gt;
+	&lt;a href=&#34;http://localhost:1313/2024/intossd/pcie-link-widths.jpg&#34; data-size=&#34;785x176&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/2024/intossd/pcie-link-widths.jpg&#34;
+			width=&#34;785&#34;
+			height=&#34;176&#34;
+			srcset=&#34;http://localhost:1313/2024/intossd/pcie-link-widths_hucc78108fa480238b43ddf08cd330f450_28856_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2024/intossd/pcie-link-widths_hucc78108fa480238b43ddf08cd330f450_28856_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h4 id=&#34;pcie拓扑结构&#34;&gt;PCIe拓扑结构&lt;/h4&gt;
+&lt;p&gt;PCIe主要的组件有RC（&lt;code&gt;Root Complex&lt;/code&gt;），SW（&lt;code&gt;Switch&lt;/code&gt;），EP（&lt;code&gt;Endpoint&lt;/code&gt;）。RC可以和所有device进行通信，一个EP也可以和一个PCIe系统中的EP来通信（Peer-to-Peer）。协议规定SW需要支持Peer-to-Peer，但对于有多个port的RC并没有要求。也就是说下图中 PCIe4 和 PCIe5 可以进行数据通信，但 PCIe4 和 PCIe6 就不一定能进行数据传输。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;RC&lt;/code&gt;是指连接CPU和存储器子系统以及PCIe结构的设备，可以支持一个或多个PCIe Port，下图中RC支持3个PCIe Port，每个Port连接EP或者SW，SW形成一个子层，又可以挂接其他PCIe设备。&lt;/p&gt;
+&lt;p&gt;RC上的port可以进行数据交互，但协议并没有规定必须支持。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;SW&lt;/code&gt;是PCIe链路上进行转接的一类设备，拥有一个upstream prot和多个downstream port。可以将SW当作多个PCIe桥组成的设备。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;EP&lt;/code&gt;是PCIe链路的末端，有两种类型：Legacy Endpoint 和 PCIe Endpoint。传统EP支持IO事务，而且还需要能接收锁定事务。而PCIe EP不必支持IO事务和接收锁定事务，但必须支持MSI中断。&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 139; 
+			flex-basis: 335px&#34;
+	&gt;
+	&lt;a href=&#34;http://localhost:1313/2024/intossd/PCIE-T.jpg&#34; data-size=&#34;750x537&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/2024/intossd/PCIE-T.jpg&#34;
+			width=&#34;750&#34;
+			height=&#34;537&#34;
+			srcset=&#34;http://localhost:1313/2024/intossd/PCIE-T_hua44522a7eeebfe5b7cf11adb47567b30_71744_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2024/intossd/PCIE-T_hua44522a7eeebfe5b7cf11adb47567b30_71744_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;upstream port：在一个PCIe 设备上靠近RC方向的port。
+
+downstream port：在一个PCIe 设别上远离RC方向的port。
+
+Ingress port（入端口）：接收数据包的端口。
+
+Egress port（出端口）：发送数据包的端口。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;在一个PCIe系统中，&lt;code&gt;upstream port&lt;/code&gt; 和 &lt;code&gt;downstream port&lt;/code&gt;是固定的，但是&lt;code&gt;Ingress port&lt;/code&gt; 和 &lt;code&gt;Egress port&lt;/code&gt; 是不固定的，和数据包的传输方向相关。例如：图中RC发起 MWr 事务到PCI-XP 4，那么SW上的upstream就是&lt;code&gt;Ingress port&lt;/code&gt;，downstream就是&lt;code&gt;Egress port&lt;/code&gt;。而当PCI-XP4发起 MWr到 RC时，那么SW的downstream就是 &lt;code&gt;Ingress port&lt;/code&gt;，upstream就是 &lt;code&gt;Egress port&lt;/code&gt;。&lt;/p&gt;
+&lt;h4 id=&#34;pcie-transaction&#34;&gt;PCIe Transaction&lt;/h4&gt;
+&lt;p&gt;事务：Transaction指 requester 和 completer 之间完成一次信息传送时所需要完成的一系列或多个数据包传送的过程。&lt;/p&gt;
+&lt;p&gt;PCIe支持的事务类型与PCI、PCI-X支持的事务类型相同，包括存储器读和存储器写，IO读和IO写，配置读和配置写，此外还增加了一种新事务：消息（message）。&lt;/p&gt;
+&lt;p&gt;PCIe事务可以分为Non-Posted 和 Posted。Non-Posted指 requester 发送TLP请求包给completer时，completer需要返回一个TLP完成数据包给requester。Posted指requester 发送TLP请求事务包给 completer时，completer不需要回复TLP完成数据包给requester。&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 213; 
+			flex-basis: 513px&#34;
+	&gt;
+	&lt;a href=&#34;http://localhost:1313/2024/intossd/PCIE-NPPT.jpg&#34; data-size=&#34;740x346&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/2024/intossd/PCIE-NPPT.jpg&#34;
+			width=&#34;740&#34;
+			height=&#34;346&#34;
+			srcset=&#34;http://localhost:1313/2024/intossd/PCIE-NPPT_hud1150bf66e860872a03bc23d18c2573a_59019_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2024/intossd/PCIE-NPPT_hud1150bf66e860872a03bc23d18c2573a_59019_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;PCIe的数据传输以数据包的形式进行传输，通信涉及一种称为处理层数据包（Transaction Layer packet， TLP）的数据包发送和接收。TLP包可以分为TLP请求的数据包和TLP完成的数据包。TLP请求的数据包依据PCIe事务的不同而不同，对于Non-Posted事务，需要completer 返回 TLP完成包给requester。TLP完成包带数据信息的称为CPLD，不带数据信息的称为CPL。&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 109; 
+			flex-basis: 262px&#34;
+	&gt;
+	&lt;a href=&#34;http://localhost:1313/2024/intossd/PCIE-TLP-PT.jpg&#34; data-size=&#34;668x610&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/2024/intossd/PCIE-TLP-PT.jpg&#34;
+			width=&#34;668&#34;
+			height=&#34;610&#34;
+			srcset=&#34;http://localhost:1313/2024/intossd/PCIE-TLP-PT_hu6b9e293d8ab5e7e5698ef0cb01537a68_94643_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2024/intossd/PCIE-TLP-PT_hu6b9e293d8ab5e7e5698ef0cb01537a68_94643_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;更为具体的PCIe协议细节在此就不再赘述了，感兴趣可以在网上搜索更多技术细节&lt;/p&gt;
+&lt;h3 id=&#34;nvme介绍&#34;&gt;NVMe介绍&lt;/h3&gt;
+&lt;h4 id=&#34;nvme综述&#34;&gt;NVMe综述&lt;/h4&gt;
+&lt;p&gt;非易失性内存表达（&lt;code&gt;Non-Volatile Memory Express，NVMe&lt;/code&gt;）是一种通过 PCI Express 接口访问非易失性存储设备（如固态硬盘）的技术。相较于使用 SATA 接口和 AHCI 标准的传统机械硬盘（HDD），NVMe 的数据访问速度获得了极大提升。NVMe 技术正是为了利用 PCI Express 的高带宽、低延迟等优势而开发的。以往 PCI Express 接口主要应用在显卡、声卡等扩展卡上，现在也应用到了高速存储接口上。&lt;/p&gt;
+&lt;p&gt;在 NVMe 驱动器面市之前，SSD 和 HDD 基本都使用 SATA 接口。但是，SATA 通信标准自身的性能瓶颈局限着 SSD 的发展空间，因此迫切需要一种新的接口标准。最初，开发者通过直接将 SSD 插在 PCI Express 插槽上来绕过这一瓶颈，但这种做法并不符合标准规范。&lt;/p&gt;
+&lt;p&gt;NVMe 为所有制造商提供了一个统一的标准。现在，大多数现代 NVMe SSD 都采用了 M.2 接口规格，而 M.2 接口有多种尺寸规格。&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 433; 
+			flex-basis: 1040px&#34;
+	&gt;
+	&lt;a href=&#34;http://localhost:1313/2024/intossd/M2-B&amp;amp;M.jpg&#34; data-size=&#34;811x187&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/2024/intossd/M2-B&amp;amp;M.jpg&#34;
+			width=&#34;811&#34;
+			height=&#34;187&#34;
+			srcset=&#34;http://localhost:1313/2024/intossd/M2-B&amp;amp;M_hua32a7cce3f363fd021a7d010a6d64e27_35180_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2024/intossd/M2-B&amp;amp;M_hua32a7cce3f363fd021a7d010a6d64e27_35180_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			alt=&#34;M.2 B&amp;M Key&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;M.2 B&amp;amp;M Key&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 155; 
+			flex-basis: 372px&#34;
+	&gt;
+	&lt;a href=&#34;http://localhost:1313/2024/intossd/M2-TYPE.jpg&#34; data-size=&#34;1005x647&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/2024/intossd/M2-TYPE.jpg&#34;
+			width=&#34;1005&#34;
+			height=&#34;647&#34;
+			srcset=&#34;http://localhost:1313/2024/intossd/M2-TYPE_huf50fcd0f21947f7712fce707d09f8d14_172974_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2024/intossd/M2-TYPE_huf50fcd0f21947f7712fce707d09f8d14_172974_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;当然，除了消费级SSD,企业级SSD通常采用另一些接口来满足生产环境的需求，比如U.2、E1.S、E1.L、E3.S、E3.L等等规格。&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 154; 
+			flex-basis: 371px&#34;
+	&gt;
+	&lt;a href=&#34;http://localhost:1313/2024/intossd/SSD-DC.jpg&#34; data-size=&#34;1061x686&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/2024/intossd/SSD-DC.jpg&#34;
+			width=&#34;1061&#34;
+			height=&#34;686&#34;
+			srcset=&#34;http://localhost:1313/2024/intossd/SSD-DC_hu16da4d4a0d68f58b1a4240dae49955f3_156651_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2024/intossd/SSD-DC_hu16da4d4a0d68f58b1a4240dae49955f3_156651_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;配套的还有主板上对应的接口，图中包含了U.2（SFF8639）、SATA以及eSATA接口。&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 211; 
+			flex-basis: 507px&#34;
+	&gt;
+	&lt;a href=&#34;http://localhost:1313/2024/intossd/MB-U2.jpg&#34; data-size=&#34;600x284&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/2024/intossd/MB-U2.jpg&#34;
+			width=&#34;600&#34;
+			height=&#34;284&#34;
+			srcset=&#34;http://localhost:1313/2024/intossd/MB-U2_hu4e1a1efb74d2f44314dd737aa6474f16_46033_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2024/intossd/MB-U2_hu4e1a1efb74d2f44314dd737aa6474f16_46033_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;以下是一个不是很完全的总结：&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 165; 
+			flex-basis: 396px&#34;
+	&gt;
+	&lt;a href=&#34;http://localhost:1313/2024/intossd/SUM1.jpg&#34; data-size=&#34;801x485&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/2024/intossd/SUM1.jpg&#34;
+			width=&#34;801&#34;
+			height=&#34;485&#34;
+			srcset=&#34;http://localhost:1313/2024/intossd/SUM1_hub5fd42139d179c08f3918cbc4769c19e_99259_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2024/intossd/SUM1_hub5fd42139d179c08f3918cbc4769c19e_99259_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;ssd-主控与闪存&#34;&gt;SSD 主控与闪存&lt;/h2&gt;
+&lt;p&gt;SATA SSD主控板实例：&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 120; 
+			flex-basis: 289px&#34;
+	&gt;
+	&lt;a href=&#34;http://localhost:1313/2024/intossd/satassd1.jpg&#34; data-size=&#34;557x461&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/2024/intossd/satassd1.jpg&#34;
+			width=&#34;557&#34;
+			height=&#34;461&#34;
+			srcset=&#34;http://localhost:1313/2024/intossd/satassd1_huec972013000b95c3b958ebd7ebe6b3eb_75476_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2024/intossd/satassd1_huec972013000b95c3b958ebd7ebe6b3eb_75476_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&#34;主控概述&#34;&gt;主控概述&lt;/h3&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 140; 
+			flex-basis: 338px&#34;
+	&gt;
+	&lt;a href=&#34;http://localhost:1313/2024/intossd/CentrolCTRL1.jpg&#34; data-size=&#34;685x486&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/2024/intossd/CentrolCTRL1.jpg&#34;
+			width=&#34;685&#34;
+			height=&#34;486&#34;
+			srcset=&#34;http://localhost:1313/2024/intossd/CentrolCTRL1_hubc9efb8826c5ba12dd1973ce5e025845_117719_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2024/intossd/CentrolCTRL1_hubc9efb8826c5ba12dd1973ce5e025845_117719_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&#34;nand-flash概述&#34;&gt;NAND Flash概述&lt;/h3&gt;
+&lt;p&gt;(该区域转载自&lt;a class=&#34;link&#34; href=&#34;https://news.skhynix.com.cn/flashback-the-evolution-of-nand-flash-technology/#:~:text=NAND%20%E9%97%AA%E5%AD%98%E6%98%AF%E4%B8%80%E7%A7%8D%E9%80%9A%E8%BF%87%E5%9C%A8%E6%B0%AE%E5%8C%96%E7%A1%85%E7%9A%84%E5%86%85%E9%83%A8%E8%A1%A5%E9%9B%86%E7%82%B9%E6%8D%95%E8%8E%B7%E7%94%B5%E5%AD%90%E6%88%96%E7%A9%BA%E7%A9%B4%E6%9D%A5%E5%AD%98%E5%82%A8%E4%BF%A1%E6%81%AF%E7%9A%84%E8%AE%BE%E5%A4%87%E3%80%82%20%E5%9C%A8%E8%BF%99%E7%A7%8D%E8%AE%BE%E5%A4%87%E4%B8%AD%EF%BC%8C%E5%B7%A5%E4%BD%9C%E5%8C%BA%E5%92%8C%E6%A0%85%E6%9E%81%E9%97%B4%E4%BC%9A%E7%95%99%E6%9C%89%E9%80%9A%E9%81%93%E4%BE%9B%E7%94%B5%E6%B5%81%E9%80%9A%E8%BF%87%E7%A1%85%E6%99%B6%E7%89%87%E8%A1%A8%E9%9D%A2%EF%BC%8C%E8%80%8C%E6%A0%B9%E6%8D%AE%E6%B5%AE%E7%BD%AE%E6%A0%85%E6%9E%81%E4%B8%AD%E5%AD%98%E5%82%A8%E7%9A%84%E7%94%B5%E8%8D%B7%E7%B1%BB%E5%9E%8B%EF%BC%8C%E4%BE%BF%E5%8F%AF%E8%BF%9B%E8%A1%8C%E5%AD%98%E5%82%A8%E7%BC%96%E7%A8%8B,%28%E2%80%9C1%E2%80%9D%29%20%E5%92%8C%E6%93%A6%E9%99%A4%20%28%E2%80%9C0%E2%80%9D%29%20%E4%BF%A1%E6%81%AF%E7%9A%84%E6%93%8D%E4%BD%9C%E3%80%82&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;这里&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;NAND 闪存的数据存储方法&lt;/p&gt;
+&lt;p&gt;NAND 闪存是一种通过在氮化硅的内部补集点捕获电子或空穴来存储信息的设备。在这种设备中，工作区和栅极间会留有通道供电流通过硅晶片表面，而根据浮置栅极中存储的电荷类型，便可进行存储编程 (“1”) 和擦除 (“0”) 信息的操作。同时，在一个单元内存储 1 个比特的操作被称为单层单元 (SLC)。氮化硅内部捕获的电子数量与单元晶体管的阈值电压成正比，因此，当俘获大量电子时，即实现了高阈值电压；捕获少量电子会造成低阈值电压。&lt;/p&gt;
+&lt;p&gt;通过将捕获的电子数量分成三份，并将每份的中间电压施加到单元栅极上，可以检查电流的流通状态，从而确定所捕获的电子数量。在这种情况下，存在四种状态，其中包括擦除状态：这就是 2 比特多层单元 (&lt;code&gt;2 bit-MLC&lt;/code&gt;)。2 比特多层单元的这四种状态可以描述为“11”、“10”、“01”和“00”，每个单元可以存储 2 个比特的信息。从定义而言，多层单元指的是一种状态，在这种状态下，一个单元具有多层的 2 个比特或更多比特；然而在本文中，多层单元是相对于单层单元（&lt;code&gt;SLC，Single Level Cell&lt;/code&gt;）（ 而言的。方便起见，本文将存储 2 个比特信息的多层单元（&lt;code&gt;MLC，Multi Level Cell&lt;/code&gt;）称为 2 比特多层单元。&lt;/p&gt;
+&lt;p&gt;在相同的方法下，若产生八单元状态并存储 3 个比特的信息时，此类状态则被称为三层单元 (&lt;code&gt;TLC，Triple Level Cell&lt;/code&gt;)；同样，当产生十六单元状态并存储 4 个比特的信息时，则称为四层单元 (&lt;code&gt;QLC, Quadruple Level Cell&lt;/code&gt;)。单元状态越密集，一个单元内便可储存更多信息。举例来说，与单层单元(SLC) NAND 闪存相比，四层单元(QLC) NAND 闪存能够以 67.5% 的芯片尺寸存储相同数量的信息；但若想进行更多运行和读取的操作，就要增大单元状态的密度。相应地，由于单元状态之间的空间狭窄，更大的密度会使性能降级并出现读取错误的可能性，从而导致设备寿命缩短。因此，重要的是，首先要根据NAND闪存的应用领域决定是否优先考虑信息量，性能和寿命，然后选择适当的编程方法。&lt;/p&gt;
+&lt;p&gt;3D/4D-NAND 与 NAND 闪存行业的发展趋势
+当前，NAND 闪存正在从 2D 发展到 3D 和 4D。对于 2D-NAND，如果在同一区域实现更多的单元数量，形成更小的工作区和栅级，便能增大存储容量。直至 2010 年初，2D-NAND 中的扩展一直是这项技术的主要焦点所在；然而，由于精细图案结构的限制，且储存数据会随时间推移而丢失导致使用寿命缩短，该技术已无法再实现扩展。因此，3D-NAND逐渐取而代之，成为业界关注焦点，现在所有 NAND 制造商都在开发和制造 3D-NAND 产品。&lt;/p&gt;
+&lt;p&gt;在 3D-NAND 的结构中，存储容量会随着三维叠层中堆叠层数的增加而变大。3D-NAND 使用了堆叠多层氮氧化物的方法，形成一个被称为“塞子”的垂直深孔，在其中形成一个由氧化物-氮化物-氧化物制成的存储设备。通过这种方法，仅需少量工艺即可同时形成大量单元。在 3D-NAND 中，电流通过位于圆柱单元中心的多晶硅通道，便能根据存储在氮化硅中的电荷类型实现存储编程和擦除信息。虽然2D-NAND 技术发展的目标是实现形成较小的单元， 3D-NAND 的核心技术却是实现更多层数的三维堆叠。&lt;/p&gt;
+&lt;p&gt;近年来，为了在 3D-NAND 的基础上进一步增大存储容量，SK 海力士开发了 4D-NAND技术，使得芯片尺寸进一步缩小。4D-NAND 在 3D-NAND 单元下方形成外围电路，减少了外围电路所占的面积，从而实现存储容量的最大化并降低 NAND 闪存的成本。经过几代技术的发展，当前的半导体行业已实现了用更多层数存储更多信息，包括 SK 海力士在内的业界领先企业完成了多达 128 层的产品开发和投产准备，甚至正在研发更多层的产品设备。&lt;/p&gt;
+&lt;h3 id=&#34;nand-flash-数据存储单元整体架构&#34;&gt;NAND Flash 数据存储单元整体架构&lt;/h3&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 213; 
+			flex-basis: 512px&#34;
+	&gt;
+	&lt;a href=&#34;http://localhost:1313/2024/intossd/NANDFLASH1.jpg&#34; data-size=&#34;1061x497&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/2024/intossd/NANDFLASH1.jpg&#34;
+			width=&#34;1061&#34;
+			height=&#34;497&#34;
+			srcset=&#34;http://localhost:1313/2024/intossd/NANDFLASH1_hu5be419e5ec358d2e9389edfe3049eb88_69830_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2024/intossd/NANDFLASH1_hu5be419e5ec358d2e9389edfe3049eb88_69830_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			alt=&#34;NAND Flash 数据存储单元整体架构&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;NAND Flash 数据存储单元整体架构&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 162; 
+			flex-basis: 389px&#34;
+	&gt;
+	&lt;a href=&#34;http://localhost:1313/2024/intossd/name-a1.jpg&#34; data-size=&#34;924x569&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/2024/intossd/name-a1.jpg&#34;
+			width=&#34;924&#34;
+			height=&#34;569&#34;
+			srcset=&#34;http://localhost:1313/2024/intossd/name-a1_hu8b12a8a4884987d54d885de3dd995cf2_104274_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2024/intossd/name-a1_hu8b12a8a4884987d54d885de3dd995cf2_104274_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			alt=&#34;NAND Flash 命名规则（部分）&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;NAND Flash 命名规则（部分）&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&#34;nand-flash-封装&#34;&gt;NAND Flash 封装&lt;/h3&gt;
+&lt;p&gt;随着目前产品小型化的需求越来越多，且可穿戴设备的逐渐普及，工程师们对于芯片小型化的需求也越来越强烈，这个就涉及到了芯片的封装工艺。这次，我们只针对NAND flash的封装进行介绍。&lt;/p&gt;
+&lt;p&gt;芯片常用封装有：DIP、QFP、PFP、PGA、BGA、TSOP、COB等封装。这里主要介绍NAND FLASH常用的三种封装（TSOP、BGA、COB）。&lt;/p&gt;
+&lt;p&gt;1、TSOP封装&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 186; 
+			flex-basis: 448px&#34;
+	&gt;
+	&lt;a href=&#34;http://localhost:1313/2024/intossd/tsop.jpg&#34; data-size=&#34;590x316&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/2024/intossd/tsop.jpg&#34;
+			width=&#34;590&#34;
+			height=&#34;316&#34;
+			srcset=&#34;http://localhost:1313/2024/intossd/tsop_hu8beb56d09de7b7581561fa9a509b88a9_22230_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2024/intossd/tsop_hu8beb56d09de7b7581561fa9a509b88a9_22230_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;TSOP是“&lt;code&gt;Thin Small Outline Package&lt;/code&gt;”的缩写，意思是薄型小尺寸封装。TSOP内存是在芯片的周围做出引脚，采用SMT技术（表面安装技术）附着在PCB板的表面，装配高度不到1.27mm。具体到FLASH这类型芯，工艺主要是把FLASH晶圆固定在钢板框架上，然后通过打线把晶圆上的点连接到框架的PIN脚上，再对表面进行注胶。&lt;/p&gt;
+&lt;p&gt;目前的最高的封闭技术能把四颗晶圆封闭在一个TSOP的FLASH内。此种TSOP封装的FLASH相对较厚。TSOP特点：电流大幅度变化时，引起输出电压较小，适合高频应用，操作比较方便（如方便手工贴片或拆片及反复利用），可靠性也比较高。同时TSOP封装具有成品率高。价格相对COB高，因此得到了极为广泛的应用。&lt;/p&gt;
+&lt;p&gt;2、COB封装&lt;/p&gt;
+&lt;p&gt;COB(chip on board) 板上芯片封装，是裸芯片贴装技术之一。半导体芯片交接贴装在印刷线路板上，芯片与PCB板是通过邦定连接的方法实现。NAND FLASH行业使用COB的封装方式主要是节省成本考虑。工程师先把外围电气走线画好，然后在PCB板上点红胶，把晶圆按指定方向及位置贴好。&lt;/p&gt;
+&lt;p&gt;然后使用邦定机对晶圆进行邦定。确认邦定电气性能良好后，对晶圆表面及PCB板部分进行树脂覆盖固定。COB 是最简单的裸芯片贴装技术，但它的封装密度远不如TSOP和BGA技术。&lt;/p&gt;
+&lt;p&gt;3、BGA封装&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 86; 
+			flex-basis: 208px&#34;
+	&gt;
+	&lt;a href=&#34;http://localhost:1313/2024/intossd/bga.jpg&#34; data-size=&#34;587x676&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/2024/intossd/bga.jpg&#34;
+			width=&#34;587&#34;
+			height=&#34;676&#34;
+			srcset=&#34;http://localhost:1313/2024/intossd/bga_hu74173938d167e11410952cef36aadf53_96937_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2024/intossd/bga_hu74173938d167e11410952cef36aadf53_96937_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;BGA(ball grid array) 球形触点陈列，表面贴装型封装之一。在印刷基板的背面按陈列方式制作出球形凸点用以 代替引脚，在印刷基板的正面装配NANDflash 芯片，然后用模压树脂或灌封方法进行密封。封装本体也可做的比QFP(四侧引脚扁平封装)小。&lt;/p&gt;
+&lt;p&gt;BGA主要特点：1、I/O引脚数虽然增多，但引脚之间的距离远大于QFP封装方式，提高了成品率 2、虽然BGA的功耗增加，但由于采用的是可控塌陷芯片法焊接，从而可以改善电热性能 3、信号传输延迟小，适应频率大大提高 4、组装可用共面焊接，可靠性大大提高。此封闭应用在NAND FLASH方面，主要影响是：1、可针对一些大尺寸晶圆进行封装。2、减小NAND flash封装片的面积，适用于对于主板尺寸要求严格的产品，特别是近些年来的可穿戴设备，对于产品尺寸的要求相当严格。3、此封闭大部分为原装片使用。黑片相对较少使用BGA。&lt;/p&gt;
+&lt;h2 id=&#34;ftl简介&#34;&gt;FTL简介&lt;/h2&gt;
+&lt;p&gt;FTL是&lt;code&gt;Flash Translation Layer&lt;/code&gt;(闪存转换层)的缩写，&lt;/p&gt;
+&lt;p&gt;完成主机(或者用户，Host)逻辑地址空间到闪存(Flash)物理地址空间的翻译(Translation),或者说映射(Mapping)。SSD每把一笔用户逻辑数据写人闪存地址空间，便记录下该逻辑地址到物理地址的映射关系。当主机想读取该数据时，SSD便会根据这个映射，从闪存读取这笔数据然后返回给用户。&lt;/p&gt;
+&lt;h3 id=&#34;基本功能&#34;&gt;基本功能&lt;/h3&gt;
+&lt;p&gt;完成逻辑地址空间到物理地址空间的映射。&lt;/p&gt;
+&lt;p&gt;闪存的特性：&lt;/p&gt;
+&lt;p&gt;（1） 闪存块（Block）不能覆盖写，需要维护一张逻辑地址到物理地址的映射表，FTL需要做垃圾回 收，即使GC (Garbage Collection, 垃圾回收)&lt;/p&gt;
+&lt;p&gt;（2） 闪存块有一定寿命，FTL需要做Wear Leveling,让数据写入均摊到每个闪存块上，即让每个块磨损都差不多，从而保证SSD具有最大的数据写入量。&lt;/p&gt;
+&lt;p&gt;（3） 闪存块读的次数有限，次数过多会有读干扰（具体见第三章），FTL需要处理读干扰问题，当某个闪存块读的次数将要达到一定阈值时，FTL需要把这些数据从该闪存块上搬走，从而避免数据出错。&lt;/p&gt;
+&lt;p&gt;（4） 数据的保存问题，必须上电，FTL才有效，好的FTL，就需要有处理数据保持问题的能力。&lt;/p&gt;
+&lt;p&gt;（5） 坏块问题，FTL管理坏块。&lt;/p&gt;
+&lt;p&gt;（6） 对MLC或TLC来说，存在&lt;code&gt;Lower Page corruption&lt;/code&gt;的问题。即掉电异常问题。好的FTL，应该有机制避免这个问题。&lt;/p&gt;
+&lt;p&gt;（7） MLC或TLC的读写速度都不如SLC,但它们都可以配成SLC模式来使用。好的FTL，会利用该特性去改善SSD的性能和可靠性。&lt;/p&gt;
+&lt;h3 id=&#34;映射管理&#34;&gt;映射管理&lt;/h3&gt;
+&lt;p&gt;分类：&lt;/p&gt;
+&lt;p&gt;（1）块映射：块映射有好的连续大尺寸的读写性能，但小尺寸数据的写性能是非常糟糕的。&lt;/p&gt;
+&lt;p&gt;（2）页映射：闪存页远比闪存块多，因此需要更多的空间来存储映射表。但它的性能更好，尤其体现在随机写上面。为追求性能，SSD一般都采用页映射。&lt;/p&gt;
+&lt;p&gt;（3）混合映射：块内采用页映射的方式。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;映射表大小=SSD大小/逻辑页大小
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;（准确来说，映射表大小是SSD容量大小的1/1024。前提条件是:映射页大小为4KB,物理地址用4Byte表示。）.&lt;/p&gt;
+&lt;p&gt;映射表存储在DRAM中，&lt;/p&gt;
+&lt;p&gt;HMD ( Host Memory Buffer，主机高速缓冲存储器)：主机在内存中专门划出一部分空间给SSD用，SSD可以把它当成自己的DRAM 使用。因此，映射表完全可以放到主机端的内存中去。&lt;/p&gt;
+&lt;h3 id=&#34;垃圾回收&#34;&gt;垃圾回收&lt;/h3&gt;
+&lt;p&gt;垃圾回收就是把某个闪存块上的有效数据读出来，重写，然后把该闪存块擦除，就得到新的可用闪存块了。&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 114; 
+			flex-basis: 274px&#34;
+	&gt;
+	&lt;a href=&#34;http://localhost:1313/2024/intossd/GC.jpg&#34; data-size=&#34;354x310&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/2024/intossd/GC.jpg&#34;
+			width=&#34;354&#34;
+			height=&#34;310&#34;
+			srcset=&#34;http://localhost:1313/2024/intossd/GC_hude396378753fa6e49e6de0acc9684669_24169_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2024/intossd/GC_hude396378753fa6e49e6de0acc9684669_24169_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;随机存取时候，如何挑选要回收的内存块，挑垃圾比较多的闪存块来回收，因为有效数据少，要搬移的数据少，这样腾出空闪存块的速度快。&lt;/p&gt;
+&lt;h3 id=&#34;写放大wa&#34;&gt;写放大（WA）&lt;/h3&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 369; 
+			flex-basis: 886px&#34;
+	&gt;
+	&lt;a href=&#34;http://localhost:1313/2024/intossd/WA1.jpg&#34; data-size=&#34;192x52&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/2024/intossd/WA1.jpg&#34;
+			width=&#34;192&#34;
+			height=&#34;52&#34;
+			srcset=&#34;http://localhost:1313/2024/intossd/WA1_hu03c908d3324a31e45f90a7f819c671ec_4170_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2024/intossd/WA1_hu03c908d3324a31e45f90a7f819c671ec_4170_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;写放大越大，意味着额外写人闪存的数据越多，一方面磨损闪存，减少SSD寿命，另一方面，写人这些额外数据会占用底层闪存带宽，影响SSD性能。&lt;/p&gt;
+&lt;p&gt;解决方法：&lt;/p&gt;
+&lt;p&gt;顺序写（不可控）&lt;/p&gt;
+&lt;p&gt;增大OP（预留空间）（可控）&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 1284; 
+			flex-basis: 3083px&#34;
+	&gt;
+	&lt;a href=&#34;http://localhost:1313/2024/intossd/OP1.jpg&#34; data-size=&#34;334x26&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/2024/intossd/OP1.jpg&#34;
+			width=&#34;334&#34;
+			height=&#34;26&#34;
+			srcset=&#34;http://localhost:1313/2024/intossd/OP1_huc66b06ef75fa0b8e2104aabafec68a60_4115_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2024/intossd/OP1_huc66b06ef75fa0b8e2104aabafec68a60_4115_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;OP越大，写放大越小：（很好理解，OP越大，每个闪存块有效数据越少，垃圾越多，因此需要重写更少的数据，因此写放大越小。同时，由于GC需要重写的数据越少，SSD满盘写性能也越好。）&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 163; 
+			flex-basis: 391px&#34;
+	&gt;
+	&lt;a href=&#34;http://localhost:1313/2024/intossd/OPSUM.jpg&#34; data-size=&#34;613x376&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/2024/intossd/OPSUM.jpg&#34;
+			width=&#34;613&#34;
+			height=&#34;376&#34;
+			srcset=&#34;http://localhost:1313/2024/intossd/OPSUM_hu8b45d73e2871f3b5220b570fa03d0cb2_56019_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2024/intossd/OPSUM_hu8b45d73e2871f3b5220b570fa03d0cb2_56019_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&#34;垃圾回收可以简单地分为三步&#34;&gt;垃圾回收可以简单地分为三步&lt;/h3&gt;
+&lt;p&gt;1 )挑选源闪存块。（BPA算法）&lt;/p&gt;
+&lt;p&gt;2 )从源闪存块中找有效数据。&lt;/p&gt;
+&lt;p&gt;3)把有效数据写人到目标闪存块。&lt;/p&gt;
+&lt;h3 id=&#34;垃圾回收时机&#34;&gt;垃圾回收时机&lt;/h3&gt;
+&lt;p&gt;（1）当用户写人数据时，如果可用的闪存块小于一定阈值，这时就需要做GC，以腾出空间给用户写。这时做的GC，叫作Foreground GC (前台垃圾回收)。(被动)&lt;/p&gt;
+&lt;p&gt;（2）&lt;code&gt;Background GC&lt;/code&gt; (后台垃圾回收)，它是在SSD空闲(Idle)的时候，SSD主动去做的GC，这样在用户写人的时候就有充裕的可用闪存块，不需要临时抱佛脚(做&lt;code&gt;Foreground GC&lt;/code&gt;)，从而改善用户写人性能。但是，出于功耗考虑，有些SSD可能就不做后台垃圾回收了，当SSD空闲后，直接进入省电模式，或者做少量的GC，然后进人省电模式。（主动）&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Trim&lt;/code&gt;（移除）：新增的ATA命令(&lt;code&gt;Data Set Management&lt;/code&gt;)， 专为SSD而生&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 206; 
+			flex-basis: 494px&#34;
+	&gt;
+	&lt;a href=&#34;http://localhost:1313/2024/intossd/trim1.jpg&#34; data-size=&#34;464x225&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/2024/intossd/trim1.jpg&#34;
+			width=&#34;464&#34;
+			height=&#34;225&#34;
+			srcset=&#34;http://localhost:1313/2024/intossd/trim1_hu760376fa8b6110008c57fc3608086e08_23859_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2024/intossd/trim1_hu760376fa8b6110008c57fc3608086e08_23859_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;在没有Trim之前，SSD无法知道那些被删除的数据页是否无效，必须等到系统要求在相同的地方(用户空间、逻辑空间)写人数据时才知道那些数据是无效的，进而放心删除。&lt;/p&gt;
+&lt;p&gt;一般FTL都有这3个表：&lt;/p&gt;
+&lt;p&gt;（1）FTL映射表记录每个LBA对应的物理页位置；&lt;/p&gt;
+&lt;p&gt;（2）&lt;code&gt;Valid Page Bit Map (VPBM)&lt;/code&gt;记录每个物理块上哪个页有有效数据；&lt;/p&gt;
+&lt;p&gt;（3）&lt;code&gt;Valid Page Count (VPC)&lt;/code&gt;则记录每个物理块上的有效页个数。&lt;/p&gt;
+&lt;p&gt;通常GC会使用VPC进行排序来回收最少有效页的闪存块; VPBM则是为了在GC时只读有用的数据，也有部分FTL会省略这个表。&lt;/p&gt;
+&lt;p&gt;SSD收到Trim命令后，为了实现数据删除，固件要按顺序做以下的事情：&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 292; 
+			flex-basis: 701px&#34;
+	&gt;
+	&lt;a href=&#34;http://localhost:1313/2024/intossd/ftl1.jpg&#34; data-size=&#34;421x144&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/2024/intossd/ftl1.jpg&#34;
+			width=&#34;421&#34;
+			height=&#34;144&#34;
+			srcset=&#34;http://localhost:1313/2024/intossd/ftl1_hudbf14e1f374a048e96239a1158b20e0c_15191_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2024/intossd/ftl1_hudbf14e1f374a048e96239a1158b20e0c_15191_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;5~7是Trim命令处理后，GC的处理，不是Trim命令处理的部分。Trim命令不触发GC。&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 417; 
+			flex-basis: 1002px&#34;
+	&gt;
+	&lt;a href=&#34;http://localhost:1313/2024/intossd/ftl2.jpg&#34; data-size=&#34;405x97&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/2024/intossd/ftl2.jpg&#34;
+			width=&#34;405&#34;
+			height=&#34;97&#34;
+			srcset=&#34;http://localhost:1313/2024/intossd/ftl2_hud461f7907e7a5813635f12328a86e594_11404_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2024/intossd/ftl2_hud461f7907e7a5813635f12328a86e594_11404_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&#34;磨损平衡&#34;&gt;磨损平衡&lt;/h3&gt;
+&lt;p&gt;磨损平衡，就是让SSD中的每个闪存块的磨损(擦除)都保持均衡。&lt;/p&gt;
+&lt;p&gt;冷数据(&lt;code&gt;Cold Data&lt;/code&gt;)： 不经常更新的块&lt;/p&gt;
+&lt;p&gt;热数据(&lt;code&gt;Hot Data&lt;/code&gt;)： 更新频繁的数据&lt;/p&gt;
+&lt;p&gt;年老的(&lt;code&gt;Old&lt;/code&gt;)块： 擦写次数较多的块&lt;/p&gt;
+&lt;p&gt;年轻的(&lt;code&gt;Young&lt;/code&gt;)块： 擦写次数较少的块 EC（擦除次数）&lt;/p&gt;
+&lt;p&gt;SSD一般有动态磨损平衡(&lt;code&gt;Dynamic WL&lt;/code&gt;)和静态磨损平衡(&lt;code&gt;Static WL&lt;/code&gt;)两种算法。&lt;/p&gt;
+&lt;p&gt;动态磨损平衡算法的基本思想是把热数据写到年轻的块上，即在拿一个新的闪存块用来写的时候，挑选擦写次数小的;&lt;/p&gt;
+&lt;p&gt;静态磨损平衡算法基本思想是把冷数据写到年老的块上，即把冷数据搬到擦写次数比较多的闪存块上。&lt;/p&gt;
+&lt;h3 id=&#34;掉电恢复&#34;&gt;掉电恢复&lt;/h3&gt;
+&lt;p&gt;正常掉电：&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 259; 
+			flex-basis: 623px&#34;
+	&gt;
+	&lt;a href=&#34;http://localhost:1313/2024/intossd/outpower.jpg&#34; data-size=&#34;577x222&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/2024/intossd/outpower.jpg&#34;
+			width=&#34;577&#34;
+			height=&#34;222&#34;
+			srcset=&#34;http://localhost:1313/2024/intossd/outpower_hu5ddef909ae9efba8e0839f537961b10b_37322_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2024/intossd/outpower_hu5ddef909ae9efba8e0839f537961b10b_37322_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;异常掉电：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;为防止异常掉电导致的数据丢失，一个简单的设计就是在SSD上加电容，SSD一旦检测到掉电，就让电容开始放电，然后把RAM中的数据刷到闪存上面去，从而避免数据丢失。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;重构&#34;&gt;重构&lt;/h3&gt;
+&lt;p&gt;SSD在把用户数据写到闪存的时候，会额外打包一些数据，我们叫它元数据，(&lt;code&gt;Meta Data&lt;/code&gt;)&lt;/p&gt;
+&lt;p&gt;映射表恢复原理：&lt;/p&gt;
+&lt;p&gt;只要全盘扫描整个闪存空间，就能获得所有的映射关系，最终完成整个映射表的重构。（time过长）&lt;/p&gt;
+&lt;h3 id=&#34;坏块管理&#34;&gt;坏块管理&lt;/h3&gt;
+&lt;p&gt;坏块主要来源于：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;	1、出厂坏块（Factory Bad Block）
+	2、增长坏块（Grown Bad Block）
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;坏块管理策略：&lt;/p&gt;
+&lt;p&gt;一是略过(Skip) 策略，&lt;/p&gt;
+&lt;p&gt;二是替换(Replace)策略。（用户空间与预留空间）采用替换策略，SSD内部需维护一张重映射表(&lt;code&gt;Remap Table&lt;/code&gt;) ;&lt;/p&gt;
+&lt;h3 id=&#34;slc-cache&#34;&gt;SLC Cache&lt;/h3&gt;
+&lt;p&gt;SLC相对MLC和TLC来说，有更好的读写性能和更长的寿命。这里所说的SLC Cache是把MLC或者TLC里面的一些闪存块配置成SLC模式来访问。&lt;/p&gt;
+&lt;p&gt;优点：&lt;/p&gt;
+&lt;p&gt;（1） 性能考虑&lt;/p&gt;
+&lt;p&gt;（2） 防止Lower Page数据被带坏&lt;/p&gt;
+&lt;p&gt;（3） 解决闪存的缺陷&lt;/p&gt;
+&lt;p&gt;（4） 更多的数据写入量&lt;/p&gt;
+&lt;p&gt;强制写人策略能保护Lower Page数据，而后者不能。非强制SLC写入策略，具有更好的后期写入性能。&lt;/p&gt;
+&lt;h3 id=&#34;rddr&#34;&gt;RD&amp;amp;DR&lt;/h3&gt;
+&lt;p&gt;RD指的是&lt;code&gt;Read Disturb&lt;/code&gt;（读打扰），DR指的是&lt;code&gt;Data Retention&lt;/code&gt;（数据保留）。 两者都能导致数据丢失，但原理和固件处理方式都不一样。&lt;/p&gt;
+&lt;p&gt;Host Based FTL：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Device Based&lt;/code&gt;存在以下缺点:&lt;/p&gt;
+&lt;p&gt;（1）FTL架构通用，不能针对具体应用做定制化。&lt;/p&gt;
+&lt;p&gt;（2）控制器芯片功能复杂，设计难度大，研发成本高。&lt;/p&gt;
+&lt;p&gt;（3）闪存更新很快，一般每年闪存厂商都会推出新一代产品，有新的使用特性，需要控制器芯片做出修改，但是芯片改版成本很高。&lt;/p&gt;
+&lt;p&gt;（4）企业级应用需要高性能、大容量，通用控制器芯片支持的最大性能和容量有限制。&lt;/p&gt;
+&lt;p&gt;（5）企业级市场需求多种多样，有些需求需要控制器提供特殊功能支持，这些是通用SSD主控芯片无法提供的。&lt;/p&gt;
+&lt;h3 id=&#34;host-based-ftl架构&#34;&gt;Host Based FTL架构&lt;/h3&gt;
+&lt;p&gt;Host Based SSD一般的模式是把闪存的读写接口直接开放给驱动程序，这样驱动程序就能自行管理闪存内部资源。控制器大都采用可编程逻辑器件FPGA，功能比较简单，主要实现ECC纠错和闪存时序控制。如图所示，主机驱动直接管理闪存阵列，控制器只是起到ECC纠错算法和物理协议转换的作用。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>PVE 8 安装与优化</title>
         <link>http://localhost:1313/2024/pveinstall/</link>
         <pubDate>Mon, 15 Jul 2024 00:00:00 +0000</pubDate>
@@ -22,8 +585,9 @@
 清华大学开源镜像站，下拉选择对应版本下载iso文件。&lt;/p&gt;
 &lt;p&gt;2、制作系统引导盘&lt;/p&gt;
 &lt;p&gt;这里使用rufus工具将ISO文件刻录进U盘&lt;/p&gt;
-&lt;p&gt;rufus下载地址:https://wwf.lanzoul.com/i72bm24j105c
-密码:5k8t&lt;/p&gt;
+&lt;p&gt;Rufus&lt;a class=&#34;link&#34; href=&#34;https://wwf.lanzoul.com/i72bm24j105c&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;下载地址&lt;/a&gt;
+（密码:5k8t）&lt;/p&gt;
 &lt;p&gt;下载完成后直接双击运行，无需安装，设备中选择U盘，引导类型选择PVE镜像，然后点击开始，注意U盘中的原有数据会被格式化，重要数据记得备份。&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	
@@ -62,10 +626,8 @@
 			height=&#34;160&#34;
 			srcset=&#34;http://localhost:1313/2024/pveinstall/pveinstaller_hufe9653886b00745c7725dbc66e171966_53939_480x0_resize_box_3.png 480w, http://localhost:1313/2024/pveinstall/pveinstaller_hufe9653886b00745c7725dbc66e171966_53939_1024x0_resize_box_3.png 1024w&#34;
 			loading=&#34;lazy&#34;
-			alt=&#34;pveinstaller&#34;&gt;
+			&gt;
 	&lt;/a&gt;
-	
-	&lt;figcaption&gt;pveinstaller&lt;/figcaption&gt;
 	
 &lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;然后会进入一段代码，此时不要作任何操作。&lt;/p&gt;
@@ -83,10 +645,8 @@
 			height=&#34;446&#34;
 			srcset=&#34;http://localhost:1313/2024/pveinstall/pve1_hub24785e94cd7e6f41db6636150344cac_49630_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2024/pveinstall/pve1_hub24785e94cd7e6f41db6636150344cac_49630_1024x0_resize_q75_box.jpg 1024w&#34;
 			loading=&#34;lazy&#34;
-			alt=&#34;Install&#34;&gt;
+			&gt;
 	&lt;/a&gt;
-	
-	&lt;figcaption&gt;Install&lt;/figcaption&gt;
 	
 &lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;&lt;figure 
@@ -102,10 +662,8 @@
 			height=&#34;455&#34;
 			srcset=&#34;http://localhost:1313/2024/pveinstall/pve2_hu1acf53cfa78a1e4f90e9ff45384034d9_60377_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2024/pveinstall/pve2_hu1acf53cfa78a1e4f90e9ff45384034d9_60377_1024x0_resize_q75_box.jpg 1024w&#34;
 			loading=&#34;lazy&#34;
-			alt=&#34;Install&#34;&gt;
+			&gt;
 	&lt;/a&gt;
-	
-	&lt;figcaption&gt;Install&lt;/figcaption&gt;
 	
 &lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;填写邮件，网卡选默认即可。&lt;/p&gt;
@@ -123,10 +681,8 @@
 			height=&#34;314&#34;
 			srcset=&#34;http://localhost:1313/2024/pveinstall/pve3_hu2ceec3d3c2db0ec84a95090d1db699e7_28816_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2024/pveinstall/pve3_hu2ceec3d3c2db0ec84a95090d1db699e7_28816_1024x0_resize_q75_box.jpg 1024w&#34;
 			loading=&#34;lazy&#34;
-			alt=&#34;Install&#34;&gt;
+			&gt;
 	&lt;/a&gt;
-	
-	&lt;figcaption&gt;Install&lt;/figcaption&gt;
 	
 &lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;&lt;figure 
@@ -142,10 +698,8 @@
 			height=&#34;444&#34;
 			srcset=&#34;http://localhost:1313/2024/pveinstall/pve4_hue83c051bc6084a79c30f568f5a79db2e_54784_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2024/pveinstall/pve4_hue83c051bc6084a79c30f568f5a79db2e_54784_1024x0_resize_q75_box.jpg 1024w&#34;
 			loading=&#34;lazy&#34;
-			alt=&#34;Install&#34;&gt;
+			&gt;
 	&lt;/a&gt;
-	
-	&lt;figcaption&gt;Install&lt;/figcaption&gt;
 	
 &lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;&lt;figure 
@@ -161,10 +715,8 @@
 			height=&#34;323&#34;
 			srcset=&#34;http://localhost:1313/2024/pveinstall/pve5_hu4f2a19208fc4497b6b447bea3fb5a425_21241_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2024/pveinstall/pve5_hu4f2a19208fc4497b6b447bea3fb5a425_21241_1024x0_resize_q75_box.jpg 1024w&#34;
 			loading=&#34;lazy&#34;
-			alt=&#34;Install&#34;&gt;
+			&gt;
 	&lt;/a&gt;
-	
-	&lt;figcaption&gt;Install&lt;/figcaption&gt;
 	
 &lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;这一步后就等待安装，安装完毕后重启记得拔掉u盘。&lt;/p&gt;
@@ -182,10 +734,8 @@
 			height=&#34;115&#34;
 			srcset=&#34;http://localhost:1313/2024/pveinstall/pve6_hu2ae12b08c970ac2a9f4fe45e11f4d670_8260_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2024/pveinstall/pve6_hu2ae12b08c970ac2a9f4fe45e11f4d670_8260_1024x0_resize_q75_box.jpg 1024w&#34;
 			loading=&#34;lazy&#34;
-			alt=&#34;Default&#34;&gt;
+			&gt;
 	&lt;/a&gt;
-	
-	&lt;figcaption&gt;Default&lt;/figcaption&gt;
 	
 &lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;进入到这个界面是代表安装成功了。&lt;/p&gt;
@@ -268,7 +818,7 @@
 &lt;p&gt;输入&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;nano /etc/default/grub
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;对于Intel CPU，添加 intel_iommu=on，操作如下：&lt;/p&gt;
+&lt;h4 id=&#34;对于intel-cpu添加-intel_iommuon操作如下&#34;&gt;对于Intel CPU，添加 intel_iommu=on，操作如下：&lt;/h4&gt;
 &lt;p&gt;2、找到：GRUB_CMDLINE_LINUX_DEFAULT=&amp;ldquo;quiet&amp;rdquo;&lt;/p&gt;
 &lt;p&gt;然后修改为&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;GRUB_CMDLINE_LINUX_DEFAULT=&amp;quot;quiet intel_iommu=on&amp;quot;
@@ -285,7 +835,7 @@
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;如果没有输出，则说明有问题。&lt;/p&gt;
 &lt;p&gt;如果有,可基本确认这个过程顺利完成! 接下来就可以为虚拟机正常的添加硬件直通了。&lt;/p&gt;
-&lt;p&gt;AMD CPU&lt;/p&gt;
+&lt;h4 id=&#34;对于amd-cpu&#34;&gt;对于AMD CPU&lt;/h4&gt;
 &lt;p&gt;对于AMD CPU 添加 amd_iommu=on, 操作如下：&lt;/p&gt;
 &lt;p&gt;1、Shell 里面输入命令：nano /etc/default/grub&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;root@pve:~# nano /etc/default/grub
