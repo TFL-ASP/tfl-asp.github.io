@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='SSD固件修复'><title>SSD开卡</title>
+
+<link rel='canonical' href='http://localhost:1313/2024/ssd-fw/'>
+
+<link rel="stylesheet" href="/scss/style.min.e6c6a8eb379099a52a1148e4f0a5152d4590bfbcd698edad53dbb030ed6b66d3.css"><meta property='og:title' content='SSD开卡'>
+<meta property='og:description' content='SSD固件修复'>
+<meta property='og:url' content='http://localhost:1313/2024/ssd-fw/'>
+<meta property='og:site_name' content='改BUG的大橘'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='SSD' /><meta property='article:published_time' content='2024-08-11T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-08-11T00:00:00&#43;00:00'/><meta property='og:image' content='http://localhost:1313/2024/ssd-fw/SSDFW-MAIN.jpg' />
+<meta name="twitter:title" content="SSD开卡">
+<meta name="twitter:description" content="SSD固件修复"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='http://localhost:1313/2024/ssd-fw/SSDFW-MAIN.jpg' />
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <meta name="referrer" content="no-referrer-when-downgrade">
+  
+
+<style>
+    :root {
+        --article-font-family: "Noto Serif SC", var(--base-font-family);
+    }
+</style>
+
+<script> 
+		(function () {
+		    const customFont = document.createElement('link');
+		    customFont.href = "https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;700&display=swap"; 
+		    customFont.type = "text/css";
+		    customFont.rel = "stylesheet";
+		
+		    document.head.appendChild(customFont);
+		}());
+</script>
+
+    </head>
+    <body class="
+    article-page
+">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "dark");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex 
+    <!-- 
+        extended
+     -->
+    on-phone--column extended
+">
+    
+<div id="article-toolbar">
+    <a href="http://localhost:1313/" class="back-home">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+        <span>Back</span>
+    </a>
+</div>
+    <aside class="sidebar left-sidebar sticky">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header class="site-info">
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu58122888d5c0a7d3a86eff3a2e1caa49_412720_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">💭</span>
+                
+            </figure>
+            
+        
+        
+        <h1 class="site-name"><a href="/">改BUG的大橘</a></h1>
+        <h2 class="site-description">2507280495@qq.com</h2><ol class="social-menu">
+                
+                    <li>
+                        <a 
+                            href='https://space.bilibili.com/3494374367300353'
+                            target="_blank"
+                            title="Bilibili"
+                        >
+                            
+                            
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a 
+                            href='https://github.com/TFL-ASP'
+                            target="_blank"
+                            title="GitHub"
+                        >
+                            
+                            
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                            
+                        </a>
+                    </li>
+                
+            </ol></header>
+
+    <ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+
+        
+            <li id="dark-mode-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                <span>Dark Mode</span>
+            </li>
+        
+    </ol>
+</aside>
+
+<main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/2024/ssd-fw/">
+                <img src="/2024/ssd-fw/SSDFW-MAIN_hu0e0cb618b8fd3ce0fb65d459aa58a52e_143118_800x0_resize_q75_box.jpg"
+                        srcset="/2024/ssd-fw/SSDFW-MAIN_hu0e0cb618b8fd3ce0fb65d459aa58a52e_143118_800x0_resize_q75_box.jpg 800w, /2024/ssd-fw/SSDFW-MAIN_hu0e0cb618b8fd3ce0fb65d459aa58a52e_143118_1600x0_resize_q75_box.jpg 1600w"
+                        width="800" 
+                        height="462" 
+                        loading="lazy"
+                        alt="Featured image of post SSD开卡" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/ssd/" >
+                SSD
+            </a>
+        
+            <a href="/categories/%E5%89%8D%E6%B2%BF%E6%8A%80%E6%9C%AF/" >
+                前沿技术
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/2024/ssd-fw/">SSD开卡</a>
+    </h2>
+
+    
+    <h3 class="article-subtitle">
+        SSD固件修复
+    </h3>
+    
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Aug 11, 2024</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-words">
+                    1416字
+                </time>
+            </div>
+        
+    </footer>
+    
+</div>
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="ssd开卡技术">SSD开卡技术</h2>
+<p>SSD（固态硬盘）里采用慧荣主控的品牌很多，其中常见的慧荣主控型号有<code>SM2258XT</code>、<code>SM2259XT</code>、<code>SM2259XT2</code>、<code>SM2259XT3</code>、<code>SM2263XT</code>等等，这些主控的SSD要是坏了或者掉盘了，在保质期里的可以返厂维修，如果过保了，我们还是有办法自己修复的，方法就是用量产软件来开卡。</p>
+<h3 id="准备工作">准备工作</h3>
+<p>准备SM2258XT开卡软件，怎么确定用哪款软件呢？常见步骤是这样：首先拆开SSD看正方形的主控是不是SM2258XT；然后找长方形的闪存颗粒，打开量产部落的闪存查询常用网址，输入闪存颗粒上面的编号来确定制程（有的是黑片或者盖标片，这我不另说，比较复杂），然后再从<a class="link" href="http://club.liangchanba.com/forum-smi-1.html"  target="_blank" rel="noopener"
+    >量产部落</a>上面下载开卡软件。</p>
+<p>准备一个SATA-USB转接硬盘盒（建议使用<code>ASM1153E</code>/<code>JMS578</code>主控的），把SSD插到硬盘盒里，用尖头镊子短接SSD的ROM孔，保持短接，把硬盘盒插到电脑USB接口上（固态U盘可以直接短接ROM，再插电脑USB即可）。</p>
+<h3 id="开卡流程">开卡流程</h3>
+<p>打开开卡软件，点击右侧“搜索设备”，待软件识别到SSD后，把尖头镊子取下。</p>
+<p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 146; 
+			flex-basis: 352px"
+	>
+	<a href="/2024/ssd-fw/mainpage.jpg" data-size="1054x718">
+		<img src="/2024/ssd-fw/mainpage.jpg"
+			width="1054"
+			height="718"
+			srcset="/2024/ssd-fw/mainpage_hu097bcbea9f7afb8365547c9a0939e9ea_119697_480x0_resize_q75_box.jpg 480w, /2024/ssd-fw/mainpage_hu097bcbea9f7afb8365547c9a0939e9ea_119697_1024x0_resize_q75_box.jpg 1024w"
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<p>点击“1024M”，查看ID显示是否正常，有无缺失（如下图，是Channel3的CE0错误），CE错误的原因可能是颗粒损坏、主控损坏、主板损坏、焊接不良等等，一一排除直到正确显示。</p>
+<p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 139; 
+			flex-basis: 334px"
+	>
+	<a href="/2024/ssd-fw/checkce.jpg" data-size="1052x754">
+		<img src="/2024/ssd-fw/checkce.jpg"
+			width="1052"
+			height="754"
+			srcset="/2024/ssd-fw/checkce_hu0cc7b2de01dd58ca8c556d08c8080855_159840_480x0_resize_q75_box.jpg 480w, /2024/ssd-fw/checkce_hu0cc7b2de01dd58ca8c556d08c8080855_159840_1024x0_resize_q75_box.jpg 1024w"
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<p>进入“设定”页面，点击右上角“编辑配置”，输入密码（两个空格），此时软件会解锁，我们可以对配置信息进行修改。</p>
+<p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 140; 
+			flex-basis: 336px"
+	>
+	<a href="/2024/ssd-fw/parameter.jpg" data-size="1053x751">
+		<img src="/2024/ssd-fw/parameter.jpg"
+			width="1053"
+			height="751"
+			srcset="/2024/ssd-fw/parameter_hub0cfcecc8134562e0a54147a2803af88_168726_480x0_resize_q75_box.jpg 480w, /2024/ssd-fw/parameter_hub0cfcecc8134562e0a54147a2803af88_168726_1024x0_resize_q75_box.jpg 1024w"
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<p>点击“自动”，软件会自动识别SSD的颗粒型号，一般选择第一个。</p>
+<p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 696; 
+			flex-basis: 1670px"
+	>
+	<a href="/2024/ssd-fw/flash.jpg" data-size="724x104">
+		<img src="/2024/ssd-fw/flash.jpg"
+			width="724"
+			height="104"
+			srcset="/2024/ssd-fw/flash_hu2151609881272e0a356a79c2d9ba51a9_25053_480x0_resize_q75_box.jpg 480w, /2024/ssd-fw/flash_hu2151609881272e0a356a79c2d9ba51a9_25053_1024x0_resize_q75_box.jpg 1024w"
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<p>下图中可以编辑SSD的产品名称、序列号等等。</p>
+<p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 172; 
+			flex-basis: 413px"
+	>
+	<a href="/2024/ssd-fw/info.jpg" data-size="370x215">
+		<img src="/2024/ssd-fw/info.jpg"
+			width="370"
+			height="215"
+			srcset="/2024/ssd-fw/info_hue3f2efd80039254109471fb65c3c6676_23269_480x0_resize_q75_box.jpg 480w, /2024/ssd-fw/info_hue3f2efd80039254109471fb65c3c6676_23269_1024x0_resize_q75_box.jpg 1024w"
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<p>下图可以设置SSD容量，自动或者手动都行，我一般用Auto自动。</p>
+<p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 289; 
+			flex-basis: 695px"
+	>
+	<a href="/2024/ssd-fw/disksize.jpg" data-size="316x109">
+		<img src="/2024/ssd-fw/disksize.jpg"
+			width="316"
+			height="109"
+			srcset="/2024/ssd-fw/disksize_hu34fb98c277a854b22358e3b92ad125ba_8774_480x0_resize_q75_box.jpg 480w, /2024/ssd-fw/disksize_hu34fb98c277a854b22358e3b92ad125ba_8774_1024x0_resize_q75_box.jpg 1024w"
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<p>SSD类型与功能，一般默认即可。</p>
+<p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 257; 
+			flex-basis: 618px"
+	>
+	<a href="/2024/ssd-fw/config.jpg" data-size="394x153">
+		<img src="/2024/ssd-fw/config.jpg"
+			width="394"
+			height="153"
+			srcset="/2024/ssd-fw/config_hu1a4c59973af10291ed2c757cd20816ea_11283_480x0_resize_q75_box.jpg 480w, /2024/ssd-fw/config_hu1a4c59973af10291ed2c757cd20816ea_11283_1024x0_resize_q75_box.jpg 1024w"
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<p>设置颗粒速度，可根据颗粒情况调节快慢，颗粒质量差需要降低频率，类似于超频的思路，自己尝试即可。</p>
+<p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 283; 
+			flex-basis: 681px"
+	>
+	<a href="/2024/ssd-fw/clock.jpg" data-size="667x235">
+		<img src="/2024/ssd-fw/clock.jpg"
+			width="667"
+			height="235"
+			srcset="/2024/ssd-fw/clock_hu3bcd9b21441de15bf572e9e9eb87aeec_36550_480x0_resize_q75_box.jpg 480w, /2024/ssd-fw/clock_hu3bcd9b21441de15bf572e9e9eb87aeec_36550_1024x0_resize_q75_box.jpg 1024w"
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<p>下图选择量产模式，一般情况下“Pretest”选择1；多个不同等级颗粒一起量产时，可勾选“忽略区分等级”（开启“忽略区分等级”功能）；“CH/CE组态”可以选择颗粒的某个CE量产（譬如4CE的颗粒坏掉1个CE，可以选择只量产另外2个<code>对称CE</code>，这样就能量产出一半的容量，具体可自测）；部分颗粒量产可能报TranADJ错误，此时需要勾选“忽略Tran ADJ”。</p>
+<p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 69; 
+			flex-basis: 165px"
+	>
+	<a href="/2024/ssd-fw/cech.jpg" data-size="379x548">
+		<img src="/2024/ssd-fw/cech.jpg"
+			width="379"
+			height="548"
+			srcset="/2024/ssd-fw/cech_hu1670046152ba4bef8ac4dd4837927f42_34636_480x0_resize_q75_box.jpg 480w, /2024/ssd-fw/cech_hu1670046152ba4bef8ac4dd4837927f42_34636_1024x0_resize_q75_box.jpg 1024w"
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<h3 id="rdt">RDT</h3>
+<p>RDT测试，不勾选“RDT测试”即表示正常ISP开卡，开卡后重新拔插SSD再分区即可正常使用。勾选“RDT测试”相当于写入数据，再读取校验，用来标记坏块。下图左侧是正常ISP开卡，右侧是RDT测试开卡。</p>
+<p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 256; 
+			flex-basis: 615px"
+	>
+	<a href="/2024/ssd-fw/isprdt.jpg" data-size="587x229">
+		<img src="/2024/ssd-fw/isprdt.jpg"
+			width="587"
+			height="229"
+			srcset="/2024/ssd-fw/isprdt_hu905340faaee6ecff0a19aa6486fadb4e_23328_480x0_resize_q75_box.jpg 480w, /2024/ssd-fw/isprdt_hu905340faaee6ecff0a19aa6486fadb4e_23328_1024x0_resize_q75_box.jpg 1024w"
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<p>勾选“RDT测试”后，右边的“RDT设定”按钮即可启用，进行RDT相关设置（可参考下图）。</p>
+<p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 144; 
+			flex-basis: 347px"
+	>
+	<a href="/2024/ssd-fw/rdt.jpg" data-size="792x547">
+		<img src="/2024/ssd-fw/rdt.jpg"
+			width="792"
+			height="547"
+			srcset="/2024/ssd-fw/rdt_hu83efca114b5647693e2e1f8950ae7f42_81902_480x0_resize_q75_box.jpg 480w, /2024/ssd-fw/rdt_hu83efca114b5647693e2e1f8950ae7f42_81902_1024x0_resize_q75_box.jpg 1024w"
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<p>保存设置后点击“开始”按钮进行RDT量产。量产成功后，再把SSD/固态U盘通过硬盘盒或者转接线插到电源上（部分可使用充电头）会自动进行测试，RDT测试时间大约为N个小时（512GB的SSD一般要1.5个小时）。</p>
+<p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 68; 
+			flex-basis: 164px"
+	>
+	<a href="/2024/ssd-fw/rdt2.jpg" data-size="250x364">
+		<img src="/2024/ssd-fw/rdt2.jpg"
+			width="250"
+			height="364"
+			srcset="/2024/ssd-fw/rdt2_hu20a2d5f672c13f3203934663f42668e6_34430_480x0_resize_q75_box.jpg 480w, /2024/ssd-fw/rdt2_hu20a2d5f672c13f3203934663f42668e6_34430_1024x0_resize_q75_box.jpg 1024w"
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<p>RDT结束后可通过下图查看RDT结果，显示RDT PASS则为正常，如未通过可能是颗粒损坏严重。</p>
+<p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 229; 
+			flex-basis: 551px"
+	>
+	<a href="/2024/ssd-fw/rdtresult1.jpg" data-size="1055x459">
+		<img src="/2024/ssd-fw/rdtresult1.jpg"
+			width="1055"
+			height="459"
+			srcset="/2024/ssd-fw/rdtresult1_huaab86167ea466376caafdd63393614b8_121883_480x0_resize_q75_box.jpg 480w, /2024/ssd-fw/rdtresult1_huaab86167ea466376caafdd63393614b8_121883_1024x0_resize_q75_box.jpg 1024w"
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 223; 
+			flex-basis: 537px"
+	>
+	<a href="/2024/ssd-fw/fail.jpg" data-size="1043x466">
+		<img src="/2024/ssd-fw/fail.jpg"
+			width="1043"
+			height="466"
+			srcset="/2024/ssd-fw/fail_hu401dead367e9003d725762e16e0096e2_110072_480x0_resize_q75_box.jpg 480w, /2024/ssd-fw/fail_hu401dead367e9003d725762e16e0096e2_110072_1024x0_resize_q75_box.jpg 1024w"
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<p>需要注意的是，RDT结束后仍需要进行一次ISP开卡，如下图在“Pretest”里可选择3（参考RDT坏块量产），并且不再勾选“RDT测试”，这样量产出的SSD已经屏蔽了坏块，使用起来相对稳定。</p>
+<p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 82; 
+			flex-basis: 198px"
+	>
+	<a href="/2024/ssd-fw/isp2.jpg" data-size="385x465">
+		<img src="/2024/ssd-fw/isp2.jpg"
+			width="385"
+			height="465"
+			srcset="/2024/ssd-fw/isp2_hu2c56642c936437b7e693940821e8db96_32351_480x0_resize_q75_box.jpg 480w, /2024/ssd-fw/isp2_hu2c56642c936437b7e693940821e8db96_32351_1024x0_resize_q75_box.jpg 1024w"
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<h3 id="总结">总结</h3>
+<p>总之最后都要不勾选“RDT测试”，进行ISP开卡才能使SSD正常使用。保存设置，回到“开卡”页面，点击“开始”，等待量产成功。量产成功后，需要重新插一下硬盘盒，对SSD进行分区格式化。</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/ssd/">SSD</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css"integrity="sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js"integrity="sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js"integrity="sha384-vZTG03m&#43;2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.querySelector(`.article-content`), {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ]
+        });})
+</script>
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+        <h2 class="section-title">Related contents</h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="has-image">
+    <a href="/2024/intossd/">
+        
+        
+            <div class="article-image">
+                <img src="/2024/intossd/ssd.27a75879000211d64c90bb8fcf02431e_hu2470aadf0c24fb2b811eab2a80d1c319_111167_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 年度巨献 | 深入浅出SSD（持续更新）"
+                        data-key="IntoSSD" 
+                        data-hash="md5-J6dYeQACEdZMkLuPzwJDHg==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">年度巨献 | 深入浅出SSD（持续更新）</h2>
+        </div>
+    </a>
+</article>
+                
+            </div>
+        </div>
+    
+</aside>
+
+     
+     
+        
+    <script src='//cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js'></script>
+<div id="waline" class="waline-container"></div>
+<style>
+    .waline-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+    .waline-container .vcount {
+        color: var(--card-text-color-main);
+    }
+</style><script>
+    
+    new Waline({"dark":"html[data-scheme=\"dark\"]","el":"#waline","emoji":["https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/bilibili","https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/tw-emoji"],"lang":"zh-CN","locale":{"admin":"Admin"},"requiredMeta":["name","email","url"],"serverURL":"https://api.tfl-asp.github.io/"});
+</script>
+
+    
+
+    <footer class="site-footer">
+  
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+<script>
+(function(u, c) {
+  var d = document, t = 'script', o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+  o.src = u;
+  if (c) { o.addEventListener('load', function(e) { c(e); }); }
+  s.parentNode.insertBefore(o, s);
+})('//cdn.bootcss.com/pangu/3.3.0/pangu.min.js', function() {
+  pangu.spacingPage();
+});
+
+
+</script>
+
+    <section class="copyright">
+        &copy; 
+        
+            2021 - 
+        
+        2024 <a href="https://stack-theme-mod.vercel.app/">TFL-ASP</a>·<i class="fas fa-bell"></i> <a id="days">0</a>Days<br>
+      共书写了13.2k字·共 7篇文章</br><span><p>
+    </section>
+  
+      
+<div class="busuanzi-footer">
+  <span id="busuanzi_container_site_pv">
+    本站总访问量<span id="busuanzi_value_site_pv"></span>次
+  </span>
+  <span id="busuanzi_container_site_uv">
+    本站访客数<span id="busuanzi_value_site_uv"></span>人次
+  </span>
+</div><section class="powerby">
+        
+            TFL's Personal Website | LTP 2.1.27 <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.2.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a><br />
+         <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">© Licensed Under CC BY-NC-SA 4.0</a>
+    </section>
+
+<script>
+var s1 = '2024-07-07';
+s1 = new Date(s1.replace(/-/g, "/"));
+s2 = new Date();
+var days = s2.getTime() - s1.getTime();
+var number_of_days = parseInt(days / (1000 * 60 * 60 * 24));
+document.getElementById('days').innerHTML = number_of_days;
+
+
+</script>
+    
+</footer>
+
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    
+    
+    
+    <aside class="sidebar right-sidebar sticky">
+        
+            <form action="/search/" class="search-form widget" >
+        <p>
+            <label>Search</label>
+            <input name="keyword" required placeholder="Type something..." />
+        
+            <button title="Search">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+            </button>
+        </p>
+    </form>
+        
+            
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#ssd开卡技术">SSD开卡技术</a>
+      <ol>
+        <li><a href="#准备工作">准备工作</a></li>
+        <li><a href="#开卡流程">开卡流程</a></li>
+        <li><a href="#rdt">RDT</a></li>
+        <li><a href="#总结">总结</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+        
+            <section class="widget categories">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-infinity" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M9.828 9.172a4 4 0 1 0 0 5.656 a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828 a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828" />
+</svg>
+
+
+  
+        </div> 
+        <h2 class="widget-title section-title">Categories</h2>
+    <div class="widget-categories--list">
+<div class="widget">
+    <h3 class="widget-title"> </h3>
+    <div class="widget-body">
+        <div class="category-list">
+            <div class="category-list-item"><a href="http://localhost:1313/categories/hugo/" class="category-list-link">hugo<span class="category-list-count">2</a>
+            </span></div>
+            <div class="category-list-item"><a href="http://localhost:1313/categories/pve/" class="category-list-link">pve<span class="category-list-count">1</a>
+            </span></div>
+            <div class="category-list-item"><a href="http://localhost:1313/categories/software/" class="category-list-link">software<span class="category-list-count">1</a>
+            </span></div>
+            <div class="category-list-item"><a href="http://localhost:1313/categories/ssd/" class="category-list-link">ssd<span class="category-list-count">2</a>
+            </span></div>
+            <div class="category-list-item"><a href="http://localhost:1313/categories/%E5%89%8D%E6%B2%BF%E6%8A%80%E6%9C%AF/" class="category-list-link">前沿技术<span class="category-list-count">2</a>
+            </span></div>
+            <div class="category-list-item"><a href="http://localhost:1313/categories/%E6%95%99%E7%A8%8B/" class="category-list-link">教程<span class="category-list-count">3</a>
+            </span></div>
+        </div>
+    </div>
+</div>
+    </div>
+    </section>
+        
+            <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-infinity" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M9.828 9.172a4 4 0 1 0 0 5.656 a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828 a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Archives</h2>
+
+        
+        
+        
+        
+        
+        <div class="widget-archive--list">
+            <div class="archives-year">
+                    <a href="/archives/#2024">
+                        
+                            <span class="year">2024</span>
+                            <span class="count">4</span>
+                        
+                    </a> 
+                </div>
+            <div class="archives-year">
+                    <a href="/archives/#2021">
+                        
+                            <span class="year">2021</span>
+                            <span class="count">1</span>
+                        
+                    </a> 
+                </div>
+            <div class="archives-year">
+                    <a href="/archives/#2020">
+                        
+                            <span class="year">2020</span>
+                            <span class="count">2</span>
+                        
+                    </a> 
+                </div>
+            
+        </div>
+    </section>
+        
+            <section class="widget tagCloud">
+    <div class="widget-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tag" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11 3L20 12a1.5 1.5 0 0 1 0 2L14 20a1.5 1.5 0 0 1 -2 0L3 11v-4a4 4 0 0 1 4 -4h4" />
+  <circle cx="9" cy="9" r="2" />
+</svg>
+
+
+
+    </div>
+    <h2 class="widget-title section-title">Tags</h2>
+
+    <div class="tagCloud-tags">
+        
+            <a href="/tags/ssd/" class="font_size_2">
+                SSD
+            </a>
+        
+            <a href="/tags/css/" class="font_size_1">
+                Css
+            </a>
+        
+            <a href="/tags/html/" class="font_size_1">
+                Html
+            </a>
+        
+            <a href="/tags/hugo/" class="font_size_1">
+                Hugo
+            </a>
+        
+            <a href="/tags/markdown/" class="font_size_1">
+                Markdown
+            </a>
+        
+            <a href="/tags/pve/" class="font_size_1">
+                PVE
+            </a>
+        
+            <a href="/tags/software/" class="font_size_1">
+                Software
+            </a>
+        
+            <a href="/tags/themes/" class="font_size_1">
+                Themes
+            </a>
+        
+    </div>
+</section>
+        
+    </aside>
+
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

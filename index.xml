@@ -6,7 +6,294 @@
         <description>Recent content on 改BUG的大橘</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 05 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 11 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>SSD开卡</title>
+        <link>http://localhost:1313/2024/ssd-fw/</link>
+        <pubDate>Sun, 11 Aug 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/2024/ssd-fw/</guid>
+        <description>&lt;img src="http://localhost:1313/2024/ssd-fw/SSDFW-MAIN.jpg" alt="Featured image of post SSD开卡" /&gt;&lt;h2 id=&#34;ssd开卡技术&#34;&gt;SSD开卡技术&lt;/h2&gt;
+&lt;p&gt;SSD（固态硬盘）里采用慧荣主控的品牌很多，其中常见的慧荣主控型号有&lt;code&gt;SM2258XT&lt;/code&gt;、&lt;code&gt;SM2259XT&lt;/code&gt;、&lt;code&gt;SM2259XT2&lt;/code&gt;、&lt;code&gt;SM2259XT3&lt;/code&gt;、&lt;code&gt;SM2263XT&lt;/code&gt;等等，这些主控的SSD要是坏了或者掉盘了，在保质期里的可以返厂维修，如果过保了，我们还是有办法自己修复的，方法就是用量产软件来开卡。&lt;/p&gt;
+&lt;h3 id=&#34;准备工作&#34;&gt;准备工作&lt;/h3&gt;
+&lt;p&gt;准备SM2258XT开卡软件，怎么确定用哪款软件呢？常见步骤是这样：首先拆开SSD看正方形的主控是不是SM2258XT；然后找长方形的闪存颗粒，打开量产部落的闪存查询常用网址，输入闪存颗粒上面的编号来确定制程（有的是黑片或者盖标片，这我不另说，比较复杂），然后再从&lt;a class=&#34;link&#34; href=&#34;http://club.liangchanba.com/forum-smi-1.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;量产部落&lt;/a&gt;上面下载开卡软件。&lt;/p&gt;
+&lt;p&gt;准备一个SATA-USB转接硬盘盒（建议使用&lt;code&gt;ASM1153E&lt;/code&gt;/&lt;code&gt;JMS578&lt;/code&gt;主控的），把SSD插到硬盘盒里，用尖头镊子短接SSD的ROM孔，保持短接，把硬盘盒插到电脑USB接口上（固态U盘可以直接短接ROM，再插电脑USB即可）。&lt;/p&gt;
+&lt;h3 id=&#34;开卡流程&#34;&gt;开卡流程&lt;/h3&gt;
+&lt;p&gt;打开开卡软件，点击右侧“搜索设备”，待软件识别到SSD后，把尖头镊子取下。&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 146; 
+			flex-basis: 352px&#34;
+	&gt;
+	&lt;a href=&#34;http://localhost:1313/2024/ssd-fw/mainpage.jpg&#34; data-size=&#34;1054x718&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/2024/ssd-fw/mainpage.jpg&#34;
+			width=&#34;1054&#34;
+			height=&#34;718&#34;
+			srcset=&#34;http://localhost:1313/2024/ssd-fw/mainpage_hu097bcbea9f7afb8365547c9a0939e9ea_119697_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2024/ssd-fw/mainpage_hu097bcbea9f7afb8365547c9a0939e9ea_119697_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;点击“1024M”，查看ID显示是否正常，有无缺失（如下图，是Channel3的CE0错误），CE错误的原因可能是颗粒损坏、主控损坏、主板损坏、焊接不良等等，一一排除直到正确显示。&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 139; 
+			flex-basis: 334px&#34;
+	&gt;
+	&lt;a href=&#34;http://localhost:1313/2024/ssd-fw/checkce.jpg&#34; data-size=&#34;1052x754&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/2024/ssd-fw/checkce.jpg&#34;
+			width=&#34;1052&#34;
+			height=&#34;754&#34;
+			srcset=&#34;http://localhost:1313/2024/ssd-fw/checkce_hu0cc7b2de01dd58ca8c556d08c8080855_159840_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2024/ssd-fw/checkce_hu0cc7b2de01dd58ca8c556d08c8080855_159840_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;进入“设定”页面，点击右上角“编辑配置”，输入密码（两个空格），此时软件会解锁，我们可以对配置信息进行修改。&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 140; 
+			flex-basis: 336px&#34;
+	&gt;
+	&lt;a href=&#34;http://localhost:1313/2024/ssd-fw/parameter.jpg&#34; data-size=&#34;1053x751&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/2024/ssd-fw/parameter.jpg&#34;
+			width=&#34;1053&#34;
+			height=&#34;751&#34;
+			srcset=&#34;http://localhost:1313/2024/ssd-fw/parameter_hub0cfcecc8134562e0a54147a2803af88_168726_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2024/ssd-fw/parameter_hub0cfcecc8134562e0a54147a2803af88_168726_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;点击“自动”，软件会自动识别SSD的颗粒型号，一般选择第一个。&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 696; 
+			flex-basis: 1670px&#34;
+	&gt;
+	&lt;a href=&#34;http://localhost:1313/2024/ssd-fw/flash.jpg&#34; data-size=&#34;724x104&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/2024/ssd-fw/flash.jpg&#34;
+			width=&#34;724&#34;
+			height=&#34;104&#34;
+			srcset=&#34;http://localhost:1313/2024/ssd-fw/flash_hu2151609881272e0a356a79c2d9ba51a9_25053_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2024/ssd-fw/flash_hu2151609881272e0a356a79c2d9ba51a9_25053_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;下图中可以编辑SSD的产品名称、序列号等等。&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 172; 
+			flex-basis: 413px&#34;
+	&gt;
+	&lt;a href=&#34;http://localhost:1313/2024/ssd-fw/info.jpg&#34; data-size=&#34;370x215&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/2024/ssd-fw/info.jpg&#34;
+			width=&#34;370&#34;
+			height=&#34;215&#34;
+			srcset=&#34;http://localhost:1313/2024/ssd-fw/info_hue3f2efd80039254109471fb65c3c6676_23269_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2024/ssd-fw/info_hue3f2efd80039254109471fb65c3c6676_23269_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;下图可以设置SSD容量，自动或者手动都行，我一般用Auto自动。&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 289; 
+			flex-basis: 695px&#34;
+	&gt;
+	&lt;a href=&#34;http://localhost:1313/2024/ssd-fw/disksize.jpg&#34; data-size=&#34;316x109&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/2024/ssd-fw/disksize.jpg&#34;
+			width=&#34;316&#34;
+			height=&#34;109&#34;
+			srcset=&#34;http://localhost:1313/2024/ssd-fw/disksize_hu34fb98c277a854b22358e3b92ad125ba_8774_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2024/ssd-fw/disksize_hu34fb98c277a854b22358e3b92ad125ba_8774_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;SSD类型与功能，一般默认即可。&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 257; 
+			flex-basis: 618px&#34;
+	&gt;
+	&lt;a href=&#34;http://localhost:1313/2024/ssd-fw/config.jpg&#34; data-size=&#34;394x153&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/2024/ssd-fw/config.jpg&#34;
+			width=&#34;394&#34;
+			height=&#34;153&#34;
+			srcset=&#34;http://localhost:1313/2024/ssd-fw/config_hu1a4c59973af10291ed2c757cd20816ea_11283_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2024/ssd-fw/config_hu1a4c59973af10291ed2c757cd20816ea_11283_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;设置颗粒速度，可根据颗粒情况调节快慢，颗粒质量差需要降低频率，类似于超频的思路，自己尝试即可。&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 283; 
+			flex-basis: 681px&#34;
+	&gt;
+	&lt;a href=&#34;http://localhost:1313/2024/ssd-fw/clock.jpg&#34; data-size=&#34;667x235&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/2024/ssd-fw/clock.jpg&#34;
+			width=&#34;667&#34;
+			height=&#34;235&#34;
+			srcset=&#34;http://localhost:1313/2024/ssd-fw/clock_hu3bcd9b21441de15bf572e9e9eb87aeec_36550_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2024/ssd-fw/clock_hu3bcd9b21441de15bf572e9e9eb87aeec_36550_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;下图选择量产模式，一般情况下“Pretest”选择1；多个不同等级颗粒一起量产时，可勾选“忽略区分等级”（开启“忽略区分等级”功能）；“CH/CE组态”可以选择颗粒的某个CE量产（譬如4CE的颗粒坏掉1个CE，可以选择只量产另外2个&lt;code&gt;对称CE&lt;/code&gt;，这样就能量产出一半的容量，具体可自测）；部分颗粒量产可能报TranADJ错误，此时需要勾选“忽略Tran ADJ”。&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 69; 
+			flex-basis: 165px&#34;
+	&gt;
+	&lt;a href=&#34;http://localhost:1313/2024/ssd-fw/cech.jpg&#34; data-size=&#34;379x548&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/2024/ssd-fw/cech.jpg&#34;
+			width=&#34;379&#34;
+			height=&#34;548&#34;
+			srcset=&#34;http://localhost:1313/2024/ssd-fw/cech_hu1670046152ba4bef8ac4dd4837927f42_34636_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2024/ssd-fw/cech_hu1670046152ba4bef8ac4dd4837927f42_34636_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&#34;rdt&#34;&gt;RDT&lt;/h3&gt;
+&lt;p&gt;RDT测试，不勾选“RDT测试”即表示正常ISP开卡，开卡后重新拔插SSD再分区即可正常使用。勾选“RDT测试”相当于写入数据，再读取校验，用来标记坏块。下图左侧是正常ISP开卡，右侧是RDT测试开卡。&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 256; 
+			flex-basis: 615px&#34;
+	&gt;
+	&lt;a href=&#34;http://localhost:1313/2024/ssd-fw/isprdt.jpg&#34; data-size=&#34;587x229&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/2024/ssd-fw/isprdt.jpg&#34;
+			width=&#34;587&#34;
+			height=&#34;229&#34;
+			srcset=&#34;http://localhost:1313/2024/ssd-fw/isprdt_hu905340faaee6ecff0a19aa6486fadb4e_23328_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2024/ssd-fw/isprdt_hu905340faaee6ecff0a19aa6486fadb4e_23328_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;勾选“RDT测试”后，右边的“RDT设定”按钮即可启用，进行RDT相关设置（可参考下图）。&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 144; 
+			flex-basis: 347px&#34;
+	&gt;
+	&lt;a href=&#34;http://localhost:1313/2024/ssd-fw/rdt.jpg&#34; data-size=&#34;792x547&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/2024/ssd-fw/rdt.jpg&#34;
+			width=&#34;792&#34;
+			height=&#34;547&#34;
+			srcset=&#34;http://localhost:1313/2024/ssd-fw/rdt_hu83efca114b5647693e2e1f8950ae7f42_81902_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2024/ssd-fw/rdt_hu83efca114b5647693e2e1f8950ae7f42_81902_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;保存设置后点击“开始”按钮进行RDT量产。量产成功后，再把SSD/固态U盘通过硬盘盒或者转接线插到电源上（部分可使用充电头）会自动进行测试，RDT测试时间大约为N个小时（512GB的SSD一般要1.5个小时）。&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 68; 
+			flex-basis: 164px&#34;
+	&gt;
+	&lt;a href=&#34;http://localhost:1313/2024/ssd-fw/rdt2.jpg&#34; data-size=&#34;250x364&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/2024/ssd-fw/rdt2.jpg&#34;
+			width=&#34;250&#34;
+			height=&#34;364&#34;
+			srcset=&#34;http://localhost:1313/2024/ssd-fw/rdt2_hu20a2d5f672c13f3203934663f42668e6_34430_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2024/ssd-fw/rdt2_hu20a2d5f672c13f3203934663f42668e6_34430_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;RDT结束后可通过下图查看RDT结果，显示RDT PASS则为正常，如未通过可能是颗粒损坏严重。&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 229; 
+			flex-basis: 551px&#34;
+	&gt;
+	&lt;a href=&#34;http://localhost:1313/2024/ssd-fw/rdtresult1.jpg&#34; data-size=&#34;1055x459&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/2024/ssd-fw/rdtresult1.jpg&#34;
+			width=&#34;1055&#34;
+			height=&#34;459&#34;
+			srcset=&#34;http://localhost:1313/2024/ssd-fw/rdtresult1_huaab86167ea466376caafdd63393614b8_121883_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2024/ssd-fw/rdtresult1_huaab86167ea466376caafdd63393614b8_121883_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 223; 
+			flex-basis: 537px&#34;
+	&gt;
+	&lt;a href=&#34;http://localhost:1313/2024/ssd-fw/fail.jpg&#34; data-size=&#34;1043x466&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/2024/ssd-fw/fail.jpg&#34;
+			width=&#34;1043&#34;
+			height=&#34;466&#34;
+			srcset=&#34;http://localhost:1313/2024/ssd-fw/fail_hu401dead367e9003d725762e16e0096e2_110072_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2024/ssd-fw/fail_hu401dead367e9003d725762e16e0096e2_110072_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;需要注意的是，RDT结束后仍需要进行一次ISP开卡，如下图在“Pretest”里可选择3（参考RDT坏块量产），并且不再勾选“RDT测试”，这样量产出的SSD已经屏蔽了坏块，使用起来相对稳定。&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 82; 
+			flex-basis: 198px&#34;
+	&gt;
+	&lt;a href=&#34;http://localhost:1313/2024/ssd-fw/isp2.jpg&#34; data-size=&#34;385x465&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/2024/ssd-fw/isp2.jpg&#34;
+			width=&#34;385&#34;
+			height=&#34;465&#34;
+			srcset=&#34;http://localhost:1313/2024/ssd-fw/isp2_hu2c56642c936437b7e693940821e8db96_32351_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2024/ssd-fw/isp2_hu2c56642c936437b7e693940821e8db96_32351_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&#34;总结&#34;&gt;总结&lt;/h3&gt;
+&lt;p&gt;总之最后都要不勾选“RDT测试”，进行ISP开卡才能使SSD正常使用。保存设置，回到“开卡”页面，点击“开始”，等待量产成功。量产成功后，需要重新插一下硬盘盒，对SSD进行分区格式化。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>年度巨献 | 深入浅出SSD（持续更新）</title>
         <link>http://localhost:1313/2024/intossd/</link>
         <pubDate>Sun, 04 Aug 2024 00:00:00 +0000</pubDate>
