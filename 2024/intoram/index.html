@@ -331,7 +331,7 @@
 
 
                 <time class="article-words">
-                    1476字
+                    2902字
                 </time>
             </div>
         
@@ -471,6 +471,84 @@
 </figure></p>
 <p>   与DDR相比，LPDDR内存全称是<code>Low Power Double Data Rate SDRAM</code>，中文意为低功耗双倍数据速率内存，又称为mDDR（<code>Mobile DDR SDRM</code>），主要针对于<strong>移动端</strong>电子产品。
    LPDDR4X可以看作是LPDDR4的省电优化版本，比LPDDR4功耗更低、更省电；目前市面上主流旗舰手机内存使用的都是<code>LPDDR4X</code>和<code>LPDDR4</code>，由于二者经常同时出现，名字也十分相似，所以很容易让人混淆。</p>
+<h2 id="eccnone-ecc与reg-ecc">ECC、None-ECC与REG-ECC</h2>
+<p>ECC，全称 <code>Error Correction Code</code>，是一种可以自动检测并修复数据错误的类型的计算机数据存储。ECC 内存在存储数据时会生成校验码，当数据被重新读取时，它会使用这些校验码来检查是否有错误发生。如果检测到错误，ECC 内存会尝试自动修复这些错误，或者至少通知系统错误已经发生。</p>
+<h4 id="11-工作原理">1.1 工作原理</h4>
+<p>ECC内存通过奇偶校验或更复杂的纠错码来检测和纠正内存中的数据错误。</p>
+<p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 241; 
+			flex-basis: 580px"
+	>
+	<a href="/2024/intoram/ecc1.jpg" data-size="522x216">
+		<img src="/2024/intoram/ecc1.jpg"
+			width="522"
+			height="216"
+			srcset="/2024/intoram/ecc1_huea089c95978b0f79e58957b0efc0db02_29498_480x0_resize_q75_box.jpg 480w, /2024/intoram/ecc1_huea089c95978b0f79e58957b0efc0db02_29498_1024x0_resize_q75_box.jpg 1024w"
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<p>1、奇偶校验位： 奇偶校验是一种简单的错误检测方法，它通过在数据字节末尾添加一个额外的位（奇校验位或偶校验位）来检测错误。根据校验位的设置，数据字节的总位数可以是奇数或偶数。例如，如果校验位设置为使数据字节的总位数为奇数，那么校验位将被设置为确保总位数为奇数。如果在数据传输过程中发生了错误，奇偶校验位将不匹配，从而指示出现错误。</p>
+<p>2、纠错码： 纠错码通常更复杂，可以检测和纠正多个位的错误。ECC内存使用纠错码，如Hamming码或其他类似的编码方案，生成校验位。这些校验位用于检测和纠正内存中的数据错误。例如，Hamming码可以纠正单个位错误，以及检测多位错误。</p>
+<p>3、错误检测和纠正： 当数据从内存中读取时，内存控制器会计算校验位并与存储的校验位进行比较。如果检测到校验位不匹配，内存控制器将确定发生了错误，并尝试纠正错误（如果支持）。这使ECC内存能够在读取数据时检测到单个位错误并进行纠正，以确保数据的完整性。</p>
+<p>4、纠错能力： 纠错码的能力取决于其设计和级别。某些ECC内存可以纠正单个位错误，而其他更高级别的ECC内存可以纠正多个位错误。</p>
+<h4 id="12-特点">1.2 特点</h4>
+<blockquote>
+<p>1、错误检测和纠正： ECC内存使用附加的校验位来检测并纠正内存中的单个位错误。这意味着即使在内存硬件出现故障的情况下，服务器仍然可以正常运行。</p>
+</blockquote>
+<blockquote>
+<p>2、数据完整性： ECC内存可确保存储在内存中的数据的完整性，因此在关键任务和数据中使用它可以防止数据损坏。</p>
+</blockquote>
+<blockquote>
+<p>3、可靠性： 由于其纠正能力，ECC内存在服务器环境中非常可靠，可以减少因内存故障而导致的服务器停机时间。</p>
+</blockquote>
+<blockquote>
+<p>4、成本： 由于其高级功能，ECC内存通常比非ECC内存更昂贵。</p>
+</blockquote>
+<h4 id="13适用场景">1.3适用场景</h4>
+<p>1、关键任务和数据： 对于需要高度可靠性和数据完整性的服务器，如金融机构、医疗保健、科学计算等，ECC内存是必不可少的选择。它可以检测并纠正内存中的单个位错误，防止数据损坏。</p>
+<p>2、大规模服务器： 在大规模数据中心环境中，单个位错误可能会发生，ECC内存有助于防止这些错误对整个系统的影响。</p>
+<p>3、虚拟化： 虚拟化环境中，多个虚拟机共享同一台物理服务器的内存。ECC内存可以减少虚拟机之间的内存冲突和数据错误。</p>
+<p>4、长时间运行： 如果您的服务器需要长时间运行，ECC内存有助于减少内存错误导致的系统崩溃的风险。</p>
+<p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 104; 
+			flex-basis: 250px"
+	>
+	<a href="/2024/intoram/ecc2.jpg" data-size="686x657">
+		<img src="/2024/intoram/ecc2.jpg"
+			width="686"
+			height="657"
+			srcset="/2024/intoram/ecc2_hu397073dee7cc8517ef682580373b1899_68362_480x0_resize_q75_box.jpg 480w, /2024/intoram/ecc2_hu397073dee7cc8517ef682580373b1899_68362_1024x0_resize_q75_box.jpg 1024w"
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<h3 id="none-ecc-内存">None-ECC 内存</h3>
+<h4 id="21-特点">2.1 特点</h4>
+<p>1、性能： 由于不需要额外的校验计算，非ECC内存通常比ECC内存具有稍微更高的性能。</p>
+<p>2、成本： 非ECC内存相对便宜，适用于预算有限的服务器。</p>
+<h4 id="22-适用场景">2.2 适用场景</h4>
+<p>非ECC内存通常更适合一些性能密集型的应用和成本敏感型的环境，包括：</p>
+<blockquote>
+<p>1、Web服务器： 对于大多数Web服务器，性能可能比数据完整性更重要。非ECC内存提供了更高的性能，并且通常更经济实惠。</p>
+</blockquote>
+<blockquote>
+<p>2、游戏服务器： 在游戏服务器中，快速响应时间和较低的延迟可能更加关键，而非ECC内存通常具备更高的性能。</p>
+</blockquote>
+<blockquote>
+<p>3、一般用途服务器： 对于一般用途的服务器，非ECC内存可能足够，因为数据完整性不是最重要的考虑因素。</p>
+</blockquote>
+<blockquote>
+<p>4、预算受限： 如果您的预算有限，非ECC内存通常更经济实惠。</p>
+</blockquote>
 
 </section>
 
@@ -652,7 +730,7 @@
             2021 - 
         
         2024 <a href="https://stack-theme-mod.vercel.app/">TFL-ASP</a>·<i class="fas fa-bell"></i> <a id="days">0</a>Days<br>
-      共书写了14.7k字·共 8篇文章</br><span><p>
+      共书写了16.1k字·共 8篇文章</br><span><p>
     </section>
   
       
@@ -811,6 +889,23 @@ document.getElementById('days').innerHTML = number_of_days;
     <li><a href="#ram">RAM</a></li>
     <li><a href="#sram与dram">SRAM与DRAM</a></li>
     <li><a href="#ddr基础">DDR基础</a></li>
+    <li><a href="#eccnone-ecc与reg-ecc">ECC、None-ECC与REG-ECC</a>
+      <ol>
+        <li>
+          <ol>
+            <li><a href="#11-工作原理">1.1 工作原理</a></li>
+            <li><a href="#12-特点">1.2 特点</a></li>
+            <li><a href="#13适用场景">1.3适用场景</a></li>
+          </ol>
+        </li>
+        <li><a href="#none-ecc-内存">None-ECC 内存</a>
+          <ol>
+            <li><a href="#21-特点">2.1 特点</a></li>
+            <li><a href="#22-适用场景">2.2 适用场景</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
   </ol>
 </nav>
         </div>
