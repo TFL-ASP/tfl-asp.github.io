@@ -2,59 +2,59 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on 改BUG的大橘</title>
-    <link>http://localhost:8372/categories/</link>
+    <link>http://localhost:1313/categories/</link>
     <description>Recent content in Categories on 改BUG的大橘</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 19 Aug 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:8372/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>RAM</title>
-      <link>http://localhost:8372/categories/ram/</link>
+      <link>http://localhost:1313/categories/ram/</link>
       <pubDate>Mon, 19 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:8372/categories/ram/</guid>
+      <guid>http://localhost:1313/categories/ram/</guid>
       <description></description>
     </item>
     <item>
       <title>前沿技术</title>
-      <link>http://localhost:8372/categories/%E5%89%8D%E6%B2%BF%E6%8A%80%E6%9C%AF/</link>
+      <link>http://localhost:1313/categories/%E5%89%8D%E6%B2%BF%E6%8A%80%E6%9C%AF/</link>
       <pubDate>Mon, 19 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:8372/categories/%E5%89%8D%E6%B2%BF%E6%8A%80%E6%9C%AF/</guid>
+      <guid>http://localhost:1313/categories/%E5%89%8D%E6%B2%BF%E6%8A%80%E6%9C%AF/</guid>
       <description></description>
     </item>
     <item>
       <title>SSD</title>
-      <link>http://localhost:8372/categories/ssd/</link>
+      <link>http://localhost:1313/categories/ssd/</link>
       <pubDate>Sun, 11 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:8372/categories/ssd/</guid>
+      <guid>http://localhost:1313/categories/ssd/</guid>
       <description></description>
     </item>
     <item>
       <title>PVE</title>
-      <link>http://localhost:8372/categories/pve/</link>
+      <link>http://localhost:1313/categories/pve/</link>
       <pubDate>Mon, 15 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:8372/categories/pve/</guid>
+      <guid>http://localhost:1313/categories/pve/</guid>
       <description></description>
     </item>
     <item>
       <title>教程</title>
-      <link>http://localhost:8372/categories/%E6%95%99%E7%A8%8B/</link>
+      <link>http://localhost:1313/categories/%E6%95%99%E7%A8%8B/</link>
       <pubDate>Mon, 15 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:8372/categories/%E6%95%99%E7%A8%8B/</guid>
+      <guid>http://localhost:1313/categories/%E6%95%99%E7%A8%8B/</guid>
       <description></description>
     </item>
     <item>
       <title>Hugo</title>
-      <link>http://localhost:8372/categories/hugo/</link>
+      <link>http://localhost:1313/categories/hugo/</link>
       <pubDate>Thu, 11 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:8372/categories/hugo/</guid>
+      <guid>http://localhost:1313/categories/hugo/</guid>
       <description></description>
     </item>
     <item>
       <title>Software</title>
-      <link>http://localhost:8372/categories/software/</link>
+      <link>http://localhost:1313/categories/software/</link>
       <pubDate>Sun, 10 Oct 2021 00:00:00 +0000</pubDate>
-      <guid>http://localhost:8372/categories/software/</guid>
+      <guid>http://localhost:1313/categories/software/</guid>
       <description></description>
     </item>
   </channel>
