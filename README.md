@@ -1,6 +1,6 @@
 ---
 title: About
-description: About TFL's Personal Website
+description: About this website
 date: '2024-08-05'
 aliases:
   - about-us
@@ -13,14 +13,16 @@ menu:
         params:
             icon: user
 ---
-由TFL-ASP本人搭建的个人博客，还有很多功能待完善，欢迎邮箱联系！
+由 **改BUG的大橘**（TFL-ASP）本人搭建的个人博客，还有很多功能待完善，欢迎联系！
 
-Contact Us :
+Bilibili：[改Bug的大橘](https://space.bilibili.com/3494374367300353)
 
 Email:
 
-	2507280495@qq.com 
+> 2507280495@qq.com 
 
-	tfldd@outlook.com
+> tfldd@outlook.com
 
 Learn more and contribute on [GitHub](https://github.com/XIAOXIANGPENG/xiaoxiangpeng.github.io).
+
+特别鸣谢：[小猫蛋卷](https://space.bilibili.com/257463461)
