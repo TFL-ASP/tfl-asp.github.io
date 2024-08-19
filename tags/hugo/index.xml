@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hugo on 改BUG的大橘</title>
-    <link>http://tflasp.fun:1313/tags/hugo/</link>
+    <link>http://localhost:1313/tags/hugo/</link>
     <description>Recent content in Hugo on 改BUG的大橘</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 03 Aug 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://tflasp.fun:1313/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo | 使用Hugo&#43;Stack主题搭建博客</title>
-      <link>http://tflasp.fun:1313/2024/hugo-stack/</link>
+      <link>http://localhost:1313/2024/hugo-stack/</link>
       <pubDate>Thu, 11 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://tflasp.fun:1313/2024/hugo-stack/</guid>
+      <guid>http://localhost:1313/2024/hugo-stack/</guid>
       <description>Github仓库地址：hugo-stack-theme 使用方式 从零建立博客：Fork仓库到自己账号下，用Github 注册 Vercel，依次点</description>
     </item>
   </channel>

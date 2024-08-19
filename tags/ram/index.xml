@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>RAM on 改BUG的大橘</title>
+    <link>http://localhost:1313/tags/ram/</link>
+    <description>Recent content in RAM on 改BUG的大橘</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 19 Aug 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/ram/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>RAM</title>
+      <link>http://localhost:1313/2024/intoram/</link>
+      <pubDate>Mon, 19 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/2024/intoram/</guid>
+      <description>存储系统 RAM RAM（随机访问存储器）： RAM 是计算机中用于临时存储数据和程序的一种类型的存储器。它是一种易失性存储器，意味着当计算机断电或重新启动</description>
+    </item>
+  </channel>
+</rss>
