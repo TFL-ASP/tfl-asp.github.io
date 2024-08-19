@@ -24,5 +24,3 @@ Email:
 > tfldd@outlook.com
 
 Learn more and contribute on [GitHub](https://github.com/XIAOXIANGPENG/xiaoxiangpeng.github.io).
-
-特别鸣谢：[小猫蛋卷](https://space.bilibili.com/257463461)
