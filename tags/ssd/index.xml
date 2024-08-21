@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>SSD on 改BUG的大橘</title>
-    <link>https://tfl-asp.github.io/tags/ssd/</link>
+    <link>https://tflasp.fun/tags/ssd/</link>
     <description>Recent content in SSD on 改BUG的大橘</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 11 Aug 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://tfl-asp.github.io/tags/ssd/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tflasp.fun/tags/ssd/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>SSD开卡</title>
-      <link>https://tfl-asp.github.io/2024/ssd-fw/</link>
+      <link>https://tflasp.fun/2024/ssd-fw/</link>
       <pubDate>Sun, 11 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://tfl-asp.github.io/2024/ssd-fw/</guid>
+      <guid>https://tflasp.fun/2024/ssd-fw/</guid>
       <description>SSD开卡技术 SSD（固态硬盘）里采用慧荣主控的品牌很多，其中常见的慧荣主控型号有SM2258XT、SM2259XT、SM2259XT2、S</description>
     </item>
     <item>
       <title>年度巨献 | 深入浅出SSD（持续更新）</title>
-      <link>https://tfl-asp.github.io/2024/intossd/</link>
+      <link>https://tflasp.fun/2024/intossd/</link>
       <pubDate>Sun, 04 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://tfl-asp.github.io/2024/intossd/</guid>
+      <guid>https://tflasp.fun/2024/intossd/</guid>
       <description>SSD简介 SSD (Solid State Drive)，即固态硬盘，是一种以半导体闪存(NAND Flash)作为介质的存储设备。和传统机械硬盘(Hard Disk Drive，</description>
     </item>
   </channel>

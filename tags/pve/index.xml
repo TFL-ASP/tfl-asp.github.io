@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>PVE on 改BUG的大橘</title>
-    <link>https://tfl-asp.github.io/tags/pve/</link>
+    <link>https://tflasp.fun/tags/pve/</link>
     <description>Recent content in PVE on 改BUG的大橘</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 15 Jul 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://tfl-asp.github.io/tags/pve/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tflasp.fun/tags/pve/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>PVE 8 安装与优化</title>
-      <link>https://tfl-asp.github.io/2024/pveinstall/</link>
+      <link>https://tflasp.fun/2024/pveinstall/</link>
       <pubDate>Mon, 15 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>https://tfl-asp.github.io/2024/pveinstall/</guid>
+      <guid>https://tflasp.fun/2024/pveinstall/</guid>
       <description>前言 该文章还在CSDN发表，文章链接：Link PVE镜像下载 1、在浏览器输入以下网址下载pve的iso安装镜像。 Download Proxmox VE 清华大学开源镜像站，下</description>
     </item>
   </channel>
