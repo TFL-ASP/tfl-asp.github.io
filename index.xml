@@ -6,7 +6,411 @@
         <description>Recent content on 改BUG的大橘</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 19 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://tflasp.fun/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 22 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://tflasp.fun/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>一只垃圾佬的探索历程（硬件平台篇）</title>
+        <link>https://tflasp.fun/2024/record-hw/</link>
+        <pubDate>Thu, 22 Aug 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://tflasp.fun/2024/record-hw/</guid>
+        <description>&lt;img src="https://tflasp.fun/2024/record-hw/3A2000C.jpg" alt="Featured image of post 一只垃圾佬的探索历程（硬件平台篇）" /&gt;&lt;h2 id=&#34;梦开始的地方&#34;&gt;梦开始的地方&lt;/h2&gt;
+&lt;p&gt;2023年6月，最早的配置是：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Intel Core i5-13400F&lt;/p&gt;
+&lt;p&gt;铭瑄B760M WIFI&lt;/p&gt;
+&lt;p&gt;华硕ATS RTX3060Ti&lt;/p&gt;
+&lt;p&gt;威刚DDR4 3200 8*2&lt;/p&gt;
+&lt;p&gt;鑫谷GN650W&lt;/p&gt;
+&lt;p&gt;KIOXIA RC20 1T&lt;/p&gt;
+&lt;p&gt;aigo P7000Z 2TB&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在当时的性价比还算可以吧，当时12600KF的价格可谓是居高不下，索性选择了当时最新的13代13400F（线程数更多，对生产力友好一些）&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://img.picui.cn/free/2024/08/22/66c6d97d6ac97.png&#34; &gt;
+		&lt;img src=&#34;https://img.picui.cn/free/2024/08/22/66c6d97d6ac97.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;探索历程&#34;&gt;探索历程&lt;/h2&gt;
+&lt;h3 id=&#34;主线-双路x79&#34;&gt;主线-双路X79&lt;/h3&gt;
+&lt;p&gt;在家用平台用腻了过后，一天在淘宝上看到了一个非常逆天的主板:&lt;code&gt;Insuper M2220 X79&lt;/code&gt;.双路X79，仅需260包邮！带有10个SATA口，简直就是NAS党的福音！然后还能搭配超级便宜32元一根16GB的DDR3 RECC内存，实在是太香了，于是果断入手，开启了折腾之路。&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 74; 
+			flex-basis: 179px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2024/record-hw/M2220.jpg&#34; data-size=&#34;1280x1707&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2024/record-hw/M2220.jpg&#34;
+			width=&#34;1280&#34;
+			height=&#34;1707&#34;
+			srcset=&#34;https://tflasp.fun/2024/record-hw/M2220_hu5862341271831252275.jpg 480w, https://tflasp.fun/2024/record-hw/M2220_hu4644059091627050841.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 74; 
+			flex-basis: 179px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2024/record-hw/10SATA.jpg&#34; data-size=&#34;1280x1707&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2024/record-hw/10SATA.jpg&#34;
+			width=&#34;1280&#34;
+			height=&#34;1707&#34;
+			srcset=&#34;https://tflasp.fun/2024/record-hw/10SATA_hu8892890855171542580.jpg 480w, https://tflasp.fun/2024/record-hw/10SATA_hu4172127157622814841.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 74; 
+			flex-basis: 179px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2024/record-hw/D3-RECC.jpg&#34; data-size=&#34;1280x1707&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2024/record-hw/D3-RECC.jpg&#34;
+			width=&#34;1280&#34;
+			height=&#34;1707&#34;
+			srcset=&#34;https://tflasp.fun/2024/record-hw/D3-RECC_hu419420536012649300.jpg 480w, https://tflasp.fun/2024/record-hw/D3-RECC_hu14190055289508631013.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;这个服务器板子是E-ATX规格，现在想起也是幸运，没有买到诸如&lt;code&gt;RH2288HV3&lt;/code&gt;那种定制板子，普通机箱装不了。另外，折腾这个板子也是坎坷：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;1、开机慢：当然，本来就不是为家用而设计的，在启动时要加载BMC管理系统（带外管理），如果插入了直通卡，还要加载HBA卡的BIOS，总之，开机时间不会低于一分钟。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;2、10个SATA口识别不全：由于板子比较老（2013年的），所以查找官网资料也比较困难。这个板子有10个由C602芯片组引出来的SATA口，还有3个扩展出来的SAS接口（物理外形与SATA相同）。在排除了BIOS问题和硬件方面的问题后，最后发现是驱动问题。询问卖家要了驱动后，发现Windows10 22H2并不能打上驱动（安装ini），最后发现只有&lt;code&gt;Windows server&lt;/code&gt;和某些&lt;code&gt;Linux server&lt;/code&gt;的发行版才可以打上这个驱动，而Windows server的安全策略过于严格，导致并不适合日常使用。所以只能暂时放弃使用10个SATA的想法了&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;3、不支持由NVME硬盘启动。这个其实比较好解决，提取BIOS，然后使用MMTool在BIOS内添加NVME驱动后，刷回BIOS内即可解决这个问题。（详见教程）&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;4、功耗问题：这个是怕X79平台的硬伤，没有办法解决（只有&lt;code&gt;换平台&lt;/code&gt;）&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;主线-单路x79&#34;&gt;主线-单路X79&lt;/h3&gt;
+&lt;p&gt;由于双路X79平台功耗实在是太高了，电源650W带不太动，于是换到了单路X79平台（130包邮精粤X79M-PRO V2）&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 46; 
+			flex-basis: 110px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2024/record-hw/S-X79.jpg&#34; data-size=&#34;1280x2769&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2024/record-hw/S-X79.jpg&#34;
+			width=&#34;1280&#34;
+			height=&#34;2769&#34;
+			srcset=&#34;https://tflasp.fun/2024/record-hw/S-X79_hu3768536978792953312.jpg 480w, https://tflasp.fun/2024/record-hw/S-X79_hu11725076269505724521.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;更换平台主要是为日常使用考虑的，由于是寨板，所以并没有BMC带外管理，启动速度快得多。但是也催生了一个问题，主板MOS管温度非常高，即使带一个TDP为95W的&lt;code&gt;E5-2650V2&lt;/code&gt;，mos管温度能达到110℃，经常因为供电温度原因降频死机，这让我顿悟：洋垃圾平台有他便宜的道理，还是家用平台更加稳定可靠。&lt;/p&gt;
+&lt;h3 id=&#34;侧线-fm2fm2&#34;&gt;侧线-FM2、FM2+&lt;/h3&gt;
+&lt;p&gt;当然，只折腾主力机是一件比较痛苦的事情，所以就诞生了所谓&lt;code&gt;二奶机&lt;/code&gt;的说法。我的第一台二奶机就是微星的&lt;code&gt;A58&lt;/code&gt; + &lt;code&gt;AMD A4-6400K&lt;/code&gt;。也是第一次体验到MSI图形BIOS的统治力（就是使用逻辑不大好）。&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 74; 
+			flex-basis: 179px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2024/record-hw/FM2-1.jpg&#34; data-size=&#34;1280x1707&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2024/record-hw/FM2-1.jpg&#34;
+			width=&#34;1280&#34;
+			height=&#34;1707&#34;
+			srcset=&#34;https://tflasp.fun/2024/record-hw/FM2-1_hu8613386598265605040.jpg 480w, https://tflasp.fun/2024/record-hw/FM2-1_hu4382271761670331144.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;不得不说，老AMD的核显确实给力，Windows10日常办公非常流畅，作为一个办公机绰绰有余。但是，处理器部分就极为有限，虽然频率非常高，但是并不顶用。&lt;/p&gt;
+&lt;h3 id=&#34;服务器线-b85&#34;&gt;服务器线-B85&lt;/h3&gt;
+&lt;p&gt;在认识了一位同道中人后，他把之前用的平台借给了我。就是这块B85和&lt;code&gt;Intel Core i5-4460&lt;/code&gt;以及DDR3 1600 8*2和其他配件。本来打算用这套平台作为服务器的，但是他的线程数实在是太少了，只有4线程，并且公告也不低，待机状况下有65W左右功耗，最终也只是让它跑&lt;code&gt;Windows server 2019&lt;/code&gt;来进行一些磁盘类的操作（&lt;code&gt;MHDD&lt;/code&gt;扫盘、磁盘清零的操作）。&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 74; 
+			flex-basis: 179px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2024/record-hw/4460.jpg&#34; data-size=&#34;1280x1707&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2024/record-hw/4460.jpg&#34;
+			width=&#34;1280&#34;
+			height=&#34;1707&#34;
+			srcset=&#34;https://tflasp.fun/2024/record-hw/4460_hu6865538445479779917.jpg 480w, https://tflasp.fun/2024/record-hw/4460_hu17509651032725605089.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 74; 
+			flex-basis: 179px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2024/record-hw/B85-1.jpg&#34; data-size=&#34;1280x1707&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2024/record-hw/B85-1.jpg&#34;
+			width=&#34;1280&#34;
+			height=&#34;1707&#34;
+			srcset=&#34;https://tflasp.fun/2024/record-hw/B85-1_hu3308938523395106644.jpg 480w, https://tflasp.fun/2024/record-hw/B85-1_hu6228517678636191123.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;这块主板同样有值得折腾的点：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;1、同样不支持由NVME硬盘启动，解决方法可以借鉴上文折腾X79的操作。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;2、拥有6个原生SATA口（属于是把芯片组的所有通道用完了）：可以拿来当NAS之类的&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;3、拥有两个Pciex1，可以拿来扩展一个2.5GB网卡和一个NVMe硬盘，配合2.5G交换机使用，实现内网2.5G化&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;但是也就仅限与这些了，主要还是被CPU的性能与功耗所限制。&lt;/p&gt;
+&lt;h3 id=&#34;侧线-龙芯3a2000c&#34;&gt;侧线-龙芯3A2000C&lt;/h3&gt;
+&lt;p&gt;在2024年初，在咸鱼上偶然看到一个主板，龙芯3A2000C itx主板，自带4个SATA口，36元包邮&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;作为垃圾佬的直觉，果断入手
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;但是由于这款主板挑内存，我手上6跟DDR3普条都没有办法使它开机，于是也就没有了后续&lt;/p&gt;
+&lt;p&gt;当然，随着有人把这块主板做成视频宣传后，主板在2个月后就断货了。半年后，我以66元的价格卖出去了（小赚一笔嘿嘿）&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 75; 
+			flex-basis: 180px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2024/record-hw/3A2000C.jpg&#34; data-size=&#34;1080x1440&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2024/record-hw/3A2000C.jpg&#34;
+			width=&#34;1080&#34;
+			height=&#34;1440&#34;
+			srcset=&#34;https://tflasp.fun/2024/record-hw/3A2000C_hu14756719238525200741.jpg 480w, https://tflasp.fun/2024/record-hw/3A2000C_hu722227450703754610.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&#34;侧线-p5pl2&#34;&gt;侧线-P5PL2&lt;/h3&gt;
+&lt;p&gt;偶然的一次机会，回老家翻出了一台老电脑。大概是2007年的时候装的吧。还是用的XP系统。拆开一看，真是老古董。&lt;code&gt;奔腾4 631&lt;/code&gt;+华硕&lt;code&gt;P5PL2-E&lt;/code&gt;主板，用料可以用豪华来形容。可是这个接近20年前的产品终究还是无法抵挡时间的摧残，虽然能开机，但是清灰后就不亮了（疑似打破了灰电平衡）。不得不说，奔腾的发热量真的是巨大，被动式散热根本压不住（甚至被烫了一下）。&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 74; 
+			flex-basis: 179px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2024/record-hw/775.jpg&#34; data-size=&#34;1280x1707&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2024/record-hw/775.jpg&#34;
+			width=&#34;1280&#34;
+			height=&#34;1707&#34;
+			srcset=&#34;https://tflasp.fun/2024/record-hw/775_hu13553187665999861869.jpg 480w, https://tflasp.fun/2024/record-hw/775_hu16927818022728043724.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 74; 
+			flex-basis: 179px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2024/record-hw/775-1.jpg&#34; data-size=&#34;1280x1707&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2024/record-hw/775-1.jpg&#34;
+			width=&#34;1280&#34;
+			height=&#34;1707&#34;
+			srcset=&#34;https://tflasp.fun/2024/record-hw/775-1_hu3957773723703569388.jpg 480w, https://tflasp.fun/2024/record-hw/775-1_hu17563628174264585261.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 216; 
+			flex-basis: 519px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2024/record-hw/P4.png&#34; data-size=&#34;1139x526&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2024/record-hw/P4.png&#34;
+			width=&#34;1139&#34;
+			height=&#34;526&#34;
+			srcset=&#34;https://tflasp.fun/2024/record-hw/P4_hu6361950381101584164.png 480w, https://tflasp.fun/2024/record-hw/P4_hu14387835041983380355.png 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&#34;主线-am4之光&#34;&gt;主线-AM4之光&lt;/h3&gt;
+&lt;p&gt;众所周知，AMD YES!，在经历了最近的Intel的暴毙后，性价比极高的12600KF（低价为880）便不敢入手了。&lt;/p&gt;
+&lt;p&gt;于是，目光转向了神U：AMD R5 5600（B2步进）。拥有大L3（32MB），打网游非常爽，属于千年性价比组合了。&lt;/p&gt;
+&lt;p&gt;5600到手后，直接超频到4.75GHz 1.2V使用，体验非常好！&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 99; 
+			flex-basis: 239px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2024/record-hw/AM4.jpg&#34; data-size=&#34;1279x1284&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2024/record-hw/AM4.jpg&#34;
+			width=&#34;1279&#34;
+			height=&#34;1284&#34;
+			srcset=&#34;https://tflasp.fun/2024/record-hw/AM4_hu16116005325447780028.jpg 480w, https://tflasp.fun/2024/record-hw/AM4_hu7609811326428524459.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;配合上现在及其便宜的AM4板子，属于是颜值与性能同在了吧&lt;/p&gt;
+&lt;p&gt;所以我现在的主力机配置为：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;AMD R5 5600 B2&lt;/p&gt;
+&lt;p&gt;技嘉B550M AORUS ELITE&lt;/p&gt;
+&lt;p&gt;光威DDR4 3200 16G&lt;/p&gt;
+&lt;p&gt;利民TR TG850W&lt;/p&gt;
+&lt;p&gt;技嘉GTX 1070Ti 8G Gaming&lt;/p&gt;
+&lt;p&gt;利民AX120-SE风冷&lt;/p&gt;
+&lt;p&gt;致态Tiplus5000 1TB&lt;/p&gt;
+&lt;p&gt;西数SN730 256GB OEM&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;不推荐抄作业，特别是显卡。这是我通过自己的需求搭出来的配置，很显然这里显卡方面弱了。&lt;/p&gt;
+&lt;h3 id=&#34;侧线-modt平台&#34;&gt;侧线-MoDT平台&lt;/h3&gt;
+&lt;p&gt;由于MoDT平台极高的性价比，以及Q1HY远超桌面平台的性能，于是就入手了TOPC（天邦）的Q1HY DDR4版本的板子。上手测试，原装的“均热板”太弱鸡了，不亚于AM4时代AMD的积热顶盖，导致一烤鸡就破百，撞温度墙，降频。于是就更换了尔英科技的itx均热板，烤鸡有缓解，但是手上也没有合适的散热器，最高规格的也都是上次压洋垃圾的6热管双塔风冷了。由于这个平台确实太吵了，于是也就只是过了下手玩了会就出了。&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 74; 
+			flex-basis: 179px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2024/record-hw/MoDT-1.jpg&#34; data-size=&#34;1280x1707&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2024/record-hw/MoDT-1.jpg&#34;
+			width=&#34;1280&#34;
+			height=&#34;1707&#34;
+			srcset=&#34;https://tflasp.fun/2024/record-hw/MoDT-1_hu11067098512724451942.jpg 480w, https://tflasp.fun/2024/record-hw/MoDT-1_hu18069276837049797515.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 74; 
+			flex-basis: 179px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2024/record-hw/MoDT-2.jpg&#34; data-size=&#34;1280x1707&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2024/record-hw/MoDT-2.jpg&#34;
+			width=&#34;1280&#34;
+			height=&#34;1707&#34;
+			srcset=&#34;https://tflasp.fun/2024/record-hw/MoDT-2_hu11983018386322354599.jpg 480w, https://tflasp.fun/2024/record-hw/MoDT-2_hu7477561456418096882.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;不得不说，这个板子其实挺有搭建全闪NAS的潜力的。拥有3个M.2口，其中有两个PCIe4.0x（一个由PCH引出）4，一个PCIe3.0x4。其搭载的核显也可以加速视频解码使用。&lt;/p&gt;
+&lt;h3 id=&#34;服务器线-x99&#34;&gt;服务器线-X99&lt;/h3&gt;
+&lt;p&gt;在体验了X79平台以后，似乎对洋垃圾平台（E3、E5）有了心里阴影，代表着高功耗与低主频。但是，志强也有低功耗的版本（后缀带L），比如这颗&lt;code&gt;E5-2630LV3&lt;/code&gt;，TDP仅有55w（比i5-4460 TDP 84w要低得多）&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 196; 
+			flex-basis: 472px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2024/record-hw/2630LV3.png&#34; data-size=&#34;1242x631&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2024/record-hw/2630LV3.png&#34;
+			width=&#34;1242&#34;
+			height=&#34;631&#34;
+			srcset=&#34;https://tflasp.fun/2024/record-hw/2630LV3_hu16503521173522673783.png 480w, https://tflasp.fun/2024/record-hw/2630LV3_hu13003109823454049027.png 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;而且还Xeon的绝对优势：核心多。超适合开PVE，多开系统。于是就入手了这款HSGM X99 PF7。&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 133; 
+			flex-basis: 320px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2024/record-hw/PF7.jpg&#34; data-size=&#34;4032x3024&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2024/record-hw/PF7.jpg&#34;
+			width=&#34;4032&#34;
+			height=&#34;3024&#34;
+			srcset=&#34;https://tflasp.fun/2024/record-hw/PF7_hu9499885560598325928.jpg 480w, https://tflasp.fun/2024/record-hw/PF7_hu7216959863418331071.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;在实际上手后才知道其有两个SATA控制器（一个SATA，一个eSATA），在加上一张阵列卡即可将不同硬直通到三个虚拟机里，爽！&lt;/p&gt;
+&lt;p&gt;并且这个板子还有一个特性，支持DDR3与DDR4双平台，也意味着其有极高的可玩性（D3 D4不能同时用，因为用的是不同的BIOS）&lt;/p&gt;
+&lt;p&gt;实测该平台待机功耗为60w，性价比显然比B85要高。&lt;/p&gt;
+&lt;h3 id=&#34;服务器线-dell-wyse瘦客户机&#34;&gt;服务器线-DELL WYSE瘦客户机&lt;/h3&gt;
+&lt;p&gt;由于搭建网站，最初的想法是一个超低功耗的服务器来跑nginx和内网穿透，于是就入手了这款DELL-WYSE-3290瘦客户机。整体占地不大，功耗也可以控制在3-8W内（无感的功耗），同时被动散热也使它非常静音。虽然其搭载的CPU N2807非常弱，但是跑nginx还是非常好的。&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 74; 
+			flex-basis: 179px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2024/record-hw/wyse.jpg&#34; data-size=&#34;1280x1707&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2024/record-hw/wyse.jpg&#34;
+			width=&#34;1280&#34;
+			height=&#34;1707&#34;
+			srcset=&#34;https://tflasp.fun/2024/record-hw/wyse_hu15623303081777422509.jpg 480w, https://tflasp.fun/2024/record-hw/wyse_hu13671688029889274243.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;设计非常紧凑，麻雀虽小五脏俱全，DELL还是挺有水平的一家OEM公司（就是贵）&lt;/p&gt;
+&lt;p&gt;现在正在拿来跑nginx，已经两三周没有关机了，除非供电源的问题，一般还是非常稳定的。&lt;/p&gt;
+&lt;h2 id=&#34;总结&#34;&gt;总结&lt;/h2&gt;
+&lt;p&gt;当然这篇文章永远不会到此结束，未来更多好玩的硬件还多着呢，这里只是想总结DIY精神：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;要么就是在折腾，要么就是在折腾的路上
+垃圾佬买硬件几乎不是拿来常用的，而是拿来折腾的&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;问折腾硬件有什么意义？&lt;/p&gt;
+&lt;p&gt;就如人类为什么要举办奥运会，为什么要攀登珠穆朗玛峰一样，这个问题本身就没有意义，生命在于探索和不停地折腾！&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        </item>
+        <item>
         <title>RAM</title>
         <link>https://tflasp.fun/2024/intoram/</link>
         <pubDate>Mon, 19 Aug 2024 00:00:00 +0000</pubDate>

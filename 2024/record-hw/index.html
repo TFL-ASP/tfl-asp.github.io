@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='1年速成专业垃圾佬'><title>一只垃圾佬的探索历程（硬件平台篇）</title>
+
+<link rel='canonical' href='https://tflasp.fun/2024/record-hw/'>
+
+<link rel="stylesheet" href="/scss/style.min.e6c6a8eb379099a52a1148e4f0a5152d4590bfbcd698edad53dbb030ed6b66d3.css"><meta property='og:title' content='一只垃圾佬的探索历程（硬件平台篇）'>
+<meta property='og:description' content='1年速成专业垃圾佬'>
+<meta property='og:url' content='https://tflasp.fun/2024/record-hw/'>
+<meta property='og:site_name' content='改BUG的大橘'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='记录' /><meta property='article:published_time' content='2024-08-22T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-08-22T00:00:00&#43;00:00'/><meta property='og:image' content='https://tflasp.fun/2024/record-hw/3A2000C.jpg' />
+<meta name="twitter:title" content="一只垃圾佬的探索历程（硬件平台篇）">
+<meta name="twitter:description" content="1年速成专业垃圾佬"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://tflasp.fun/2024/record-hw/3A2000C.jpg' />
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <meta name="referrer" content="no-referrer-when-downgrade">
+  
+
+<style>
+    :root {
+        --article-font-family: "Noto Serif SC", var(--base-font-family);
+    }
+</style>
+
+<script> 
+		(function () {
+		    const customFont = document.createElement('link');
+		    customFont.href = "https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;700&display=swap"; 
+		    customFont.type = "text/css";
+		    customFont.rel = "stylesheet";
+		
+		    document.head.appendChild(customFont);
+		}());
+</script>
+
+    </head>
+    <body class="
+    article-page
+">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "dark");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex 
+    <!-- 
+        extended
+     -->
+    on-phone--column extended
+">
+    
+<div id="article-toolbar">
+    <a href="https://tflasp.fun/" class="back-home">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+        <span>返回</span>
+    </a>
+</div>
+    <aside class="sidebar left-sidebar sticky">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header class="site-info">
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu7796591967309082562.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">💬</span>
+                
+            </figure>
+            
+        
+        
+        <h1 class="site-name"><a href="/">改BUG的大橘</a></h1>
+        <h2 class="site-description">要找的，近在眼前</h2><ol class="social-menu">
+                
+                    <li>
+                        <a 
+                            href='https://space.bilibili.com/3494374367300353'
+                            target="_blank"
+                            title="Bilibili"
+                        >
+                            
+                            
+                                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-bilibili"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 10a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v6a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4v-6z" /><path d="M8 3l2 3" /><path d="M16 3l-2 3" /><path d="M9 13v-2" /><path d="M15 11v2" /></svg>
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a 
+                            href='https://tflasp.fun/404.HTML'
+                            target="_blank"
+                            title="FileShare"
+                        >
+                            
+                            
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a 
+                            href='https://github.com/TFL-ASP'
+                            target="_blank"
+                            title="GitHub"
+                        >
+                            
+                            
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a 
+                            href='https://qm.qq.com/q/z0wEdsiULK'
+                            target="_blank"
+                            title="QQ群"
+                        >
+                            
+                            
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-messages" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M21 14l-3 -3h-7a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1h9a1 1 0 0 1 1 1v10" />
+  <path d="M14 15v2a1 1 0 0 1 -1 1h-7l-3 3v-10a1 1 0 0 1 1 -1h2" />
+</svg>
+
+
+
+                            
+                        </a>
+                    </li>
+                
+            </ol></header>
+
+    <ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+
+        
+            <li id="dark-mode-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                <span>暗色模式</span>
+            </li>
+        
+    </ol>
+</aside>
+
+<main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/2024/record-hw/">
+                <img src="/2024/record-hw/3A2000C_hu168502139998727072.jpg"
+                        srcset="/2024/record-hw/3A2000C_hu168502139998727072.jpg 800w, /2024/record-hw/3A2000C_hu6903682989535987162.jpg 1600w"
+                        width="800" 
+                        height="1067" 
+                        loading="lazy"
+                        alt="Featured image of post 一只垃圾佬的探索历程（硬件平台篇）" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E8%AE%B0%E5%BD%95/" >
+                记录
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/2024/record-hw/">一只垃圾佬的探索历程（硬件平台篇）</a>
+    </h2>
+
+    
+    <h3 class="article-subtitle">
+        1年速成专业垃圾佬
+    </h3>
+    
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Aug 22, 2024</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-words">
+                    3228字
+                </time>
+            </div>
+        
+    </footer>
+    
+</div>
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="梦开始的地方">梦开始的地方</h2>
+<p>2023年6月，最早的配置是：</p>
+<blockquote>
+<p>Intel Core i5-13400F</p>
+<p>铭瑄B760M WIFI</p>
+<p>华硕ATS RTX3060Ti</p>
+<p>威刚DDR4 3200 8*2</p>
+<p>鑫谷GN650W</p>
+<p>KIOXIA RC20 1T</p>
+<p>aigo P7000Z 2TB</p>
+</blockquote>
+<p>在当时的性价比还算可以吧，当时12600KF的价格可谓是居高不下，索性选择了当时最新的13代13400F（线程数更多，对生产力友好一些）</p>
+<p><figure 
+	>
+	<a href="https://img.picui.cn/free/2024/08/22/66c6d97d6ac97.png" >
+		<img src="https://img.picui.cn/free/2024/08/22/66c6d97d6ac97.png"
+			
+			
+			
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<h2 id="探索历程">探索历程</h2>
+<h3 id="主线-双路x79">主线-双路X79</h3>
+<p>在家用平台用腻了过后，一天在淘宝上看到了一个非常逆天的主板:<code>Insuper M2220 X79</code>.双路X79，仅需260包邮！带有10个SATA口，简直就是NAS党的福音！然后还能搭配超级便宜32元一根16GB的DDR3 RECC内存，实在是太香了，于是果断入手，开启了折腾之路。</p>
+<p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 74; 
+			flex-basis: 179px"
+	>
+	<a href="/2024/record-hw/M2220.jpg" data-size="1280x1707">
+		<img src="/2024/record-hw/M2220.jpg"
+			width="1280"
+			height="1707"
+			srcset="/2024/record-hw/M2220_hu5862341271831252275.jpg 480w, /2024/record-hw/M2220_hu4644059091627050841.jpg 1024w"
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 74; 
+			flex-basis: 179px"
+	>
+	<a href="/2024/record-hw/10SATA.jpg" data-size="1280x1707">
+		<img src="/2024/record-hw/10SATA.jpg"
+			width="1280"
+			height="1707"
+			srcset="/2024/record-hw/10SATA_hu8892890855171542580.jpg 480w, /2024/record-hw/10SATA_hu4172127157622814841.jpg 1024w"
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 74; 
+			flex-basis: 179px"
+	>
+	<a href="/2024/record-hw/D3-RECC.jpg" data-size="1280x1707">
+		<img src="/2024/record-hw/D3-RECC.jpg"
+			width="1280"
+			height="1707"
+			srcset="/2024/record-hw/D3-RECC_hu419420536012649300.jpg 480w, /2024/record-hw/D3-RECC_hu14190055289508631013.jpg 1024w"
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<p>这个服务器板子是E-ATX规格，现在想起也是幸运，没有买到诸如<code>RH2288HV3</code>那种定制板子，普通机箱装不了。另外，折腾这个板子也是坎坷：</p>
+<blockquote>
+<p>1、开机慢：当然，本来就不是为家用而设计的，在启动时要加载BMC管理系统（带外管理），如果插入了直通卡，还要加载HBA卡的BIOS，总之，开机时间不会低于一分钟。</p>
+</blockquote>
+<blockquote>
+<p>2、10个SATA口识别不全：由于板子比较老（2013年的），所以查找官网资料也比较困难。这个板子有10个由C602芯片组引出来的SATA口，还有3个扩展出来的SAS接口（物理外形与SATA相同）。在排除了BIOS问题和硬件方面的问题后，最后发现是驱动问题。询问卖家要了驱动后，发现Windows10 22H2并不能打上驱动（安装ini），最后发现只有<code>Windows server</code>和某些<code>Linux server</code>的发行版才可以打上这个驱动，而Windows server的安全策略过于严格，导致并不适合日常使用。所以只能暂时放弃使用10个SATA的想法了</p>
+</blockquote>
+<blockquote>
+<p>3、不支持由NVME硬盘启动。这个其实比较好解决，提取BIOS，然后使用MMTool在BIOS内添加NVME驱动后，刷回BIOS内即可解决这个问题。（详见教程）</p>
+</blockquote>
+<blockquote>
+<p>4、功耗问题：这个是怕X79平台的硬伤，没有办法解决（只有<code>换平台</code>）</p>
+</blockquote>
+<h3 id="主线-单路x79">主线-单路X79</h3>
+<p>由于双路X79平台功耗实在是太高了，电源650W带不太动，于是换到了单路X79平台（130包邮精粤X79M-PRO V2）</p>
+<p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 46; 
+			flex-basis: 110px"
+	>
+	<a href="/2024/record-hw/S-X79.jpg" data-size="1280x2769">
+		<img src="/2024/record-hw/S-X79.jpg"
+			width="1280"
+			height="2769"
+			srcset="/2024/record-hw/S-X79_hu3768536978792953312.jpg 480w, /2024/record-hw/S-X79_hu11725076269505724521.jpg 1024w"
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<p>更换平台主要是为日常使用考虑的，由于是寨板，所以并没有BMC带外管理，启动速度快得多。但是也催生了一个问题，主板MOS管温度非常高，即使带一个TDP为95W的<code>E5-2650V2</code>，mos管温度能达到110℃，经常因为供电温度原因降频死机，这让我顿悟：洋垃圾平台有他便宜的道理，还是家用平台更加稳定可靠。</p>
+<h3 id="侧线-fm2fm2">侧线-FM2、FM2+</h3>
+<p>当然，只折腾主力机是一件比较痛苦的事情，所以就诞生了所谓<code>二奶机</code>的说法。我的第一台二奶机就是微星的<code>A58</code> + <code>AMD A4-6400K</code>。也是第一次体验到MSI图形BIOS的统治力（就是使用逻辑不大好）。</p>
+<p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 74; 
+			flex-basis: 179px"
+	>
+	<a href="/2024/record-hw/FM2-1.jpg" data-size="1280x1707">
+		<img src="/2024/record-hw/FM2-1.jpg"
+			width="1280"
+			height="1707"
+			srcset="/2024/record-hw/FM2-1_hu8613386598265605040.jpg 480w, /2024/record-hw/FM2-1_hu4382271761670331144.jpg 1024w"
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<p>不得不说，老AMD的核显确实给力，Windows10日常办公非常流畅，作为一个办公机绰绰有余。但是，处理器部分就极为有限，虽然频率非常高，但是并不顶用。</p>
+<h3 id="服务器线-b85">服务器线-B85</h3>
+<p>在认识了一位同道中人后，他把之前用的平台借给了我。就是这块B85和<code>Intel Core i5-4460</code>以及DDR3 1600 8*2和其他配件。本来打算用这套平台作为服务器的，但是他的线程数实在是太少了，只有4线程，并且公告也不低，待机状况下有65W左右功耗，最终也只是让它跑<code>Windows server 2019</code>来进行一些磁盘类的操作（<code>MHDD</code>扫盘、磁盘清零的操作）。</p>
+<p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 74; 
+			flex-basis: 179px"
+	>
+	<a href="/2024/record-hw/4460.jpg" data-size="1280x1707">
+		<img src="/2024/record-hw/4460.jpg"
+			width="1280"
+			height="1707"
+			srcset="/2024/record-hw/4460_hu6865538445479779917.jpg 480w, /2024/record-hw/4460_hu17509651032725605089.jpg 1024w"
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 74; 
+			flex-basis: 179px"
+	>
+	<a href="/2024/record-hw/B85-1.jpg" data-size="1280x1707">
+		<img src="/2024/record-hw/B85-1.jpg"
+			width="1280"
+			height="1707"
+			srcset="/2024/record-hw/B85-1_hu3308938523395106644.jpg 480w, /2024/record-hw/B85-1_hu6228517678636191123.jpg 1024w"
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<p>这块主板同样有值得折腾的点：</p>
+<blockquote>
+<p>1、同样不支持由NVME硬盘启动，解决方法可以借鉴上文折腾X79的操作。</p>
+</blockquote>
+<blockquote>
+<p>2、拥有6个原生SATA口（属于是把芯片组的所有通道用完了）：可以拿来当NAS之类的</p>
+</blockquote>
+<blockquote>
+<p>3、拥有两个Pciex1，可以拿来扩展一个2.5GB网卡和一个NVMe硬盘，配合2.5G交换机使用，实现内网2.5G化</p>
+</blockquote>
+<p>但是也就仅限与这些了，主要还是被CPU的性能与功耗所限制。</p>
+<h3 id="侧线-龙芯3a2000c">侧线-龙芯3A2000C</h3>
+<p>在2024年初，在咸鱼上偶然看到一个主板，龙芯3A2000C itx主板，自带4个SATA口，36元包邮</p>
+<pre><code>作为垃圾佬的直觉，果断入手
+</code></pre>
+<p>但是由于这款主板挑内存，我手上6跟DDR3普条都没有办法使它开机，于是也就没有了后续</p>
+<p>当然，随着有人把这块主板做成视频宣传后，主板在2个月后就断货了。半年后，我以66元的价格卖出去了（小赚一笔嘿嘿）</p>
+<p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 75; 
+			flex-basis: 180px"
+	>
+	<a href="/2024/record-hw/3A2000C.jpg" data-size="1080x1440">
+		<img src="/2024/record-hw/3A2000C.jpg"
+			width="1080"
+			height="1440"
+			srcset="/2024/record-hw/3A2000C_hu14756719238525200741.jpg 480w, /2024/record-hw/3A2000C_hu722227450703754610.jpg 1024w"
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<h3 id="侧线-p5pl2">侧线-P5PL2</h3>
+<p>偶然的一次机会，回老家翻出了一台老电脑。大概是2007年的时候装的吧。还是用的XP系统。拆开一看，真是老古董。<code>奔腾4 631</code>+华硕<code>P5PL2-E</code>主板，用料可以用豪华来形容。可是这个接近20年前的产品终究还是无法抵挡时间的摧残，虽然能开机，但是清灰后就不亮了（疑似打破了灰电平衡）。不得不说，奔腾的发热量真的是巨大，被动式散热根本压不住（甚至被烫了一下）。</p>
+<p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 74; 
+			flex-basis: 179px"
+	>
+	<a href="/2024/record-hw/775.jpg" data-size="1280x1707">
+		<img src="/2024/record-hw/775.jpg"
+			width="1280"
+			height="1707"
+			srcset="/2024/record-hw/775_hu13553187665999861869.jpg 480w, /2024/record-hw/775_hu16927818022728043724.jpg 1024w"
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 74; 
+			flex-basis: 179px"
+	>
+	<a href="/2024/record-hw/775-1.jpg" data-size="1280x1707">
+		<img src="/2024/record-hw/775-1.jpg"
+			width="1280"
+			height="1707"
+			srcset="/2024/record-hw/775-1_hu3957773723703569388.jpg 480w, /2024/record-hw/775-1_hu17563628174264585261.jpg 1024w"
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 216; 
+			flex-basis: 519px"
+	>
+	<a href="/2024/record-hw/P4.png" data-size="1139x526">
+		<img src="/2024/record-hw/P4.png"
+			width="1139"
+			height="526"
+			srcset="/2024/record-hw/P4_hu6361950381101584164.png 480w, /2024/record-hw/P4_hu14387835041983380355.png 1024w"
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<h3 id="主线-am4之光">主线-AM4之光</h3>
+<p>众所周知，AMD YES!，在经历了最近的Intel的暴毙后，性价比极高的12600KF（低价为880）便不敢入手了。</p>
+<p>于是，目光转向了神U：AMD R5 5600（B2步进）。拥有大L3（32MB），打网游非常爽，属于千年性价比组合了。</p>
+<p>5600到手后，直接超频到4.75GHz 1.2V使用，体验非常好！</p>
+<p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 99; 
+			flex-basis: 239px"
+	>
+	<a href="/2024/record-hw/AM4.jpg" data-size="1279x1284">
+		<img src="/2024/record-hw/AM4.jpg"
+			width="1279"
+			height="1284"
+			srcset="/2024/record-hw/AM4_hu16116005325447780028.jpg 480w, /2024/record-hw/AM4_hu7609811326428524459.jpg 1024w"
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<p>配合上现在及其便宜的AM4板子，属于是颜值与性能同在了吧</p>
+<p>所以我现在的主力机配置为：</p>
+<blockquote>
+<p>AMD R5 5600 B2</p>
+<p>技嘉B550M AORUS ELITE</p>
+<p>光威DDR4 3200 16G</p>
+<p>利民TR TG850W</p>
+<p>技嘉GTX 1070Ti 8G Gaming</p>
+<p>利民AX120-SE风冷</p>
+<p>致态Tiplus5000 1TB</p>
+<p>西数SN730 256GB OEM</p>
+</blockquote>
+<p>不推荐抄作业，特别是显卡。这是我通过自己的需求搭出来的配置，很显然这里显卡方面弱了。</p>
+<h3 id="侧线-modt平台">侧线-MoDT平台</h3>
+<p>由于MoDT平台极高的性价比，以及Q1HY远超桌面平台的性能，于是就入手了TOPC（天邦）的Q1HY DDR4版本的板子。上手测试，原装的“均热板”太弱鸡了，不亚于AM4时代AMD的积热顶盖，导致一烤鸡就破百，撞温度墙，降频。于是就更换了尔英科技的itx均热板，烤鸡有缓解，但是手上也没有合适的散热器，最高规格的也都是上次压洋垃圾的6热管双塔风冷了。由于这个平台确实太吵了，于是也就只是过了下手玩了会就出了。</p>
+<p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 74; 
+			flex-basis: 179px"
+	>
+	<a href="/2024/record-hw/MoDT-1.jpg" data-size="1280x1707">
+		<img src="/2024/record-hw/MoDT-1.jpg"
+			width="1280"
+			height="1707"
+			srcset="/2024/record-hw/MoDT-1_hu11067098512724451942.jpg 480w, /2024/record-hw/MoDT-1_hu18069276837049797515.jpg 1024w"
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 74; 
+			flex-basis: 179px"
+	>
+	<a href="/2024/record-hw/MoDT-2.jpg" data-size="1280x1707">
+		<img src="/2024/record-hw/MoDT-2.jpg"
+			width="1280"
+			height="1707"
+			srcset="/2024/record-hw/MoDT-2_hu11983018386322354599.jpg 480w, /2024/record-hw/MoDT-2_hu7477561456418096882.jpg 1024w"
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<p>不得不说，这个板子其实挺有搭建全闪NAS的潜力的。拥有3个M.2口，其中有两个PCIe4.0x（一个由PCH引出）4，一个PCIe3.0x4。其搭载的核显也可以加速视频解码使用。</p>
+<h3 id="服务器线-x99">服务器线-X99</h3>
+<p>在体验了X79平台以后，似乎对洋垃圾平台（E3、E5）有了心里阴影，代表着高功耗与低主频。但是，志强也有低功耗的版本（后缀带L），比如这颗<code>E5-2630LV3</code>，TDP仅有55w（比i5-4460 TDP 84w要低得多）</p>
+<p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 196; 
+			flex-basis: 472px"
+	>
+	<a href="/2024/record-hw/2630LV3.png" data-size="1242x631">
+		<img src="/2024/record-hw/2630LV3.png"
+			width="1242"
+			height="631"
+			srcset="/2024/record-hw/2630LV3_hu16503521173522673783.png 480w, /2024/record-hw/2630LV3_hu13003109823454049027.png 1024w"
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<p>而且还Xeon的绝对优势：核心多。超适合开PVE，多开系统。于是就入手了这款HSGM X99 PF7。</p>
+<p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 133; 
+			flex-basis: 320px"
+	>
+	<a href="/2024/record-hw/PF7.jpg" data-size="4032x3024">
+		<img src="/2024/record-hw/PF7.jpg"
+			width="4032"
+			height="3024"
+			srcset="/2024/record-hw/PF7_hu9499885560598325928.jpg 480w, /2024/record-hw/PF7_hu7216959863418331071.jpg 1024w"
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<p>在实际上手后才知道其有两个SATA控制器（一个SATA，一个eSATA），在加上一张阵列卡即可将不同硬直通到三个虚拟机里，爽！</p>
+<p>并且这个板子还有一个特性，支持DDR3与DDR4双平台，也意味着其有极高的可玩性（D3 D4不能同时用，因为用的是不同的BIOS）</p>
+<p>实测该平台待机功耗为60w，性价比显然比B85要高。</p>
+<h3 id="服务器线-dell-wyse瘦客户机">服务器线-DELL WYSE瘦客户机</h3>
+<p>由于搭建网站，最初的想法是一个超低功耗的服务器来跑nginx和内网穿透，于是就入手了这款DELL-WYSE-3290瘦客户机。整体占地不大，功耗也可以控制在3-8W内（无感的功耗），同时被动散热也使它非常静音。虽然其搭载的CPU N2807非常弱，但是跑nginx还是非常好的。</p>
+<p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 74; 
+			flex-basis: 179px"
+	>
+	<a href="/2024/record-hw/wyse.jpg" data-size="1280x1707">
+		<img src="/2024/record-hw/wyse.jpg"
+			width="1280"
+			height="1707"
+			srcset="/2024/record-hw/wyse_hu15623303081777422509.jpg 480w, /2024/record-hw/wyse_hu13671688029889274243.jpg 1024w"
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<p>设计非常紧凑，麻雀虽小五脏俱全，DELL还是挺有水平的一家OEM公司（就是贵）</p>
+<p>现在正在拿来跑nginx，已经两三周没有关机了，除非供电源的问题，一般还是非常稳定的。</p>
+<h2 id="总结">总结</h2>
+<p>当然这篇文章永远不会到此结束，未来更多好玩的硬件还多着呢，这里只是想总结DIY精神：</p>
+<blockquote>
+<p>要么就是在折腾，要么就是在折腾的路上
+垃圾佬买硬件几乎不是拿来常用的，而是拿来折腾的</p>
+</blockquote>
+<blockquote>
+<p>问折腾硬件有什么意义？</p>
+<p>就如人类为什么要举办奥运会，为什么要攀登珠穆朗玛峰一样，这个问题本身就没有意义，生命在于探索和不停地折腾！</p>
+</blockquote>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/%E8%AE%B0%E5%BD%95/">记录</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css"integrity="sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js"integrity="sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js"integrity="sha384-vZTG03m&#43;2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.querySelector(`.article-content`), {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ]
+        });})
+</script>
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+</aside>
+
+     
+     
+        
+    <script src='//cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js'></script>
+<div id="waline" class="waline-container"></div>
+<style>
+    .waline-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+    .waline-container .vcount {
+        color: var(--card-text-color-main);
+    }
+</style><script>
+    
+    new Waline({"dark":"html[data-scheme=\"dark\"]","el":"#waline","emoji":["https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/bilibili","https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/tw-emoji"],"lang":"zh-CN","locale":{"admin":"Admin"},"requiredMeta":["name","email","url"],"serverURL":"https://api.tfl-asp.github.io/"});
+</script>
+
+    
+
+    <footer class="site-footer">
+  
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+<script>
+(function(u, c) {
+  var d = document, t = 'script', o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+  o.src = u;
+  if (c) { o.addEventListener('load', function(e) { c(e); }); }
+  s.parentNode.insertBefore(o, s);
+})('//cdn.bootcss.com/pangu/3.3.0/pangu.min.js', function() {
+  pangu.spacingPage();
+});
+
+
+</script>
+
+    <section class="copyright">
+        &copy; 
+        
+            2021 - 
+        
+        2024 <a href="https://www.tflasp.fun/">TFL-ASP</a>·<i class="fas fa-bell"></i> 
+      共书写了19.5k字·共 10篇文章</br><span><p>
+    </section>
+  
+      
+<div class="busuanzi-footer">
+  <span id="busuanzi_container_site_pv">
+    本站总访问量<span id="busuanzi_value_site_pv"></span>次
+  </span>
+  <span id="busuanzi_container_site_uv">
+    本站访客数<span id="busuanzi_value_site_uv"></span>人次
+  </span>
+</div>
+    <section class="powerby">
+        
+            TFL's Personal Website | LTP 2.3.32 <br/>
+         <br />
+        <br />
+         <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">© Licensed Under CC BY-NC-SA 4.0</a>
+    </section>
+
+<script>
+var s1 = '2024-07-07';
+s1 = new Date(s1.replace(/-/g, "/"));
+s2 = new Date();
+var days = s2.getTime() - s1.getTime();
+var number_of_days = parseInt(days / (1000 * 60 * 60 * 24));
+document.getElementById('days').innerHTML = number_of_days;
+
+
+</script>
+    
+</footer>
+
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    
+    
+    
+    <aside class="sidebar right-sidebar sticky">
+        
+            <form action="/search/" class="search-form widget" >
+        <p>
+            <label>搜索</label>
+            <input name="keyword" required placeholder="输入关键词..." />
+        
+            <button title="搜索">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+            </button>
+        </p>
+    </form>
+        
+            
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#梦开始的地方">梦开始的地方</a></li>
+    <li><a href="#探索历程">探索历程</a>
+      <ol>
+        <li><a href="#主线-双路x79">主线-双路X79</a></li>
+        <li><a href="#主线-单路x79">主线-单路X79</a></li>
+        <li><a href="#侧线-fm2fm2">侧线-FM2、FM2+</a></li>
+        <li><a href="#服务器线-b85">服务器线-B85</a></li>
+        <li><a href="#侧线-龙芯3a2000c">侧线-龙芯3A2000C</a></li>
+        <li><a href="#侧线-p5pl2">侧线-P5PL2</a></li>
+        <li><a href="#主线-am4之光">主线-AM4之光</a></li>
+        <li><a href="#侧线-modt平台">侧线-MoDT平台</a></li>
+        <li><a href="#服务器线-x99">服务器线-X99</a></li>
+        <li><a href="#服务器线-dell-wyse瘦客户机">服务器线-DELL WYSE瘦客户机</a></li>
+      </ol>
+    </li>
+    <li><a href="#总结">总结</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+        
+            <section class="widget categories">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-infinity" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M9.828 9.172a4 4 0 1 0 0 5.656 a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828 a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828" />
+</svg>
+
+
+  
+        </div> 
+        <h2 class="widget-title section-title">Categories</h2>
+    <div class="widget-categories--list">
+<div class="widget">
+    <h3 class="widget-title"> </h3>
+    <div class="widget-body">
+        <div class="category-list">
+            <div class="category-list-item"><a href="https://tflasp.fun/categories/hugo/" class="category-list-link">hugo<span class="category-list-count">2</a>
+            </span></div>
+            <div class="category-list-item"><a href="https://tflasp.fun/categories/pve/" class="category-list-link">pve<span class="category-list-count">1</a>
+            </span></div>
+            <div class="category-list-item"><a href="https://tflasp.fun/categories/ram/" class="category-list-link">ram<span class="category-list-count">1</a>
+            </span></div>
+            <div class="category-list-item"><a href="https://tflasp.fun/categories/software/" class="category-list-link">software<span class="category-list-count">1</a>
+            </span></div>
+            <div class="category-list-item"><a href="https://tflasp.fun/categories/ssd/" class="category-list-link">ssd<span class="category-list-count">2</a>
+            </span></div>
+            <div class="category-list-item"><a href="https://tflasp.fun/categories/test/" class="category-list-link">test<span class="category-list-count">1</a>
+            </span></div>
+            <div class="category-list-item"><a href="https://tflasp.fun/categories/%E5%89%8D%E6%B2%BF%E6%8A%80%E6%9C%AF/" class="category-list-link">前沿技术<span class="category-list-count">3</a>
+            </span></div>
+            <div class="category-list-item"><a href="https://tflasp.fun/categories/%E6%95%99%E7%A8%8B/" class="category-list-link">教程<span class="category-list-count">3</a>
+            </span></div>
+            <div class="category-list-item"><a href="https://tflasp.fun/categories/%E8%AE%B0%E5%BD%95/" class="category-list-link">记录<span class="category-list-count">1</a>
+            </span></div>
+        </div>
+    </div>
+</div>
+    </div>
+    </section>
+        
+            <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-infinity" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M9.828 9.172a4 4 0 1 0 0 5.656 a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828 a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">归档</h2>
+
+        
+        
+        
+        
+        
+        <div class="widget-archive--list">
+            <div class="archives-year">
+                    <a href="/archives/#2024">
+                        
+                            <span class="year">2024</span>
+                            <span class="count">6</span>
+                        
+                    </a> 
+                </div>
+            <div class="archives-year">
+                    <a href="/archives/#2021">
+                        
+                            <span class="year">2021</span>
+                            <span class="count">1</span>
+                        
+                    </a> 
+                </div>
+            <div class="archives-year">
+                    <a href="/archives/#2020">
+                        
+                            <span class="year">2020</span>
+                            <span class="count">2</span>
+                        
+                    </a> 
+                </div>
+            <div class="archives-year">
+                    <a href="/archives/#2019">
+                        
+                            <span class="year">2019</span>
+                            <span class="count">1</span>
+                        
+                    </a> 
+                </div>
+            
+        </div>
+    </section>
+        
+            <section class="widget tagCloud">
+    <div class="widget-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tag" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11 3L20 12a1.5 1.5 0 0 1 0 2L14 20a1.5 1.5 0 0 1 -2 0L3 11v-4a4 4 0 0 1 4 -4h4" />
+  <circle cx="9" cy="9" r="2" />
+</svg>
+
+
+
+    </div>
+    <h2 class="widget-title section-title">标签云</h2>
+
+    <div class="tagCloud-tags">
+        
+            <a href="/tags/ssd/" class="font_size_2">
+                SSD
+            </a>
+        
+            <a href="/tags/css/" class="font_size_1">
+                Css
+            </a>
+        
+            <a href="/tags/emoji/" class="font_size_1">
+                Emoji
+            </a>
+        
+            <a href="/tags/html/" class="font_size_1">
+                Html
+            </a>
+        
+            <a href="/tags/hugo/" class="font_size_1">
+                Hugo
+            </a>
+        
+            <a href="/tags/markdown/" class="font_size_1">
+                Markdown
+            </a>
+        
+            <a href="/tags/pve/" class="font_size_1">
+                PVE
+            </a>
+        
+            <a href="/tags/ram/" class="font_size_1">
+                RAM
+            </a>
+        
+            <a href="/tags/software/" class="font_size_1">
+                Software
+            </a>
+        
+            <a href="/tags/themes/" class="font_size_1">
+                Themes
+            </a>
+        
+    </div>
+</section>
+        
+    </aside>
+
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

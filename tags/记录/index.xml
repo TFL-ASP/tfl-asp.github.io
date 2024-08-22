@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>记录 on 改BUG的大橘</title>
+    <link>https://tflasp.fun/tags/%E8%AE%B0%E5%BD%95/</link>
+    <description>Recent content in 记录 on 改BUG的大橘</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 22 Aug 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://tflasp.fun/tags/%E8%AE%B0%E5%BD%95/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>一只垃圾佬的探索历程（硬件平台篇）</title>
+      <link>https://tflasp.fun/2024/record-hw/</link>
+      <pubDate>Thu, 22 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://tflasp.fun/2024/record-hw/</guid>
+      <description>梦开始的地方 2023年6月，最早的配置是： Intel Core i5-13400F 铭瑄B760M WIFI 华硕ATS RTX3060Ti 威刚DDR4 3200 8*2 鑫谷GN650W KIOXIA RC20 1T aigo P7000Z 2TB 在当时的性价比还算可</description>
+    </item>
+  </channel>
+</rss>
