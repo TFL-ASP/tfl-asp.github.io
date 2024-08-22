@@ -6,21 +6,21 @@
     <description>Recent content in Pages on 改BUG的大橘</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 21 Aug 2024 15:00:29 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 05 Aug 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://tflasp.fun/page/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Links</title>
-      <link>https://tflasp.fun/links/</link>
-      <pubDate>Wed, 21 Aug 2024 15:00:29 +0800</pubDate>
-      <guid>https://tflasp.fun/links/</guid>
-      <description>title: Links description: Links date: 2024-08-21T15:00:29+08:00 aliases: links lastmod: &amp;lsquo;2024-08-05&amp;rsquo; menu: main: weight: -90 params: icon: user 由 改BUG的大橘（TFL-ASP）本人搭建的个人博客，还有很多功能待完善，欢迎联系！ Bilibili：改B</description>
-    </item>
     <item>
       <title>About</title>
       <link>https://tflasp.fun/about/</link>
       <pubDate>Mon, 05 Aug 2024 00:00:00 +0000</pubDate>
       <guid>https://tflasp.fun/about/</guid>
       <description>由 改BUG的大橘（TFL-ASP）本人搭建的个人博客，还有很多功能待完善，欢迎联系！ Bilibili：改Bug的大橘 Email: tfldd@outlook.com Learn more and contribute on GitHub. 特别鸣谢</description>
+    </item>
+    <item>
+      <title>Links</title>
+      <link>https://tflasp.fun/links/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://tflasp.fun/links/</guid>
+      <description>相关链接 站外链接仅作跳转，其内容与本站无关</description>
     </item>
     <item>
       <title>Links</title>
