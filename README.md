@@ -13,13 +13,11 @@ menu:
         params:
             icon: user
 ---
-由TFL-ASP本人搭建的个人博客，还有很多功能待完善，欢迎邮箱联系！
+由 改Bug的大橘 (TFL-ASP)本人搭建的个人博客，还有很多功能待完善，欢迎邮箱联系！
 
 Contact Us :
 
 Email:
-
-	2507280495@qq.com 
 
 	tfldd@outlook.com
 
