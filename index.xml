@@ -966,7 +966,7 @@
         <pubDate>Sun, 04 Aug 2024 00:00:00 +0000</pubDate>
         
         <guid>https://tflasp.fun/2024/intossd/</guid>
-        <description>&lt;img src="https://img.picui.cn/free/2024/08/19/66c347061eb15.jpg" alt="Featured image of post 年度巨献 | 深入浅出SSD（持续更新）" /&gt;&lt;h2 id=&#34;ssd简介&#34;&gt;SSD简介&lt;/h2&gt;
+        <description>&lt;img src="https://tflasp.fun/2024/intossd/ssd.jpg" alt="Featured image of post 年度巨献 | 深入浅出SSD（持续更新）" /&gt;&lt;h2 id=&#34;ssd简介&#34;&gt;SSD简介&lt;/h2&gt;
 &lt;p&gt;SSD (&lt;code&gt;Solid State Drive&lt;/code&gt;)，即固态硬盘，是一种以半导体闪存(&lt;code&gt;NAND Flash&lt;/code&gt;)作为介质的存储设备。和传统机械硬盘(&lt;code&gt;Hard Disk Drive，HDD&lt;/code&gt;)不同，SSD以半导体存储数据，用纯电子电路实现，没有任何机械设备，这就决定了它在性能、功耗、可靠性等方面和HDD有很大不同。&lt;/p&gt;
 &lt;h2 id=&#34;ssd-协议与接口&#34;&gt;SSD 协议与接口&lt;/h2&gt;
 &lt;h3 id=&#34;pcie协议&#34;&gt;PCIe协议&lt;/h3&gt;
