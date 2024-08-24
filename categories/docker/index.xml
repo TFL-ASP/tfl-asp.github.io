@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docker on 改BUG的大橘</title>
+    <link>https://tflasp.fun/categories/docker/</link>
+    <description>Recent content in Docker on 改BUG的大橘</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 23 Aug 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://tflasp.fun/categories/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>【归档】Ubuntu20.04下安装Docker</title>
+      <link>https://tflasp.fun/2024/docker-setup-ubuntu/</link>
+      <pubDate>Fri, 23 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://tflasp.fun/2024/docker-setup-ubuntu/</guid>
+      <description>以 ubuntu 20.04（也包括作为桌面使用的 Linux Mint 21） 为例，参考官网文档： https://docs.docker.com/install/linux/docker-ce/ubuntu/ 安装准备 看一下自己的Linux机器版本和内核信息： uname --all Linux skywork 5.15.0-53-generic #59-Ubuntu SMP Mon Oct 17 18:53:30</description>
+    </item>
+  </channel>
+</rss>

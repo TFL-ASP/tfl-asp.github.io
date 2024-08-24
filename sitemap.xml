@@ -2,7 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://tflasp.fun/2024/docker-setup-ubuntu/</loc>
+    <lastmod>2024-08-23T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://tflasp.fun/categories/</loc>
+    <lastmod>2024-08-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tflasp.fun/tags/docker/</loc>
+    <lastmod>2024-08-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tflasp.fun/categories/docker/</loc>
     <lastmod>2024-08-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://tflasp.fun/post/</loc>
@@ -15,6 +24,12 @@
     <lastmod>2024-08-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://tflasp.fun/2024/links/</loc>
+    <lastmod>2024-08-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tflasp.fun/categories/%E5%BD%92%E6%A1%A3/</loc>
+    <lastmod>2024-08-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tflasp.fun/categories/%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2024-08-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://tflasp.fun/tags/%E9%93%BE%E6%8E%A5/</loc>
@@ -38,25 +53,25 @@
     <loc>https://tflasp.fun/2024/microcode/</loc>
     <lastmod>2024-08-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://tflasp.fun/tags/pve/</loc>
-    <lastmod>2024-08-21T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://tflasp.fun/categories/pve/</loc>
-    <lastmod>2024-08-21T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://tflasp.fun/2024/rtl8125-driver/</loc>
     <lastmod>2024-08-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://tflasp.fun/2024/timeshift/</loc>
     <lastmod>2024-08-21T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://tflasp.fun/2024/pve-maxio1602/</loc>
+    <lastmod>2024-08-21T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://tflasp.fun/2024/pve-recovery/</loc>
     <lastmod>2024-08-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://tflasp.fun/tags/%E6%95%99%E7%A8%8B/</loc>
+    <loc>https://tflasp.fun/tags/pve/</loc>
     <lastmod>2024-08-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://tflasp.fun/categories/%E6%95%99%E7%A8%8B/</loc>
+    <loc>https://tflasp.fun/categories/pve/</loc>
+    <lastmod>2024-08-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tflasp.fun/tags/%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2024-08-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://tflasp.fun/tags/ram/</loc>
@@ -92,13 +107,13 @@
     <loc>https://tflasp.fun/2024/pveinstall/</loc>
     <lastmod>2024-07-15T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://tflasp.fun/2024/hugo-stack/</loc>
+    <lastmod>2024-08-03T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://tflasp.fun/tags/hugo/</loc>
     <lastmod>2024-08-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://tflasp.fun/categories/hugo/</loc>
-    <lastmod>2024-08-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://tflasp.fun/2024/hugo-stack/</loc>
     <lastmod>2024-08-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://tflasp.fun/tags/software/</loc>

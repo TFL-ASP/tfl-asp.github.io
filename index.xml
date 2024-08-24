@@ -7,6 +7,176 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <lastBuildDate>Fri, 23 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://tflasp.fun/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>【归档】Ubuntu20.04下安装Docker</title>
+        <link>https://tflasp.fun/2024/docker-setup-ubuntu/</link>
+        <pubDate>Fri, 23 Aug 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://tflasp.fun/2024/docker-setup-ubuntu/</guid>
+        <description>&lt;p&gt;以 ubuntu 20.04（也包括作为桌面使用的 Linux Mint 21） 为例，参考官网文档：&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.docker.com/install/linux/docker-ce/ubuntu/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://docs.docker.com/install/linux/docker-ce/ubuntu/&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;安装准备&#34;&gt;安装准备&lt;/h2&gt;
+&lt;p&gt;看一下自己的Linux机器版本和内核信息：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;uname --all&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;Linux skywork 5.15.0-53-generic #59-Ubuntu SMP Mon Oct 17 18:53:30 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;cat /proc/version&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;Linux version 5.15.0-53-generic (buildd@lcy02-amd64-047) (gcc (Ubuntu 11.2.0-19ubuntu1) 11.2.0, GNU ld (GNU Binutils for Ubuntu) 2.38) #59-Ubuntu SMP Mon Oct 17 18:53:30 UTC 2022
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;lsb_release -a&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;No LSB modules are available.
+Distributor ID:	Linuxmint
+Description:	Linux Mint 21
+Release:	21
+Codename:	vanessa
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这台机器是Linux Mint 21 升级到非常新的Linux内核5.15.0-53了，Linux Mint 21 是基于 Ubuntu 20.04，但是有些系统参数不一样，比如这里 Codename 是 &lt;code&gt;vanessa&lt;/code&gt;，而不是 Ubuntu 20.04 的 &lt;code&gt;Focal Fossa&lt;/code&gt;。后面安装时要小心，需要修改为 Ubuntu 20.04 的参数。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ubuntu各个版本的codename 请见：&lt;a class=&#34;link&#34; href=&#34;https://download.docker.com/linux/ubuntu/dists/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://download.docker.com/linux/ubuntu/dists/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;安装步骤&#34;&gt;安装步骤&lt;/h2&gt;
+&lt;h3 id=&#34;卸载旧版本&#34;&gt;卸载旧版本&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt-get remove docker docker-engine docker.io containerd runc
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;安装docker&#34;&gt;安装docker&lt;/h3&gt;
+&lt;p&gt;简单起见，使用 docker 仓库安装。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ sudo apt-get install ca-certificates curl gnupg lsb-release
+
+$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+
+# 官方给的是这样，
+# echo \
+#  &amp;quot;deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] \
+# https://download.docker.com/linux/ubuntu \
+#  $(lsb_release -cs) stable&amp;quot; | sudo tee /etc/apt/sources.list.d/docker.list &amp;gt; /dev/null
+# 但是`lsb_release -cs`在Linux Mint下取值会不对，因此手工修改
+# for ubuntu 20.04 / linuxmint 20.02，$(lsb_release -cs)替代为 focal
+$ echo \
+&amp;quot;deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu focal stable&amp;quot; | sudo tee /etc/apt/sources.list.d/docker.list &amp;gt; /dev/null
+
+$ sudo apt-get update
+$ sudo apt-get install docker-ce docker-ce-cli containerd.io
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;如果不想安装最新版本，则可以先查看当前可选版本：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ apt-cache madison docker-ce
+docker-ce | 5:20.10.21~3-0~ubuntu-focal | https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+ docker-ce | 5:20.10.20~3-0~ubuntu-focal | https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+ docker-ce | 5:20.10.19~3-0~ubuntu-focal | https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+ docker-ce | 5:20.10.18~3-0~ubuntu-focal | https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+ docker-ce | 5:20.10.17~3-0~ubuntu-focal | https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+ docker-ce | 5:20.10.16~3-0~ubuntu-focal | https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+ docker-ce | 5:20.10.15~3-0~ubuntu-focal | https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+ docker-ce | 5:20.10.14~3-0~ubuntu-focal | https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+ docker-ce | 5:20.10.13~3-0~ubuntu-focal | https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+ docker-ce | 5:20.10.12~3-0~ubuntu-focal | https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+ docker-ce | 5:20.10.11~3-0~ubuntu-focal | https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+ docker-ce | 5:20.10.10~3-0~ubuntu-focal | https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+ docker-ce | 5:20.10.9~3-0~ubuntu-focal | https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+ docker-ce | 5:20.10.8~3-0~ubuntu-focal | https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+ docker-ce | 5:20.10.7~3-0~ubuntu-focal | https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+ docker-ce | 5:20.10.6~3-0~ubuntu-focal | https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+ docker-ce | 5:20.10.5~3-0~ubuntu-focal | https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+ docker-ce | 5:20.10.4~3-0~ubuntu-focal | https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+ docker-ce | 5:20.10.3~3-0~ubuntu-focal | https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+ docker-ce | 5:20.10.2~3-0~ubuntu-focal | https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+ docker-ce | 5:20.10.1~3-0~ubuntu-focal | https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+ docker-ce | 5:20.10.0~3-0~ubuntu-focal | https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+ docker-ce | 5:19.03.15~3-0~ubuntu-focal | https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+ docker-ce | 5:19.03.14~3-0~ubuntu-focal | https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+ docker-ce | 5:19.03.13~3-0~ubuntu-focal | https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+ docker-ce | 5:19.03.12~3-0~ubuntu-focal | https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+ docker-ce | 5:19.03.11~3-0~ubuntu-focal | https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+ docker-ce | 5:19.03.10~3-0~ubuntu-focal | https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+ docker-ce | 5:19.03.9~3-0~ubuntu-focal | https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;然后执行 :&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt-get install docker-ce=20.10.21~3-0~ubuntu
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;验证安装&#34;&gt;验证安装&lt;/h3&gt;
+&lt;p&gt;安装完成之后，看一下版本信息：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ docker --version
+Docker version 20.10.21, build baeda1f
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;验证一下：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo docker run hello-world
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;输出如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ sudo docker run hello-world
+Unable to find image &#39;hello-world:latest&#39; locally
+
+latest: Pulling from library/hello-world
+2db29710123e: Pull complete 
+Digest: sha256:faa03e786c97f07ef34423fccceeec2398ec8a5759259f94d99078f264e9d7af
+Status: Downloaded newer image for hello-world:latest
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+...
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;设置权限避免每次sudo&#34;&gt;设置权限避免每次sudo&lt;/h3&gt;
+&lt;p&gt;为了以非root用户使用docker, 可以将用户加入&amp;quot;docker&amp;quot;组.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo usermod -aG docker sky
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;重新登录之后生效。&lt;/p&gt;
+&lt;h3 id=&#34;设置docker的cgroup-driver&#34;&gt;设置docker的cgroup driver&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;备注： 发现 docker 20.10.21&lt;del&gt;3-0&lt;/del&gt;ubuntu 版本已经修改为默认 systemd ，因此新版本可以不用这么设置。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;docker 默认的 cgroup driver 是 cgroupfs，可以通过 docker info 命令查看：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ docker info | grep &amp;quot;Cgroup Driver&amp;quot;
+Cgroup Driver: cgroupfs
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;而 kubernetes 在v1.22版本之后，如果用户没有在 KubeletConfiguration 下设置 cgroupDriver 字段，则 kubeadm 将默认为 &lt;code&gt;systemd&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;为了保持一致，需要修改 docker 的 cgroup driver 为 &lt;code&gt;systemd&lt;/code&gt;, 方式为打开 docker 的配置文件（如果不存在则创建）&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo vi /etc/docker/daemon.json
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;增加内容：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
+	&amp;quot;exec-opts&amp;quot;: [&amp;quot;native.cgroupdriver=systemd&amp;quot;]
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;修改完成后重启 docker：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo systemctl restart docker
+
+# 重启后检查一下
+docker info | grep &amp;quot;Cgroup Driver&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;设置swap-limit&#34;&gt;设置swap limit&lt;/h3&gt;
+&lt;p&gt;如果遇到如下的 &amp;ldquo;No swap limit support&amp;rdquo; 警告：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;docker info | grep &amp;quot;Cgroup Driver&amp;quot;
+ Cgroup Driver: systemd
+WARNING: No swap limit support
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;则说明 swap limit 功能没能开启。解决方法是 grub&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ sudo vi /etc/default/grub
+......
+GRUB_CMDLINE_LINUX=&amp;quot;cgroup_enable=memory swapaccount=1&amp;quot;
+......
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;如果 GRUB_CMDLINE_LINUX= 内有内容，切记不可删除，只需在后面追加，并用空格和前面的内容分隔开。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;执行下面命令生效并重启。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ sudo update-grub2
+$ sudo reboot
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;参考资料&#34;&gt;参考资料&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.k2zone.cn/?p=2356&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.k2zone.cn/?p=2356&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://unix.stackexchange.com/questions/342735/docker-warning-no-swap-limit-support&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://unix.stackexchange.com/questions/342735/docker-warning-no-swap-limit-support&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>工具包分享</title>
         <link>https://tflasp.fun/2024/links/</link>
         <pubDate>Fri, 23 Aug 2024 00:00:00 +0000</pubDate>
@@ -658,7 +828,7 @@
 </description>
         </item>
         <item>
-        <title>Proxmox VE更新CPU微码</title>
+        <title>【归档】Proxmox VE更新CPU微码</title>
         <link>https://tflasp.fun/2024/microcode/</link>
         <pubDate>Wed, 21 Aug 2024 00:00:00 +0000</pubDate>
         
@@ -719,7 +889,7 @@ All packages are up to date.
 </description>
         </item>
         <item>
-        <title>PVE安装RTL8125驱动</title>
+        <title>【归档】PVE安装RTL8125驱动</title>
         <link>https://tflasp.fun/2024/rtl8125-driver/</link>
         <pubDate>Wed, 21 Aug 2024 00:00:00 +0000</pubDate>
         
@@ -832,7 +1002,7 @@ r8169                 114688  0
 </description>
         </item>
         <item>
-        <title>PVE安装配置timeshift</title>
+        <title>【归档】PVE安装配置timeshift</title>
         <link>https://tflasp.fun/2024/timeshift/</link>
         <pubDate>Wed, 21 Aug 2024 00:00:00 +0000</pubDate>
         
@@ -1143,7 +1313,65 @@ Num     Name                 Tags  Description
 </description>
         </item>
         <item>
-        <title>PVE进入Recovery模式恢复系统</title>
+        <title>【归档】PVE环境下硬盘识别问题</title>
+        <link>https://tflasp.fun/2024/pve-maxio1602/</link>
+        <pubDate>Wed, 21 Aug 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://tflasp.fun/2024/pve-maxio1602/</guid>
+        <description>&lt;h2 id=&#34;问题复现&#34;&gt;问题复现&lt;/h2&gt;
+&lt;p&gt;爱国者P7000Z（以及所有使用MAXIO 1602主控的PCIe4.0固态）有个坑，两块以上只认一块。
+经分析发现，是联芸MAP1602主控的共性问题。
+给官方Linux内核提出了patch，内核6.4版本开始会集成进来。&lt;/p&gt;
+&lt;h2 id=&#34;解决方法&#34;&gt;解决方法&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;diff --git a/drivers/nvme/host/pci.c b/drivers/nvme/host/pci.c
+--- a/drivers/nvme/host/pci.c
++++ b/drivers/nvme/host/pci.c
+@@ -3424,6 +3424,8 @@ static const struct pci_device_id nvme_id_table[] = {
+                 .driver_data = NVME_QUIRK_BOGUS_NID, },
+         { PCI_DEVICE(0x1e4B, 0x1202),   /* MAXIO MAP1202 */
+                 .driver_data = NVME_QUIRK_BOGUS_NID, },
++        { PCI_DEVICE(0x1e4B, 0x1602),   /* MAXIO MAP1602 */
++                .driver_data = NVME_QUIRK_BOGUS_NID, },
+         { PCI_DEVICE(0x1cc1, 0x5350),   /* ADATA XPG GAMMIX S50 */
+                 .driver_data = NVME_QUIRK_BOGUS_NID, },
+         { PCI_DEVICE(0x1dbe, 0x5236),   /* ADATA XPG GAMMIX S70 */
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;PVE 8.0 beta最新，内核是6.2.16-1-pve，所以目前不支持联芸MAP1602主控的多块NVMe同时使用。
+现在需要使用的，修改不难，
+下载源码，找到代码中drivers/nvme/host/pci.c添加这两行&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;        { PCI_DEVICE(0x1e4B, 0x1602),   /* MAXIO MAP1602 */
+                .driver_data = NVME_QUIRK_BOGUS_NID, },
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;重新编译安装，就好了。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;20230616 分享编译好的内核，直接用就好，基于PVE 8.0beta源码6.2.16-1修改：
+链接: &lt;a class=&#34;link&#34; href=&#34;https://pan.baidu.com/s/1qdF8AVyjUOX_gL8Fxe9g6A?pwd=CHH1&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://pan.baidu.com/s/1qdF8AVyjUOX_gL8Fxe9g6A?pwd=CHH1&lt;/a&gt; 提取码: CHH1&lt;/p&gt;
+&lt;p&gt;20230708 分享编译好的内核，直接用就好，基于PVE 8.0正式版源码6.2.16-3修改：
+链接: &lt;a class=&#34;link&#34; href=&#34;https://pan.baidu.com/s/1juvlOR6uA7G53eiCJTAzGw?pwd=CHH2&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://pan.baidu.com/s/1juvlOR6uA7G53eiCJTAzGw?pwd=CHH2&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;20230712 分享编译好的内核，直接用就好，基于PVE 8.0正式版源码6.2.16-4修改：
+链接: &lt;a class=&#34;link&#34; href=&#34;https://pan.baidu.com/s/1xHShA5LBaVl2uWH4cIUHGg?pwd=CHH3&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://pan.baidu.com/s/1xHShA5LBaVl2uWH4cIUHGg?pwd=CHH3&lt;/a&gt; 提取码: CHH3&lt;/p&gt;
+&lt;p&gt;20230713 分享基于PVE 8.0正式版源码6.2.16-4修改的4TB未验证测试版，按114楼增加了延时属性。
+链接: &lt;a class=&#34;link&#34; href=&#34;https://pan.baidu.com/s/1Wgbva1awvubtBFdxhx0vaA?pwd=CHH4&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://pan.baidu.com/s/1Wgbva1awvubtBFdxhx0vaA?pwd=CHH4&lt;/a&gt; 提取码: CHH4&lt;/p&gt;
+&lt;p&gt;20230908 分享基于PVE 8.0正式版源码6.2.16-12修改的4TB未验证测试版，增加延时属性及初始化延迟。
+链接: &lt;a class=&#34;link&#34; href=&#34;https://pan.baidu.com/s/1D-0qjzBop9d_tOcRu7bs3Q?pwd=CHH5&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://pan.baidu.com/s/1D-0qjzBop9d_tOcRu7bs3Q?pwd=CHH5&lt;/a&gt; 提取码: CHH5&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;安装方法：
+上传文件至PVE，登录PVE执行：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;dpkg -i *.deb
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;重启即可。&lt;/p&gt;
+&lt;h2 id=&#34;参考资料&#34;&gt;参考资料&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.chiphell.com/forum.php?mod=viewthread&amp;amp;tid=2524660&amp;amp;extra=page%3D1&amp;amp;ordertype=1&amp;amp;mobile=no&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ChipHell&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>【归档】PVE进入Recovery模式恢复系统</title>
         <link>https://tflasp.fun/2024/pve-recovery/</link>
         <pubDate>Wed, 21 Aug 2024 00:00:00 +0000</pubDate>
         
@@ -2109,12 +2337,12 @@ Egress port（出端口）：发送数据包的端口。
 </description>
         </item>
         <item>
-        <title>PVE 8 安装与优化</title>
+        <title>【归档】PVE 8 安装与优化</title>
         <link>https://tflasp.fun/2024/pveinstall/</link>
         <pubDate>Mon, 15 Jul 2024 00:00:00 +0000</pubDate>
         
         <guid>https://tflasp.fun/2024/pveinstall/</guid>
-        <description>&lt;img src="https://tflasp.fun/2024/pveinstall/pveinstaller.png" alt="Featured image of post PVE 8 安装与优化" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+        <description>&lt;img src="https://tflasp.fun/2024/pveinstall/pveinstaller.png" alt="Featured image of post 【归档】PVE 8 安装与优化" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 &lt;p&gt;该文章还在CSDN发表，文章链接：&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/Dd_w606/article/details/140447411&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Link&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;pve镜像下载&#34;&gt;PVE镜像下载&lt;/h2&gt;
@@ -2595,12 +2823,12 @@ Egress port（出端口）：发送数据包的端口。
 </description>
         </item>
         <item>
-        <title>Hugo | 使用Hugo&#43;Stack主题搭建博客</title>
+        <title>【归档】Hugo | 使用Hugo&#43;Stack主题搭建博客</title>
         <link>https://tflasp.fun/2024/hugo-stack/</link>
         <pubDate>Thu, 11 Jul 2024 00:00:00 +0000</pubDate>
         
         <guid>https://tflasp.fun/2024/hugo-stack/</guid>
-        <description>&lt;img src="https://tflasp.fun/2024/hugo-stack/hugo.jpg" alt="Featured image of post Hugo | 使用Hugo&#43;Stack主题搭建博客" /&gt;&lt;p&gt;Github仓库地址：&lt;a class=&#34;link&#34; href=&#34;https://github.com/CaiJimmy/hugo-theme-stack&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <description>&lt;img src="https://tflasp.fun/2024/hugo-stack/hugo.jpg" alt="Featured image of post 【归档】Hugo | 使用Hugo&#43;Stack主题搭建博客" /&gt;&lt;p&gt;Github仓库地址：&lt;a class=&#34;link&#34; href=&#34;https://github.com/CaiJimmy/hugo-theme-stack&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;hugo-stack-theme&lt;/a&gt;&lt;/p&gt;
 &lt;br&gt;
 &lt;h2 id=&#34;使用方式&#34;&gt;使用方式&lt;/h2&gt;
