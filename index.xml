@@ -12,7 +12,8 @@
         <pubDate>Fri, 23 Aug 2024 00:00:00 +0000</pubDate>
         
         <guid>https://tflasp.fun/2024/links/</guid>
-        <description>&lt;p&gt;资料由站长收集整理，仅供学习交流，&lt;strong&gt;严禁用于商业用途&lt;/strong&gt;，请于24小时内删除。&lt;/p&gt;
+        <description>&lt;p&gt;下载时记得关闭杀毒软件，若被误杀请重新下载。&lt;/p&gt;
+&lt;p&gt;资料由站长收集整理，仅供学习交流，&lt;strong&gt;严禁用于商业用途&lt;/strong&gt;，请于24小时内删除。&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -193,14 +194,14 @@
 	
 		class=&#34;gallery-image&#34; 
 		style=&#34;
-			flex-grow: 46; 
-			flex-basis: 110px&#34;
+			flex-grow: 73; 
+			flex-basis: 176px&#34;
 	&gt;
-	&lt;a href=&#34;https://tflasp.fun/2024/record-hw/S-X79.jpg&#34; data-size=&#34;1280x2769&#34;&gt;
+	&lt;a href=&#34;https://tflasp.fun/2024/record-hw/S-X79.jpg&#34; data-size=&#34;440x597&#34;&gt;
 		&lt;img src=&#34;https://tflasp.fun/2024/record-hw/S-X79.jpg&#34;
-			width=&#34;1280&#34;
-			height=&#34;2769&#34;
-			srcset=&#34;https://tflasp.fun/2024/record-hw/S-X79_huc73af1a01d38386b9228324d3c2a8c0a_385934_480x0_resize_q75_box.jpg 480w, https://tflasp.fun/2024/record-hw/S-X79_huc73af1a01d38386b9228324d3c2a8c0a_385934_1024x0_resize_q75_box.jpg 1024w&#34;
+			width=&#34;440&#34;
+			height=&#34;597&#34;
+			srcset=&#34;https://tflasp.fun/2024/record-hw/S-X79_hubc3aa4d7b8e338c10c987baeac028ec9_103847_480x0_resize_q75_box.jpg 480w, https://tflasp.fun/2024/record-hw/S-X79_hubc3aa4d7b8e338c10c987baeac028ec9_103847_1024x0_resize_q75_box.jpg 1024w&#34;
 			loading=&#34;lazy&#34;
 			&gt;
 	&lt;/a&gt;
@@ -2307,37 +2308,6 @@ rev = &amp;quot;11f52b8c72fc3a568e8bb4a4cd1f3eb025ac2e13&amp;quot;
 $$
 \varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } }
 $$&lt;/p&gt;</description>
-        </item>
-        <item>
-        <title>Emoji Support</title>
-        <link>https://tflasp.fun/2019/emoji-support/</link>
-        <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
-        
-        <guid>https://tflasp.fun/2019/emoji-support/</guid>
-        <description>&lt;img src="https://tflasp.fun/2019/emoji-support/the-creative-exchange-d2zvqp3fpro-unsplash.jpg" alt="Featured image of post Emoji Support" /&gt;&lt;p&gt;Emoji can be enabled in a Hugo project in a number of ways.&lt;/p&gt;
-&lt;p&gt;The &lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/functions/emojify/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;&lt;code&gt;emojify&lt;/code&gt;&lt;/a&gt; function can be called directly in templates or &lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/templates/shortcode-templates/#inline-shortcodes&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Inline Shortcodes&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;To enable emoji globally, set &lt;code&gt;enableEmoji&lt;/code&gt; to &lt;code&gt;true&lt;/code&gt; in your site&amp;rsquo;s &lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/getting-started/configuration/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;configuration&lt;/a&gt; and then you can type emoji shorthand codes directly in content files; e.g.&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;nowrap&#34;&gt;&lt;span class=&#34;emojify&#34;&gt;🙈&lt;/span&gt; &lt;code&gt;:see_no_evil:&lt;/code&gt;&lt;/span&gt;  &lt;span class=&#34;nowrap&#34;&gt;&lt;span class=&#34;emojify&#34;&gt;🙉&lt;/span&gt; &lt;code&gt;:hear_no_evil:&lt;/code&gt;&lt;/span&gt;  &lt;span class=&#34;nowrap&#34;&gt;&lt;span class=&#34;emojify&#34;&gt;🙊&lt;/span&gt; &lt;code&gt;:speak_no_evil:&lt;/code&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;br&gt;
-&lt;p&gt;The &lt;a class=&#34;link&#34; href=&#34;http://www.emoji-cheat-sheet.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Emoji cheat sheet&lt;/a&gt; is a useful reference for emoji shorthand codes.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;strong&gt;N.B.&lt;/strong&gt; The above steps enable Unicode Standard emoji characters and sequences in Hugo, however the rendering of these glyphs depends on the browser and the platform. To style the emoji you can either use a third party emoji font or a font stack; e.g.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;.emoji {
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  font-family: Apple Color Emoji, Segoe UI Emoji, NotoColorEmoji, Segoe UI Symbol, Android Emoji, EmojiSymbols;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;</description>
         </item>
         
     </channel>

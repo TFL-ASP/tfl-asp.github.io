@@ -375,7 +375,7 @@
 
 
                 <time class="article-words">
-                    107字
+                    129字
                 </time>
             </div>
         
@@ -387,7 +387,8 @@
     <section class="article-content">
     
     
-    <p>资料由站长收集整理，仅供学习交流，<strong>严禁用于商业用途</strong>，请于24小时内删除。</p>
+    <p>下载时记得关闭杀毒软件，若被误杀请重新下载。</p>
+<p>资料由站长收集整理，仅供学习交流，<strong>严禁用于商业用途</strong>，请于24小时内删除。</p>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
@@ -525,21 +526,30 @@
      
      
         
-    <script src='//cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js'></script>
-<div id="waline" class="waline-container"></div>
-<style>
-    .waline-container {
-        background-color: var(--card-background);
-        border-radius: var(--card-border-radius);
-        box-shadow: var(--shadow-l1);
-        padding: var(--card-padding);
-    }
-    .waline-container .vcount {
-        color: var(--card-text-color-main);
-    }
-</style><script>
-    
-    new Waline({"dark":"html[data-scheme=\"dark\"]","el":"#waline","emoji":["https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/bilibili","https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/tw-emoji"],"lang":"zh-CN","locale":{"admin":"Admin"},"requiredMeta":["name","email","url"],"serverURL":"https://tfl-asp-github-io.vercel.app/"});
+    <link rel="stylesheet" href="https://unpkg.com/vssue/dist/vssue.min.css" />
+
+<div id="vssue"></div>
+
+<script src="https://unpkg.com/vue/dist/vue.runtime.min.js"></script>
+<script src="https://unpkg.com/vssue/dist/vssue.Github.min.js"></script>
+
+<script>
+    new Vue({
+        el: "#vssue",
+        render: (h) =>
+            h("Vssue", {
+                props: {
+                    title: "置顶 | 工具包分享",
+                    options: {
+                        autoCreateIssue:  false ,
+                        owner: "tfl-asp",
+                        repo: "https:\/\/github.com\/TFL-ASP\/tfl-asp.github.io",
+                        clientId: "Ov23liZA8ZDWGyREmLEn",
+                        clientSecret: "9bddb14d14832ff28ee9150ccf53123a7fd90bbe",
+                    },
+                },
+            }),
+    });
 </script>
 
     
@@ -547,8 +557,6 @@
     <footer class="site-footer">
   
 
-
-    
 
     
 
@@ -599,7 +607,7 @@
             2021 - 
         
         2024 <a href="https://www.tflasp.fun/">TFL-ASP</a>·<i class="fas fa-bell"></i> 
-      共书写了19.6k字·共 11篇文章</br><span><p>
+      共书写了19.5k字·共 10篇文章</br><span><p>
     </section>
   
       
@@ -613,7 +621,7 @@
 </div>
     <section class="powerby">
         
-            TFL's Personal Website | LTP 2.3.77 <br/>
+            TFL's Personal Website | LTP 2.3.81 <br/>
          <br />
         <br />
          <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">© Licensed Under CC BY-NC-SA 4.0</a>
@@ -764,8 +772,6 @@ document.getElementById('days').innerHTML = number_of_days;
             </span></div>
             <div class="category-list-item"><a href="https://tflasp.fun/categories/ssd/" class="category-list-link">ssd<span class="category-list-count">2</a>
             </span></div>
-            <div class="category-list-item"><a href="https://tflasp.fun/categories/test/" class="category-list-link">test<span class="category-list-count">1</a>
-            </span></div>
             <div class="category-list-item"><a href="https://tflasp.fun/categories/%E5%89%8D%E6%B2%BF%E6%8A%80%E6%9C%AF/" class="category-list-link">前沿技术<span class="category-list-count">3</a>
             </span></div>
             <div class="category-list-item"><a href="https://tflasp.fun/categories/%E6%95%99%E7%A8%8B/" class="category-list-link">教程<span class="category-list-count">3</a>
@@ -822,14 +828,6 @@ document.getElementById('days').innerHTML = number_of_days;
                         
                     </a> 
                 </div>
-            <div class="archives-year">
-                    <a href="/archives/#2019">
-                        
-                            <span class="year">2019</span>
-                            <span class="count">1</span>
-                        
-                    </a> 
-                </div>
             
         </div>
     </section>
@@ -855,10 +853,6 @@ document.getElementById('days').innerHTML = number_of_days;
         
             <a href="/tags/css/" class="font_size_1">
                 Css
-            </a>
-        
-            <a href="/tags/emoji/" class="font_size_1">
-                Emoji
             </a>
         
             <a href="/tags/html/" class="font_size_1">
@@ -887,6 +881,10 @@ document.getElementById('days').innerHTML = number_of_days;
         
             <a href="/tags/themes/" class="font_size_1">
                 Themes
+            </a>
+        
+            <a href="/tags/%E8%AE%B0%E5%BD%95/" class="font_size_1">
+                记录
             </a>
         
     </div>

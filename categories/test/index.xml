@@ -2,18 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Test on 改BUG的大橘</title>
-    <link>https://tflasp.fun/categories/test/</link>
+    <link>http://localhost:1313/categories/test/</link>
     <description>Recent content in Test on 改BUG的大橘</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 05 Mar 2019 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://tflasp.fun/categories/test/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Emoji Support</title>
-      <link>https://tflasp.fun/2019/emoji-support/</link>
-      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
-      <guid>https://tflasp.fun/2019/emoji-support/</guid>
-      <description>&lt;p&gt;Emoji can be enabled in a Hugo project in a number of ways.&lt;/p&gt;</description>
-    </item>
+    <atom:link href="http://localhost:1313/categories/test/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
