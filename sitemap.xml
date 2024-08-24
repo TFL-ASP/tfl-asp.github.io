@@ -20,13 +20,13 @@
     <loc>https://tflasp.fun/tags/</loc>
     <lastmod>2024-08-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://tflasp.fun/</loc>
-    <lastmod>2024-08-23T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://tflasp.fun/2024/links/</loc>
     <lastmod>2024-08-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://tflasp.fun/categories/%E5%BD%92%E6%A1%A3/</loc>
+    <lastmod>2024-08-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tflasp.fun/</loc>
     <lastmod>2024-08-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://tflasp.fun/categories/%E6%95%99%E7%A8%8B/</loc>
@@ -38,16 +38,16 @@
     <loc>https://tflasp.fun/categories/%E9%93%BE%E6%8E%A5/</loc>
     <lastmod>2024-08-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://tflasp.fun/tags/%E8%AE%B0%E5%BD%95/</loc>
-    <lastmod>2024-08-22T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://tflasp.fun/categories/%E8%AE%B0%E5%BD%95/</loc>
+    <loc>https://tflasp.fun/2024/record-hw/</loc>
     <lastmod>2024-08-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://tflasp.fun/2024/record-sw/</loc>
     <lastmod>2024-08-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://tflasp.fun/2024/record-hw/</loc>
+    <loc>https://tflasp.fun/tags/%E8%AE%B0%E5%BD%95/</loc>
+    <lastmod>2024-08-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tflasp.fun/categories/%E8%AE%B0%E5%BD%95/</loc>
     <lastmod>2024-08-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://tflasp.fun/2024/microcode/</loc>
@@ -150,5 +150,7 @@
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://tflasp.fun/search/</loc>
+  </url><url>
+    <loc>https://tflasp.fun/categories/test/</loc>
   </url>
 </urlset>

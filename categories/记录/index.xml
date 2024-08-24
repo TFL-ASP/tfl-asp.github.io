@@ -9,18 +9,18 @@
     <lastBuildDate>Thu, 22 Aug 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://tflasp.fun/categories/%E8%AE%B0%E5%BD%95/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>一只垃圾佬的探索历程（软件系统篇）</title>
-      <link>https://tflasp.fun/2024/record-sw/</link>
-      <pubDate>Thu, 22 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://tflasp.fun/2024/record-sw/</guid>
-      <description>System Windows 第一台笔记本用的是Windows LTSC 2019（17763.6189），非常精简，砍掉了Microsoft store以及所有UWP应用。 当时</description>
-    </item>
-    <item>
       <title>一只垃圾佬的探索历程（硬件平台篇）</title>
       <link>https://tflasp.fun/2024/record-hw/</link>
       <pubDate>Thu, 22 Aug 2024 00:00:00 +0000</pubDate>
       <guid>https://tflasp.fun/2024/record-hw/</guid>
       <description>梦开始的地方 2023年6月，最早的配置是： Intel Core i5-13400F 铭瑄B760M WIFI 华硕ATS RTX3060Ti 威刚DDR4 3200 8*2 鑫谷GN650W KIOXIA RC20 1T aigo P7000Z 2TB 在当时的性价比还算可</description>
+    </item>
+    <item>
+      <title>一只垃圾佬的探索历程（软件系统篇）</title>
+      <link>https://tflasp.fun/2024/record-sw/</link>
+      <pubDate>Thu, 22 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://tflasp.fun/2024/record-sw/</guid>
+      <description>System Windows 第一台笔记本用的是Windows LTSC 2019（17763.6189），非常精简，砍掉了Microsoft store以及所有UWP应用。 当时</description>
     </item>
   </channel>
 </rss>

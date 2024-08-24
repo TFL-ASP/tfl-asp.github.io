@@ -307,123 +307,6 @@ $ sudo reboot
 </description>
         </item>
         <item>
-        <title>一只垃圾佬的探索历程（软件系统篇）</title>
-        <link>https://tflasp.fun/2024/record-sw/</link>
-        <pubDate>Thu, 22 Aug 2024 00:00:00 +0000</pubDate>
-        
-        <guid>https://tflasp.fun/2024/record-sw/</guid>
-        <description>&lt;img src="https://tflasp.fun/2024/record-sw/sys-10.jpg" alt="Featured image of post 一只垃圾佬的探索历程（软件系统篇）" /&gt;&lt;h2 id=&#34;system&#34;&gt;System&lt;/h2&gt;
-&lt;h3 id=&#34;windows&#34;&gt;Windows&lt;/h3&gt;
-&lt;p&gt;第一台笔记本用的是&lt;code&gt;Windows LTSC 2019（17763.6189）&lt;/code&gt;，非常精简，砍掉了Microsoft store以及所有UWP应用。&lt;/p&gt;
-&lt;p&gt;&lt;figure 
-	
-		class=&#34;gallery-image&#34; 
-		style=&#34;
-			flex-grow: 106; 
-			flex-basis: 256px&#34;
-	&gt;
-	&lt;a href=&#34;https://tflasp.fun/2024/record-sw/LTSC2019.jpg&#34; data-size=&#34;380x356&#34;&gt;
-		&lt;img src=&#34;https://tflasp.fun/2024/record-sw/LTSC2019.jpg&#34;
-			width=&#34;380&#34;
-			height=&#34;356&#34;
-			srcset=&#34;https://tflasp.fun/2024/record-sw/LTSC2019_hua3bdb90004ddb224a5a8a41c58474616_24516_480x0_resize_q75_box.jpg 480w, https://tflasp.fun/2024/record-sw/LTSC2019_hua3bdb90004ddb224a5a8a41c58474616_24516_1024x0_resize_q75_box.jpg 1024w&#34;
-			loading=&#34;lazy&#34;
-			&gt;
-	&lt;/a&gt;
-	
-&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;当时主Channel版本是&lt;code&gt;21H1（19042.1）&lt;/code&gt;，本想是通过Microsoft官方的MCT Update升级系统的（保留文件与设置），但由于LTSC与普通平台不在一个渠道里，所以自然也不在MCT所支持的升级版本里。&lt;/p&gt;
-&lt;p&gt;于是顺藤摸瓜搞清楚了MacBook双系统的解决办法，以及BootCamp驱动。详见我写的教程：&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/Dd_w606/article/details/120640475&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;CSDN文章&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;2021年6月，Windows 11首次泄露，同时我也搞了一份来体验&lt;code&gt;（Build 22000.1）&lt;/code&gt;,这体验。。。把我最喜欢的磁贴给砍掉了，整体磨成圆角，越来越“果化”了。同时，Windows11对系统硬件增加了对TPM2.0的要求，这确实筛掉了很多老电脑，不过也可以通过修改注册表或者替换动态链接库（DLL文件）来实现安装Windows11，在此就不做教程了。&lt;/p&gt;
-&lt;p&gt;2021年6月24日，微软发布&lt;code&gt;Windows 11（22000.168）&lt;/code&gt;，至此我电脑用上了3系统（MacOS+Windows10 21H2+Windows11）&lt;/p&gt;
-&lt;p&gt;引导结构如下：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;├─MacOS Bootloader
-└─Windows Boot Manager
-    ├─Windows 10
-    └─Windows 11
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;在日常使用之外，我还喜欢尝试一些Insider Preview版本的系统，比如被号称为&lt;code&gt;Windows 9&lt;/code&gt;的&lt;code&gt;Windows Technical Preview Build 9834&lt;/code&gt;&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Links&lt;/th&gt;
-&lt;th&gt;Password&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;http://pan.baidu.com/s/1c60rW6&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Windows Technical Preview Build 9834&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;提取码：k2qe&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Edition / SKU Name&lt;/th&gt;
-&lt;th&gt;Key&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Professional&lt;/td&gt;
-&lt;td&gt;XHQ8N-C3MCJ-RQXB6-WCHYG-C9WKB&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Core&lt;/td&gt;
-&lt;td&gt;334NH-RXG76-64THK-C7CKG-D3VPT&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;然后就是不停的用最新版，跟着&lt;code&gt;Windows10 19042&lt;/code&gt;一直到现在的&lt;code&gt;19045&lt;/code&gt;，&lt;code&gt;Windows11 22000&lt;/code&gt;到&lt;code&gt;26100.1586&lt;/code&gt;,这三年算是随Windows一起迭代了吧哈哈，到后来随着事情越来越多，Windows update似乎确实有点烦人，索性组策略直接禁用了Windows update。&lt;/p&gt;
-&lt;p&gt;&lt;figure 
-	
-		class=&#34;gallery-image&#34; 
-		style=&#34;
-			flex-grow: 252; 
-			flex-basis: 605px&#34;
-	&gt;
-	&lt;a href=&#34;https://tflasp.fun/2024/record-sw/240824.jpg&#34; data-size=&#34;565x224&#34;&gt;
-		&lt;img src=&#34;https://tflasp.fun/2024/record-sw/240824.jpg&#34;
-			width=&#34;565&#34;
-			height=&#34;224&#34;
-			srcset=&#34;https://tflasp.fun/2024/record-sw/240824_huf68f1d1913b165da65d30e70d0c00519_23924_480x0_resize_q75_box.jpg 480w, https://tflasp.fun/2024/record-sw/240824_huf68f1d1913b165da65d30e70d0c00519_23924_1024x0_resize_q75_box.jpg 1024w&#34;
-			loading=&#34;lazy&#34;
-			alt=&#34;截至2024年8月24日的Windows各Channel最新版本&#34;&gt;
-	&lt;/a&gt;
-	
-	&lt;figcaption&gt;截至2024年8月24日的Windows各Channel最新版本&lt;/figcaption&gt;
-	
-&lt;/figure&gt;&lt;/p&gt;
-&lt;h3 id=&#34;linux&#34;&gt;Linux&lt;/h3&gt;
-&lt;p&gt;除了Windows，当然少不了Linux。&lt;/p&gt;
-&lt;p&gt;在尝试了Linux minit 、CentOS、Ubuntu后，最终还是选择了Ubuntu更适合我的使用逻辑，目前正作为服务器使用（&lt;code&gt;Ubuntu server 2404 LTS&lt;/code&gt;）。&lt;/p&gt;
-&lt;p&gt;由于Linux极高的可自定义性，目前在用&lt;code&gt;Proxmox VE&lt;/code&gt;作为服务器Host系统，然后在其下安装虚拟机来最大化利用系统硬件资源。&lt;/p&gt;
-&lt;p&gt;&lt;figure 
-	
-		class=&#34;gallery-image&#34; 
-		style=&#34;
-			flex-grow: 198; 
-			flex-basis: 476px&#34;
-	&gt;
-	&lt;a href=&#34;https://tflasp.fun/2024/record-sw/pve.jpg&#34; data-size=&#34;1901x957&#34;&gt;
-		&lt;img src=&#34;https://tflasp.fun/2024/record-sw/pve.jpg&#34;
-			width=&#34;1901&#34;
-			height=&#34;957&#34;
-			srcset=&#34;https://tflasp.fun/2024/record-sw/pve_huae367620b5e57a8a7e1d11fcc1de64df_222125_480x0_resize_q75_box.jpg 480w, https://tflasp.fun/2024/record-sw/pve_huae367620b5e57a8a7e1d11fcc1de64df_222125_1024x0_resize_q75_box.jpg 1024w&#34;
-			loading=&#34;lazy&#34;
-			&gt;
-	&lt;/a&gt;
-	
-&lt;/figure&gt;&lt;/p&gt;
-&lt;h2 id=&#34;software&#34;&gt;Software&lt;/h2&gt;
-&lt;p&gt;WSL、WSA、VMware、Hyper-V、FastCopy、Dism++、DiskGenius、FlashID等等实用工具，详见&lt;a class=&#34;link&#34; href=&#34;https://tflasp.fun/2024/links/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;这里&lt;/a&gt;&lt;/p&gt;
-</description>
-        </item>
-        <item>
         <title>一只垃圾佬的探索历程（硬件平台篇）</title>
         <link>https://tflasp.fun/2024/record-hw/</link>
         <pubDate>Thu, 22 Aug 2024 00:00:00 +0000</pubDate>
@@ -825,6 +708,123 @@ $ sudo reboot
 &lt;p&gt;问折腾硬件有什么意义？&lt;/p&gt;
 &lt;p&gt;就如人类为什么要举办奥运会，为什么要攀登珠穆朗玛峰一样，这个问题本身就没有意义，生命在于探索和不停地折腾！&lt;/p&gt;
 &lt;/blockquote&gt;
+</description>
+        </item>
+        <item>
+        <title>一只垃圾佬的探索历程（软件系统篇）</title>
+        <link>https://tflasp.fun/2024/record-sw/</link>
+        <pubDate>Thu, 22 Aug 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://tflasp.fun/2024/record-sw/</guid>
+        <description>&lt;img src="https://tflasp.fun/2024/record-sw/sys-10.jpg" alt="Featured image of post 一只垃圾佬的探索历程（软件系统篇）" /&gt;&lt;h2 id=&#34;system&#34;&gt;System&lt;/h2&gt;
+&lt;h3 id=&#34;windows&#34;&gt;Windows&lt;/h3&gt;
+&lt;p&gt;第一台笔记本用的是&lt;code&gt;Windows LTSC 2019（17763.6189）&lt;/code&gt;，非常精简，砍掉了Microsoft store以及所有UWP应用。&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 106; 
+			flex-basis: 256px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2024/record-sw/LTSC2019.jpg&#34; data-size=&#34;380x356&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2024/record-sw/LTSC2019.jpg&#34;
+			width=&#34;380&#34;
+			height=&#34;356&#34;
+			srcset=&#34;https://tflasp.fun/2024/record-sw/LTSC2019_hua3bdb90004ddb224a5a8a41c58474616_24516_480x0_resize_q75_box.jpg 480w, https://tflasp.fun/2024/record-sw/LTSC2019_hua3bdb90004ddb224a5a8a41c58474616_24516_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;当时主Channel版本是&lt;code&gt;21H1（19042.1）&lt;/code&gt;，本想是通过Microsoft官方的MCT Update升级系统的（保留文件与设置），但由于LTSC与普通平台不在一个渠道里，所以自然也不在MCT所支持的升级版本里。&lt;/p&gt;
+&lt;p&gt;于是顺藤摸瓜搞清楚了MacBook双系统的解决办法，以及BootCamp驱动。详见我写的教程：&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/Dd_w606/article/details/120640475&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;CSDN文章&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;2021年6月，Windows 11首次泄露，同时我也搞了一份来体验&lt;code&gt;（Build 22000.1）&lt;/code&gt;,这体验。。。把我最喜欢的磁贴给砍掉了，整体磨成圆角，越来越“果化”了。同时，Windows11对系统硬件增加了对TPM2.0的要求，这确实筛掉了很多老电脑，不过也可以通过修改注册表或者替换动态链接库（DLL文件）来实现安装Windows11，在此就不做教程了。&lt;/p&gt;
+&lt;p&gt;2021年6月24日，微软发布&lt;code&gt;Windows 11（22000.168）&lt;/code&gt;，至此我电脑用上了3系统（MacOS+Windows10 21H2+Windows11）&lt;/p&gt;
+&lt;p&gt;引导结构如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;├─MacOS Bootloader
+└─Windows Boot Manager
+    ├─Windows 10
+    └─Windows 11
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;在日常使用之外，我还喜欢尝试一些Insider Preview版本的系统，比如被号称为&lt;code&gt;Windows 9&lt;/code&gt;的&lt;code&gt;Windows Technical Preview Build 9834&lt;/code&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Links&lt;/th&gt;
+&lt;th&gt;Password&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;http://pan.baidu.com/s/1c60rW6&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Windows Technical Preview Build 9834&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;提取码：k2qe&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Edition / SKU Name&lt;/th&gt;
+&lt;th&gt;Key&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Professional&lt;/td&gt;
+&lt;td&gt;XHQ8N-C3MCJ-RQXB6-WCHYG-C9WKB&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Core&lt;/td&gt;
+&lt;td&gt;334NH-RXG76-64THK-C7CKG-D3VPT&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;然后就是不停的用最新版，跟着&lt;code&gt;Windows10 19042&lt;/code&gt;一直到现在的&lt;code&gt;19045&lt;/code&gt;，&lt;code&gt;Windows11 22000&lt;/code&gt;到&lt;code&gt;26100.1586&lt;/code&gt;,这三年算是随Windows一起迭代了吧哈哈，到后来随着事情越来越多，Windows update似乎确实有点烦人，索性组策略直接禁用了Windows update。&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 252; 
+			flex-basis: 605px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2024/record-sw/240824.jpg&#34; data-size=&#34;565x224&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2024/record-sw/240824.jpg&#34;
+			width=&#34;565&#34;
+			height=&#34;224&#34;
+			srcset=&#34;https://tflasp.fun/2024/record-sw/240824_huf68f1d1913b165da65d30e70d0c00519_23924_480x0_resize_q75_box.jpg 480w, https://tflasp.fun/2024/record-sw/240824_huf68f1d1913b165da65d30e70d0c00519_23924_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			alt=&#34;截至2024年8月24日的Windows各Channel最新版本&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;截至2024年8月24日的Windows各Channel最新版本&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&#34;linux&#34;&gt;Linux&lt;/h3&gt;
+&lt;p&gt;除了Windows，当然少不了Linux。&lt;/p&gt;
+&lt;p&gt;在尝试了Linux minit 、CentOS、Ubuntu后，最终还是选择了Ubuntu更适合我的使用逻辑，目前正作为服务器使用（&lt;code&gt;Ubuntu server 2404 LTS&lt;/code&gt;）。&lt;/p&gt;
+&lt;p&gt;由于Linux极高的可自定义性，目前在用&lt;code&gt;Proxmox VE&lt;/code&gt;作为服务器Host系统，然后在其下安装虚拟机来最大化利用系统硬件资源。&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 198; 
+			flex-basis: 476px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2024/record-sw/pve.jpg&#34; data-size=&#34;1901x957&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2024/record-sw/pve.jpg&#34;
+			width=&#34;1901&#34;
+			height=&#34;957&#34;
+			srcset=&#34;https://tflasp.fun/2024/record-sw/pve_huae367620b5e57a8a7e1d11fcc1de64df_222125_480x0_resize_q75_box.jpg 480w, https://tflasp.fun/2024/record-sw/pve_huae367620b5e57a8a7e1d11fcc1de64df_222125_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;software&#34;&gt;Software&lt;/h2&gt;
+&lt;p&gt;WSL、WSA、VMware、Hyper-V、FastCopy、Dism++、DiskGenius、FlashID等等实用工具，详见&lt;a class=&#34;link&#34; href=&#34;https://tflasp.fun/2024/links/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;这里&lt;/a&gt;&lt;/p&gt;
 </description>
         </item>
         <item>
