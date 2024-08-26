@@ -2931,6 +2931,35 @@ style:
 </description>
         </item>
         <item>
+        <title>Windows下使用批处理文件清除缓存</title>
+        <link>https://tflasp.fun/2021/cache_cleaner/</link>
+        <pubDate>Thu, 11 Nov 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://tflasp.fun/2021/cache_cleaner/</guid>
+        <description>&lt;p&gt;新建一个文本文档，更改后缀为bat，右键编辑输入以下内容，保存、运行。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;@echo off echo 
+正在清除缓存
+del /f /s /q %systemdrive%\*.tmp 
+del /f /s /q %systemdrive%\*._mp 
+del /f /s /q %systemdrive%\*.log 
+del /f /s /q %systemdrive%\*.gid 
+del /f /s /q %systemdrive%\*.chk 
+del /f /s /q %systemdrive%\*.old 
+del /f /s /q %systemdrive%\recycled\*.* 
+del /f /s /q %windir%\*.bak 
+del /f /s /q %windir%\prefetch\*.* 
+rd /s /q %windir%\temp &amp;amp; md %windir%\temp 
+del /f /q %userprofile%\cookies\*.* 
+del /f /q %userprofile%\recent\*.* 
+del /f /s /q &amp;quot;%userprofile%\Local Settings\Temporary Internet Files\*.*&amp;quot; 
+del /f /s /q &amp;quot;%userprofile%\Local Settings\Temp\*.*&amp;quot; 
+del /f /s /q &amp;quot;%userprofile%\recent\*.*&amp;quot; echo 
+清除完成！ 
+echo. &amp;amp; pause
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+        </item>
+        <item>
         <title>安装与激活Microsoft Office</title>
         <link>https://tflasp.fun/2021/officeinstall/</link>
         <pubDate>Sun, 10 Oct 2021 00:00:00 +0000</pubDate>

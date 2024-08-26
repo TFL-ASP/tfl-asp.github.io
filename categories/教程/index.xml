@@ -65,6 +65,13 @@
       <description>Github仓库地址：hugo-stack-theme 使用方式 从零建立博客：Fork仓库到自己账号下，用Github 注册 Vercel，依次点</description>
     </item>
     <item>
+      <title>Windows下使用批处理文件清除缓存</title>
+      <link>https://tflasp.fun/2021/cache_cleaner/</link>
+      <pubDate>Thu, 11 Nov 2021 00:00:00 +0000</pubDate>
+      <guid>https://tflasp.fun/2021/cache_cleaner/</guid>
+      <description>新建一个文本文档，更改后缀为bat，右键编辑输入以下内容，保存、运行。 @echo off echo 正在清除缓存 del /f /s /q %systemdrive%\*.tmp del /f /s /q %systemdrive%\*._mp del /f /s /q %systemdrive%\*.log del /f /s /q %systemdrive%\*.gid del /f /s /q %systemdrive%\*.chk del</description>
+    </item>
+    <item>
       <title>安装与激活Microsoft Office</title>
       <link>https://tflasp.fun/2021/officeinstall/</link>
       <pubDate>Sun, 10 Oct 2021 00:00:00 +0000</pubDate>

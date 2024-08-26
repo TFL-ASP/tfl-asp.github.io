@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>System on 改BUG的大橘</title>
+    <link>https://tflasp.fun/tags/system/</link>
+    <description>Recent content in System on 改BUG的大橘</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 11 Nov 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://tflasp.fun/tags/system/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Windows下使用批处理文件清除缓存</title>
+      <link>https://tflasp.fun/2021/cache_cleaner/</link>
+      <pubDate>Thu, 11 Nov 2021 00:00:00 +0000</pubDate>
+      <guid>https://tflasp.fun/2021/cache_cleaner/</guid>
+      <description>新建一个文本文档，更改后缀为bat，右键编辑输入以下内容，保存、运行。 @echo off echo 正在清除缓存 del /f /s /q %systemdrive%\*.tmp del /f /s /q %systemdrive%\*._mp del /f /s /q %systemdrive%\*.log del /f /s /q %systemdrive%\*.gid del /f /s /q %systemdrive%\*.chk del</description>
+    </item>
+  </channel>
+</rss>
