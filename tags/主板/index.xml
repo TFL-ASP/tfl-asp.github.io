@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>主板 on 改BUG的大橘</title>
+    <link>https://tflasp.fun/tags/%E4%B8%BB%E6%9D%BF/</link>
+    <description>Recent content in 主板 on 改BUG的大橘</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 28 Aug 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://tflasp.fun/tags/%E4%B8%BB%E6%9D%BF/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>【归档】旧主板BIOS添加nvme驱动</title>
+      <link>https://tflasp.fun/2024/bios_nvme/</link>
+      <pubDate>Wed, 28 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://tflasp.fun/2024/bios_nvme/</guid>
+      <description>准备工作 首先准备待刷BIOS的主板，我手上的是华硕B85M-F PLUS，以及一台能正常使用的联网的电脑，一个u盘（重要数据建议备份） 注意，尽</description>
+    </item>
+  </channel>
+</rss>

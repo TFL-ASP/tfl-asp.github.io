@@ -2,10 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://tflasp.fun/2024/docker-setup-ubuntu/</loc>
-    <lastmod>2024-08-23T00:00:00+00:00</lastmod>
+    <loc>https://tflasp.fun/2024/bios_nvme/</loc>
+    <lastmod>2024-08-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://tflasp.fun/categories/</loc>
+    <lastmod>2024-08-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tflasp.fun/post/</loc>
+    <lastmod>2024-08-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tflasp.fun/tags/</loc>
+    <lastmod>2024-08-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tflasp.fun/tags/%E4%B8%BB%E6%9D%BF/</loc>
+    <lastmod>2024-08-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tflasp.fun/categories/%E4%B8%BB%E6%9D%BF/</loc>
+    <lastmod>2024-08-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tflasp.fun/</loc>
+    <lastmod>2024-08-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tflasp.fun/categories/%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2024-08-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tflasp.fun/2024/docker-setup-ubuntu/</loc>
     <lastmod>2024-08-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://tflasp.fun/tags/docker/</loc>
@@ -14,22 +35,10 @@
     <loc>https://tflasp.fun/categories/docker/</loc>
     <lastmod>2024-08-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://tflasp.fun/post/</loc>
-    <lastmod>2024-08-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://tflasp.fun/tags/</loc>
-    <lastmod>2024-08-23T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://tflasp.fun/2024/links/</loc>
     <lastmod>2024-08-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://tflasp.fun/categories/%E5%BD%92%E6%A1%A3/</loc>
-    <lastmod>2024-08-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://tflasp.fun/</loc>
-    <lastmod>2024-08-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://tflasp.fun/categories/%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2024-08-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://tflasp.fun/tags/%E9%93%BE%E6%8E%A5/</loc>

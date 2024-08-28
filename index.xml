@@ -6,7 +6,97 @@
         <description>Recent content on 改BUG的大橘</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Fri, 23 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://tflasp.fun/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 28 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://tflasp.fun/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>【归档】旧主板BIOS添加nvme驱动</title>
+        <link>https://tflasp.fun/2024/bios_nvme/</link>
+        <pubDate>Wed, 28 Aug 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://tflasp.fun/2024/bios_nvme/</guid>
+        <description>&lt;h2 id=&#34;准备工作&#34;&gt;准备工作&lt;/h2&gt;
+&lt;p&gt;首先准备待刷BIOS的主板，我手上的是华硕B85M-F PLUS，以及一台能正常使用的联网的电脑，一个u盘（&lt;code&gt;重要数据建议备份&lt;/code&gt;）&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;注意，尽量不要在网上找做好的BIOS文件来刷，每个品牌主板各个系列下面还有很多子型号以及rev版本，BIOS都是不一样的，刷错了容易变砖（也可以用编程器刷回去，但完全没必要去踩这个坑）
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;提取本机bios&#34;&gt;提取本机BIOS&lt;/h2&gt;
+&lt;p&gt;使用&lt;a class=&#34;link&#34; href=&#34;https://wwz.lanzoul.com/it3l328llona&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;BIOSBackupTool&lt;/a&gt;进行备份本机BIOS&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 189; 
+			flex-basis: 455px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2024/bios_nvme/bios_out.jpg&#34; data-size=&#34;467x246&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2024/bios_nvme/bios_out.jpg&#34;
+			width=&#34;467&#34;
+			height=&#34;246&#34;
+			srcset=&#34;https://tflasp.fun/2024/bios_nvme/bios_out_hu1bb952bca1648c5a906363b1191765b1_30986_480x0_resize_q75_box.jpg 480w, https://tflasp.fun/2024/bios_nvme/bios_out_hu1bb952bca1648c5a906363b1191765b1_30986_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;注意自定义一栏修改大小到自己主板bios芯片的大小（看芯片丝印，实在不行自己一点点试）&lt;/p&gt;
+&lt;p&gt;单击读取，进度达到100%时，备份BIOS文件到桌面（暂存）。&lt;/p&gt;
+&lt;p&gt;给BIOS文件取一个简单的名字（方便后续在Shell里操作，一般是用BIOS版本号）&lt;/p&gt;
+&lt;h2 id=&#34;添加nvme模块&#34;&gt;添加NVMe模块&lt;/h2&gt;
+&lt;p&gt;下载&lt;a class=&#34;link&#34; href=&#34;https://wwz.lanzoul.com/iyr2Y28lluyh&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MMTool&lt;/a&gt;（提取码：2up8）&lt;/p&gt;
+&lt;p&gt;下载&lt;a class=&#34;link&#34; href=&#34;https://wwz.lanzoul.com/iBEqJ28lnk9e&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;NVMe驱动&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;打开MMTool，点击LoadImage，选择刚刚备份的BIOS（.rom或.cap），下拉找到CSMCORE，选中）&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 126; 
+			flex-basis: 302px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2024/bios_nvme/MMTOOL-1.jpg&#34; data-size=&#34;958x760&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2024/bios_nvme/MMTOOL-1.jpg&#34;
+			width=&#34;958&#34;
+			height=&#34;760&#34;
+			srcset=&#34;https://tflasp.fun/2024/bios_nvme/MMTOOL-1_hu2ca56b75fa77ce179851577feef1779c_155298_480x0_resize_q75_box.jpg 480w, https://tflasp.fun/2024/bios_nvme/MMTOOL-1_hu2ca56b75fa77ce179851577feef1779c_155298_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;在模块文件后点预览（如上图），选择刚刚下载好的NVMe驱动，选择压缩版最好。&lt;/p&gt;
+&lt;p&gt;最后另存映像在路径里，注意使用不同的文件名称区分开&lt;code&gt;不要用中文！&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;刷写bios&#34;&gt;刷写BIOS&lt;/h2&gt;
+&lt;p&gt;此步骤根据主板的不同有些许不同，如果使用原BIOS自带的刷写方法的话，有可能新BIOS文件无法通过校验导致刷写失败。如果用华硕的AI suite软件刷写则需要（.cap）文件。并且御三家以外的主板BIOS可能没有刷写BIOS的功能。在此介绍一个通用的使用EFI Shell刷写BIOS。&lt;/p&gt;
+&lt;p&gt;首先在原BIOS中改为UEFI启动。&lt;/p&gt;
+&lt;p&gt;拿出U盘，插在能正常使用的电脑上，格式化为&lt;code&gt;FAT32格式&lt;/code&gt;（若已经是，则忽略此步骤）。&lt;/p&gt;
+&lt;p&gt;下载&lt;a class=&#34;link&#34; href=&#34;https://wwz.lanzoul.com/irZhR28lm3jg&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;EFI Shell刷写工具&lt;/a&gt;，拷贝整个压缩包内EFI文件夹到U盘根目录，同时将已经添加过NVMe模块的.rom文件复制到\EFI\BIOS\中&lt;/p&gt;
+&lt;p&gt;安全弹出U盘，插入待刷主板，开机按&lt;code&gt;F8&lt;/code&gt;（不同主板有所不同）选择启动设备，找到U盘，回车进入EFI Shell&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 139; 
+			flex-basis: 334px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2024/bios_nvme/SHELL.jpg&#34; data-size=&#34;681x489&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2024/bios_nvme/SHELL.jpg&#34;
+			width=&#34;681&#34;
+			height=&#34;489&#34;
+			srcset=&#34;https://tflasp.fun/2024/bios_nvme/SHELL_hu8efec03471d3ed058c037eee85d15371_134685_480x0_resize_q75_box.jpg 480w, https://tflasp.fun/2024/bios_nvme/SHELL_hu8efec03471d3ed058c037eee85d15371_134685_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;及时按下&lt;code&gt;ESC&lt;/code&gt;跳过&lt;code&gt;startup.nsh&lt;/code&gt;，记下自己U盘的设备编号。//将下文命令中&lt;code&gt;0503.rom&lt;/code&gt;换成自己的BIOS文件名&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;shell&amp;gt; fs3:
+fs3:&amp;gt; cd \EFI\BOOT\
+fs3:\EFI\BOOT&amp;gt; afugan 0503.rom /GAN
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;等待刷写完成后，直接按下关机键，拔下U盘，重启进入BIOS查看是否可以通过NVMe硬盘启动。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>【归档】Ubuntu20.04下安装Docker</title>
         <link>https://tflasp.fun/2024/docker-setup-ubuntu/</link>
         <pubDate>Fri, 23 Aug 2024 00:00:00 +0000</pubDate>
@@ -327,17 +417,32 @@ $ sudo reboot
     &gt;BoardViewer点位图查看&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;\&lt;/td&gt;
 &lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://wwz.lanzoul.com/it3l328llona&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;BIOSBackupTool&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;64u3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://wwz.lanzoul.com/iyr2Y28lluyh&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MMTool&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;2up8&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://wwz.lanzoul.com/irZhR28lm3jg&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;EFI Shell 刷写BIOS&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;\&lt;/td&gt;
+&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 </description>
         </item>
         <item>
-        <title>一只垃圾佬的探索历程（硬件平台篇）</title>
+        <title>一只硬件玩家的探索历程（硬件平台篇）</title>
         <link>https://tflasp.fun/2024/record-hw/</link>
         <pubDate>Thu, 22 Aug 2024 00:00:00 +0000</pubDate>
         
         <guid>https://tflasp.fun/2024/record-hw/</guid>
-        <description>&lt;img src="https://tflasp.fun/2024/record-hw/3A2000C.jpg" alt="Featured image of post 一只垃圾佬的探索历程（硬件平台篇）" /&gt;&lt;h2 id=&#34;梦开始的地方&#34;&gt;梦开始的地方&lt;/h2&gt;
+        <description>&lt;img src="https://tflasp.fun/2024/record-hw/3A2000C.jpg" alt="Featured image of post 一只硬件玩家的探索历程（硬件平台篇）" /&gt;&lt;h2 id=&#34;梦开始的地方&#34;&gt;梦开始的地方&lt;/h2&gt;
 &lt;p&gt;最早的配置是：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Intel Core i5-13400F&lt;/p&gt;
@@ -736,12 +841,12 @@ $ sudo reboot
 </description>
         </item>
         <item>
-        <title>一只垃圾佬的探索历程（软件系统篇）</title>
+        <title>一只硬件玩家的探索历程（软件系统篇）</title>
         <link>https://tflasp.fun/2024/record-sw/</link>
         <pubDate>Thu, 22 Aug 2024 00:00:00 +0000</pubDate>
         
         <guid>https://tflasp.fun/2024/record-sw/</guid>
-        <description>&lt;img src="https://tflasp.fun/2024/record-sw/sys-10.jpg" alt="Featured image of post 一只垃圾佬的探索历程（软件系统篇）" /&gt;&lt;h2 id=&#34;system&#34;&gt;System&lt;/h2&gt;
+        <description>&lt;img src="https://tflasp.fun/2024/record-sw/sys-10.jpg" alt="Featured image of post 一只硬件玩家的探索历程（软件系统篇）" /&gt;&lt;h2 id=&#34;system&#34;&gt;System&lt;/h2&gt;
 &lt;h3 id=&#34;windows&#34;&gt;Windows&lt;/h3&gt;
 &lt;p&gt;第一台笔记本用的是&lt;code&gt;Windows LTSC 2019（17763.6189）&lt;/code&gt;，非常精简，砍掉了Microsoft store以及所有UWP应用。&lt;/p&gt;
 &lt;p&gt;&lt;figure 
@@ -1889,12 +1994,12 @@ Num     Name                 Tags  Description
 </description>
         </item>
         <item>
-        <title>年度巨献 | 深入浅出SSD（持续更新）</title>
+        <title>年度巨献 | 深入浅出SSD</title>
         <link>https://tflasp.fun/2024/intossd/</link>
         <pubDate>Sun, 04 Aug 2024 00:00:00 +0000</pubDate>
         
         <guid>https://tflasp.fun/2024/intossd/</guid>
-        <description>&lt;img src="https://tflasp.fun/2024/intossd/ssd.jpg" alt="Featured image of post 年度巨献 | 深入浅出SSD（持续更新）" /&gt;&lt;h2 id=&#34;ssd简介&#34;&gt;SSD简介&lt;/h2&gt;
+        <description>&lt;img src="https://tflasp.fun/2024/intossd/ssd.jpg" alt="Featured image of post 年度巨献 | 深入浅出SSD" /&gt;&lt;h2 id=&#34;ssd简介&#34;&gt;SSD简介&lt;/h2&gt;
 &lt;p&gt;SSD (&lt;code&gt;Solid State Drive&lt;/code&gt;)，即固态硬盘，是一种以半导体闪存(&lt;code&gt;NAND Flash&lt;/code&gt;)作为介质的存储设备。和传统机械硬盘(&lt;code&gt;Hard Disk Drive，HDD&lt;/code&gt;)不同，SSD以半导体存储数据，用纯电子电路实现，没有任何机械设备，这就决定了它在性能、功耗、可靠性等方面和HDD有很大不同。&lt;/p&gt;
 &lt;h2 id=&#34;ssd-协议与接口&#34;&gt;SSD 协议与接口&lt;/h2&gt;
 &lt;h3 id=&#34;pcie协议&#34;&gt;PCIe协议&lt;/h3&gt;

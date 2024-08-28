@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='在旧主板BIOS中添加nvme驱动使其可以通过nvme硬盘启动'><title>【归档】旧主板BIOS添加nvme驱动</title>
+
+<link rel='canonical' href='https://tflasp.fun/2024/bios_nvme/'>
+
+<link rel="stylesheet" href="/scss/style.min.46208cabd58e8bcef0cfb7d7ea6b561adcca3b91dd1fc6657493a44f03c5db75.css"><meta property='og:title' content='【归档】旧主板BIOS添加nvme驱动'>
+<meta property='og:description' content='在旧主板BIOS中添加nvme驱动使其可以通过nvme硬盘启动'>
+<meta property='og:url' content='https://tflasp.fun/2024/bios_nvme/'>
+<meta property='og:site_name' content='改BUG的大橘'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='主板' /><meta property='article:published_time' content='2024-08-28T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-08-28T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="【归档】旧主板BIOS添加nvme驱动">
+<meta name="twitter:description" content="在旧主板BIOS中添加nvme驱动使其可以通过nvme硬盘启动">
+
+
+  
+
+<style>
+    :root {
+        --article-font-family: "Noto Serif SC", var(--base-font-family);
+    }
+</style>
+
+<script> 
+		(function () {
+		    const customFont = document.createElement('link');
+		    customFont.href = "https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;700&display=swap"; 
+		    customFont.type = "text/css";
+		    customFont.rel = "stylesheet";
+		
+		    document.head.appendChild(customFont);
+		}());
+</script>
+
+    </head>
+    <body class="
+    article-page
+">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "dark");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex 
+    <!-- 
+        extended
+     -->
+    on-phone--column extended
+">
+    
+<div id="article-toolbar">
+    <a href="https://tflasp.fun/" class="back-home">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+        <span>Back</span>
+    </a>
+</div>
+    <aside class="sidebar left-sidebar sticky">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header class="site-info">
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu4b2414d569d16040044da8ad8587484d_26765_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">💬</span>
+                
+            </figure>
+            
+        
+        
+        <h1 class="site-name"><a href="/">改BUG的大橘</a></h1>
+        <h2 class="site-description">要找的，近在眼前</h2><ol class="social-menu">
+                
+                    <li>
+                        <a 
+                            href='https://space.bilibili.com/3494374367300353'
+                            target="_blank"
+                            title="Bilibili"
+                        >
+                            
+                            
+                                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-bilibili"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 10a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v6a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4v-6z" /><path d="M8 3l2 3" /><path d="M16 3l-2 3" /><path d="M9 13v-2" /><path d="M15 11v2" /></svg>
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a 
+                            href='https://blog.csdn.net/Dd_w606'
+                            target="_blank"
+                            title="CSDN"
+                        >
+                            
+                            
+                                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-code"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 8l-4 4l4 4" /><path d="M17 8l4 4l-4 4" /><path d="M14 4l-4 16" /></svg>
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a 
+                            href='https://tflasp.fun/2024/links/'
+                            target="_blank"
+                            title="FileShare"
+                        >
+                            
+                            
+                                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-zip"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 20.735a2 2 0 0 1 -1 -1.735v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2h-1" /><path d="M11 17a2 2 0 0 1 2 2v2a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1v-2a2 2 0 0 1 2 -2z" /><path d="M11 5l-1 0" /><path d="M13 7l-1 0" /><path d="M11 9l-1 0" /><path d="M13 11l-1 0" /><path d="M11 13l-1 0" /><path d="M13 15l-1 0" /></svg>
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a 
+                            href='https://github.com/TFL-ASP'
+                            target="_blank"
+                            title="GitHub"
+                        >
+                            
+                            
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a 
+                            href='https://qm.qq.com/q/z0wEdsiULK'
+                            target="_blank"
+                            title="QQ群"
+                        >
+                            
+                            
+                                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-qq"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9.748a14.716 14.716 0 0 0 11.995 -.052c.275 -9.236 -11.104 -11.256 -11.995 .052z" /><path d="M18 10c.984 2.762 1.949 4.765 2 7.153c.014 .688 -.664 1.346 -1.184 .303c-.346 -.696 -.952 -1.181 -1.816 -1.456" /><path d="M17 16c.031 1.831 .147 3.102 -1 4" /><path d="M8 20c-1.099 -.87 -.914 -2.24 -1 -4" /><path d="M6 10c-.783 2.338 -1.742 4.12 -1.968 6.43c-.217 2.227 .716 1.644 1.16 .917c.296 -.487 .898 -.934 1.808 -1.347" /><path d="M15.898 13l-.476 -2" /><path d="M8 20l-1.5 1c-.5 .5 -.5 1 .5 1h10c1 0 1 -.5 .5 -1l-1.5 -1" /><path d="M13.75 7m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M10.25 7m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /></svg>
+                            
+                        </a>
+                    </li>
+                
+            </ol></header>
+
+    <ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+
+        
+            <li id="dark-mode-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                <span>Dark Mode</span>
+            </li>
+        
+    </ol>
+</aside>
+
+<main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E4%B8%BB%E6%9D%BF/" >
+                主板
+            </a>
+        
+            <a href="/categories/%E6%95%99%E7%A8%8B/" >
+                教程
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/2024/bios_nvme/">【归档】旧主板BIOS添加nvme驱动</a>
+    </h2>
+
+    
+    <h3 class="article-subtitle">
+        在旧主板BIOS中添加nvme驱动使其可以通过nvme硬盘启动
+    </h3>
+    
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Aug 28, 2024</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-words">
+                    913字
+                </time>
+            </div>
+        
+    </footer>
+    
+</div>
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="准备工作">准备工作</h2>
+<p>首先准备待刷BIOS的主板，我手上的是华硕B85M-F PLUS，以及一台能正常使用的联网的电脑，一个u盘（<code>重要数据建议备份</code>）</p>
+<pre><code>注意，尽量不要在网上找做好的BIOS文件来刷，每个品牌主板各个系列下面还有很多子型号以及rev版本，BIOS都是不一样的，刷错了容易变砖（也可以用编程器刷回去，但完全没必要去踩这个坑）
+</code></pre>
+<h2 id="提取本机bios">提取本机BIOS</h2>
+<p>使用<a class="link" href="https://wwz.lanzoul.com/it3l328llona"  target="_blank" rel="noopener"
+    >BIOSBackupTool</a>进行备份本机BIOS</p>
+<p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 189; 
+			flex-basis: 455px"
+	>
+	<a href="/2024/bios_nvme/bios_out.jpg" data-size="467x246">
+		<img src="/2024/bios_nvme/bios_out.jpg"
+			width="467"
+			height="246"
+			srcset="/2024/bios_nvme/bios_out_hu1bb952bca1648c5a906363b1191765b1_30986_480x0_resize_q75_box.jpg 480w, /2024/bios_nvme/bios_out_hu1bb952bca1648c5a906363b1191765b1_30986_1024x0_resize_q75_box.jpg 1024w"
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<p>注意自定义一栏修改大小到自己主板bios芯片的大小（看芯片丝印，实在不行自己一点点试）</p>
+<p>单击读取，进度达到100%时，备份BIOS文件到桌面（暂存）。</p>
+<p>给BIOS文件取一个简单的名字（方便后续在Shell里操作，一般是用BIOS版本号）</p>
+<h2 id="添加nvme模块">添加NVMe模块</h2>
+<p>下载<a class="link" href="https://wwz.lanzoul.com/iyr2Y28lluyh"  target="_blank" rel="noopener"
+    >MMTool</a>（提取码：2up8）</p>
+<p>下载<a class="link" href="https://wwz.lanzoul.com/iBEqJ28lnk9e"  target="_blank" rel="noopener"
+    >NVMe驱动</a></p>
+<p>打开MMTool，点击LoadImage，选择刚刚备份的BIOS（.rom或.cap），下拉找到CSMCORE，选中）</p>
+<p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 126; 
+			flex-basis: 302px"
+	>
+	<a href="/2024/bios_nvme/MMTOOL-1.jpg" data-size="958x760">
+		<img src="/2024/bios_nvme/MMTOOL-1.jpg"
+			width="958"
+			height="760"
+			srcset="/2024/bios_nvme/MMTOOL-1_hu2ca56b75fa77ce179851577feef1779c_155298_480x0_resize_q75_box.jpg 480w, /2024/bios_nvme/MMTOOL-1_hu2ca56b75fa77ce179851577feef1779c_155298_1024x0_resize_q75_box.jpg 1024w"
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<p>在模块文件后点预览（如上图），选择刚刚下载好的NVMe驱动，选择压缩版最好。</p>
+<p>最后另存映像在路径里，注意使用不同的文件名称区分开<code>不要用中文！</code></p>
+<h2 id="刷写bios">刷写BIOS</h2>
+<p>此步骤根据主板的不同有些许不同，如果使用原BIOS自带的刷写方法的话，有可能新BIOS文件无法通过校验导致刷写失败。如果用华硕的AI suite软件刷写则需要（.cap）文件。并且御三家以外的主板BIOS可能没有刷写BIOS的功能。在此介绍一个通用的使用EFI Shell刷写BIOS。</p>
+<p>首先在原BIOS中改为UEFI启动。</p>
+<p>拿出U盘，插在能正常使用的电脑上，格式化为<code>FAT32格式</code>（若已经是，则忽略此步骤）。</p>
+<p>下载<a class="link" href="https://wwz.lanzoul.com/irZhR28lm3jg"  target="_blank" rel="noopener"
+    >EFI Shell刷写工具</a>，拷贝整个压缩包内EFI文件夹到U盘根目录，同时将已经添加过NVMe模块的.rom文件复制到\EFI\BIOS\中</p>
+<p>安全弹出U盘，插入待刷主板，开机按<code>F8</code>（不同主板有所不同）选择启动设备，找到U盘，回车进入EFI Shell</p>
+<p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 139; 
+			flex-basis: 334px"
+	>
+	<a href="/2024/bios_nvme/SHELL.jpg" data-size="681x489">
+		<img src="/2024/bios_nvme/SHELL.jpg"
+			width="681"
+			height="489"
+			srcset="/2024/bios_nvme/SHELL_hu8efec03471d3ed058c037eee85d15371_134685_480x0_resize_q75_box.jpg 480w, /2024/bios_nvme/SHELL_hu8efec03471d3ed058c037eee85d15371_134685_1024x0_resize_q75_box.jpg 1024w"
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<p>及时按下<code>ESC</code>跳过<code>startup.nsh</code>，记下自己U盘的设备编号。//将下文命令中<code>0503.rom</code>换成自己的BIOS文件名</p>
+<pre><code>shell&gt; fs3:
+fs3:&gt; cd \EFI\BOOT\
+fs3:\EFI\BOOT&gt; afugan 0503.rom /GAN
+</code></pre>
+<p>等待刷写完成后，直接按下关机键，拔下U盘，重启进入BIOS查看是否可以通过NVMe硬盘启动。</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/%E4%B8%BB%E6%9D%BF/">主板</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+        <h2 class="section-title">Related contents</h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="">
+    <a href="/2024/docker-setup-ubuntu/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">【归档】Ubuntu20.04下安装Docker</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/2024/rtl8125-driver/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">【归档】PVE安装RTL8125驱动</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/2024/timeshift/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">【归档】PVE安装配置timeshift</h2>
+        </div>
+    </a>
+</article>
+                
+            </div>
+        </div>
+    
+</aside>
+
+     
+     
+        
+    
+
+    <footer class="site-footer">
+  
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+<script>
+(function(u, c) {
+  var d = document, t = 'script', o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+  o.src = u;
+  if (c) { o.addEventListener('load', function(e) { c(e); }); }
+  s.parentNode.insertBefore(o, s);
+})('//cdn.bootcss.com/pangu/3.3.0/pangu.min.js', function() {
+  pangu.spacingPage();
+});
+
+
+</script>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <section class="copyright">
+        &copy; 
+        
+            2021 - 
+        
+        2024 <a href="https://stack-theme-mod.vercel.app/">改Bug的大橘</a><i class="fas fa-bell"></i> <br>
+      共产出了26.5k字·共 19篇文章</br><span><p>
+    </section>
+  
+      
+<section class="powerby">
+        
+            TFL's Personal Website | LTP 2.4.3 <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.2.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a><br />
+         <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">© Licensed Under CC BY-NC-SA 4.0</a>
+    </section>
+
+<script>
+var s1 = '2024-07-07';
+s1 = new Date(s1.replace(/-/g, "/"));
+s2 = new Date();
+var days = s2.getTime() - s1.getTime();
+var number_of_days = parseInt(days / (1000 * 60 * 60 * 24));
+document.getElementById('days').innerHTML = number_of_days;
+
+
+</script>
+    
+</footer>
+
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    
+    
+    
+    <aside class="sidebar right-sidebar sticky">
+        
+            <form action="/search/" class="search-form widget" >
+        <p>
+            <label>Search</label>
+            <input name="keyword" required placeholder="Type something..." />
+        
+            <button title="Search">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+            </button>
+        </p>
+    </form>
+        
+            
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#准备工作">准备工作</a></li>
+    <li><a href="#提取本机bios">提取本机BIOS</a></li>
+    <li><a href="#添加nvme模块">添加NVMe模块</a></li>
+    <li><a href="#刷写bios">刷写BIOS</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+        
+            <section class="widget categories">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-infinity" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M9.828 9.172a4 4 0 1 0 0 5.656 a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828 a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828" />
+</svg>
+
+
+  
+        </div> 
+        <h2 class="widget-title section-title">Categories</h2>
+    <div class="widget-categories--list">
+<div class="widget">
+    <h3 class="widget-title"> </h3>
+    <div class="widget-body">
+        <div class="category-list">
+            <div class="category-list-item"><a href="https://tflasp.fun/categories/docker/" class="category-list-link">docker<span class="category-list-count">1</a>
+            </span></div>
+            <div class="category-list-item"><a href="https://tflasp.fun/categories/hugo/" class="category-list-link">hugo<span class="category-list-count">2</a>
+            </span></div>
+            <div class="category-list-item"><a href="https://tflasp.fun/categories/pve/" class="category-list-link">pve<span class="category-list-count">6</a>
+            </span></div>
+            <div class="category-list-item"><a href="https://tflasp.fun/categories/ram/" class="category-list-link">ram<span class="category-list-count">1</a>
+            </span></div>
+            <div class="category-list-item"><a href="https://tflasp.fun/categories/software/" class="category-list-link">software<span class="category-list-count">1</a>
+            </span></div>
+            <div class="category-list-item"><a href="https://tflasp.fun/categories/ssd/" class="category-list-link">ssd<span class="category-list-count">2</a>
+            </span></div>
+            <div class="category-list-item"><a href="https://tflasp.fun/categories/system/" class="category-list-link">system<span class="category-list-count">1</a>
+            </span></div>
+            <div class="category-list-item"><a href="https://tflasp.fun/categories/%E4%B8%BB%E6%9D%BF/" class="category-list-link">主板<span class="category-list-count">1</a>
+            </span></div>
+            <div class="category-list-item"><a href="https://tflasp.fun/categories/%E5%89%8D%E6%B2%BF%E6%8A%80%E6%9C%AF/" class="category-list-link">前沿技术<span class="category-list-count">3</a>
+            </span></div>
+            <div class="category-list-item"><a href="https://tflasp.fun/categories/%E5%BD%92%E6%A1%A3/" class="category-list-link">归档<span class="category-list-count">8</a>
+            </span></div>
+            <div class="category-list-item"><a href="https://tflasp.fun/categories/%E6%95%99%E7%A8%8B/" class="category-list-link">教程<span class="category-list-count">11</a>
+            </span></div>
+            <div class="category-list-item"><a href="https://tflasp.fun/categories/%E8%AE%B0%E5%BD%95/" class="category-list-link">记录<span class="category-list-count">2</a>
+            </span></div>
+            <div class="category-list-item"><a href="https://tflasp.fun/categories/%E9%93%BE%E6%8E%A5/" class="category-list-link">链接<span class="category-list-count">1</a>
+            </span></div>
+        </div>
+    </div>
+</div>
+    </div>
+    </section>
+        
+            <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-infinity" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M9.828 9.172a4 4 0 1 0 0 5.656 a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828 a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Archives</h2>
+
+        
+        
+        
+        
+        
+        <div class="widget-archive--list">
+            <div class="archives-year">
+                    <a href="/archives/#2024">
+                        
+                            <span class="year">2024</span>
+                            <span class="count">15</span>
+                        
+                    </a> 
+                </div>
+            <div class="archives-year">
+                    <a href="/archives/#2021">
+                        
+                            <span class="year">2021</span>
+                            <span class="count">2</span>
+                        
+                    </a> 
+                </div>
+            <div class="archives-year">
+                    <a href="/archives/#2020">
+                        
+                            <span class="year">2020</span>
+                            <span class="count">2</span>
+                        
+                    </a> 
+                </div>
+            
+        </div>
+    </section>
+        
+            <section class="widget tagCloud">
+    <div class="widget-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tag" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11 3L20 12a1.5 1.5 0 0 1 0 2L14 20a1.5 1.5 0 0 1 -2 0L3 11v-4a4 4 0 0 1 4 -4h4" />
+  <circle cx="9" cy="9" r="2" />
+</svg>
+
+
+
+    </div>
+    <h2 class="widget-title section-title">Tags</h2>
+
+    <div class="tagCloud-tags">
+        
+            <a href="/tags/pve/" class="font_size_6">
+                PVE
+            </a>
+        
+            <a href="/tags/ssd/" class="font_size_2">
+                SSD
+            </a>
+        
+            <a href="/tags/%E8%AE%B0%E5%BD%95/" class="font_size_2">
+                记录
+            </a>
+        
+            <a href="/tags/css/" class="font_size_1">
+                Css
+            </a>
+        
+            <a href="/tags/docker/" class="font_size_1">
+                Docker
+            </a>
+        
+            <a href="/tags/html/" class="font_size_1">
+                Html
+            </a>
+        
+            <a href="/tags/hugo/" class="font_size_1">
+                Hugo
+            </a>
+        
+            <a href="/tags/markdown/" class="font_size_1">
+                Markdown
+            </a>
+        
+            <a href="/tags/ram/" class="font_size_1">
+                RAM
+            </a>
+        
+            <a href="/tags/software/" class="font_size_1">
+                Software
+            </a>
+        
+    </div>
+</section>
+        
+    </aside>
+
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
