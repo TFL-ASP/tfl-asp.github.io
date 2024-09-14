@@ -88,12 +88,13 @@
 	&lt;/a&gt;
 	
 &lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;及时按下&lt;code&gt;ESC&lt;/code&gt;跳过&lt;code&gt;startup.nsh&lt;/code&gt;，记下自己U盘的设备编号。//将下文命令中&lt;code&gt;0503.rom&lt;/code&gt;换成自己的BIOS文件名&lt;/p&gt;
+&lt;p&gt;及时按下&lt;code&gt;ESC&lt;/code&gt;跳过&lt;code&gt;startup.nsh&lt;/code&gt;，记下自己U盘的设备编号。&lt;/p&gt;
+&lt;p&gt;//将下文命令中&lt;code&gt;0503.rom&lt;/code&gt;换成自己的BIOS文件名&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;shell&amp;gt; fs3:
 fs3:&amp;gt; cd \EFI\BOOT\
 fs3:\EFI\BOOT&amp;gt; afugan 0503.rom /GAN
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;等待刷写完成后，直接按下关机键，拔下U盘，重启进入BIOS查看是否可以通过NVMe硬盘启动。&lt;/p&gt;
+&lt;p&gt;等待刷写完成后，直接按下关机键，拔下U盘，重启进入BIOS查看是否可以通过NVMe硬盘启动。（如果BIOS内还是无法识别，重启按F8直接选择启动设备，实测部分华硕主板会出现该问题）&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -455,6 +456,21 @@ $ sudo reboot
 &lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://wwz.lanzoul.com/iGARJ28jfh4b&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;SM2258XT_Sandisk_BiCS4_T0910A0&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;43pf&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://wwz.lanzoul.com/ibEEV29yq18b&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;SM2258XT(AD)_B16A_PKGV0608A_FWV0328A0 Beta&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;\&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://wwz.lanzoul.com/i8P2i29yqrwb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;SM2258XT东芝BiCS4颗粒（T0910A0固件）【8Die】&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;\&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://wwz.lanzoul.com/iZKVY29yricd&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;TRANSCEND-SM32X-PV1.3.08-BY-USBDEV-U1207&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;\&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
