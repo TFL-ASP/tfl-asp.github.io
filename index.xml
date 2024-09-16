@@ -2054,12 +2054,17 @@ Num     Name                 Tags  Description
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;2代表TX和RX&lt;/p&gt;
 &lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 446; 
+			flex-basis: 1070px&#34;
 	&gt;
-	&lt;a href=&#34;https://img.picui.cn/free/2024/08/19/66c347b0dde5a.jpg&#34; &gt;
-		&lt;img src=&#34;https://img.picui.cn/free/2024/08/19/66c347b0dde5a.jpg&#34;
-			
-			
-			
+	&lt;a href=&#34;https://tflasp.fun/2024/intossd/pcie-link-widths.jpg&#34; data-size=&#34;785x176&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2024/intossd/pcie-link-widths.jpg&#34;
+			width=&#34;785&#34;
+			height=&#34;176&#34;
+			srcset=&#34;https://tflasp.fun/2024/intossd/pcie-link-widths_hucc78108fa480238b43ddf08cd330f450_28856_480x0_resize_q75_box.jpg 480w, https://tflasp.fun/2024/intossd/pcie-link-widths_hucc78108fa480238b43ddf08cd330f450_28856_1024x0_resize_q75_box.jpg 1024w&#34;
 			loading=&#34;lazy&#34;
 			&gt;
 	&lt;/a&gt;
@@ -2072,12 +2077,17 @@ Num     Name                 Tags  Description
 &lt;p&gt;&lt;code&gt;SW&lt;/code&gt;是PCIe链路上进行转接的一类设备，拥有一个upstream prot和多个downstream port。可以将SW当作多个PCIe桥组成的设备。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;EP&lt;/code&gt;是PCIe链路的末端，有两种类型：Legacy Endpoint 和 PCIe Endpoint。传统EP支持IO事务，而且还需要能接收锁定事务。而PCIe EP不必支持IO事务和接收锁定事务，但必须支持MSI中断。&lt;/p&gt;
 &lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 139; 
+			flex-basis: 335px&#34;
 	&gt;
-	&lt;a href=&#34;https://img.picui.cn/free/2024/08/19/66c347cf1e31e.jpg&#34; &gt;
-		&lt;img src=&#34;https://img.picui.cn/free/2024/08/19/66c347cf1e31e.jpg&#34;
-			
-			
-			
+	&lt;a href=&#34;https://tflasp.fun/2024/intossd/PCIE-T.jpg&#34; data-size=&#34;750x537&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2024/intossd/PCIE-T.jpg&#34;
+			width=&#34;750&#34;
+			height=&#34;537&#34;
+			srcset=&#34;https://tflasp.fun/2024/intossd/PCIE-T_hua44522a7eeebfe5b7cf11adb47567b30_71744_480x0_resize_q75_box.jpg 480w, https://tflasp.fun/2024/intossd/PCIE-T_hua44522a7eeebfe5b7cf11adb47567b30_71744_1024x0_resize_q75_box.jpg 1024w&#34;
 			loading=&#34;lazy&#34;
 			&gt;
 	&lt;/a&gt;
@@ -2097,12 +2107,17 @@ Egress port（出端口）：发送数据包的端口。
 &lt;p&gt;PCIe支持的事务类型与PCI、PCI-X支持的事务类型相同，包括存储器读和存储器写，IO读和IO写，配置读和配置写，此外还增加了一种新事务：消息（message）。&lt;/p&gt;
 &lt;p&gt;PCIe事务可以分为Non-Posted 和 Posted。Non-Posted指 requester 发送TLP请求包给completer时，completer需要返回一个TLP完成数据包给requester。Posted指requester 发送TLP请求事务包给 completer时，completer不需要回复TLP完成数据包给requester。&lt;/p&gt;
 &lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 213; 
+			flex-basis: 513px&#34;
 	&gt;
-	&lt;a href=&#34;https://img.picui.cn/free/2024/08/19/66c348072b130.jpg&#34; &gt;
-		&lt;img src=&#34;https://img.picui.cn/free/2024/08/19/66c348072b130.jpg&#34;
-			
-			
-			
+	&lt;a href=&#34;https://tflasp.fun/2024/intossd/PCIE-NPPT.jpg&#34; data-size=&#34;740x346&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2024/intossd/PCIE-NPPT.jpg&#34;
+			width=&#34;740&#34;
+			height=&#34;346&#34;
+			srcset=&#34;https://tflasp.fun/2024/intossd/PCIE-NPPT_hud1150bf66e860872a03bc23d18c2573a_59019_480x0_resize_q75_box.jpg 480w, https://tflasp.fun/2024/intossd/PCIE-NPPT_hud1150bf66e860872a03bc23d18c2573a_59019_1024x0_resize_q75_box.jpg 1024w&#34;
 			loading=&#34;lazy&#34;
 			&gt;
 	&lt;/a&gt;
@@ -2110,12 +2125,17 @@ Egress port（出端口）：发送数据包的端口。
 &lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;PCIe的数据传输以数据包的形式进行传输，通信涉及一种称为处理层数据包（Transaction Layer packet， TLP）的数据包发送和接收。TLP包可以分为TLP请求的数据包和TLP完成的数据包。TLP请求的数据包依据PCIe事务的不同而不同，对于Non-Posted事务，需要completer 返回 TLP完成包给requester。TLP完成包带数据信息的称为CPLD，不带数据信息的称为CPL。&lt;/p&gt;
 &lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 109; 
+			flex-basis: 262px&#34;
 	&gt;
-	&lt;a href=&#34;https://img.picui.cn/free/2024/08/19/66c3481fe8f17.jpg&#34; &gt;
-		&lt;img src=&#34;https://img.picui.cn/free/2024/08/19/66c3481fe8f17.jpg&#34;
-			
-			
-			
+	&lt;a href=&#34;https://tflasp.fun/2024/intossd/PCIE-TLP-PT.jpg&#34; data-size=&#34;668x610&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2024/intossd/PCIE-TLP-PT.jpg&#34;
+			width=&#34;668&#34;
+			height=&#34;610&#34;
+			srcset=&#34;https://tflasp.fun/2024/intossd/PCIE-TLP-PT_hu6b9e293d8ab5e7e5698ef0cb01537a68_94643_480x0_resize_q75_box.jpg 480w, https://tflasp.fun/2024/intossd/PCIE-TLP-PT_hu6b9e293d8ab5e7e5698ef0cb01537a68_94643_1024x0_resize_q75_box.jpg 1024w&#34;
 			loading=&#34;lazy&#34;
 			&gt;
 	&lt;/a&gt;
@@ -2128,12 +2148,17 @@ Egress port（出端口）：发送数据包的端口。
 &lt;p&gt;在 NVMe 驱动器面市之前，SSD 和 HDD 基本都使用 SATA 接口。但是，SATA 通信标准自身的性能瓶颈局限着 SSD 的发展空间，因此迫切需要一种新的接口标准。最初，开发者通过直接将 SSD 插在 PCI Express 插槽上来绕过这一瓶颈，但这种做法并不符合标准规范。&lt;/p&gt;
 &lt;p&gt;NVMe 为所有制造商提供了一个统一的标准。现在，大多数现代 NVMe SSD 都采用了 M.2 接口规格，而 M.2 接口有多种尺寸规格。&lt;/p&gt;
 &lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 433; 
+			flex-basis: 1040px&#34;
 	&gt;
-	&lt;a href=&#34;https://img.picui.cn/free/2024/08/19/66c3489952497.jpg&#34; &gt;
-		&lt;img src=&#34;https://img.picui.cn/free/2024/08/19/66c3489952497.jpg&#34;
-			
-			
-			
+	&lt;a href=&#34;https://tflasp.fun/2024/intossd/M2-B&amp;amp;M.jpg&#34; data-size=&#34;811x187&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2024/intossd/M2-B&amp;amp;M.jpg&#34;
+			width=&#34;811&#34;
+			height=&#34;187&#34;
+			srcset=&#34;https://tflasp.fun/2024/intossd/M2-B&amp;amp;M_hua32a7cce3f363fd021a7d010a6d64e27_35180_480x0_resize_q75_box.jpg 480w, https://tflasp.fun/2024/intossd/M2-B&amp;amp;M_hua32a7cce3f363fd021a7d010a6d64e27_35180_1024x0_resize_q75_box.jpg 1024w&#34;
 			loading=&#34;lazy&#34;
 			alt=&#34;M.2 B&amp;M Key&#34;&gt;
 	&lt;/a&gt;
@@ -2142,12 +2167,17 @@ Egress port（出端口）：发送数据包的端口。
 	
 &lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 155; 
+			flex-basis: 372px&#34;
 	&gt;
-	&lt;a href=&#34;https://img.picui.cn/free/2024/08/19/66c3486a08f38.jpg&#34; &gt;
-		&lt;img src=&#34;https://img.picui.cn/free/2024/08/19/66c3486a08f38.jpg&#34;
-			
-			
-			
+	&lt;a href=&#34;https://tflasp.fun/2024/intossd/M2-TYPE.jpg&#34; data-size=&#34;1005x647&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2024/intossd/M2-TYPE.jpg&#34;
+			width=&#34;1005&#34;
+			height=&#34;647&#34;
+			srcset=&#34;https://tflasp.fun/2024/intossd/M2-TYPE_huf50fcd0f21947f7712fce707d09f8d14_172974_480x0_resize_q75_box.jpg 480w, https://tflasp.fun/2024/intossd/M2-TYPE_huf50fcd0f21947f7712fce707d09f8d14_172974_1024x0_resize_q75_box.jpg 1024w&#34;
 			loading=&#34;lazy&#34;
 			&gt;
 	&lt;/a&gt;
@@ -2155,12 +2185,17 @@ Egress port（出端口）：发送数据包的端口。
 &lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;当然，除了消费级SSD,企业级SSD通常采用另一些接口来满足生产环境的需求，比如U.2、E1.S、E1.L、E3.S、E3.L等等规格。&lt;/p&gt;
 &lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 154; 
+			flex-basis: 371px&#34;
 	&gt;
-	&lt;a href=&#34;https://img.picui.cn/free/2024/08/19/66c3487f5a606.jpg&#34; &gt;
-		&lt;img src=&#34;https://img.picui.cn/free/2024/08/19/66c3487f5a606.jpg&#34;
-			
-			
-			
+	&lt;a href=&#34;https://tflasp.fun/2024/intossd/SSD-DC.jpg&#34; data-size=&#34;1061x686&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2024/intossd/SSD-DC.jpg&#34;
+			width=&#34;1061&#34;
+			height=&#34;686&#34;
+			srcset=&#34;https://tflasp.fun/2024/intossd/SSD-DC_hu16da4d4a0d68f58b1a4240dae49955f3_156651_480x0_resize_q75_box.jpg 480w, https://tflasp.fun/2024/intossd/SSD-DC_hu16da4d4a0d68f58b1a4240dae49955f3_156651_1024x0_resize_q75_box.jpg 1024w&#34;
 			loading=&#34;lazy&#34;
 			&gt;
 	&lt;/a&gt;
@@ -2168,12 +2203,17 @@ Egress port（出端口）：发送数据包的端口。
 &lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;配套的还有主板上对应的接口，图中包含了U.2（SFF8639）、SATA以及eSATA接口。&lt;/p&gt;
 &lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 211; 
+			flex-basis: 507px&#34;
 	&gt;
-	&lt;a href=&#34;https://img.picui.cn/free/2024/08/19/66c348a906f69.jpg&#34; &gt;
-		&lt;img src=&#34;https://img.picui.cn/free/2024/08/19/66c348a906f69.jpg&#34;
-			
-			
-			
+	&lt;a href=&#34;https://tflasp.fun/2024/intossd/MB-U2.jpg&#34; data-size=&#34;600x284&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2024/intossd/MB-U2.jpg&#34;
+			width=&#34;600&#34;
+			height=&#34;284&#34;
+			srcset=&#34;https://tflasp.fun/2024/intossd/MB-U2_hu4e1a1efb74d2f44314dd737aa6474f16_46033_480x0_resize_q75_box.jpg 480w, https://tflasp.fun/2024/intossd/MB-U2_hu4e1a1efb74d2f44314dd737aa6474f16_46033_1024x0_resize_q75_box.jpg 1024w&#34;
 			loading=&#34;lazy&#34;
 			&gt;
 	&lt;/a&gt;
@@ -2181,12 +2221,17 @@ Egress port（出端口）：发送数据包的端口。
 &lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;以下是一个不是很完全的总结：&lt;/p&gt;
 &lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 165; 
+			flex-basis: 396px&#34;
 	&gt;
-	&lt;a href=&#34;https://img.picui.cn/free/2024/08/19/66c348c697b82.jpg&#34; &gt;
-		&lt;img src=&#34;https://img.picui.cn/free/2024/08/19/66c348c697b82.jpg&#34;
-			
-			
-			
+	&lt;a href=&#34;https://tflasp.fun/2024/intossd/SUM1.jpg&#34; data-size=&#34;801x485&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2024/intossd/SUM1.jpg&#34;
+			width=&#34;801&#34;
+			height=&#34;485&#34;
+			srcset=&#34;https://tflasp.fun/2024/intossd/SUM1_hub5fd42139d179c08f3918cbc4769c19e_99259_480x0_resize_q75_box.jpg 480w, https://tflasp.fun/2024/intossd/SUM1_hub5fd42139d179c08f3918cbc4769c19e_99259_1024x0_resize_q75_box.jpg 1024w&#34;
 			loading=&#34;lazy&#34;
 			&gt;
 	&lt;/a&gt;
@@ -2195,12 +2240,17 @@ Egress port（出端口）：发送数据包的端口。
 &lt;h2 id=&#34;ssd-主控与闪存&#34;&gt;SSD 主控与闪存&lt;/h2&gt;
 &lt;p&gt;SATA SSD主控板实例：&lt;/p&gt;
 &lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 120; 
+			flex-basis: 289px&#34;
 	&gt;
-	&lt;a href=&#34;https://img.picui.cn/free/2024/08/19/66c348e5a5c81.jpg&#34; &gt;
-		&lt;img src=&#34;https://img.picui.cn/free/2024/08/19/66c348e5a5c81.jpg&#34;
-			
-			
-			
+	&lt;a href=&#34;https://tflasp.fun/2024/intossd/satassd1.jpg&#34; data-size=&#34;557x461&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2024/intossd/satassd1.jpg&#34;
+			width=&#34;557&#34;
+			height=&#34;461&#34;
+			srcset=&#34;https://tflasp.fun/2024/intossd/satassd1_huec972013000b95c3b958ebd7ebe6b3eb_75476_480x0_resize_q75_box.jpg 480w, https://tflasp.fun/2024/intossd/satassd1_huec972013000b95c3b958ebd7ebe6b3eb_75476_1024x0_resize_q75_box.jpg 1024w&#34;
 			loading=&#34;lazy&#34;
 			&gt;
 	&lt;/a&gt;
@@ -2208,12 +2258,17 @@ Egress port（出端口）：发送数据包的端口。
 &lt;/figure&gt;&lt;/p&gt;
 &lt;h3 id=&#34;主控概述&#34;&gt;主控概述&lt;/h3&gt;
 &lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 140; 
+			flex-basis: 338px&#34;
 	&gt;
-	&lt;a href=&#34;https://img.picui.cn/free/2024/08/19/66c348fa96c31.jpg&#34; &gt;
-		&lt;img src=&#34;https://img.picui.cn/free/2024/08/19/66c348fa96c31.jpg&#34;
-			
-			
-			
+	&lt;a href=&#34;https://tflasp.fun/2024/intossd/CentrolCTRL1.jpg&#34; data-size=&#34;685x486&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2024/intossd/CentrolCTRL1.jpg&#34;
+			width=&#34;685&#34;
+			height=&#34;486&#34;
+			srcset=&#34;https://tflasp.fun/2024/intossd/CentrolCTRL1_hubc9efb8826c5ba12dd1973ce5e025845_117719_480x0_resize_q75_box.jpg 480w, https://tflasp.fun/2024/intossd/CentrolCTRL1_hubc9efb8826c5ba12dd1973ce5e025845_117719_1024x0_resize_q75_box.jpg 1024w&#34;
 			loading=&#34;lazy&#34;
 			&gt;
 	&lt;/a&gt;
@@ -2232,12 +2287,17 @@ Egress port（出端口）：发送数据包的端口。
 &lt;p&gt;近年来，为了在 3D-NAND 的基础上进一步增大存储容量，SK 海力士开发了 4D-NAND技术，使得芯片尺寸进一步缩小。4D-NAND 在 3D-NAND 单元下方形成外围电路，减少了外围电路所占的面积，从而实现存储容量的最大化并降低 NAND 闪存的成本。经过几代技术的发展，当前的半导体行业已实现了用更多层数存储更多信息，包括 SK 海力士在内的业界领先企业完成了多达 128 层的产品开发和投产准备，甚至正在研发更多层的产品设备。&lt;/p&gt;
 &lt;h3 id=&#34;nand-flash-数据存储单元整体架构&#34;&gt;NAND Flash 数据存储单元整体架构&lt;/h3&gt;
 &lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 213; 
+			flex-basis: 512px&#34;
 	&gt;
-	&lt;a href=&#34;https://img.picui.cn/free/2024/08/19/66c3491786c62.jpg&#34; &gt;
-		&lt;img src=&#34;https://img.picui.cn/free/2024/08/19/66c3491786c62.jpg&#34;
-			
-			
-			
+	&lt;a href=&#34;https://tflasp.fun/2024/intossd/NANDFLASH1.jpg&#34; data-size=&#34;1061x497&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2024/intossd/NANDFLASH1.jpg&#34;
+			width=&#34;1061&#34;
+			height=&#34;497&#34;
+			srcset=&#34;https://tflasp.fun/2024/intossd/NANDFLASH1_hu5be419e5ec358d2e9389edfe3049eb88_69830_480x0_resize_q75_box.jpg 480w, https://tflasp.fun/2024/intossd/NANDFLASH1_hu5be419e5ec358d2e9389edfe3049eb88_69830_1024x0_resize_q75_box.jpg 1024w&#34;
 			loading=&#34;lazy&#34;
 			alt=&#34;NAND Flash 数据存储单元整体架构&#34;&gt;
 	&lt;/a&gt;
@@ -2246,12 +2306,17 @@ Egress port（出端口）：发送数据包的端口。
 	
 &lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 162; 
+			flex-basis: 389px&#34;
 	&gt;
-	&lt;a href=&#34;https://img.picui.cn/free/2024/08/19/66c3492d3557a.jpg&#34; &gt;
-		&lt;img src=&#34;https://img.picui.cn/free/2024/08/19/66c3492d3557a.jpg&#34;
-			
-			
-			
+	&lt;a href=&#34;https://tflasp.fun/2024/intossd/name-a1.jpg&#34; data-size=&#34;924x569&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2024/intossd/name-a1.jpg&#34;
+			width=&#34;924&#34;
+			height=&#34;569&#34;
+			srcset=&#34;https://tflasp.fun/2024/intossd/name-a1_hu8b12a8a4884987d54d885de3dd995cf2_104274_480x0_resize_q75_box.jpg 480w, https://tflasp.fun/2024/intossd/name-a1_hu8b12a8a4884987d54d885de3dd995cf2_104274_1024x0_resize_q75_box.jpg 1024w&#34;
 			loading=&#34;lazy&#34;
 			alt=&#34;NAND Flash 命名规则（部分）&#34;&gt;
 	&lt;/a&gt;
@@ -2264,12 +2329,17 @@ Egress port（出端口）：发送数据包的端口。
 &lt;p&gt;芯片常用封装有：DIP、QFP、PFP、PGA、BGA、TSOP、COB等封装。这里主要介绍NAND FLASH常用的三种封装（TSOP、BGA、COB）。&lt;/p&gt;
 &lt;p&gt;1、TSOP封装&lt;/p&gt;
 &lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 186; 
+			flex-basis: 448px&#34;
 	&gt;
-	&lt;a href=&#34;https://img.picui.cn/free/2024/08/19/66c3493f71c79.jpg&#34; &gt;
-		&lt;img src=&#34;https://img.picui.cn/free/2024/08/19/66c3493f71c79.jpg&#34;
-			
-			
-			
+	&lt;a href=&#34;https://tflasp.fun/2024/intossd/tsop.jpg&#34; data-size=&#34;590x316&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2024/intossd/tsop.jpg&#34;
+			width=&#34;590&#34;
+			height=&#34;316&#34;
+			srcset=&#34;https://tflasp.fun/2024/intossd/tsop_hu8beb56d09de7b7581561fa9a509b88a9_22230_480x0_resize_q75_box.jpg 480w, https://tflasp.fun/2024/intossd/tsop_hu8beb56d09de7b7581561fa9a509b88a9_22230_1024x0_resize_q75_box.jpg 1024w&#34;
 			loading=&#34;lazy&#34;
 			&gt;
 	&lt;/a&gt;
@@ -2282,12 +2352,17 @@ Egress port（出端口）：发送数据包的端口。
 &lt;p&gt;然后使用邦定机对晶圆进行邦定。确认邦定电气性能良好后，对晶圆表面及PCB板部分进行树脂覆盖固定。COB 是最简单的裸芯片贴装技术，但它的封装密度远不如TSOP和BGA技术。&lt;/p&gt;
 &lt;p&gt;3、BGA封装&lt;/p&gt;
 &lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 86; 
+			flex-basis: 208px&#34;
 	&gt;
-	&lt;a href=&#34;https://img.picui.cn/free/2024/08/19/66c34726f0bb5.jpg&#34; &gt;
-		&lt;img src=&#34;https://img.picui.cn/free/2024/08/19/66c34726f0bb5.jpg&#34;
-			
-			
-			
+	&lt;a href=&#34;https://tflasp.fun/2024/intossd/bga.jpg&#34; data-size=&#34;587x676&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2024/intossd/bga.jpg&#34;
+			width=&#34;587&#34;
+			height=&#34;676&#34;
+			srcset=&#34;https://tflasp.fun/2024/intossd/bga_hu74173938d167e11410952cef36aadf53_96937_480x0_resize_q75_box.jpg 480w, https://tflasp.fun/2024/intossd/bga_hu74173938d167e11410952cef36aadf53_96937_1024x0_resize_q75_box.jpg 1024w&#34;
 			loading=&#34;lazy&#34;
 			&gt;
 	&lt;/a&gt;
@@ -2321,12 +2396,17 @@ Egress port（出端口）：发送数据包的端口。
 &lt;h3 id=&#34;垃圾回收&#34;&gt;垃圾回收&lt;/h3&gt;
 &lt;p&gt;垃圾回收就是把某个闪存块上的有效数据读出来，重写，然后把该闪存块擦除，就得到新的可用闪存块了。&lt;/p&gt;
 &lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 114; 
+			flex-basis: 274px&#34;
 	&gt;
-	&lt;a href=&#34;https://img.picui.cn/free/2024/08/19/66c349546f2e3.jpg&#34; &gt;
-		&lt;img src=&#34;https://img.picui.cn/free/2024/08/19/66c349546f2e3.jpg&#34;
-			
-			
-			
+	&lt;a href=&#34;https://tflasp.fun/2024/intossd/GC.jpg&#34; data-size=&#34;354x310&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2024/intossd/GC.jpg&#34;
+			width=&#34;354&#34;
+			height=&#34;310&#34;
+			srcset=&#34;https://tflasp.fun/2024/intossd/GC_hude396378753fa6e49e6de0acc9684669_24169_480x0_resize_q75_box.jpg 480w, https://tflasp.fun/2024/intossd/GC_hude396378753fa6e49e6de0acc9684669_24169_1024x0_resize_q75_box.jpg 1024w&#34;
 			loading=&#34;lazy&#34;
 			&gt;
 	&lt;/a&gt;
@@ -2335,12 +2415,17 @@ Egress port（出端口）：发送数据包的端口。
 &lt;p&gt;随机存取时候，如何挑选要回收的内存块，挑垃圾比较多的闪存块来回收，因为有效数据少，要搬移的数据少，这样腾出空闪存块的速度快。&lt;/p&gt;
 &lt;h3 id=&#34;写放大wa&#34;&gt;写放大（WA）&lt;/h3&gt;
 &lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 369; 
+			flex-basis: 886px&#34;
 	&gt;
-	&lt;a href=&#34;https://img.picui.cn/free/2024/08/19/66c34968377b9.jpg&#34; &gt;
-		&lt;img src=&#34;https://img.picui.cn/free/2024/08/19/66c34968377b9.jpg&#34;
-			
-			
-			
+	&lt;a href=&#34;https://tflasp.fun/2024/intossd/WA1.jpg&#34; data-size=&#34;192x52&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2024/intossd/WA1.jpg&#34;
+			width=&#34;192&#34;
+			height=&#34;52&#34;
+			srcset=&#34;https://tflasp.fun/2024/intossd/WA1_hu03c908d3324a31e45f90a7f819c671ec_4170_480x0_resize_q75_box.jpg 480w, https://tflasp.fun/2024/intossd/WA1_hu03c908d3324a31e45f90a7f819c671ec_4170_1024x0_resize_q75_box.jpg 1024w&#34;
 			loading=&#34;lazy&#34;
 			&gt;
 	&lt;/a&gt;
@@ -2351,12 +2436,17 @@ Egress port（出端口）：发送数据包的端口。
 &lt;p&gt;顺序写（不可控）&lt;/p&gt;
 &lt;p&gt;增大OP（预留空间）（可控）&lt;/p&gt;
 &lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 1284; 
+			flex-basis: 3083px&#34;
 	&gt;
-	&lt;a href=&#34;https://img.picui.cn/free/2024/08/19/66c349866d5d9.jpg&#34; &gt;
-		&lt;img src=&#34;https://img.picui.cn/free/2024/08/19/66c349866d5d9.jpg&#34;
-			
-			
-			
+	&lt;a href=&#34;https://tflasp.fun/2024/intossd/OP1.jpg&#34; data-size=&#34;334x26&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2024/intossd/OP1.jpg&#34;
+			width=&#34;334&#34;
+			height=&#34;26&#34;
+			srcset=&#34;https://tflasp.fun/2024/intossd/OP1_huc66b06ef75fa0b8e2104aabafec68a60_4115_480x0_resize_q75_box.jpg 480w, https://tflasp.fun/2024/intossd/OP1_huc66b06ef75fa0b8e2104aabafec68a60_4115_1024x0_resize_q75_box.jpg 1024w&#34;
 			loading=&#34;lazy&#34;
 			&gt;
 	&lt;/a&gt;
