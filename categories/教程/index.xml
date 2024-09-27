@@ -6,8 +6,15 @@
     <description>Recent content in 教程 on 改BUG的大橘</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 28 Aug 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 26 Sep 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://tflasp.fun/categories/%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>【教程】保障数据安全，关闭Bitlocker</title>
+      <link>https://tflasp.fun/2024/disable-bitlocker/</link>
+      <pubDate>Thu, 26 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://tflasp.fun/2024/disable-bitlocker/</guid>
+      <description>前言 近期有几个朋友笔记本硬盘坏了，拿去恢复数据，硬件层面的问题解决后发现硬盘有BitLocker加密，而他全然不知道此事，微软账号里也没有备</description>
+    </item>
     <item>
       <title>【归档】旧主板BIOS添加nvme驱动</title>
       <link>https://tflasp.fun/2024/bios_nvme/</link>

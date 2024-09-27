@@ -6,7 +6,274 @@
         <description>Recent content on 改BUG的大橘</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Wed, 28 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://tflasp.fun/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 26 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://tflasp.fun/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>【教程】保障数据安全，关闭Bitlocker</title>
+        <link>https://tflasp.fun/2024/disable-bitlocker/</link>
+        <pubDate>Thu, 26 Sep 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://tflasp.fun/2024/disable-bitlocker/</guid>
+        <description>&lt;img src="https://tflasp.fun/2024/disable-bitlocker/slug.png" alt="Featured image of post 【教程】保障数据安全，关闭Bitlocker" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;近期有几个朋友笔记本硬盘坏了，拿去恢复数据，硬件层面的问题解决后发现硬盘有BitLocker加密，而他全然不知道此事，微软账号里也没有备份，所以数据也就无法找回了。这也是我写这篇文章的原因之一。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;BitLocker 是一项 Windows 安全功能，可为整个卷提供加密，解决因设备丢失、被盗或不适当停用而导致数据被盗或泄露的威胁。但是，&lt;strong&gt;在2020年后的新笔记本电脑一般已开启Bitlocker功能（即硬盘中数据已被加密）&lt;/strong&gt;，若计算机硬件有改变或损坏，重新进入已加密的系统会要求输入“恢复密钥”，如下图。&lt;strong&gt;若密钥丢失，则加密分区中的数据全部丢失！&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;如果的确担心数据安全或有重要数据，请&lt;strong&gt;及时备份密钥&lt;/strong&gt;（或使用其他加密软件，如：&lt;code&gt;VeraCrypt&lt;/code&gt;），或者按照公司要求保存在指定驱动器里！&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 222; 
+			flex-basis: 533px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2024/disable-bitlocker/recovery.png&#34; data-size=&#34;676x304&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2024/disable-bitlocker/recovery.png&#34;
+			width=&#34;676&#34;
+			height=&#34;304&#34;
+			srcset=&#34;https://tflasp.fun/2024/disable-bitlocker/recovery_hu5c1f7f68b6da2f524f10fc57c5d65e43_137490_480x0_resize_box_3.png 480w, https://tflasp.fun/2024/disable-bitlocker/recovery_hu5c1f7f68b6da2f524f10fc57c5d65e43_137490_1024x0_resize_box_3.png 1024w&#34;
+			loading=&#34;lazy&#34;
+			alt=&#34;Bitlocker恢复界面（将会在开机时显示）&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;Bitlocker恢复界面（将会在开机时显示）&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;原理&#34;&gt;原理&lt;/h2&gt;
+&lt;p&gt;若对原理不感兴趣可以 &lt;a class=&#34;link&#34; href=&#34;&#34; &gt;往下翻&lt;/a&gt; 或 &lt;a class=&#34;link&#34; href=&#34;&#34; &gt;单击右侧目录栏跳转至“&lt;strong&gt;解密方法&lt;/strong&gt;”&lt;/a&gt; 以查看解密步骤！&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 127; 
+			flex-basis: 306px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2024/disable-bitlocker/bitlocker.png&#34; data-size=&#34;669x524&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2024/disable-bitlocker/bitlocker.png&#34;
+			width=&#34;669&#34;
+			height=&#34;524&#34;
+			srcset=&#34;https://tflasp.fun/2024/disable-bitlocker/bitlocker_hu351eb91ec3bf236eb95b8deb32d48588_314421_480x0_resize_box_3.png 480w, https://tflasp.fun/2024/disable-bitlocker/bitlocker_hu351eb91ec3bf236eb95b8deb32d48588_314421_1024x0_resize_box_3.png 1024w&#34;
+			loading=&#34;lazy&#34;
+			alt=&#34;Bitlocker使用TPM解密 原理图（图源：MSDN）&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;Bitlocker使用TPM解密 原理图（图源：MSDN）&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;图解：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;BIOS 启动并初始化TPM。并measure firmware部分敏感内容和启动分区以及bootloader，将结果放入PCR组。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;2.如果 PCR 值与期望值相匹配，则 TPM 将使用存储根密钥 (SRK) 对卷主密钥 (VMK) 进行解密。&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;从卷中读取加密 FVEK，并使用解密 VMK 对其进行解密。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;访问磁盘扇区时，使用 FVEK 进行解密。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;为应用程序和过程提供解密数据。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;其中SRK存储在TPM芯片中，它是整个过程的信任根。BitLocker通过检测PCR组，对主启动记录 (MBR) 代码、NTFS 启动扇区、NTFS 启动块、启动管理器和其他重要组件进行检查，如果被更改，则第2步将出错，要求输入recovery PIN值。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;详细原理请跳转至Microsoft官方文档：&lt;a class=&#34;link&#34; href=&#34;https://learn.microsoft.com/en-us/windows/security/operating-system-security/data-protection/bitlocker/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Microsoft Learn: BitLocker overview&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;触发条件&#34;&gt;触发条件&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;1，更换主板（100%触发，把硬盘拆下做成移动硬盘也在此列）
+
+2，修改高级启动设置（高概率）
+
+3，同一台电脑上存在两个以上的系统盘或引导（高概率，PE应该也在此列）
+
+4，更换CPU/内存/显卡/网卡/加装硬盘（低概率）
+
+5，更新BIOS（低概率）
+
+6，Win10更新时崩溃卡死（低概率）
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;解密方法-windows1011通用&#34;&gt;解密方法 (Windows10/11通用)&lt;/h2&gt;
+&lt;p&gt;以下内容涉及图片较多，建议打开Github加速器查看。&lt;/p&gt;
+&lt;h3 id=&#34;辨别当前磁盘状态&#34;&gt;辨别当前磁盘状态&lt;/h3&gt;
+&lt;h4 id=&#34;case-1-无需解密&#34;&gt;Case 1 （无需解密）&lt;/h4&gt;
+&lt;p&gt;打开“此电脑”，若磁盘图标同下，则磁盘未被加密，无需进行任何操作！！&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 1088; 
+			flex-basis: 2612px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2024/disable-bitlocker/status1.png&#34; data-size=&#34;762x70&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2024/disable-bitlocker/status1.png&#34;
+			width=&#34;762&#34;
+			height=&#34;70&#34;
+			srcset=&#34;https://tflasp.fun/2024/disable-bitlocker/status1_hu19fa987ca6fc814523aff5dbee594014_5893_480x0_resize_box_3.png 480w, https://tflasp.fun/2024/disable-bitlocker/status1_hu19fa987ca6fc814523aff5dbee594014_5893_1024x0_resize_box_3.png 1024w&#34;
+			loading=&#34;lazy&#34;
+			alt=&#34;磁盘上无任何标记，未被加密&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;磁盘上无任何标记，未被加密&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h4 id=&#34;case-2-需要解密&#34;&gt;Case 2 （需要解密）&lt;/h4&gt;
+&lt;p&gt;磁盘上有带锁图标且存在感叹号，该磁盘已被加密，但还缺失连接账户的步骤！普通用户建议直接解密。&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 362; 
+			flex-basis: 870px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2024/disable-bitlocker/status2.png&#34; data-size=&#34;254x70&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2024/disable-bitlocker/status2.png&#34;
+			width=&#34;254&#34;
+			height=&#34;70&#34;
+			srcset=&#34;https://tflasp.fun/2024/disable-bitlocker/status2_hu0bd0f26ae9bd93285e3f90a2fecb25c0_15574_480x0_resize_box_3.png 480w, https://tflasp.fun/2024/disable-bitlocker/status2_hu0bd0f26ae9bd93285e3f90a2fecb25c0_15574_1024x0_resize_box_3.png 1024w&#34;
+			loading=&#34;lazy&#34;
+			alt=&#34;磁盘上有带锁图标且存在感叹号，该磁盘已被加密，但还缺失连接账户的步骤&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;磁盘上有带锁图标且存在感叹号，该磁盘已被加密，但还缺失连接账户的步骤&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h4 id=&#34;case-3-需要解密&#34;&gt;Case 3 （需要解密）&lt;/h4&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 390; 
+			flex-basis: 937px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2024/disable-bitlocker/status3.png&#34; data-size=&#34;254x65&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2024/disable-bitlocker/status3.png&#34;
+			width=&#34;254&#34;
+			height=&#34;65&#34;
+			srcset=&#34;https://tflasp.fun/2024/disable-bitlocker/status3_huc3b3d67649efda639b360f81b75aa60f_8483_480x0_resize_box_3.png 480w, https://tflasp.fun/2024/disable-bitlocker/status3_huc3b3d67649efda639b360f81b75aa60f_8483_1024x0_resize_box_3.png 1024w&#34;
+			loading=&#34;lazy&#34;
+			alt=&#34;磁盘上出现打开的锁，该磁盘已被完全加密&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;磁盘上出现打开的锁，该磁盘已被完全加密&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&#34;解密步骤请务必判断自身磁盘状态后进行操作&#34;&gt;解密步骤（请务必判断自身磁盘状态后进行操作）&lt;/h3&gt;
+&lt;p&gt;同时按Windows徽标键+R 调出 运行，并输入control，回车&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 181; 
+			flex-basis: 434px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2024/disable-bitlocker/step1.png&#34; data-size=&#34;395x218&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2024/disable-bitlocker/step1.png&#34;
+			width=&#34;395&#34;
+			height=&#34;218&#34;
+			srcset=&#34;https://tflasp.fun/2024/disable-bitlocker/step1_hu1ad58a6de2d5dce3a768a2028ff668c4_42263_480x0_resize_box_3.png 480w, https://tflasp.fun/2024/disable-bitlocker/step1_hu1ad58a6de2d5dce3a768a2028ff668c4_42263_1024x0_resize_box_3.png 1024w&#34;
+			loading=&#34;lazy&#34;
+			alt=&#34;同时按Windows徽标键&amp;#43;R 调出 运行，并输入control，回车&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;同时按Windows徽标键+R 调出 运行，并输入control，回车&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;将查看方式改为“小图标”&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 179; 
+			flex-basis: 430px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2024/disable-bitlocker/step2.png&#34; data-size=&#34;1109x618&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2024/disable-bitlocker/step2.png&#34;
+			width=&#34;1109&#34;
+			height=&#34;618&#34;
+			srcset=&#34;https://tflasp.fun/2024/disable-bitlocker/step2_hud75ad39012b4948563eaa812025e936e_246769_480x0_resize_box_3.png 480w, https://tflasp.fun/2024/disable-bitlocker/step2_hud75ad39012b4948563eaa812025e936e_246769_1024x0_resize_box_3.png 1024w&#34;
+			loading=&#34;lazy&#34;
+			alt=&#34;将查看方式改为“小图标”&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;将查看方式改为“小图标”&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;单击“Bitlocker驱动器加密”&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 223; 
+			flex-basis: 536px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2024/disable-bitlocker/step3.png&#34; data-size=&#34;1126x504&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2024/disable-bitlocker/step3.png&#34;
+			width=&#34;1126&#34;
+			height=&#34;504&#34;
+			srcset=&#34;https://tflasp.fun/2024/disable-bitlocker/step3_hua87df2787f3a286621259056406910b0_221800_480x0_resize_box_3.png 480w, https://tflasp.fun/2024/disable-bitlocker/step3_hua87df2787f3a286621259056406910b0_221800_1024x0_resize_box_3.png 1024w&#34;
+			loading=&#34;lazy&#34;
+			alt=&#34;单击“Bitlocker驱动器加密”&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;单击“Bitlocker驱动器加密”&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;选择要解密的驱动器，单击“关闭BitLocker，并授予权限&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 115; 
+			flex-basis: 276px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2024/disable-bitlocker/step4.png&#34; data-size=&#34;612x532&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2024/disable-bitlocker/step4.png&#34;
+			width=&#34;612&#34;
+			height=&#34;532&#34;
+			srcset=&#34;https://tflasp.fun/2024/disable-bitlocker/step4_hu7b09272d50ebb46126ef10c50b65985d_163230_480x0_resize_box_3.png 480w, https://tflasp.fun/2024/disable-bitlocker/step4_hu7b09272d50ebb46126ef10c50b65985d_163230_1024x0_resize_box_3.png 1024w&#34;
+			loading=&#34;lazy&#34;
+			alt=&#34;选择要解密的驱动器，单击“关闭BitLocker”，并授予权限&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;选择要解密的驱动器，单击“关闭BitLocker”，并授予权限&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;注意：解密过程会消耗一段时间，根据磁盘性能和磁盘内已有文件大小相关，解密时可正常使用电脑，期间可以关机，但是异常断电会导致数据丢失！！！
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;若需输入恢复密钥，可在微软账户里寻找到密钥，&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://account.microsoft.com/devices/recoverykey?refd=account.microsoft.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;微软官网&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 244; 
+			flex-basis: 587px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2024/disable-bitlocker/key.png&#34; data-size=&#34;1232x503&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2024/disable-bitlocker/key.png&#34;
+			width=&#34;1232&#34;
+			height=&#34;503&#34;
+			srcset=&#34;https://tflasp.fun/2024/disable-bitlocker/key_hu3cb8847aa3b1670fecacda07b21d02d2_244148_480x0_resize_box_3.png 480w, https://tflasp.fun/2024/disable-bitlocker/key_hu3cb8847aa3b1670fecacda07b21d02d2_244148_1024x0_resize_box_3.png 1024w&#34;
+			loading=&#34;lazy&#34;
+			alt=&#34;密钥示例&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;密钥示例&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;将密钥ID与设备上的密钥ID匹配后，输入正确的恢复密钥即可解密。&lt;/p&gt;
+&lt;h2 id=&#34;参考资料&#34;&gt;参考资料&lt;/h2&gt;
+&lt;p&gt;[1] &lt;a class=&#34;link&#34; href=&#34;https://learn.microsoft.com/en-us/windows/security/hardware-security/tpm/tpm-fundamentals&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Microsoft Learn/Windows/Security &lt;strong&gt;TPM fundamentals&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;[2] &lt;a class=&#34;link&#34; href=&#34;https://learn.microsoft.com/en-us/windows/security/operating-system-security/data-protection/bitlocker/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Microsoft Learn/Windows/Security &lt;strong&gt;BitLocker countermeasures&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;[3] &lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/29840740&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Bitlocker、TPM和系统安全&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>【归档】旧主板BIOS添加nvme驱动</title>
         <link>https://tflasp.fun/2024/bios_nvme/</link>
         <pubDate>Wed, 28 Aug 2024 00:00:00 +0000</pubDate>
@@ -2644,7 +2911,7 @@ Egress port（出端口）：发送数据包的端口。
 &lt;p&gt;当写盘完成时，显示准备就绪，即可关闭程序，弹出U盘，拔出U盘。&lt;/p&gt;
 &lt;h2 id=&#34;pve-安装&#34;&gt;PVE 安装&lt;/h2&gt;
 &lt;p&gt;1、打开主机电源，不断按键盘F12按键（不同主机的启动按键不同，请自行百度）选择由刚刚制作好的启动盘启动。&lt;/p&gt;
-&lt;p&gt;2、进入PVE安装页面，选择第一个Install Proxmox VE （Graphical)，按回车。&lt;/p&gt;
+&lt;p&gt;2、进入PVE安装页面，选择第一个Install Proxmox VE （Graphical），按回车。&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	
 		class=&#34;gallery-image&#34; 
