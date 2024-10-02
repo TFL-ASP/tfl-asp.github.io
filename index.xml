@@ -1795,26 +1795,36 @@ Num     Name                 Tags  Description
         <pubDate>Mon, 19 Aug 2024 00:00:00 +0000</pubDate>
         
         <guid>https://tflasp.fun/2024/intoram/</guid>
-        <description>&lt;img src="https://img.picui.cn/free/2024/08/19/66c31be1e7277.jpg" alt="Featured image of post RAM" /&gt;&lt;h2 id=&#34;存储系统&#34;&gt;存储系统&lt;/h2&gt;
+        <description>&lt;img src="https://tflasp.fun/2024/intoram/ram.jpg" alt="Featured image of post RAM" /&gt;&lt;h2 id=&#34;存储系统&#34;&gt;存储系统&lt;/h2&gt;
 &lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 115; 
+			flex-basis: 277px&#34;
 	&gt;
-	&lt;a href=&#34;https://img.picui.cn/free/2024/08/19/66c31cc2680b0.jpg&#34; &gt;
-		&lt;img src=&#34;https://img.picui.cn/free/2024/08/19/66c31cc2680b0.jpg&#34;
-			
-			
-			
+	&lt;a href=&#34;https://tflasp.fun/2024/intoram/sum1.jpg&#34; data-size=&#34;719x622&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2024/intoram/sum1.jpg&#34;
+			width=&#34;719&#34;
+			height=&#34;622&#34;
+			srcset=&#34;https://tflasp.fun/2024/intoram/sum1_huc946aad5228fb9ecf14e05f175d7d63b_55704_480x0_resize_q75_box.jpg 480w, https://tflasp.fun/2024/intoram/sum1_huc946aad5228fb9ecf14e05f175d7d63b_55704_1024x0_resize_q75_box.jpg 1024w&#34;
 			loading=&#34;lazy&#34;
 			&gt;
 	&lt;/a&gt;
 	
 &lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 212; 
+			flex-basis: 510px&#34;
 	&gt;
-	&lt;a href=&#34;https://img.picui.cn/free/2024/08/19/66c31ca2721b9.jpg&#34; &gt;
-		&lt;img src=&#34;https://img.picui.cn/free/2024/08/19/66c31ca2721b9.jpg&#34;
-			
-			
-			
+	&lt;a href=&#34;https://tflasp.fun/2024/intoram/CUNCHU.jpg&#34; data-size=&#34;874x411&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2024/intoram/CUNCHU.jpg&#34;
+			width=&#34;874&#34;
+			height=&#34;411&#34;
+			srcset=&#34;https://tflasp.fun/2024/intoram/CUNCHU_hu71fad82249dd9fb152beac7a2f80cbf9_33456_480x0_resize_q75_box.jpg 480w, https://tflasp.fun/2024/intoram/CUNCHU_hu71fad82249dd9fb152beac7a2f80cbf9_33456_1024x0_resize_q75_box.jpg 1024w&#34;
 			loading=&#34;lazy&#34;
 			&gt;
 	&lt;/a&gt;
@@ -1857,12 +1867,17 @@ Num     Name                 Tags  Description
 目前已经发展到DDR5 SDRAM；
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 171; 
+			flex-basis: 411px&#34;
 	&gt;
-	&lt;a href=&#34;https://img.picui.cn/free/2024/08/19/66c31c4578cf7.jpg&#34; &gt;
-		&lt;img src=&#34;https://img.picui.cn/free/2024/08/19/66c31c4578cf7.jpg&#34;
-			
-			
-			
+	&lt;a href=&#34;https://tflasp.fun/2024/intoram/ddrgen.jpg&#34; data-size=&#34;1021x595&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2024/intoram/ddrgen.jpg&#34;
+			width=&#34;1021&#34;
+			height=&#34;595&#34;
+			srcset=&#34;https://tflasp.fun/2024/intoram/ddrgen_hu0fe8d4f3d7d7bed490f34b5e2ab916db_109231_480x0_resize_q75_box.jpg 480w, https://tflasp.fun/2024/intoram/ddrgen_hu0fe8d4f3d7d7bed490f34b5e2ab916db_109231_1024x0_resize_q75_box.jpg 1024w&#34;
 			loading=&#34;lazy&#34;
 			alt=&#34;DDR1-5各代实物图对比&#34;&gt;
 	&lt;/a&gt;
@@ -1871,12 +1886,17 @@ Num     Name                 Tags  Description
 	
 &lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 120; 
+			flex-basis: 290px&#34;
 	&gt;
-	&lt;a href=&#34;https://img.picui.cn/free/2024/08/19/66c31cf41f395.jpg&#34; &gt;
-		&lt;img src=&#34;https://img.picui.cn/free/2024/08/19/66c31cf41f395.jpg&#34;
-			
-			
-			
+	&lt;a href=&#34;https://tflasp.fun/2024/intoram/ddr.jpg&#34; data-size=&#34;729x603&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2024/intoram/ddr.jpg&#34;
+			width=&#34;729&#34;
+			height=&#34;603&#34;
+			srcset=&#34;https://tflasp.fun/2024/intoram/ddr_hu4dea0f0a7189e080ddc6a264f015116f_70615_480x0_resize_q75_box.jpg 480w, https://tflasp.fun/2024/intoram/ddr_hu4dea0f0a7189e080ddc6a264f015116f_70615_1024x0_resize_q75_box.jpg 1024w&#34;
 			loading=&#34;lazy&#34;
 			&gt;
 	&lt;/a&gt;
@@ -1885,12 +1905,17 @@ Num     Name                 Tags  Description
 &lt;p&gt;   DDR核心技术点就在于：（1）双沿传输。（2）预取prefetch。
    DDR的频率：（1）核心频率、（2）时钟频率、（3）数据传输频率；核心频率就是内存的工作频率；DDR1内存的核心频率是和时钟频率相同的，到了DDR2和DDR3时才有了时钟频率的概念，就是将核心频率通过倍频技术得到的一个频率。数据传输频率就是传输数据的频率。DDR1预读取是2位，DDR2预读取是4位，DDR3预读取是8位…&lt;/p&gt;
 &lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 163; 
+			flex-basis: 392px&#34;
 	&gt;
-	&lt;a href=&#34;https://img.picui.cn/free/2024/08/19/66c31d0f10a71.jpg&#34; &gt;
-		&lt;img src=&#34;https://img.picui.cn/free/2024/08/19/66c31d0f10a71.jpg&#34;
-			
-			
-			
+	&lt;a href=&#34;https://tflasp.fun/2024/intoram/prefetch.jpg&#34; data-size=&#34;730x446&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2024/intoram/prefetch.jpg&#34;
+			width=&#34;730&#34;
+			height=&#34;446&#34;
+			srcset=&#34;https://tflasp.fun/2024/intoram/prefetch_hu0bd4406dcc099e7b5dc5e22e5c2968f7_49920_480x0_resize_q75_box.jpg 480w, https://tflasp.fun/2024/intoram/prefetch_hu0bd4406dcc099e7b5dc5e22e5c2968f7_49920_1024x0_resize_q75_box.jpg 1024w&#34;
 			loading=&#34;lazy&#34;
 			&gt;
 	&lt;/a&gt;
@@ -1903,12 +1928,17 @@ Num     Name                 Tags  Description
 &lt;h4 id=&#34;11-工作原理&#34;&gt;1.1 工作原理&lt;/h4&gt;
 &lt;p&gt;ECC内存通过奇偶校验或更复杂的纠错码来检测和纠正内存中的数据错误。&lt;/p&gt;
 &lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 241; 
+			flex-basis: 580px&#34;
 	&gt;
-	&lt;a href=&#34;https://img.picui.cn/free/2024/08/19/66c31cd99a268.jpg&#34; &gt;
-		&lt;img src=&#34;https://img.picui.cn/free/2024/08/19/66c31cd99a268.jpg&#34;
-			
-			
-			
+	&lt;a href=&#34;https://tflasp.fun/2024/intoram/ecc1.jpg&#34; data-size=&#34;522x216&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2024/intoram/ecc1.jpg&#34;
+			width=&#34;522&#34;
+			height=&#34;216&#34;
+			srcset=&#34;https://tflasp.fun/2024/intoram/ecc1_huea089c95978b0f79e58957b0efc0db02_29498_480x0_resize_q75_box.jpg 480w, https://tflasp.fun/2024/intoram/ecc1_huea089c95978b0f79e58957b0efc0db02_29498_1024x0_resize_q75_box.jpg 1024w&#34;
 			loading=&#34;lazy&#34;
 			&gt;
 	&lt;/a&gt;
@@ -1937,12 +1967,17 @@ Num     Name                 Tags  Description
 &lt;p&gt;3、虚拟化： 虚拟化环境中，多个虚拟机共享同一台物理服务器的内存。ECC内存可以减少虚拟机之间的内存冲突和数据错误。&lt;/p&gt;
 &lt;p&gt;4、长时间运行： 如果您的服务器需要长时间运行，ECC内存有助于减少内存错误导致的系统崩溃的风险。&lt;/p&gt;
 &lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 104; 
+			flex-basis: 250px&#34;
 	&gt;
-	&lt;a href=&#34;https://img.picui.cn/free/2024/08/19/66c31d25dee9b.jpg&#34; &gt;
-		&lt;img src=&#34;https://img.picui.cn/free/2024/08/19/66c31d25dee9b.jpg&#34;
-			
-			
-			
+	&lt;a href=&#34;https://tflasp.fun/2024/intoram/ecc2.jpg&#34; data-size=&#34;686x657&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2024/intoram/ecc2.jpg&#34;
+			width=&#34;686&#34;
+			height=&#34;657&#34;
+			srcset=&#34;https://tflasp.fun/2024/intoram/ecc2_hu397073dee7cc8517ef682580373b1899_68362_480x0_resize_q75_box.jpg 480w, https://tflasp.fun/2024/intoram/ecc2_hu397073dee7cc8517ef682580373b1899_68362_1024x0_resize_q75_box.jpg 1024w&#34;
 			loading=&#34;lazy&#34;
 			&gt;
 	&lt;/a&gt;
