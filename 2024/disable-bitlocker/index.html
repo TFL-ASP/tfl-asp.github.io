@@ -391,12 +391,17 @@
 <p>BitLocker 是一项 Windows 安全功能，可为整个卷提供加密，解决因设备丢失、被盗或不适当停用而导致数据被盗或泄露的威胁。但是，<strong>在2020年后的新笔记本电脑一般已开启Bitlocker功能（即硬盘中数据已被加密）</strong>，若计算机硬件有改变或损坏，重新进入已加密的系统会要求输入“恢复密钥”，如下图。<strong>若密钥丢失，则加密分区中的数据全部丢失！</strong></p>
 <p>如果的确担心数据安全或有重要数据，请<strong>及时备份密钥</strong>（或使用其他加密软件，如：<code>VeraCrypt</code>），或者按照公司要求保存在指定驱动器里！</p>
 <p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 222; 
+			flex-basis: 533px"
 	>
-	<a href="https://i-blog.csdnimg.cn/direct/c7e9a2b35b274596af9431b4c162b318.png" >
-		<img src="https://i-blog.csdnimg.cn/direct/c7e9a2b35b274596af9431b4c162b318.png"
-			
-			
-			
+	<a href="/2024/disable-bitlocker/recovery.png" data-size="676x304">
+		<img src="/2024/disable-bitlocker/recovery.png"
+			width="676"
+			height="304"
+			srcset="/2024/disable-bitlocker/recovery_hu5c1f7f68b6da2f524f10fc57c5d65e43_137490_480x0_resize_box_3.png 480w, /2024/disable-bitlocker/recovery_hu5c1f7f68b6da2f524f10fc57c5d65e43_137490_1024x0_resize_box_3.png 1024w"
 			loading="lazy"
 			alt="Bitlocker恢复界面（将会在开机时显示）">
 	</a>
@@ -407,12 +412,17 @@
 <h2 id="原理">原理</h2>
 <p>若对原理不感兴趣可以 <a class="link" href="" >往下翻</a> 或 <a class="link" href="" >单击右侧目录栏跳转至“<strong>解密方法</strong>”</a> 以查看解密步骤！</p>
 <p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 127; 
+			flex-basis: 306px"
 	>
-	<a href="https://i-blog.csdnimg.cn/direct/2da92e85635042e1839cea1dd0645962.png" >
-		<img src="https://i-blog.csdnimg.cn/direct/2da92e85635042e1839cea1dd0645962.png"
-			
-			
-			
+	<a href="/2024/disable-bitlocker/bitlocker.png" data-size="669x524">
+		<img src="/2024/disable-bitlocker/bitlocker.png"
+			width="669"
+			height="524"
+			srcset="/2024/disable-bitlocker/bitlocker_hu351eb91ec3bf236eb95b8deb32d48588_314421_480x0_resize_box_3.png 480w, /2024/disable-bitlocker/bitlocker_hu351eb91ec3bf236eb95b8deb32d48588_314421_1024x0_resize_box_3.png 1024w"
 			loading="lazy"
 			alt="Bitlocker使用TPM解密 原理图（图源：MSDN）">
 	</a>
@@ -460,12 +470,17 @@
 <h4 id="case-1-无需解密">Case 1 （无需解密）</h4>
 <p>打开“此电脑”，若磁盘图标同下，则磁盘未被加密，无需进行任何操作！！</p>
 <p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 1088; 
+			flex-basis: 2612px"
 	>
-	<a href="https://i-blog.csdnimg.cn/direct/6016b222b16049429f73dc4951493503.png" >
-		<img src="https://i-blog.csdnimg.cn/direct/6016b222b16049429f73dc4951493503.png"
-			
-			
-			
+	<a href="/2024/disable-bitlocker/status1.png" data-size="762x70">
+		<img src="/2024/disable-bitlocker/status1.png"
+			width="762"
+			height="70"
+			srcset="/2024/disable-bitlocker/status1_hu19fa987ca6fc814523aff5dbee594014_5893_480x0_resize_box_3.png 480w, /2024/disable-bitlocker/status1_hu19fa987ca6fc814523aff5dbee594014_5893_1024x0_resize_box_3.png 1024w"
 			loading="lazy"
 			alt="磁盘上无任何标记，未被加密">
 	</a>
@@ -476,12 +491,17 @@
 <h4 id="case-2-需要解密">Case 2 （需要解密）</h4>
 <p>磁盘上有带锁图标且存在感叹号，该磁盘已被加密，但还缺失连接账户的步骤！普通用户建议直接解密。</p>
 <p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 362; 
+			flex-basis: 870px"
 	>
-	<a href="https://i-blog.csdnimg.cn/direct/faf6e0a6ec69475d9baf359782047b6f.png" >
-		<img src="https://i-blog.csdnimg.cn/direct/faf6e0a6ec69475d9baf359782047b6f.png"
-			
-			
-			
+	<a href="/2024/disable-bitlocker/status2.png" data-size="254x70">
+		<img src="/2024/disable-bitlocker/status2.png"
+			width="254"
+			height="70"
+			srcset="/2024/disable-bitlocker/status2_hu0bd0f26ae9bd93285e3f90a2fecb25c0_15574_480x0_resize_box_3.png 480w, /2024/disable-bitlocker/status2_hu0bd0f26ae9bd93285e3f90a2fecb25c0_15574_1024x0_resize_box_3.png 1024w"
 			loading="lazy"
 			alt="磁盘上有带锁图标且存在感叹号，该磁盘已被加密，但还缺失连接账户的步骤">
 	</a>
@@ -491,12 +511,17 @@
 </figure></p>
 <h4 id="case-3-需要解密">Case 3 （需要解密）</h4>
 <p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 390; 
+			flex-basis: 937px"
 	>
-	<a href="https://i-blog.csdnimg.cn/direct/a51c246c1ed446779a5e1943f9a6a03e.png" >
-		<img src="https://i-blog.csdnimg.cn/direct/a51c246c1ed446779a5e1943f9a6a03e.png"
-			
-			
-			
+	<a href="/2024/disable-bitlocker/status3.png" data-size="254x65">
+		<img src="/2024/disable-bitlocker/status3.png"
+			width="254"
+			height="65"
+			srcset="/2024/disable-bitlocker/status3_huc3b3d67649efda639b360f81b75aa60f_8483_480x0_resize_box_3.png 480w, /2024/disable-bitlocker/status3_huc3b3d67649efda639b360f81b75aa60f_8483_1024x0_resize_box_3.png 1024w"
 			loading="lazy"
 			alt="磁盘上出现打开的锁，该磁盘已被完全加密">
 	</a>
@@ -507,12 +532,17 @@
 <h3 id="解密步骤请务必判断自身磁盘状态后进行操作">解密步骤（请务必判断自身磁盘状态后进行操作）</h3>
 <p>同时按Windows徽标键+R 调出 运行，并输入control，回车</p>
 <p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 181; 
+			flex-basis: 434px"
 	>
-	<a href="https://i-blog.csdnimg.cn/direct/c6683bc057a74659a9dc3619d133039f.png" >
-		<img src="https://i-blog.csdnimg.cn/direct/c6683bc057a74659a9dc3619d133039f.png"
-			
-			
-			
+	<a href="/2024/disable-bitlocker/step1.png" data-size="395x218">
+		<img src="/2024/disable-bitlocker/step1.png"
+			width="395"
+			height="218"
+			srcset="/2024/disable-bitlocker/step1_hu1ad58a6de2d5dce3a768a2028ff668c4_42263_480x0_resize_box_3.png 480w, /2024/disable-bitlocker/step1_hu1ad58a6de2d5dce3a768a2028ff668c4_42263_1024x0_resize_box_3.png 1024w"
 			loading="lazy"
 			alt="同时按Windows徽标键&#43;R 调出 运行，并输入control，回车">
 	</a>
@@ -522,12 +552,17 @@
 </figure></p>
 <p>将查看方式改为“小图标”</p>
 <p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 179; 
+			flex-basis: 430px"
 	>
-	<a href="https://i-blog.csdnimg.cn/direct/f01d75018acc4f4b9bb2e1ccf3b94848.png" >
-		<img src="https://i-blog.csdnimg.cn/direct/f01d75018acc4f4b9bb2e1ccf3b94848.png"
-			
-			
-			
+	<a href="/2024/disable-bitlocker/step2.png" data-size="1109x618">
+		<img src="/2024/disable-bitlocker/step2.png"
+			width="1109"
+			height="618"
+			srcset="/2024/disable-bitlocker/step2_hud75ad39012b4948563eaa812025e936e_246769_480x0_resize_box_3.png 480w, /2024/disable-bitlocker/step2_hud75ad39012b4948563eaa812025e936e_246769_1024x0_resize_box_3.png 1024w"
 			loading="lazy"
 			alt="将查看方式改为“小图标”">
 	</a>
@@ -537,12 +572,17 @@
 </figure></p>
 <p>单击“Bitlocker驱动器加密”</p>
 <p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 223; 
+			flex-basis: 536px"
 	>
-	<a href="https://i-blog.csdnimg.cn/direct/9a44010306044aecade0130297b7d161.png" >
-		<img src="https://i-blog.csdnimg.cn/direct/9a44010306044aecade0130297b7d161.png"
-			
-			
-			
+	<a href="/2024/disable-bitlocker/step3.png" data-size="1126x504">
+		<img src="/2024/disable-bitlocker/step3.png"
+			width="1126"
+			height="504"
+			srcset="/2024/disable-bitlocker/step3_hua87df2787f3a286621259056406910b0_221800_480x0_resize_box_3.png 480w, /2024/disable-bitlocker/step3_hua87df2787f3a286621259056406910b0_221800_1024x0_resize_box_3.png 1024w"
 			loading="lazy"
 			alt="单击“Bitlocker驱动器加密”">
 	</a>
@@ -552,12 +592,17 @@
 </figure></p>
 <p>选择要解密的驱动器，单击“关闭BitLocker，并授予权限</p>
 <p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 115; 
+			flex-basis: 276px"
 	>
-	<a href="https://i-blog.csdnimg.cn/direct/ad514190be29479dac63115efb59ad6f.png" >
-		<img src="https://i-blog.csdnimg.cn/direct/ad514190be29479dac63115efb59ad6f.png"
-			
-			
-			
+	<a href="/2024/disable-bitlocker/step4.png" data-size="612x532">
+		<img src="/2024/disable-bitlocker/step4.png"
+			width="612"
+			height="532"
+			srcset="/2024/disable-bitlocker/step4_hu7b09272d50ebb46126ef10c50b65985d_163230_480x0_resize_box_3.png 480w, /2024/disable-bitlocker/step4_hu7b09272d50ebb46126ef10c50b65985d_163230_1024x0_resize_box_3.png 1024w"
 			loading="lazy"
 			alt="选择要解密的驱动器，单击“关闭BitLocker”，并授予权限">
 	</a>
@@ -572,12 +617,17 @@
     >微软官网</a></strong></p>
 </blockquote>
 <p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 244; 
+			flex-basis: 587px"
 	>
-	<a href="https://i-blog.csdnimg.cn/direct/91c89800d792425cbf9b13f3de014fa1.png" >
-		<img src="https://i-blog.csdnimg.cn/direct/91c89800d792425cbf9b13f3de014fa1.png"
-			
-			
-			
+	<a href="/2024/disable-bitlocker/key.png" data-size="1232x503">
+		<img src="/2024/disable-bitlocker/key.png"
+			width="1232"
+			height="503"
+			srcset="/2024/disable-bitlocker/key_hu3cb8847aa3b1670fecacda07b21d02d2_244148_480x0_resize_box_3.png 480w, /2024/disable-bitlocker/key_hu3cb8847aa3b1670fecacda07b21d02d2_244148_1024x0_resize_box_3.png 1024w"
 			loading="lazy"
 			alt="密钥示例">
 	</a>
