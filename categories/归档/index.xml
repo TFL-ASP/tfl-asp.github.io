@@ -16,7 +16,7 @@
       <description>准备工作 首先准备待刷BIOS的主板，我手上的是华硕B85M-F PLUS，以及一台能正常使用的联网的电脑，一个u盘（重要数据建议备份） 注意，尽</description>
     </item>
     <item>
-      <title>【归档】Ubuntu20.04下安装Docker</title>
+      <title>Ubuntu</title>
       <link>https://tflasp.fun/2024/docker-setup-ubuntu/</link>
       <pubDate>Fri, 23 Aug 2024 00:00:00 +0000</pubDate>
       <guid>https://tflasp.fun/2024/docker-setup-ubuntu/</guid>
