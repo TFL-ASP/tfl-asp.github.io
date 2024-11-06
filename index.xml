@@ -122,6 +122,137 @@ Version：X0913
 </description>
         </item>
         <item>
+        <title>SSD评测</title>
+        <link>https://tflasp.fun/2024/ssd-pc/</link>
+        <pubDate>Fri, 25 Oct 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://tflasp.fun/2024/ssd-pc/</guid>
+        <description>&lt;p&gt;测试时间：2021年10月24日0时起——2022年1月10日止
+测试型号：金士顿KC2500（非原厂颗粒用于测试对比）、英睿达P5、铠侠RD20、西数SN750、致钛PC005 Active、三星970EVO PLUS
+测试容量：1TB
+测试模式：黑盒测试+白盒测试
+样本来源：某东自营随机性自购
+测试项目：厂商宣传PE数、冷数据、IO负载测试、循环通断电测试
+测试共消耗硬盘：18块
+测试时主要涉及的工具/硬件：urwtest(用于读写校验测试)、Anvil Storage(用于模拟用户日常使用测试)、Oracle11G(用于模拟IO测试)、Pentaho Kettle(IO测试中间件)、加热台(模拟冷数据测试)、电磁继电器（用于模拟通断电）、18650电池、可调电源、USB线若干、JMS583方案硬盘盒、M.2 NVME转PCI-E硬盘转接卡等
+测试环境：华硕Z9PAU8（X79芯片组）+Xeon E5 2650L v2(10C/20T)+三星32G DDR3 REG
+系统：Windows 10 工作站版（20H2）
+测试目的：
+1.验证原厂颗粒硬盘颗粒寿命是否可达原厂宣传标准（主要）
+2.验证硬盘上长期未使用的文件固件算法对该数据读取速度的影响（冷数据）
+3.验证硬盘在高负载情况下表现（IO测试——附加项目）
+4.验证在保期间硬盘是否会因断电导致损坏（循环通断电测试）&lt;/p&gt;
+&lt;p&gt;PS：为保证测试变量一致性，每次测试都是在同一台机器上同时进行的&lt;/p&gt;
+&lt;p&gt;先上一张官方宣传页的寿命&lt;/p&gt;
+&lt;p&gt;废话不多说，先直接看结果（建议综合一起看）&lt;/p&gt;
+&lt;p&gt;寿命整体测试结果：&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 317; 
+			flex-basis: 762px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2024/ssd-pc/result.png&#34; data-size=&#34;1131x356&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2024/ssd-pc/result.png&#34;
+			width=&#34;1131&#34;
+			height=&#34;356&#34;
+			srcset=&#34;https://tflasp.fun/2024/ssd-pc/result_hua50c6fbdaac22a648ab32b96c55fbc11_357374_480x0_resize_box_3.png 480w, https://tflasp.fun/2024/ssd-pc/result_hua50c6fbdaac22a648ab32b96c55fbc11_357374_1024x0_resize_box_3.png 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;冷数据测试结果：
+测试参考闪存通的SSD老化对照表
+计算方式使用闪存通的老化计算器&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 169; 
+			flex-basis: 407px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2024/ssd-pc/LH.png&#34; data-size=&#34;892x525&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2024/ssd-pc/LH.png&#34;
+			width=&#34;892&#34;
+			height=&#34;525&#34;
+			srcset=&#34;https://tflasp.fun/2024/ssd-pc/LH_hu617af04dc8c5a1c266c86e32c64ca079_575652_480x0_resize_box_3.png 480w, https://tflasp.fun/2024/ssd-pc/LH_hu617af04dc8c5a1c266c86e32c64ca079_575652_1024x0_resize_box_3.png 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;先上未老化前的测试结果做为对比&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 353; 
+			flex-basis: 848px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2024/ssd-pc/LHD.png&#34; data-size=&#34;619x175&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2024/ssd-pc/LHD.png&#34;
+			width=&#34;619&#34;
+			height=&#34;175&#34;
+			srcset=&#34;https://tflasp.fun/2024/ssd-pc/LHD_hu9277bd6da341532d815f794a2b6ddcaf_24602_480x0_resize_box_3.png 480w, https://tflasp.fun/2024/ssd-pc/LHD_hu9277bd6da341532d815f794a2b6ddcaf_24602_1024x0_resize_box_3.png 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;由于全部硬盘质保期为5年，因此直接测试5年老化情况
+老化数据参考小程序闪存通
+模拟温度：35度
+老化温度：150度&lt;/p&gt;
+&lt;p&gt;分别测试半年、一年、两年、三年、四年、五年&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 913; 
+			flex-basis: 2192px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2024/ssd-pc/LHD2.png&#34; data-size=&#34;1361x149&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2024/ssd-pc/LHD2.png&#34;
+			width=&#34;1361&#34;
+			height=&#34;149&#34;
+			srcset=&#34;https://tflasp.fun/2024/ssd-pc/LHD2_hu80a37f79cb3e4f5343c7fb3392629d2f_268654_480x0_resize_box_3.png 480w, https://tflasp.fun/2024/ssd-pc/LHD2_hu80a37f79cb3e4f5343c7fb3392629d2f_268654_1024x0_resize_box_3.png 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;1年模拟后英睿达P5及金士顿KC2500在老化测试中掉速最严重&lt;/p&gt;
+&lt;p&gt;英睿达P5在模拟第二年的时候因数据校验不通过而退出测试&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 420; 
+			flex-basis: 1009px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2024/ssd-pc/LHD3.png&#34; data-size=&#34;753x179&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2024/ssd-pc/LHD3.png&#34;
+			width=&#34;753&#34;
+			height=&#34;179&#34;
+			srcset=&#34;https://tflasp.fun/2024/ssd-pc/LHD3_hub1cf2dd9e88d1153464426c42ea3737b_45551_480x0_resize_box_3.png 480w, https://tflasp.fun/2024/ssd-pc/LHD3_hub1cf2dd9e88d1153464426c42ea3737b_45551_1024x0_resize_box_3.png 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;四年模拟时金士顿因不识别而退出测试
+5年模拟测试三星、致钛、西数、铠侠存活成功
+IO测试（子项目）
+此处采用Oracle11G数据库+Kettle写入对比基准线1000W数据进行测试
+用于计算IO消耗时间
+Oracle表空间分别置于每个盘的根目录内
+默认分配存储块200M，自动增长、自动扩展表空间开启
+Oracle主程序安装于C盘&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>【教程】保障数据安全，关闭Bitlocker</title>
         <link>https://tflasp.fun/2024/disable-bitlocker/</link>
         <pubDate>Thu, 26 Sep 2024 00:00:00 +0000</pubDate>
@@ -3024,7 +3155,8 @@ Egress port（出端口）：发送数据包的端口。
         <pubDate>Mon, 15 Jul 2024 00:00:00 +0000</pubDate>
         
         <guid>https://tflasp.fun/2024/pveinstall/</guid>
-        <description>&lt;img src="https://tflasp.fun/2024/pveinstall/pveinstaller.png" alt="Featured image of post 【归档】PVE 8 安装与优化" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+        <description>&lt;img src="https://tflasp.fun/2024/pveinstall/pveinstaller.png" alt="Featured image of post 【归档】PVE 8 安装与优化" /&gt;&lt;p&gt;文章版本 2.02&lt;/p&gt;
+&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 &lt;p&gt;该文章还在CSDN发表，文章链接：&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/Dd_w606/article/details/140447411&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Link&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;pve镜像下载&#34;&gt;PVE镜像下载&lt;/h2&gt;
@@ -3245,63 +3377,188 @@ Egress port（出端口）：发送数据包的端口。
 	
 &lt;/figure&gt;&lt;/p&gt;
 &lt;h2 id=&#34;虚拟机直通设备&#34;&gt;虚拟机直通设备&lt;/h2&gt;
-&lt;p&gt;首先在主板BIOS里查看是否开启了硬件虚拟化（通常在Advanced栏下），同时CPU也必须要支持虚拟化才行。Intel VT-D。&lt;/p&gt;
+&lt;h3 id=&#34;前提条件&#34;&gt;前提条件&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;确保支持虚拟化的 CPU（Intel VT-d 或 AMD-Vi）。&lt;/li&gt;
+&lt;li&gt;确保您的系统已经安装了 Proxmox VE，并且可以访问 Web 界面。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;第一步启用-vt-d-或-iommu&#34;&gt;第一步：启用 VT-d 或 IOMMU&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;进入 BIOS 设置&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;重启计算机，进入 BIOS 设置（通常按 &lt;code&gt;Delete&lt;/code&gt;、&lt;code&gt;F2&lt;/code&gt; 或 &lt;code&gt;F10&lt;/code&gt;）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;启用 VT-d 或 IOMMU&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在 BIOS 设置中，找到与虚拟化相关的选项，启用 Intel VT-d 或 AMD IOMMU。&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;&lt;figure 
-	
-		class=&#34;gallery-image&#34; 
-		style=&#34;
-			flex-grow: 241; 
-			flex-basis: 579px&#34;
 	&gt;
-	&lt;a href=&#34;https://tflasp.fun/2024/pveinstall/pve10.jpg&#34; data-size=&#34;768x318&#34;&gt;
-		&lt;img src=&#34;https://tflasp.fun/2024/pveinstall/pve10.jpg&#34;
-			width=&#34;768&#34;
-			height=&#34;318&#34;
-			srcset=&#34;https://tflasp.fun/2024/pveinstall/pve10_hu74c9828a0c0ef861f45d03445e0a54ab_60944_480x0_resize_q75_box.jpg 480w, https://tflasp.fun/2024/pveinstall/pve10_hu74c9828a0c0ef861f45d03445e0a54ab_60944_1024x0_resize_q75_box.jpg 1024w&#34;
+	&lt;a href=&#34;https://www.intel.com/content/dam/www/public/us/en/images/graphics/graphics-virtualization-vt-d.png&#34; &gt;
+		&lt;img src=&#34;https://www.intel.com/content/dam/www/public/us/en/images/graphics/graphics-virtualization-vt-d.png&#34;
+			
+			
+			
 			loading=&#34;lazy&#34;
-			&gt;
+			alt=&#34;启用 VT-d&#34;&gt;
 	&lt;/a&gt;
 	
+	&lt;figcaption&gt;启用 VT-d&lt;/figcaption&gt;
+	
 &lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;如上图进入pve shell。&lt;/p&gt;
-&lt;p&gt;输入&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;nano /etc/default/grub
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;保存并退出 BIOS&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;保存设置并重新启动计算机。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;第二步检查-iommu-支持&#34;&gt;第二步：检查 IOMMU 支持&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;登录到 Proxmox VE&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;使用 SSH 或直接在控制台登录到 Proxmox VE。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;检查 IOMMU 是否启用&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;执行以下命令：
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;dmesg | grep -e DMAR -e IOMMU
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&#34;对于intel-cpu添加-intel_iommuon操作如下&#34;&gt;对于Intel CPU，添加 intel_iommu=on，操作如下：&lt;/h4&gt;
-&lt;p&gt;2、找到：GRUB_CMDLINE_LINUX_DEFAULT=&amp;ldquo;quiet&amp;rdquo;&lt;/p&gt;
-&lt;p&gt;然后修改为&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;GRUB_CMDLINE_LINUX_DEFAULT=&amp;quot;quiet intel_iommu=on&amp;quot;
+&lt;/li&gt;
+&lt;li&gt;如果看到相关输出，说明 IOMMU 已启用。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;第三步配置-proxmox-ve&#34;&gt;第三步：配置 Proxmox VE&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;编辑 GRUB 配置&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;打开 GRUB 配置文件：
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;nano /etc/default/grub
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;编辑完成后，使用快捷键 Ctrl + O 回车保存文件，Ctrl + X 退出编辑器。&lt;/p&gt;
-&lt;p&gt;3、使用命令 update-grub 保存更改并更新grub&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;root@pve:~# update-grub
+&lt;/li&gt;
+&lt;li&gt;找到以下行并添加 &lt;code&gt;intel_iommu=on&lt;/code&gt;（对于 Intel CPU）或 &lt;code&gt;amd_iommu=on&lt;/code&gt;（对于 AMD CPU）：
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;GRUB_CMDLINE_LINUX_DEFAULT=&amp;quot;quiet intel_iommu=on&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;4、更新完成后，使用命令 reboot 重启PVE系统&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;root@pve:~# reboot
+&lt;/li&gt;
+&lt;li&gt;保存并退出编辑器（在 nano 中按 &lt;code&gt;Ctrl + X&lt;/code&gt;，然后按 &lt;code&gt;Y&lt;/code&gt; 确认保存）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;更新 GRUB&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;执行以下命令以更新 GRUB：
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;update-grub
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;从命令行运行&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;dmesg | grep -e DMAR -e IOMMU
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;重启 Proxmox VE&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;重启系统以应用更改：
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;reboot
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;如果没有输出，则说明有问题。&lt;/p&gt;
-&lt;p&gt;如果有,可基本确认这个过程顺利完成! 接下来就可以为虚拟机正常的添加硬件直通了。&lt;/p&gt;
-&lt;h4 id=&#34;对于amd-cpu&#34;&gt;对于AMD CPU&lt;/h4&gt;
-&lt;p&gt;对于AMD CPU 添加 amd_iommu=on, 操作如下：&lt;/p&gt;
-&lt;p&gt;1、Shell 里面输入命令：nano /etc/default/grub&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;root@pve:~# nano /etc/default/grub
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;第四步查找设备的-pci-id&#34;&gt;第四步：查找设备的 PCI ID&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;列出所有 PCI 设备&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;登录到 Proxmox VE，执行以下命令：
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;lspci
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;2、在里面找到：GRUB_CMDLINE_LINUX_DEFAULT=&amp;ldquo;quiet&amp;rdquo;&lt;/p&gt;
-&lt;p&gt;然后修改为&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;GRUB_CMDLINE_LINUX_DEFAULT=&amp;quot;quiet amd_iommu=on&amp;quot;
+&lt;/li&gt;
+&lt;li&gt;找到您想要直通的设备，记下其 PCI ID（格式为 &lt;code&gt;xx:xx.x&lt;/code&gt;）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://www.linuxjournal.com/files/images/lspci-output.png&#34; &gt;
+		&lt;img src=&#34;https://www.linuxjournal.com/files/images/lspci-output.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			alt=&#34;lspci 输出&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;lspci 输出&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;第五步配置设备直通&#34;&gt;第五步：配置设备直通&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;编辑虚拟机配置文件&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;找到虚拟机的配置文件，通常在 &lt;code&gt;/etc/pve/qemu-server/&lt;/code&gt; 目录下，文件名格式为 &lt;code&gt;&amp;lt;VMID&amp;gt;.conf&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;使用文本编辑器打开配置文件：
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;nano /etc/pve/qemu-server/&amp;lt;VMID&amp;gt;.conf
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;编辑完成后，使用快捷键 Ctrl + O 回车保存文件，Ctrl + X 退出编辑器。&lt;/p&gt;
-&lt;p&gt;3、使用命令 update-grub 保存更改并更新grub&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;root@pve:~# update-grub
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;添加 PCI 直通设备&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在文件末尾添加以下行，替换 &lt;code&gt;&amp;lt;PCI-ID&amp;gt;&lt;/code&gt; 为您的设备 PCI ID：
+&lt;pre&gt;&lt;code&gt;hostpci0: &amp;lt;PCI-ID&amp;gt;,pcie=1
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;4、更新完成后，使用命令 reboot 重启PVE系统&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;root@pve:~# reboot
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;这样虚拟机直通设置就完成了。&lt;/p&gt;
-&lt;p&gt;当然，也可以使用pvetools来进行pve环境下的优化设置操作，更加方便（需换源）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;保存并退出编辑器。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;第六步启动虚拟机&#34;&gt;第六步：启动虚拟机&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;在 Proxmox VE Web 界面中启动虚拟机&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;登录到 Proxmox VE Web 界面，选择您的虚拟机，点击“Start”启动虚拟机。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://pve.proxmox.com/media/vm-start/vm-start.png&#34; &gt;
+		&lt;img src=&#34;https://pve.proxmox.com/media/vm-start/vm-start.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			alt=&#34;启动虚拟机&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;启动虚拟机&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;第七步安装驱动程序如果需要&#34;&gt;第七步：安装驱动程序（如果需要）&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;登录到虚拟机&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;使用 VNC 或 SPICE 控制台登录到虚拟机。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;安装设备驱动程序&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;根据您直通的设备类型，安装相应的驱动程序。例如，如果是 GPU，可能需要安装 NVIDIA 或 AMD 驱动程序。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
 &lt;h2 id=&#34;虚拟机安装&#34;&gt;虚拟机安装&lt;/h2&gt;
 &lt;p&gt;pve安装虚拟机还是非常简单的，本篇我们将使用pve安装win10来演示一下安装过程，其他系统安装大同小异。&lt;/p&gt;
 &lt;p&gt;1、首先需要上传安装镜像，通过local(pve)→ISO镜像→上传，将win10镜像上传到pve中。&lt;/p&gt;

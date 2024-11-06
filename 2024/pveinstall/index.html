@@ -376,7 +376,7 @@
 
 
                 <time class="article-words">
-                    1615字
+                    1792字
                 </time>
             </div>
         
@@ -388,7 +388,8 @@
     <section class="article-content">
     
     
-    <h2 id="前言">前言</h2>
+    <p>文章版本 2.02</p>
+<h2 id="前言">前言</h2>
 <p>该文章还在CSDN发表，文章链接：<a class="link" href="https://blog.csdn.net/Dd_w606/article/details/140447411"  target="_blank" rel="noopener"
     >Link</a></p>
 <h2 id="pve镜像下载">PVE镜像下载</h2>
@@ -609,63 +610,188 @@
 	
 </figure></p>
 <h2 id="虚拟机直通设备">虚拟机直通设备</h2>
-<p>首先在主板BIOS里查看是否开启了硬件虚拟化（通常在Advanced栏下），同时CPU也必须要支持虚拟化才行。Intel VT-D。</p>
+<h3 id="前提条件">前提条件</h3>
+<ul>
+<li>确保支持虚拟化的 CPU（Intel VT-d 或 AMD-Vi）。</li>
+<li>确保您的系统已经安装了 Proxmox VE，并且可以访问 Web 界面。</li>
+</ul>
+<h3 id="第一步启用-vt-d-或-iommu">第一步：启用 VT-d 或 IOMMU</h3>
+<ol>
+<li>
+<p><strong>进入 BIOS 设置</strong>：</p>
+<ul>
+<li>重启计算机，进入 BIOS 设置（通常按 <code>Delete</code>、<code>F2</code> 或 <code>F10</code>）。</li>
+</ul>
+</li>
+<li>
+<p><strong>启用 VT-d 或 IOMMU</strong>：</p>
+<ul>
+<li>在 BIOS 设置中，找到与虚拟化相关的选项，启用 Intel VT-d 或 AMD IOMMU。</li>
+</ul>
 <p><figure 
-	
-		class="gallery-image" 
-		style="
-			flex-grow: 241; 
-			flex-basis: 579px"
 	>
-	<a href="/2024/pveinstall/pve10.jpg" data-size="768x318">
-		<img src="/2024/pveinstall/pve10.jpg"
-			width="768"
-			height="318"
-			srcset="/2024/pveinstall/pve10_hu74c9828a0c0ef861f45d03445e0a54ab_60944_480x0_resize_q75_box.jpg 480w, /2024/pveinstall/pve10_hu74c9828a0c0ef861f45d03445e0a54ab_60944_1024x0_resize_q75_box.jpg 1024w"
+	<a href="https://www.intel.com/content/dam/www/public/us/en/images/graphics/graphics-virtualization-vt-d.png" >
+		<img src="https://www.intel.com/content/dam/www/public/us/en/images/graphics/graphics-virtualization-vt-d.png"
+			
+			
+			
 			loading="lazy"
-			>
+			alt="启用 VT-d">
 	</a>
 	
+	<figcaption>启用 VT-d</figcaption>
+	
 </figure></p>
-<p>如上图进入pve shell。</p>
-<p>输入</p>
-<pre><code>nano /etc/default/grub
+</li>
+<li>
+<p><strong>保存并退出 BIOS</strong>：</p>
+<ul>
+<li>保存设置并重新启动计算机。</li>
+</ul>
+</li>
+</ol>
+<h3 id="第二步检查-iommu-支持">第二步：检查 IOMMU 支持</h3>
+<ol>
+<li>
+<p><strong>登录到 Proxmox VE</strong>：</p>
+<ul>
+<li>使用 SSH 或直接在控制台登录到 Proxmox VE。</li>
+</ul>
+</li>
+<li>
+<p><strong>检查 IOMMU 是否启用</strong>：</p>
+<ul>
+<li>执行以下命令：
+<pre><code class="language-bash">dmesg | grep -e DMAR -e IOMMU
 </code></pre>
-<h4 id="对于intel-cpu添加-intel_iommuon操作如下">对于Intel CPU，添加 intel_iommu=on，操作如下：</h4>
-<p>2、找到：GRUB_CMDLINE_LINUX_DEFAULT=&ldquo;quiet&rdquo;</p>
-<p>然后修改为</p>
-<pre><code>GRUB_CMDLINE_LINUX_DEFAULT=&quot;quiet intel_iommu=on&quot;
+</li>
+<li>如果看到相关输出，说明 IOMMU 已启用。</li>
+</ul>
+</li>
+</ol>
+<h3 id="第三步配置-proxmox-ve">第三步：配置 Proxmox VE</h3>
+<ol>
+<li>
+<p><strong>编辑 GRUB 配置</strong>：</p>
+<ul>
+<li>打开 GRUB 配置文件：
+<pre><code class="language-bash">nano /etc/default/grub
 </code></pre>
-<p>编辑完成后，使用快捷键 Ctrl + O 回车保存文件，Ctrl + X 退出编辑器。</p>
-<p>3、使用命令 update-grub 保存更改并更新grub</p>
-<pre><code>root@pve:~# update-grub
+</li>
+<li>找到以下行并添加 <code>intel_iommu=on</code>（对于 Intel CPU）或 <code>amd_iommu=on</code>（对于 AMD CPU）：
+<pre><code class="language-bash">GRUB_CMDLINE_LINUX_DEFAULT=&quot;quiet intel_iommu=on&quot;
 </code></pre>
-<p>4、更新完成后，使用命令 reboot 重启PVE系统</p>
-<pre><code>root@pve:~# reboot
+</li>
+<li>保存并退出编辑器（在 nano 中按 <code>Ctrl + X</code>，然后按 <code>Y</code> 确认保存）。</li>
+</ul>
+</li>
+<li>
+<p><strong>更新 GRUB</strong>：</p>
+<ul>
+<li>执行以下命令以更新 GRUB：
+<pre><code class="language-bash">update-grub
 </code></pre>
-<p>从命令行运行</p>
-<pre><code>dmesg | grep -e DMAR -e IOMMU
+</li>
+</ul>
+</li>
+<li>
+<p><strong>重启 Proxmox VE</strong>：</p>
+<ul>
+<li>重启系统以应用更改：
+<pre><code class="language-bash">reboot
 </code></pre>
-<p>如果没有输出，则说明有问题。</p>
-<p>如果有,可基本确认这个过程顺利完成! 接下来就可以为虚拟机正常的添加硬件直通了。</p>
-<h4 id="对于amd-cpu">对于AMD CPU</h4>
-<p>对于AMD CPU 添加 amd_iommu=on, 操作如下：</p>
-<p>1、Shell 里面输入命令：nano /etc/default/grub</p>
-<pre><code>root@pve:~# nano /etc/default/grub
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="第四步查找设备的-pci-id">第四步：查找设备的 PCI ID</h3>
+<ol>
+<li>
+<p><strong>列出所有 PCI 设备</strong>：</p>
+<ul>
+<li>登录到 Proxmox VE，执行以下命令：
+<pre><code class="language-bash">lspci
 </code></pre>
-<p>2、在里面找到：GRUB_CMDLINE_LINUX_DEFAULT=&ldquo;quiet&rdquo;</p>
-<p>然后修改为</p>
-<pre><code>GRUB_CMDLINE_LINUX_DEFAULT=&quot;quiet amd_iommu=on&quot;
+</li>
+<li>找到您想要直通的设备，记下其 PCI ID（格式为 <code>xx:xx.x</code>）。</li>
+</ul>
+<p><figure 
+	>
+	<a href="https://www.linuxjournal.com/files/images/lspci-output.png" >
+		<img src="https://www.linuxjournal.com/files/images/lspci-output.png"
+			
+			
+			
+			loading="lazy"
+			alt="lspci 输出">
+	</a>
+	
+	<figcaption>lspci 输出</figcaption>
+	
+</figure></p>
+</li>
+</ol>
+<h3 id="第五步配置设备直通">第五步：配置设备直通</h3>
+<ol>
+<li>
+<p><strong>编辑虚拟机配置文件</strong>：</p>
+<ul>
+<li>找到虚拟机的配置文件，通常在 <code>/etc/pve/qemu-server/</code> 目录下，文件名格式为 <code>&lt;VMID&gt;.conf</code>。</li>
+<li>使用文本编辑器打开配置文件：
+<pre><code class="language-bash">nano /etc/pve/qemu-server/&lt;VMID&gt;.conf
 </code></pre>
-<p>编辑完成后，使用快捷键 Ctrl + O 回车保存文件，Ctrl + X 退出编辑器。</p>
-<p>3、使用命令 update-grub 保存更改并更新grub</p>
-<pre><code>root@pve:~# update-grub
+</li>
+</ul>
+</li>
+<li>
+<p><strong>添加 PCI 直通设备</strong>：</p>
+<ul>
+<li>在文件末尾添加以下行，替换 <code>&lt;PCI-ID&gt;</code> 为您的设备 PCI ID：
+<pre><code>hostpci0: &lt;PCI-ID&gt;,pcie=1
 </code></pre>
-<p>4、更新完成后，使用命令 reboot 重启PVE系统</p>
-<pre><code>root@pve:~# reboot
-</code></pre>
-<p>这样虚拟机直通设置就完成了。</p>
-<p>当然，也可以使用pvetools来进行pve环境下的优化设置操作，更加方便（需换源）</p>
+</li>
+<li>保存并退出编辑器。</li>
+</ul>
+</li>
+</ol>
+<h3 id="第六步启动虚拟机">第六步：启动虚拟机</h3>
+<ol>
+<li>
+<p><strong>在 Proxmox VE Web 界面中启动虚拟机</strong>：</p>
+<ul>
+<li>登录到 Proxmox VE Web 界面，选择您的虚拟机，点击“Start”启动虚拟机。</li>
+</ul>
+<p><figure 
+	>
+	<a href="https://pve.proxmox.com/media/vm-start/vm-start.png" >
+		<img src="https://pve.proxmox.com/media/vm-start/vm-start.png"
+			
+			
+			
+			loading="lazy"
+			alt="启动虚拟机">
+	</a>
+	
+	<figcaption>启动虚拟机</figcaption>
+	
+</figure></p>
+</li>
+</ol>
+<h3 id="第七步安装驱动程序如果需要">第七步：安装驱动程序（如果需要）</h3>
+<ol>
+<li>
+<p><strong>登录到虚拟机</strong>：</p>
+<ul>
+<li>使用 VNC 或 SPICE 控制台登录到虚拟机。</li>
+</ul>
+</li>
+<li>
+<p><strong>安装设备驱动程序</strong>：</p>
+<ul>
+<li>根据您直通的设备类型，安装相应的驱动程序。例如，如果是 GPU，可能需要安装 NVIDIA 或 AMD 驱动程序。</li>
+</ul>
+</li>
+</ol>
 <h2 id="虚拟机安装">虚拟机安装</h2>
 <p>pve安装虚拟机还是非常简单的，本篇我们将使用pve安装win10来演示一下安装过程，其他系统安装大同小异。</p>
 <p>1、首先需要上传安装镜像，通过local(pve)→ISO镜像→上传，将win10镜像上传到pve中。</p>
@@ -1010,6 +1136,8 @@
 
     
 
+    
+
 
 <script>
 (function(u, c) {
@@ -1031,7 +1159,7 @@
             2021 - 
         
         2024 <a href="https://stack-theme-mod.vercel.app/">改Bug的大橘</a><i class="fas fa-bell"></i><br>
-      共书写了29k字·共 22篇文章</br><span><p>
+      共书写了30.1k字·共 23篇文章</br><span><p>
     </section>
   
       
@@ -1044,7 +1172,7 @@
   </span>
 </div><section class="powerby">
         
-            TFL's Personal Website | LTP 2.5.15 <br/>
+            TFL's Personal Website | LTP 2.5.20 <br/>
         Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
         Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.2.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a><br />
          <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">© Licensed Under CC BY-NC-SA 4.0</a>
@@ -1192,12 +1320,14 @@ document.getElementById('days').innerHTML = number_of_days;
     <li><a href="#初始化pve">初始化PVE</a></li>
     <li><a href="#虚拟机直通设备">虚拟机直通设备</a>
       <ol>
-        <li>
-          <ol>
-            <li><a href="#对于intel-cpu添加-intel_iommuon操作如下">对于Intel CPU，添加 intel_iommu=on，操作如下：</a></li>
-            <li><a href="#对于amd-cpu">对于AMD CPU</a></li>
-          </ol>
-        </li>
+        <li><a href="#前提条件">前提条件</a></li>
+        <li><a href="#第一步启用-vt-d-或-iommu">第一步：启用 VT-d 或 IOMMU</a></li>
+        <li><a href="#第二步检查-iommu-支持">第二步：检查 IOMMU 支持</a></li>
+        <li><a href="#第三步配置-proxmox-ve">第三步：配置 Proxmox VE</a></li>
+        <li><a href="#第四步查找设备的-pci-id">第四步：查找设备的 PCI ID</a></li>
+        <li><a href="#第五步配置设备直通">第五步：配置设备直通</a></li>
+        <li><a href="#第六步启动虚拟机">第六步：启动虚拟机</a></li>
+        <li><a href="#第七步安装驱动程序如果需要">第七步：安装驱动程序（如果需要）</a></li>
       </ol>
     </li>
     <li><a href="#虚拟机安装">虚拟机安装</a></li>
@@ -1233,13 +1363,13 @@ document.getElementById('days').innerHTML = number_of_days;
             </span></div>
             <div class="category-list-item"><a href="https://tflasp.fun/categories/software/" class="category-list-link">software<span class="category-list-count">1</a>
             </span></div>
-            <div class="category-list-item"><a href="https://tflasp.fun/categories/ssd/" class="category-list-link">ssd<span class="category-list-count">3</a>
+            <div class="category-list-item"><a href="https://tflasp.fun/categories/ssd/" class="category-list-link">ssd<span class="category-list-count">4</a>
             </span></div>
             <div class="category-list-item"><a href="https://tflasp.fun/categories/system/" class="category-list-link">system<span class="category-list-count">2</a>
             </span></div>
             <div class="category-list-item"><a href="https://tflasp.fun/categories/%E4%B8%BB%E6%9D%BF/" class="category-list-link">主板<span class="category-list-count">1</a>
             </span></div>
-            <div class="category-list-item"><a href="https://tflasp.fun/categories/%E5%89%8D%E6%B2%BF%E6%8A%80%E6%9C%AF/" class="category-list-link">前沿技术<span class="category-list-count">4</a>
+            <div class="category-list-item"><a href="https://tflasp.fun/categories/%E5%89%8D%E6%B2%BF%E6%8A%80%E6%9C%AF/" class="category-list-link">前沿技术<span class="category-list-count">5</a>
             </span></div>
             <div class="category-list-item"><a href="https://tflasp.fun/categories/%E5%BD%92%E6%A1%A3/" class="category-list-link">归档<span class="category-list-count">9</a>
             </span></div>
@@ -1277,7 +1407,7 @@ document.getElementById('days').innerHTML = number_of_days;
                     <a href="/archives/#2024">
                         
                             <span class="year">2024</span>
-                            <span class="count">17</span>
+                            <span class="count">18</span>
                         
                     </a> 
                 </div>
@@ -1328,7 +1458,7 @@ document.getElementById('days').innerHTML = number_of_days;
                 PVE
             </a>
         
-            <a href="/tags/ssd/" class="font_size_3">
+            <a href="/tags/ssd/" class="font_size_4">
                 SSD
             </a>
         
