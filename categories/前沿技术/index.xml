@@ -6,8 +6,15 @@
     <description>Recent content in 前沿技术 on 改BUG的大橘</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 19 Aug 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 01 Sep 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://tflasp.fun/categories/%E5%89%8D%E6%B2%BF%E6%8A%80%E6%9C%AF/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PS2251-07 6H2H eSLC u盘制作</title>
+      <link>https://tflasp.fun/2025/udisk-eslc/</link>
+      <pubDate>Mon, 01 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://tflasp.fun/2025/udisk-eslc/</guid>
+      <description>准备工作 今天准备的颗粒是东芝TH58TEG6H2HBA4C （简称6H2H）的24nm eSLC颗粒，单颗2ce，双贴4ce。颗粒ID 98D7A03276D6 我这里是</description>
+    </item>
     <item>
       <title>RAM</title>
       <link>https://tflasp.fun/2024/intoram/</link>

@@ -6,7 +6,260 @@
         <description>Recent content on 改BUG的大橘</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Tue, 21 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://tflasp.fun/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 01 Sep 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://tflasp.fun/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>PS2251-07 6H2H eSLC u盘制作</title>
+        <link>https://tflasp.fun/2025/udisk-eslc/</link>
+        <pubDate>Mon, 01 Sep 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://tflasp.fun/2025/udisk-eslc/</guid>
+        <description>&lt;img src="https://tflasp.fun/2025/udisk-eslc/TOP-1.jpg" alt="Featured image of post PS2251-07 6H2H eSLC u盘制作" /&gt;&lt;h3 id=&#34;准备工作&#34;&gt;准备工作&lt;/h3&gt;
+&lt;p&gt;今天准备的颗粒是东芝&lt;code&gt;TH58TEG6H2HBA4C&lt;/code&gt; （简称6H2H）的24nm eSLC颗粒，单颗2ce，双贴4ce。颗粒ID &lt;code&gt;98D7A03276D6&lt;/code&gt; 我这里是较新批次的，是铠侠丝印，21年制造，寿命上来说比201x年出厂的更可观一些&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 75; 
+			flex-basis: 180px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2025/udisk-eslc/NAND-1.jpg&#34; data-size=&#34;3000x4000&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2025/udisk-eslc/NAND-1.jpg&#34;
+			width=&#34;3000&#34;
+			height=&#34;4000&#34;
+			srcset=&#34;https://tflasp.fun/2025/udisk-eslc/NAND-1_hu7403a243ab0b2eca1e5cd90f70f8c4ad_2467339_480x0_resize_q75_box.jpg 480w, https://tflasp.fun/2025/udisk-eslc/NAND-1_hu7403a243ab0b2eca1e5cd90f70f8c4ad_2467339_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;以及一片&lt;code&gt;PS2251-07&lt;/code&gt;（也称&lt;code&gt;PS2307&lt;/code&gt;或&lt;code&gt;UP307&lt;/code&gt;）双贴BGA152主控板&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 79; 
+			flex-basis: 191px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2025/udisk-eslc/PCB-1.png&#34; data-size=&#34;695x869&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2025/udisk-eslc/PCB-1.png&#34;
+			width=&#34;695&#34;
+			height=&#34;869&#34;
+			srcset=&#34;https://tflasp.fun/2025/udisk-eslc/PCB-1_hucdb4f0358cbb653b49b88174ae9fee91_1123987_480x0_resize_box_3.png 480w, https://tflasp.fun/2025/udisk-eslc/PCB-1_hucdb4f0358cbb653b49b88174ae9fee91_1123987_1024x0_resize_box_3.png 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&#34;制作流程&#34;&gt;制作流程&lt;/h3&gt;
+&lt;p&gt;（此处忽略拖平主控板、颗粒植球等操作）&lt;/p&gt;
+&lt;p&gt;我这里使用的是千住227°高温锡，在高温表现下更稳定，不容易虚焊，当然对焊接手法也有一定的要求&lt;/p&gt;
+&lt;p&gt;焊接好后等待颗粒冷却，然后就可以上机开始量产&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 133; 
+			flex-basis: 320px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2025/udisk-eslc/TOP-1.jpg&#34; data-size=&#34;4032x3024&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2025/udisk-eslc/TOP-1.jpg&#34;
+			width=&#34;4032&#34;
+			height=&#34;3024&#34;
+			srcset=&#34;https://tflasp.fun/2025/udisk-eslc/TOP-1_hu54abb1f52b23edc9ca42ec3ca5b34629_1711247_480x0_resize_q75_box.jpg 480w, https://tflasp.fun/2025/udisk-eslc/TOP-1_hu54abb1f52b23edc9ca42ec3ca5b34629_1711247_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 133; 
+			flex-basis: 320px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2025/udisk-eslc/BOT-1.jpg&#34; data-size=&#34;4032x3024&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2025/udisk-eslc/BOT-1.jpg&#34;
+			width=&#34;4032&#34;
+			height=&#34;3024&#34;
+			srcset=&#34;https://tflasp.fun/2025/udisk-eslc/BOT-1_hue2ff7eee12536c137b9b76d65ad7342a_1748534_480x0_resize_q75_box.jpg 480w, https://tflasp.fun/2025/udisk-eslc/BOT-1_hue2ff7eee12536c137b9b76d65ad7342a_1748534_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&#34;开卡&#34;&gt;开卡&lt;/h3&gt;
+&lt;p&gt;开卡工具可以在毛子网站上下载（&lt;a class=&#34;link&#34; href=&#34;https://www.usbdev.ru&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;www.usbdev.ru&lt;/a&gt;）&lt;/p&gt;
+&lt;p&gt;或者下载单包（&lt;a class=&#34;link&#34; href=&#34;https://wwz.lanzoul.com/iGIfn355ll7i&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MPALL_0700_v513_0C  For  All&lt;/a&gt;）&lt;/p&gt;
+&lt;p&gt;打开&lt;code&gt;MPALL_F1_9000_v513_0C.exe&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 130; 
+			flex-basis: 313px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2025/udisk-eslc/main-1.png&#34; data-size=&#34;777x594&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2025/udisk-eslc/main-1.png&#34;
+			width=&#34;777&#34;
+			height=&#34;594&#34;
+			srcset=&#34;https://tflasp.fun/2025/udisk-eslc/main-1_hue5a1527428bdb03c2ace381ae7fe98e8_54164_480x0_resize_box_3.png 480w, https://tflasp.fun/2025/udisk-eslc/main-1_hue5a1527428bdb03c2ace381ae7fe98e8_54164_1024x0_resize_box_3.png 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;点击&lt;code&gt;Setting&lt;/code&gt;，选择&lt;code&gt;Advance Setting&lt;/code&gt; &lt;code&gt;New Setting&lt;/code&gt;点确认&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 223; 
+			flex-basis: 535px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2025/udisk-eslc/set-1.png&#34; data-size=&#34;529x237&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2025/udisk-eslc/set-1.png&#34;
+			width=&#34;529&#34;
+			height=&#34;237&#34;
+			srcset=&#34;https://tflasp.fun/2025/udisk-eslc/set-1_huf596bfcfba4e0ba2ff40ca53b7e5d75e_10441_480x0_resize_box_3.png 480w, https://tflasp.fun/2025/udisk-eslc/set-1_huf596bfcfba4e0ba2ff40ca53b7e5d75e_10441_1024x0_resize_box_3.png 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;按照黄色荧光部分设置，BN固件选择&lt;code&gt;BN07V502TAW.BIN&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;FW文件选择&lt;code&gt;FW07FF51004.bin&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 148; 
+			flex-basis: 355px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2025/udisk-eslc/set-2.png&#34; data-size=&#34;821x554&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2025/udisk-eslc/set-2.png&#34;
+			width=&#34;821&#34;
+			height=&#34;554&#34;
+			srcset=&#34;https://tflasp.fun/2025/udisk-eslc/set-2_hu920ed9bbf2b91e8b5168a732bf475009_31857_480x0_resize_box_3.png 480w, https://tflasp.fun/2025/udisk-eslc/set-2_hu920ed9bbf2b91e8b5168a732bf475009_31857_1024x0_resize_box_3.png 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 148; 
+			flex-basis: 355px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2025/udisk-eslc/set-3.png&#34; data-size=&#34;820x553&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2025/udisk-eslc/set-3.png&#34;
+			width=&#34;820&#34;
+			height=&#34;553&#34;
+			srcset=&#34;https://tflasp.fun/2025/udisk-eslc/set-3_hub3febe2ac1ea00240b04af87cbc2dbec_40857_480x0_resize_box_3.png 480w, https://tflasp.fun/2025/udisk-eslc/set-3_hub3febe2ac1ea00240b04af87cbc2dbec_40857_1024x0_resize_box_3.png 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 149; 
+			flex-basis: 358px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2025/udisk-eslc/set-4.png&#34; data-size=&#34;819x548&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2025/udisk-eslc/set-4.png&#34;
+			width=&#34;819&#34;
+			height=&#34;548&#34;
+			srcset=&#34;https://tflasp.fun/2025/udisk-eslc/set-4_hu92b87dd29078238bc482c5cf05975b5d_38813_480x0_resize_box_3.png 480w, https://tflasp.fun/2025/udisk-eslc/set-4_hu92b87dd29078238bc482c5cf05975b5d_38813_1024x0_resize_box_3.png 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;最后点Save或者SaveAs新文件都可以&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 147; 
+			flex-basis: 353px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2025/udisk-eslc/set-5.png&#34; data-size=&#34;821x557&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2025/udisk-eslc/set-5.png&#34;
+			width=&#34;821&#34;
+			height=&#34;557&#34;
+			srcset=&#34;https://tflasp.fun/2025/udisk-eslc/set-5_hua1faf3b0f33084cf7ce33f2e0c0b6358_32681_480x0_resize_box_3.png 480w, https://tflasp.fun/2025/udisk-eslc/set-5_hua1faf3b0f33084cf7ce33f2e0c0b6358_32681_1024x0_resize_box_3.png 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;如果点的Save，右上角选择&lt;code&gt;MP.ini&lt;/code&gt;，若自定义了名称，右上角选择另存为的ini即可&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 131; 
+			flex-basis: 315px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2025/udisk-eslc/set-6.png&#34; data-size=&#34;788x599&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2025/udisk-eslc/set-6.png&#34;
+			width=&#34;788&#34;
+			height=&#34;599&#34;
+			srcset=&#34;https://tflasp.fun/2025/udisk-eslc/set-6_huf29e6da44898f4cf85917246ad1a9157_54265_480x0_resize_box_3.png 480w, https://tflasp.fun/2025/udisk-eslc/set-6_huf29e6da44898f4cf85917246ad1a9157_54265_1024x0_resize_box_3.png 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;最后点Start开始开卡，大约开卡时间在1~2分钟&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 131; 
+			flex-basis: 316px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2025/udisk-eslc/PASS.png&#34; data-size=&#34;784x595&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2025/udisk-eslc/PASS.png&#34;
+			width=&#34;784&#34;
+			height=&#34;595&#34;
+			srcset=&#34;https://tflasp.fun/2025/udisk-eslc/PASS_hua44f574ee4243d14eb75c186c4b76809_55551_480x0_resize_box_3.png 480w, https://tflasp.fun/2025/udisk-eslc/PASS_hua44f574ee4243d14eb75c186c4b76809_55551_1024x0_resize_box_3.png 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&#34;速度测试&#34;&gt;速度测试&lt;/h3&gt;
+&lt;p&gt;ASSSD速度测试写104MB/s  读110MB/s&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 105; 
+			flex-basis: 252px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2025/udisk-eslc/asssd.png&#34; data-size=&#34;492x467&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2025/udisk-eslc/asssd.png&#34;
+			width=&#34;492&#34;
+			height=&#34;467&#34;
+			srcset=&#34;https://tflasp.fun/2025/udisk-eslc/asssd_hu0db661738159dd08cbc379eea4f2aac4_31105_480x0_resize_box_3.png 480w, https://tflasp.fun/2025/udisk-eslc/asssd_hu0db661738159dd08cbc379eea4f2aac4_31105_1024x0_resize_box_3.png 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;最后记得跑一个urwtest简单做一下稳定性测试（我这里就没有截图了）&lt;/p&gt;
+&lt;h3 id=&#34;故障排除&#34;&gt;故障排除&lt;/h3&gt;
+&lt;p&gt;如果选择BN固件或者FW文件错误会报错，卡在ISP firmware等位置报错，这个时候就需要根据你的芯片制程来选择对应的固件，目前PS2307的固件只支持开TSB（东芝）和SNK（闪迪）的24NM 19NM 15NM SLC MLC，还有部分支持32NM，其他厂商的制程固件暂未流出，SNK的锁片也开不了。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>量产工具整理合集</title>
         <link>https://tflasp.fun/2025/mptool/</link>
         <pubDate>Tue, 21 Jan 2025 00:00:00 +0000</pubDate>
@@ -2365,8 +2618,8 @@ Num     Name                 Tags  Description
         <description>&lt;img src="https://tflasp.fun/2024/ssd-fw/SSDFW-MAIN.jpg" alt="Featured image of post SSD开卡" /&gt;&lt;h2 id=&#34;ssd开卡技术&#34;&gt;SSD开卡技术&lt;/h2&gt;
 &lt;p&gt;SSD（固态硬盘）里采用慧荣主控的品牌很多，其中常见的慧荣主控型号有&lt;code&gt;SM2258XT&lt;/code&gt;、&lt;code&gt;SM2259XT&lt;/code&gt;、&lt;code&gt;SM2259XT2&lt;/code&gt;、&lt;code&gt;SM2262EN&lt;/code&gt;、&lt;code&gt;SM2263XT&lt;/code&gt;等等，这些主控的SSD要是坏了或者掉盘了，在保质期里的可以返厂维修，如果过保了，我们还是有办法自己修复的，方法就是用量产软件来开卡。&lt;/p&gt;
 &lt;h3 id=&#34;准备工作&#34;&gt;准备工作&lt;/h3&gt;
-&lt;p&gt;准备SM2258XT开卡软件（对应你自己设备的量产软件），找长方形的闪存颗粒，打开量产部落的闪存查询（或者FlashID官网）查询闪存ID与制程，输入闪存颗粒上面的编号来确定制程（黑片、打标片除外），然后再从&lt;a class=&#34;link&#34; href=&#34;http://club.liangchanba.com/forum-smi-1.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;量产部落&lt;/a&gt;上面下载开卡软件。&lt;/p&gt;
+&lt;p&gt;准备SM2258XT开卡软件（对应你自己设备的量产软件），找长方形的闪存颗粒，打开量产部落的闪存查询（或者FlashID官网）查询闪存ID与制程，输入闪存颗粒上面的编号来确定制程（黑片、打标片除外），然后再从&lt;a class=&#34;link&#34; href=&#34;https://usbdev.ru&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;usbdev&lt;/a&gt;上面下载开卡软件。&lt;/p&gt;
 &lt;p&gt;准备一个SATA-USB转接硬盘盒（建议使用&lt;code&gt;ASM1153E&lt;/code&gt;/&lt;code&gt;JMS578&lt;/code&gt;主控的），把SSD插到硬盘盒里，用尖头镊子短接SSD的ROM孔，保持短接，把硬盘盒插到电脑USB接口上（固态U盘可以直接短接ROM，再插电脑USB即可）。&lt;/p&gt;
 &lt;h3 id=&#34;开卡流程&#34;&gt;开卡流程&lt;/h3&gt;
 &lt;p&gt;打开开卡软件，点击右侧“搜索设备”，待软件识别到SSD后，把尖头镊子取下。&lt;/p&gt;
