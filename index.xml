@@ -1,12 +1,177 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>改BUG的大橘</title>
+        <title>大橘為重</title>
         <link>https://tflasp.fun/</link>
-        <description>Recent content on 改BUG的大橘</description>
+        <description>Recent content on 大橘為重</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 01 Sep 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://tflasp.fun/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 02 Sep 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://tflasp.fun/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>SM2269XT PCIe4.0固态硬盘 DIY</title>
+        <link>https://tflasp.fun/2025/69xt/</link>
+        <pubDate>Tue, 02 Sep 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://tflasp.fun/2025/69xt/</guid>
+        <description>&lt;img src="https://tflasp.fun/2025/69xt/TOP-1.jpg" alt="Featured image of post SM2269XT PCIe4.0固态硬盘 DIY" /&gt;&lt;h3 id=&#34;准备工作&#34;&gt;准备工作&lt;/h3&gt;
+&lt;p&gt;今天准备的颗粒是镁光&lt;code&gt;NY119&lt;/code&gt; B47R BGA252 TLC颗粒，单颗4ce 8die 256GB。颗粒ID&lt;code&gt;2CC30832EA30&lt;/code&gt;，上69XT并不能做到满速，容量还是太小了，我这里只是尝鲜玩玩69XT&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 75; 
+			flex-basis: 180px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2025/69xt/NAND-1.jpg&#34; data-size=&#34;2084x2778&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2025/69xt/NAND-1.jpg&#34;
+			width=&#34;2084&#34;
+			height=&#34;2778&#34;
+			srcset=&#34;https://tflasp.fun/2025/69xt/NAND-1_hu9e6b5382890b23f007905d31d2ebe6fd_575984_480x0_resize_q75_box.jpg 480w, https://tflasp.fun/2025/69xt/NAND-1_hu9e6b5382890b23f007905d31d2ebe6fd_575984_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;以及一片&lt;code&gt;SM2269XT&lt;/code&gt;单贴BGA252 2230主控板&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 123; 
+			flex-basis: 296px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2025/69xt/PCB-1.jpg&#34; data-size=&#34;1284x1040&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2025/69xt/PCB-1.jpg&#34;
+			width=&#34;1284&#34;
+			height=&#34;1040&#34;
+			srcset=&#34;https://tflasp.fun/2025/69xt/PCB-1_huff74a85bc770c32d8bfe2e30170e62b7_866832_480x0_resize_q75_box.jpg 480w, https://tflasp.fun/2025/69xt/PCB-1_huff74a85bc770c32d8bfe2e30170e62b7_866832_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 175; 
+			flex-basis: 421px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2025/69xt/JMP.png&#34; data-size=&#34;3900x2219&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2025/69xt/JMP.png&#34;
+			width=&#34;3900&#34;
+			height=&#34;2219&#34;
+			srcset=&#34;https://tflasp.fun/2025/69xt/JMP_hue99022f325153e26aabf648754495bc8_4223511_480x0_resize_box_3.png 480w, https://tflasp.fun/2025/69xt/JMP_hue99022f325153e26aabf648754495bc8_4223511_1024x0_resize_box_3.png 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&#34;制作流程&#34;&gt;制作流程&lt;/h3&gt;
+&lt;p&gt;（此处忽略拖平主控板、颗粒植球等操作）该板子默认为B47R跳线，若需上其他制程需要改跳线。&lt;/p&gt;
+&lt;p&gt;焊接好后等待颗粒冷却，然后就可以上机开始量产&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 75; 
+			flex-basis: 180px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2025/69xt/TOP-1.jpg&#34; data-size=&#34;2084x2778&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2025/69xt/TOP-1.jpg&#34;
+			width=&#34;2084&#34;
+			height=&#34;2778&#34;
+			srcset=&#34;https://tflasp.fun/2025/69xt/TOP-1_hub6d7b80b1c2be95960c70c6751b975f0_615868_480x0_resize_q75_box.jpg 480w, https://tflasp.fun/2025/69xt/TOP-1_hub6d7b80b1c2be95960c70c6751b975f0_615868_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&#34;开卡&#34;&gt;开卡&lt;/h3&gt;
+&lt;p&gt;开卡工具可以在毛子网站上下载（&lt;a class=&#34;link&#34; href=&#34;https://www.usbdev.ru&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;www.usbdev.ru&lt;/a&gt;）&lt;/p&gt;
+&lt;p&gt;打开&lt;code&gt;SM2269XT_MPTool_ADATA.exe&lt;/code&gt;（该板子为威刚拆机，需要用威刚主程序来开卡，不然无法匹配CustomerID）&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 133; 
+			flex-basis: 320px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2025/69xt/MAIN-1.png&#34; data-size=&#34;1013x759&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2025/69xt/MAIN-1.png&#34;
+			width=&#34;1013&#34;
+			height=&#34;759&#34;
+			srcset=&#34;https://tflasp.fun/2025/69xt/MAIN-1_hu522bed3ddb4c6e2607d50b06e02fa970_35488_480x0_resize_box_3.png 480w, https://tflasp.fun/2025/69xt/MAIN-1_hu522bed3ddb4c6e2607d50b06e02fa970_35488_1024x0_resize_box_3.png 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;点击&lt;code&gt;Parameter&lt;/code&gt;，&lt;code&gt;EditConfig&lt;/code&gt;密码为两个空格&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 132; 
+			flex-basis: 318px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2025/69xt/SET-1.png&#34; data-size=&#34;1014x763&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2025/69xt/SET-1.png&#34;
+			width=&#34;1014&#34;
+			height=&#34;763&#34;
+			srcset=&#34;https://tflasp.fun/2025/69xt/SET-1_hu41a8f0a65d090be346748971de5b664b_80824_480x0_resize_box_3.png 480w, https://tflasp.fun/2025/69xt/SET-1_hu41a8f0a65d090be346748971de5b664b_80824_1024x0_resize_box_3.png 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;按照黄色荧光部分设置，auto一下选择Flash，DiskSize选择磁盘大小，&lt;code&gt;BadRef.Mode&lt;/code&gt;（Pretest）选0或1，如果跑了RDT就选3&lt;/p&gt;
+&lt;p&gt;完成设置过后&lt;code&gt;SaveConfig&lt;/code&gt;，返回&lt;code&gt;Test&lt;/code&gt;页，点ScanDrive 、确认CE识别正确后点 Start开始&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 132; 
+			flex-basis: 318px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2025/69xt/SET-2.png&#34; data-size=&#34;1005x757&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2025/69xt/SET-2.png&#34;
+			width=&#34;1005&#34;
+			height=&#34;757&#34;
+			srcset=&#34;https://tflasp.fun/2025/69xt/SET-2_hue93798ee817f3545505248b8b6720875_38403_480x0_resize_box_3.png 480w, https://tflasp.fun/2025/69xt/SET-2_hue93798ee817f3545505248b8b6720875_38403_1024x0_resize_box_3.png 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;重新插拔，在磁盘管理里初始化和分区，就大功告成了&lt;/p&gt;
+&lt;p&gt;（建议跑RDT并采用更新的固件，B47R 69XT建议用W01更稳定，跑RDT可以尽量抓干净坏块，使用更稳定）&lt;/p&gt;
+&lt;h3 id=&#34;速度测试&#34;&gt;速度测试&lt;/h3&gt;
+&lt;p&gt;ASSSD速度测试&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 105; 
+			flex-basis: 254px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2025/69xt/asssd.jpg&#34; data-size=&#34;488x461&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2025/69xt/asssd.jpg&#34;
+			width=&#34;488&#34;
+			height=&#34;461&#34;
+			srcset=&#34;https://tflasp.fun/2025/69xt/asssd_hu77f8d5dc701998767993c6eff50ee1b7_62498_480x0_resize_q75_box.jpg 480w, https://tflasp.fun/2025/69xt/asssd_hu77f8d5dc701998767993c6eff50ee1b7_62498_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;最后记得跑一个urwtest简单做一下稳定性测试（我这里就没有截图了）&lt;/p&gt;
+&lt;h3 id=&#34;故障排除&#34;&gt;故障排除&lt;/h3&gt;
+&lt;p&gt;使用公版开卡固件开该板子会无法匹配customerID导致开卡错误，选择对应的开卡主程序开卡即可&lt;/p&gt;
+&lt;p&gt;其他几个常见错误可以搜索解决，资料很多，这里就不细讲了&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>PS2251-07 6H2H eSLC u盘制作</title>
         <link>https://tflasp.fun/2025/udisk-eslc/</link>
         <pubDate>Mon, 01 Sep 2025 00:00:00 +0000</pubDate>

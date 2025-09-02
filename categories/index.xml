@@ -1,25 +1,32 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on 改BUG的大橘</title>
+    <title>Categories on 大橘為重</title>
     <link>https://tflasp.fun/categories/</link>
-    <description>Recent content in Categories on 改BUG的大橘</description>
+    <description>Recent content in Categories on 大橘為重</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 01 Sep 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 02 Sep 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://tflasp.fun/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>U盘</title>
-      <link>https://tflasp.fun/categories/u%E7%9B%98/</link>
-      <pubDate>Mon, 01 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>https://tflasp.fun/categories/u%E7%9B%98/</guid>
+      <title>SSD</title>
+      <link>https://tflasp.fun/categories/ssd/</link>
+      <pubDate>Tue, 02 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://tflasp.fun/categories/ssd/</guid>
       <description></description>
     </item>
     <item>
       <title>前沿技术</title>
       <link>https://tflasp.fun/categories/%E5%89%8D%E6%B2%BF%E6%8A%80%E6%9C%AF/</link>
-      <pubDate>Mon, 01 Sep 2025 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 02 Sep 2025 00:00:00 +0000</pubDate>
       <guid>https://tflasp.fun/categories/%E5%89%8D%E6%B2%BF%E6%8A%80%E6%9C%AF/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>U盘</title>
+      <link>https://tflasp.fun/categories/u%E7%9B%98/</link>
+      <pubDate>Mon, 01 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://tflasp.fun/categories/u%E7%9B%98/</guid>
       <description></description>
     </item>
     <item>
@@ -83,13 +90,6 @@
       <link>https://tflasp.fun/categories/ram/</link>
       <pubDate>Mon, 19 Aug 2024 00:00:00 +0000</pubDate>
       <guid>https://tflasp.fun/categories/ram/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>SSD</title>
-      <link>https://tflasp.fun/categories/ssd/</link>
-      <pubDate>Sun, 11 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://tflasp.fun/categories/ssd/</guid>
       <description></description>
     </item>
     <item>
