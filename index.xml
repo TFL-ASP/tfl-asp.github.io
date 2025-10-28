@@ -6,7 +6,206 @@
         <description>Recent content on 大橘為重</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Tue, 02 Sep 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://tflasp.fun/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 27 Oct 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://tflasp.fun/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>SM2262EN PCIe3.0固态硬盘 DIY</title>
+        <link>https://tflasp.fun/2025/62en/</link>
+        <pubDate>Mon, 27 Oct 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://tflasp.fun/2025/62en/</guid>
+        <description>&lt;img src="https://tflasp.fun/2025/62en/TOP-1.png" alt="Featured image of post SM2262EN PCIe3.0固态硬盘 DIY" /&gt;&lt;h3 id=&#34;准备工作&#34;&gt;准备工作&lt;/h3&gt;
+&lt;p&gt;准备的颗粒是闪迪SNK Bics3 BGA132 TLC颗粒，单颗4ce 8die 256GB。颗粒ID&lt;code&gt;453E99B37A72&lt;/code&gt;，上SM2262EN需要注意改1.8v vccq以及去掉tog（R58）&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 75; 
+			flex-basis: 180px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2025/62en/NAND-1.jpg&#34; data-size=&#34;3024x4032&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2025/62en/NAND-1.jpg&#34;
+			width=&#34;3024&#34;
+			height=&#34;4032&#34;
+			srcset=&#34;https://tflasp.fun/2025/62en/NAND-1_hudf47069171356754fd62412ef6923a5c_2298909_480x0_resize_q75_box.jpg 480w, https://tflasp.fun/2025/62en/NAND-1_hudf47069171356754fd62412ef6923a5c_2298909_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;以及一片&lt;code&gt;SM2262EN&lt;/code&gt;四贴BGA132 2280主控板+ &lt;code&gt;D9STQ&lt;/code&gt; 单颗1G DDR3 DRAM，跳线如图&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 133; 
+			flex-basis: 320px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2025/62en/TOP-1.png&#34; data-size=&#34;1280x960&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2025/62en/TOP-1.png&#34;
+			width=&#34;1280&#34;
+			height=&#34;960&#34;
+			srcset=&#34;https://tflasp.fun/2025/62en/TOP-1_hu6b2b50063ce2d0f3171ef981e415d3c3_1677813_480x0_resize_box_3.png 480w, https://tflasp.fun/2025/62en/TOP-1_hu6b2b50063ce2d0f3171ef981e415d3c3_1677813_1024x0_resize_box_3.png 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 133; 
+			flex-basis: 320px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2025/62en/TOP-2.png&#34; data-size=&#34;1280x960&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2025/62en/TOP-2.png&#34;
+			width=&#34;1280&#34;
+			height=&#34;960&#34;
+			srcset=&#34;https://tflasp.fun/2025/62en/TOP-2_hu98486d543b04f4867f7b945831947c87_1577436_480x0_resize_box_3.png 480w, https://tflasp.fun/2025/62en/TOP-2_hu98486d543b04f4867f7b945831947c87_1577436_1024x0_resize_box_3.png 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;还需要一个&lt;code&gt;JMS583&lt;/code&gt;转接板，最好是C口的供电更好，因为供电问题有概率卡100%&lt;/p&gt;
+&lt;h3 id=&#34;制作流程&#34;&gt;制作流程&lt;/h3&gt;
+&lt;p&gt;（此处忽略拖平主控板、颗粒植球、清空等操作）该板子默认为&lt;code&gt;vccq1.2&lt;/code&gt;，上Bics3只能&lt;code&gt;1.8 vccq&lt;/code&gt;，将RA RB按&lt;code&gt;2：1&lt;/code&gt;阻值调整即可。注意去掉&lt;code&gt;R58 Toggle&lt;/code&gt;，SNK id后两位无字母的为&lt;code&gt;Legacy&lt;/code&gt;模式&lt;/p&gt;
+&lt;p&gt;焊接好后等待颗粒冷却，然后就可以上机开始量产&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 75; 
+			flex-basis: 180px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2025/62en/fin-1.jpg&#34; data-size=&#34;3024x4032&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2025/62en/fin-1.jpg&#34;
+			width=&#34;3024&#34;
+			height=&#34;4032&#34;
+			srcset=&#34;https://tflasp.fun/2025/62en/fin-1_hu0606de3c93565917b987c953e635e938_19816136_480x0_resize_q75_box.jpg 480w, https://tflasp.fun/2025/62en/fin-1_hu0606de3c93565917b987c953e635e938_19816136_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 75; 
+			flex-basis: 180px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2025/62en/FIN-2.JPG&#34; data-size=&#34;3024x4032&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2025/62en/FIN-2.JPG&#34;
+			width=&#34;3024&#34;
+			height=&#34;4032&#34;
+			srcset=&#34;https://tflasp.fun/2025/62en/FIN-2_hue991f96d005b255104335d4fdd7d0d75_19135690_480x0_resize_q75_box.JPG 480w, https://tflasp.fun/2025/62en/FIN-2_hue991f96d005b255104335d4fdd7d0d75_19135690_1024x0_resize_q75_box.JPG 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&#34;开卡&#34;&gt;开卡&lt;/h3&gt;
+&lt;p&gt;开卡工具可以在毛子网站上下载（&lt;a class=&#34;link&#34; href=&#34;https://www.usbdev.ru&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;www.usbdev.ru&lt;/a&gt;）&lt;/p&gt;
+&lt;p&gt;62en公开固件还是很多的，别去某个要花18RMB注册的垃圾网站下东西&lt;/p&gt;
+&lt;p&gt;打开&lt;code&gt;TestAP_SM2262EN_BiCS_Security.exe&lt;/code&gt;记得先装&lt;code&gt;authorization key&lt;/code&gt;，不然打开软件会报错。&lt;/p&gt;
+&lt;p&gt;点击&lt;code&gt;Parameter&lt;/code&gt;，&lt;code&gt;EditConfig&lt;/code&gt;密码为两个空格&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 141; 
+			flex-basis: 340px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2025/62en/SET-1.png&#34; data-size=&#34;1043x736&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2025/62en/SET-1.png&#34;
+			width=&#34;1043&#34;
+			height=&#34;736&#34;
+			srcset=&#34;https://tflasp.fun/2025/62en/SET-1_hu46253c94a18441072dfb46df11f05bfc_264687_480x0_resize_box_3.png 480w, https://tflasp.fun/2025/62en/SET-1_hu46253c94a18441072dfb46df11f05bfc_264687_1024x0_resize_box_3.png 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;auto一下选择Flash，在Pretest/DRAM Set里设置缓存、频率等设置&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 140; 
+			flex-basis: 337px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2025/62en/SET-2.png&#34; data-size=&#34;1044x743&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2025/62en/SET-2.png&#34;
+			width=&#34;1044&#34;
+			height=&#34;743&#34;
+			srcset=&#34;https://tflasp.fun/2025/62en/SET-2_hu9619cad1240505909c14b74c9bf905a3_283220_480x0_resize_box_3.png 480w, https://tflasp.fun/2025/62en/SET-2_hu9619cad1240505909c14b74c9bf905a3_283220_1024x0_resize_box_3.png 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Disk Size&lt;/code&gt;选择磁盘大小，OP可设置备用块占比，&lt;code&gt;CE/CH Map&lt;/code&gt;一般直接Select All即可。主要是&lt;code&gt;DRAM&lt;/code&gt;设置，双贴D9STQ就按我的设置来，单贴16位缓存选&lt;code&gt;CS0 Low&lt;/code&gt;/&lt;code&gt;CS0 High&lt;/code&gt;，双贴选&lt;code&gt;CS0 32bit&lt;/code&gt;，缓存设置错误或者焊接不良会卡&lt;code&gt;25%&lt;/code&gt;！&lt;/p&gt;
+&lt;p&gt;跑RDT抓全坏块使用更稳定，没跑RDT的设置别勾&lt;code&gt;Check RDT Result&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;跑RDT需要插电脑上跑，不能插充电器，另外JMS583部分固件的休眠策略可能会影响RDT&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 142; 
+			flex-basis: 341px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2025/62en/RDT.JPG&#34; data-size=&#34;1042x732&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2025/62en/RDT.JPG&#34;
+			width=&#34;1042&#34;
+			height=&#34;732&#34;
+			srcset=&#34;https://tflasp.fun/2025/62en/RDT_hu7fe2060925ea2b447349a4b61e53c728_76473_480x0_resize_q75_box.JPG 480w, https://tflasp.fun/2025/62en/RDT_hu7fe2060925ea2b447349a4b61e53c728_76473_1024x0_resize_q75_box.JPG 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;RDT结果：&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 141; 
+			flex-basis: 339px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2025/62en/RDTR.png&#34; data-size=&#34;1041x735&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2025/62en/RDTR.png&#34;
+			width=&#34;1041&#34;
+			height=&#34;735&#34;
+			srcset=&#34;https://tflasp.fun/2025/62en/RDTR_huaa2d07c35a69892dafe2227403dd2fe8_85736_480x0_resize_box_3.png 480w, https://tflasp.fun/2025/62en/RDTR_huaa2d07c35a69892dafe2227403dd2fe8_85736_1024x0_resize_box_3.png 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 140; 
+			flex-basis: 338px&#34;
+	&gt;
+	&lt;a href=&#34;https://tflasp.fun/2025/62en/MP.png&#34; data-size=&#34;1039x737&#34;&gt;
+		&lt;img src=&#34;https://tflasp.fun/2025/62en/MP.png&#34;
+			width=&#34;1039&#34;
+			height=&#34;737&#34;
+			srcset=&#34;https://tflasp.fun/2025/62en/MP_hubf0d9512fff089484f476c4bd0b6f76d_73951_480x0_resize_box_3.png 480w, https://tflasp.fun/2025/62en/MP_hubf0d9512fff089484f476c4bd0b6f76d_73951_1024x0_resize_box_3.png 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;然后就大功告成了&lt;/p&gt;
+&lt;h3 id=&#34;故障排除&#34;&gt;故障排除&lt;/h3&gt;
+&lt;p&gt;卡25%大概率是缓存设置问题，也有可能是没焊好。卡50%、75%等错误根据具体报错来解决；卡100%的建议换转接板或者换板子解决&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>SM2269XT PCIe4.0固态硬盘 DIY</title>
         <link>https://tflasp.fun/2025/69xt/</link>
         <pubDate>Tue, 02 Sep 2025 00:00:00 +0000</pubDate>
