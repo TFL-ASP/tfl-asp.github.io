@@ -2,178 +2,178 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on 大橘為重</title>
-    <link>https://tflasp.fun/post/</link>
+    <link>https://tfl-asp.github.io/post/</link>
     <description>Recent content in Posts on 大橘為重</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 27 Oct 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://tflasp.fun/post/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tfl-asp.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>SM2262EN PCIe3.0固态硬盘 DIY</title>
-      <link>https://tflasp.fun/2025/62en/</link>
+      <link>https://tfl-asp.github.io/2025/62en/</link>
       <pubDate>Mon, 27 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://tflasp.fun/2025/62en/</guid>
+      <guid>https://tfl-asp.github.io/2025/62en/</guid>
       <description>准备工作 准备的颗粒是闪迪SNK Bics3 BGA132 TLC颗粒，单颗4ce 8die 256GB。颗粒ID453E99B37A72，上SM2262EN需要注意改1.8v</description>
     </item>
     <item>
       <title>SM2269XT PCIe4.0固态硬盘 DIY</title>
-      <link>https://tflasp.fun/2025/69xt/</link>
+      <link>https://tfl-asp.github.io/2025/69xt/</link>
       <pubDate>Tue, 02 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>https://tflasp.fun/2025/69xt/</guid>
+      <guid>https://tfl-asp.github.io/2025/69xt/</guid>
       <description>准备工作 今天准备的颗粒是镁光NY119 B47R BGA252 TLC颗粒，单颗4ce 8die 256GB。颗粒ID2CC30832EA30，上69XT并不能做到满速，容</description>
     </item>
     <item>
       <title>PS2251-07 6H2H eSLC u盘制作</title>
-      <link>https://tflasp.fun/2025/udisk-eslc/</link>
+      <link>https://tfl-asp.github.io/2025/udisk-eslc/</link>
       <pubDate>Mon, 01 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>https://tflasp.fun/2025/udisk-eslc/</guid>
+      <guid>https://tfl-asp.github.io/2025/udisk-eslc/</guid>
       <description>准备工作 今天准备的颗粒是东芝TH58TEG6H2HBA4C （简称6H2H）的24nm eSLC颗粒，单颗2ce，双贴4ce。颗粒ID 98D7A03276D6 我这里是</description>
     </item>
     <item>
       <title>【教程】保障数据安全，关闭Bitlocker</title>
-      <link>https://tflasp.fun/2024/disable-bitlocker/</link>
+      <link>https://tfl-asp.github.io/2024/disable-bitlocker/</link>
       <pubDate>Thu, 26 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>https://tflasp.fun/2024/disable-bitlocker/</guid>
+      <guid>https://tfl-asp.github.io/2024/disable-bitlocker/</guid>
       <description>前言 近期有几个朋友笔记本硬盘坏了，拿去恢复数据，硬件层面的问题解决后发现硬盘有BitLocker加密，而他全然不知道此事，微软账号里也没有备</description>
     </item>
     <item>
       <title>【归档】旧主板BIOS添加nvme驱动</title>
-      <link>https://tflasp.fun/2024/bios_nvme/</link>
+      <link>https://tfl-asp.github.io/2024/bios_nvme/</link>
       <pubDate>Wed, 28 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://tflasp.fun/2024/bios_nvme/</guid>
+      <guid>https://tfl-asp.github.io/2024/bios_nvme/</guid>
       <description>准备工作 首先准备待刷BIOS的主板，我手上的是华硕B85M-F PLUS，以及一台能正常使用的联网的电脑，一个u盘（重要数据建议备份） 注意，尽</description>
     </item>
     <item>
       <title>【归档】Ubuntu20.04下安装Docker</title>
-      <link>https://tflasp.fun/2024/docker-setup-ubuntu/</link>
+      <link>https://tfl-asp.github.io/2024/docker-setup-ubuntu/</link>
       <pubDate>Fri, 23 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://tflasp.fun/2024/docker-setup-ubuntu/</guid>
+      <guid>https://tfl-asp.github.io/2024/docker-setup-ubuntu/</guid>
       <description>以 ubuntu 20.04（也包括作为桌面使用的 Linux Mint 21） 为例，参考官网文档： https://docs.docker.com/install/linux/docker-ce/ubuntu/ 安装准备 看一下自己的Linux机器版本和内核信息： uname --all Linux skywork 5.15.0-53-generic #59-Ubuntu SMP Mon Oct 17 18:53:30</description>
     </item>
     <item>
       <title>工具包分享</title>
-      <link>https://tflasp.fun/2024/links/</link>
+      <link>https://tfl-asp.github.io/2024/links/</link>
       <pubDate>Fri, 23 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://tflasp.fun/2024/links/</guid>
+      <guid>https://tfl-asp.github.io/2024/links/</guid>
       <description>下载时记得关闭杀毒软件，若被误杀请重新下载。 资料由站长收集整理，仅供学习交流，严禁用于商业用途，请于24小时内删除。 系统优化工具 Name Password Wind</description>
     </item>
     <item>
       <title>一只硬件玩家的探索历程（硬件平台篇）</title>
-      <link>https://tflasp.fun/2024/record-hw/</link>
+      <link>https://tfl-asp.github.io/2024/record-hw/</link>
       <pubDate>Thu, 22 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://tflasp.fun/2024/record-hw/</guid>
+      <guid>https://tfl-asp.github.io/2024/record-hw/</guid>
       <description>梦开始的地方 最早的配置是： Intel Core i5-13400F 铭瑄B760M WIFI 华硕ATS RTX3060Ti 威刚DDR4 3200 8*2 鑫谷GN650W KIOXIA RC20 1T aigo P7000Z 2TB 在当时的性价比还算可以吧，当时126</description>
     </item>
     <item>
       <title>一只硬件玩家的探索历程（软件系统篇）</title>
-      <link>https://tflasp.fun/2024/record-sw/</link>
+      <link>https://tfl-asp.github.io/2024/record-sw/</link>
       <pubDate>Thu, 22 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://tflasp.fun/2024/record-sw/</guid>
+      <guid>https://tfl-asp.github.io/2024/record-sw/</guid>
       <description>System Windows 第一台笔记本用的是Windows LTSC 2019（17763.6189），非常精简，砍掉了Microsoft store以及所有UWP应用。 当时</description>
     </item>
     <item>
       <title>【归档】Proxmox VE更新CPU微码</title>
-      <link>https://tflasp.fun/2024/microcode/</link>
+      <link>https://tfl-asp.github.io/2024/microcode/</link>
       <pubDate>Wed, 21 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://tflasp.fun/2024/microcode/</guid>
+      <guid>https://tfl-asp.github.io/2024/microcode/</guid>
       <description>问题重现 PVE 启动时，看到屏幕上有提示要求更新 microcode。 添加仓库 需要添加 unstable repo： echo &amp;quot;deb http://deb.debian.org/debian/ unstable non-free-firmware&amp;quot; &amp;gt; /etc/apt/sources.list.d/debian-unstable.list 执行更新： apt update &amp;amp;&amp;amp; apt list --upgradable 安装微码，in</description>
     </item>
     <item>
       <title>【归档】PVE安装RTL8125驱动</title>
-      <link>https://tflasp.fun/2024/rtl8125-driver/</link>
+      <link>https://tfl-asp.github.io/2024/rtl8125-driver/</link>
       <pubDate>Wed, 21 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://tflasp.fun/2024/rtl8125-driver/</guid>
+      <guid>https://tfl-asp.github.io/2024/rtl8125-driver/</guid>
       <description>问题重现 发现更新驱动之后，普通模式下可以正常工作，但一旦开启直通，这个驱动就会无法工作。 而因为 RTL8139 被加入黑名单，导致没有驱动可用，然后网卡就无</description>
     </item>
     <item>
       <title>【归档】PVE安装配置timeshift</title>
-      <link>https://tflasp.fun/2024/timeshift/</link>
+      <link>https://tfl-asp.github.io/2024/timeshift/</link>
       <pubDate>Wed, 21 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://tflasp.fun/2024/timeshift/</guid>
+      <guid>https://tfl-asp.github.io/2024/timeshift/</guid>
       <description>前面在安装 PVE 时，选择了留出 50G 大小的空间给 timeshift 使用。 为 timeshift 准备分区 查看当前磁盘分区情况 fdisk -l 查看当前硬盘情况： Disk /dev/nvme0n1: 465.76 GiB, 500107862016 bytes, 976773168 sectors Disk model: WDC WDS500G1B0C-00S6U0 Units: sectors of 1 * 512 =</description>
     </item>
     <item>
       <title>【归档】PVE环境下硬盘识别问题</title>
-      <link>https://tflasp.fun/2024/pve-maxio1602/</link>
+      <link>https://tfl-asp.github.io/2024/pve-maxio1602/</link>
       <pubDate>Wed, 21 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://tflasp.fun/2024/pve-maxio1602/</guid>
+      <guid>https://tfl-asp.github.io/2024/pve-maxio1602/</guid>
       <description>问题复现 爱国者P7000Z（以及所有使用MAXIO 1602主控的PCIe4.0固态）有个坑，两块以上只认一块。 经分析发现，是联芸MAP160</description>
     </item>
     <item>
       <title>【归档】PVE进入Recovery模式恢复系统</title>
-      <link>https://tflasp.fun/2024/pve-recovery/</link>
+      <link>https://tfl-asp.github.io/2024/pve-recovery/</link>
       <pubDate>Wed, 21 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://tflasp.fun/2024/pve-recovery/</guid>
+      <guid>https://tfl-asp.github.io/2024/pve-recovery/</guid>
       <description>问题重现 有时在经过错误的配置之后，pve 系统会无法使用，甚至无法进入系统和页面控制台。 此时需要有其他的方案来修复系统。 恢复模式 进入恢复模式 开</description>
     </item>
     <item>
       <title>RAM</title>
-      <link>https://tflasp.fun/2024/intoram/</link>
+      <link>https://tfl-asp.github.io/2024/intoram/</link>
       <pubDate>Mon, 19 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://tflasp.fun/2024/intoram/</guid>
+      <guid>https://tfl-asp.github.io/2024/intoram/</guid>
       <description>存储系统 RAM RAM（随机访问存储器）： RAM 是计算机中用于临时存储数据和程序的一种类型的存储器。它是一种易失性存储器，意味着当计算机断电或重新启动</description>
     </item>
     <item>
       <title>SSD开卡</title>
-      <link>https://tflasp.fun/2024/ssd-fw/</link>
+      <link>https://tfl-asp.github.io/2024/ssd-fw/</link>
       <pubDate>Sun, 11 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://tflasp.fun/2024/ssd-fw/</guid>
+      <guid>https://tfl-asp.github.io/2024/ssd-fw/</guid>
       <description>SSD开卡技术 SSD（固态硬盘）里采用慧荣主控的品牌很多，其中常见的慧荣主控型号有SM2258XT、SM2259XT、SM2259XT2、S</description>
     </item>
     <item>
       <title>年度巨献 | 深入浅出SSD</title>
-      <link>https://tflasp.fun/2024/intossd/</link>
+      <link>https://tfl-asp.github.io/2024/intossd/</link>
       <pubDate>Sun, 04 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://tflasp.fun/2024/intossd/</guid>
+      <guid>https://tfl-asp.github.io/2024/intossd/</guid>
       <description>SSD简介 SSD (Solid State Drive)，即固态硬盘，是一种以半导体闪存(NAND Flash)作为介质的存储设备。和传统机械硬盘(Hard Disk Drive，</description>
     </item>
     <item>
       <title>【归档】PVE 8 安装与优化</title>
-      <link>https://tflasp.fun/2024/pveinstall/</link>
+      <link>https://tfl-asp.github.io/2024/pveinstall/</link>
       <pubDate>Mon, 15 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>https://tflasp.fun/2024/pveinstall/</guid>
+      <guid>https://tfl-asp.github.io/2024/pveinstall/</guid>
       <description>文章版本 2.02 前言 该文章还在CSDN发表，文章链接：Link PVE镜像下载 1、在浏览器输入以下网址下载pve的iso安装镜像。 Download Proxmox VE 清华大学开源</description>
     </item>
     <item>
       <title>【归档】Hugo | 使用Hugo&#43;Stack主题搭建博客</title>
-      <link>https://tflasp.fun/2024/hugo-stack/</link>
+      <link>https://tfl-asp.github.io/2024/hugo-stack/</link>
       <pubDate>Thu, 11 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>https://tflasp.fun/2024/hugo-stack/</guid>
+      <guid>https://tfl-asp.github.io/2024/hugo-stack/</guid>
       <description>Github仓库地址：hugo-stack-theme 使用方式 从零建立博客：Fork仓库到自己账号下，用Github 注册 Vercel，依次点</description>
     </item>
     <item>
       <title>Windows下使用批处理文件清除缓存</title>
-      <link>https://tflasp.fun/2021/cache_cleaner/</link>
+      <link>https://tfl-asp.github.io/2021/cache_cleaner/</link>
       <pubDate>Thu, 11 Nov 2021 00:00:00 +0000</pubDate>
-      <guid>https://tflasp.fun/2021/cache_cleaner/</guid>
+      <guid>https://tfl-asp.github.io/2021/cache_cleaner/</guid>
       <description>新建一个文本文档，更改后缀为bat，右键编辑输入以下内容，保存、运行。 @echo off echo 正在清除缓存 del /f /s /q %systemdrive%\*.tmp del /f /s /q %systemdrive%\*._mp del /f /s /q %systemdrive%\*.log del /f /s /q %systemdrive%\*.gid del /f /s /q %systemdrive%\*.chk del</description>
     </item>
     <item>
       <title>安装与激活Microsoft Office</title>
-      <link>https://tflasp.fun/2021/officeinstall/</link>
+      <link>https://tfl-asp.github.io/2021/officeinstall/</link>
       <pubDate>Sun, 10 Oct 2021 00:00:00 +0000</pubDate>
-      <guid>https://tflasp.fun/2021/officeinstall/</guid>
+      <guid>https://tfl-asp.github.io/2021/officeinstall/</guid>
       <description>​ 所需工具：【office安装工具】Office Tool Plus(OTP),[Windows desktop runtime x 86]，一台联网计算机 本文章所提及的所有文件：OTP,Windows desktop runtim</description>
     </item>
     <item>
       <title>Markdown Syntax Guide</title>
-      <link>https://tflasp.fun/2020/markdown-syntax-guide/</link>
+      <link>https://tfl-asp.github.io/2020/markdown-syntax-guide/</link>
       <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>https://tflasp.fun/2020/markdown-syntax-guide/</guid>
+      <guid>https://tfl-asp.github.io/2020/markdown-syntax-guide/</guid>
       <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Math Typesetting</title>
-      <link>https://tflasp.fun/2020/math-typesetting/</link>
+      <link>https://tfl-asp.github.io/2020/math-typesetting/</link>
       <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>https://tflasp.fun/2020/math-typesetting/</guid>
+      <guid>https://tfl-asp.github.io/2020/math-typesetting/</guid>
       <description>&lt;p&gt;Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.&lt;/p&gt;</description>
     </item>
     <item>
       <title></title>
-      <link>https://tflasp.fun/1/</link>
+      <link>https://tfl-asp.github.io/1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://tflasp.fun/1/</guid>
+      <guid>https://tfl-asp.github.io/1/</guid>
       <description></description>
     </item>
   </channel>

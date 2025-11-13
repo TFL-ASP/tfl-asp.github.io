@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pages on 大橘為重</title>
-    <link>https://tflasp.fun/page/</link>
+    <link>https://tfl-asp.github.io/page/</link>
     <description>Recent content in Pages on 大橘為重</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 05 Aug 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://tflasp.fun/page/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tfl-asp.github.io/page/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
-      <link>https://tflasp.fun/about/</link>
+      <link>https://tfl-asp.github.io/about/</link>
       <pubDate>Mon, 05 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://tflasp.fun/about/</guid>
+      <guid>https://tfl-asp.github.io/about/</guid>
       <description>由 大橘為重（TFL-ASP）本人搭建的个人博客，还有很多功能待完善，欢迎联系！ Bilibili：大橘為重awa Email: tfldd@outlook.com Learn more and contribute on GitHub.</description>
     </item>
     <item>
       <title>Links</title>
-      <link>https://tflasp.fun/links/</link>
+      <link>https://tfl-asp.github.io/links/</link>
       <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>https://tflasp.fun/links/</guid>
+      <guid>https://tfl-asp.github.io/links/</guid>
       <description>相关链接</description>
     </item>
     <item>
       <title>Archives</title>
-      <link>https://tflasp.fun/archives/</link>
+      <link>https://tfl-asp.github.io/archives/</link>
       <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
-      <guid>https://tflasp.fun/archives/</guid>
+      <guid>https://tfl-asp.github.io/archives/</guid>
       <description></description>
     </item>
     <item>
       <title>Search</title>
-      <link>https://tflasp.fun/search/</link>
+      <link>https://tfl-asp.github.io/search/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://tflasp.fun/search/</guid>
+      <guid>https://tfl-asp.github.io/search/</guid>
       <description></description>
     </item>
   </channel>

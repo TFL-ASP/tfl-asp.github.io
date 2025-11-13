@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>System on 大橘為重</title>
-    <link>https://tflasp.fun/tags/system/</link>
+    <link>https://tfl-asp.github.io/tags/system/</link>
     <description>Recent content in System on 大橘為重</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 26 Sep 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://tflasp.fun/tags/system/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tfl-asp.github.io/tags/system/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>【教程】保障数据安全，关闭Bitlocker</title>
-      <link>https://tflasp.fun/2024/disable-bitlocker/</link>
+      <link>https://tfl-asp.github.io/2024/disable-bitlocker/</link>
       <pubDate>Thu, 26 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>https://tflasp.fun/2024/disable-bitlocker/</guid>
+      <guid>https://tfl-asp.github.io/2024/disable-bitlocker/</guid>
       <description>前言 近期有几个朋友笔记本硬盘坏了，拿去恢复数据，硬件层面的问题解决后发现硬盘有BitLocker加密，而他全然不知道此事，微软账号里也没有备</description>
     </item>
     <item>
       <title>Windows下使用批处理文件清除缓存</title>
-      <link>https://tflasp.fun/2021/cache_cleaner/</link>
+      <link>https://tfl-asp.github.io/2021/cache_cleaner/</link>
       <pubDate>Thu, 11 Nov 2021 00:00:00 +0000</pubDate>
-      <guid>https://tflasp.fun/2021/cache_cleaner/</guid>
+      <guid>https://tfl-asp.github.io/2021/cache_cleaner/</guid>
       <description>新建一个文本文档，更改后缀为bat，右键编辑输入以下内容，保存、运行。 @echo off echo 正在清除缓存 del /f /s /q %systemdrive%\*.tmp del /f /s /q %systemdrive%\*._mp del /f /s /q %systemdrive%\*.log del /f /s /q %systemdrive%\*.gid del /f /s /q %systemdrive%\*.chk del</description>
     </item>
   </channel>

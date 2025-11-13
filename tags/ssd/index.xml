@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>SSD on 大橘為重</title>
-    <link>https://tflasp.fun/tags/ssd/</link>
+    <link>https://tfl-asp.github.io/tags/ssd/</link>
     <description>Recent content in SSD on 大橘為重</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 27 Oct 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://tflasp.fun/tags/ssd/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tfl-asp.github.io/tags/ssd/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>SM2262EN PCIe3.0固态硬盘 DIY</title>
-      <link>https://tflasp.fun/2025/62en/</link>
+      <link>https://tfl-asp.github.io/2025/62en/</link>
       <pubDate>Mon, 27 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://tflasp.fun/2025/62en/</guid>
+      <guid>https://tfl-asp.github.io/2025/62en/</guid>
       <description>准备工作 准备的颗粒是闪迪SNK Bics3 BGA132 TLC颗粒，单颗4ce 8die 256GB。颗粒ID453E99B37A72，上SM2262EN需要注意改1.8v</description>
     </item>
     <item>
       <title>SM2269XT PCIe4.0固态硬盘 DIY</title>
-      <link>https://tflasp.fun/2025/69xt/</link>
+      <link>https://tfl-asp.github.io/2025/69xt/</link>
       <pubDate>Tue, 02 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>https://tflasp.fun/2025/69xt/</guid>
+      <guid>https://tfl-asp.github.io/2025/69xt/</guid>
       <description>准备工作 今天准备的颗粒是镁光NY119 B47R BGA252 TLC颗粒，单颗4ce 8die 256GB。颗粒ID2CC30832EA30，上69XT并不能做到满速，容</description>
     </item>
     <item>
       <title>SSD开卡</title>
-      <link>https://tflasp.fun/2024/ssd-fw/</link>
+      <link>https://tfl-asp.github.io/2024/ssd-fw/</link>
       <pubDate>Sun, 11 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://tflasp.fun/2024/ssd-fw/</guid>
+      <guid>https://tfl-asp.github.io/2024/ssd-fw/</guid>
       <description>SSD开卡技术 SSD（固态硬盘）里采用慧荣主控的品牌很多，其中常见的慧荣主控型号有SM2258XT、SM2259XT、SM2259XT2、S</description>
     </item>
     <item>
       <title>年度巨献 | 深入浅出SSD</title>
-      <link>https://tflasp.fun/2024/intossd/</link>
+      <link>https://tfl-asp.github.io/2024/intossd/</link>
       <pubDate>Sun, 04 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://tflasp.fun/2024/intossd/</guid>
+      <guid>https://tfl-asp.github.io/2024/intossd/</guid>
       <description>SSD简介 SSD (Solid State Drive)，即固态硬盘，是一种以半导体闪存(NAND Flash)作为介质的存储设备。和传统机械硬盘(Hard Disk Drive，</description>
     </item>
   </channel>

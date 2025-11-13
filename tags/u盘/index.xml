@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>U盘 on 大橘為重</title>
-    <link>https://tflasp.fun/tags/u%E7%9B%98/</link>
+    <link>https://tfl-asp.github.io/tags/u%E7%9B%98/</link>
     <description>Recent content in U盘 on 大橘為重</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 01 Sep 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://tflasp.fun/tags/u%E7%9B%98/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tfl-asp.github.io/tags/u%E7%9B%98/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>PS2251-07 6H2H eSLC u盘制作</title>
-      <link>https://tflasp.fun/2025/udisk-eslc/</link>
+      <link>https://tfl-asp.github.io/2025/udisk-eslc/</link>
       <pubDate>Mon, 01 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>https://tflasp.fun/2025/udisk-eslc/</guid>
+      <guid>https://tfl-asp.github.io/2025/udisk-eslc/</guid>
       <description>准备工作 今天准备的颗粒是东芝TH58TEG6H2HBA4C （简称6H2H）的24nm eSLC颗粒，单颗2ce，双贴4ce。颗粒ID 98D7A03276D6 我这里是</description>
     </item>
   </channel>

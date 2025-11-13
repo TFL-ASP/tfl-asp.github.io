@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Test on 大橘為重</title>
-    <link>https://tflasp.fun/categories/test/</link>
+    <link>https://tfl-asp.github.io/categories/test/</link>
     <description>Recent content in Test on 大橘為重</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="https://tflasp.fun/categories/test/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tfl-asp.github.io/categories/test/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
