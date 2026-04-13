@@ -30,13 +30,6 @@
       <description>准备工作 今天准备的颗粒是东芝TH58TEG6H2HBA4C （简称6H2H）的24nm eSLC颗粒，单颗2ce，双贴4ce。颗粒ID 98D7A03276D6 我这里是</description>
     </item>
     <item>
-      <title>RAM</title>
-      <link>https://tfl-asp.github.io/2024/intoram/</link>
-      <pubDate>Mon, 19 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://tfl-asp.github.io/2024/intoram/</guid>
-      <description>存储系统 RAM RAM（随机访问存储器）： RAM 是计算机中用于临时存储数据和程序的一种类型的存储器。它是一种易失性存储器，意味着当计算机断电或重新启动</description>
-    </item>
-    <item>
       <title>年度巨献 | 深入浅出SSD</title>
       <link>https://tfl-asp.github.io/2024/intossd/</link>
       <pubDate>Sun, 04 Aug 2024 00:00:00 +0000</pubDate>
